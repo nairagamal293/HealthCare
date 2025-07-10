@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Health Blog | MediCare Center</title>
+</head>
+<body>
+     <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="MediCare Center" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Health Blog</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="blog-posts">
+                        <!-- Featured Post -->
+                        <div class="blog-post featured-post">
+                            <div class="post-img">
+                                <img src="images/blog-featured.jpg" alt="Featured Post" class="img-fluid">
+                                <div class="post-badge">Featured</div>
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                                    <span><i class="far fa-user"></i> By Dr. Sarah Johnson</span>
+                                    <span><i class="far fa-folder"></i> Cardiology, Prevention</span>
+                                </div>
+                                <h2><a href="blog-single.html">Understanding Heart Disease: Risk Factors and Prevention</a></h2>
+                                <p>Heart disease remains the leading cause of death worldwide, but many cases are preventable. In this comprehensive guide, we explore the major risk factors for cardiovascular disease and evidence-based strategies to maintain a healthy heart...</p>
+                                <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Regular Posts -->
+                        <div class="row g-4">
+                            <!-- Post 1 -->
+                            <div class="col-md-6">
+                                <div class="blog-post">
+                                    <div class="post-img">
+                                        <img src="images/blog-1.jpg" alt="Summer Safety Tips" class="img-fluid">
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <span><i class="far fa-calendar"></i> June 5, 2023</span>
+                                            <span><i class="far fa-user"></i> By Dr. Emily Rodriguez</span>
+                                        </div>
+                                        <h3><a href="blog-single.html">Summer Safety Tips for Children</a></h3>
+                                        <p>Keep your kids safe and healthy this summer with these expert recommendations from our pediatric team on sun protection, hydration, and water safety...</p>
+                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 2 -->
+                            <div class="col-md-6">
+                                <div class="blog-post">
+                                    <div class="post-img">
+                                        <img src="images/blog-2.jpg" alt="Back Pain Relief" class="img-fluid">
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
+                                            <span><i class="far fa-user"></i> By Dr. James Wilson</span>
+                                        </div>
+                                        <h3><a href="blog-single.html">Managing Chronic Back Pain: New Approaches</a></h3>
+                                        <p>Discover the latest non-surgical treatments and exercises that can help alleviate persistent back pain, from physical therapy techniques to minimally invasive procedures...</p>
+                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 3 -->
+                            <div class="col-md-6">
+                                <div class="blog-post">
+                                    <div class="post-img">
+                                        <img src="images/blog-3.jpg" alt="Allergy Season" class="img-fluid">
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <span><i class="far fa-calendar"></i> May 15, 2023</span>
+                                            <span><i class="far fa-user"></i> By Dr. Michael Chen</span>
+                                        </div>
+                                        <h3><a href="blog-single.html">Surviving Allergy Season: Tips from Our Allergist</a></h3>
+                                        <p>Seasonal allergies can be miserable, but they don't have to ruin your spring. Learn about effective prevention strategies and treatment options to keep your symptoms under control...</p>
+                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 4 -->
+                            <div class="col-md-6">
+                                <div class="blog-post">
+                                    <div class="post-img">
+                                        <img src="images/blog-4.jpg" alt="Healthy Eating" class="img-fluid">
+                                    </div>
+                                    <div class="post-content">
+                                        <div class="post-meta">
+                                            <span><i class="far fa-calendar"></i> April 30, 2023</span>
+                                            <span><i class="far fa-user"></i> By Nutrition Team</span>
+                                        </div>
+                                        <h3><a href="blog-single.html">Nutrition Myths Debunked: Facts from Our Dietitians</a></h3>
+                                        <p>Separating fact from fiction in the world of nutrition. Our registered dietitians address common misconceptions about carbs, fats, detoxes, and more...</p>
+                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation" class="mt-5">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Search</h3>
+                            <form class="search-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search articles...">
+                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="category-list">
+                                <li><a href="#">Cardiology <span>(12)</span></a></li>
+                                <li><a href="#">Pediatrics <span>(8)</span></a></li>
+                                <li><a href="#">Orthopedics <span>(6)</span></a></li>
+                                <li><a href="#">Neurology <span>(5)</span></a></li>
+                                <li><a href="#">Prevention <span>(15)</span></a></li>
+                                <li><a href="#">Nutrition <span>(7)</span></a></li>
+                                <li><a href="#">Mental Health <span>(4)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            <div class="recent-posts">
+                                <div class="recent-post">
+                                    <div class="post-thumb">
+                                        <a href="blog-single.html"><img src="images/blog-thumb-1.jpg" alt="Post Thumbnail" class="img-fluid"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4><a href="blog-single.html">Understanding Heart Disease</a></h4>
+                                        <span>June 15, 2023</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="post-thumb">
+                                        <a href="blog-single.html"><img src="images/blog-thumb-2.jpg" alt="Post Thumbnail" class="img-fluid"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4><a href="blog-single.html">Summer Safety Tips</a></h4>
+                                        <span>June 5, 2023</span>
+                                    </div>
+                                </div>
+                                <div class="recent-post">
+                                    <div class="post-thumb">
+                                        <a href="blog-single.html"><img src="images/blog-thumb-3.jpg" alt="Post Thumbnail" class="img-fluid"></a>
+                                    </div>
+                                    <div class="post-info">
+                                        <h4><a href="blog-single.html">Managing Back Pain</a></h4>
+                                        <span>May 28, 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tag-cloud">
+                                <a href="#">Heart Health</a>
+                                <a href="#">Children</a>
+                                <a href="#">Exercise</a>
+                                <a href="#">Nutrition</a>
+                                <a href="#">Prevention</a>
+                                <a href="#">Vaccines</a>
+                                <a href="#">Diabetes</a>
+                                <a href="#">Mental Health</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
+                            <div class="footer-contact">
+                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
+                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
+                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Quick Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
+                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
+                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Our Services</h3>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
+                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
+                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
+                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
+                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your Email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

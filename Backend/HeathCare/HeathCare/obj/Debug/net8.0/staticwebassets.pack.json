@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\3e9a45e3-3f8e-4a05-8673-76e5ad2eae69_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\3e9a45e3-3f8e-4a05-8673-76e5ad2eae69_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HeathCare.props",
+      "PackagePath": "build\\HeathCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HeathCare.props",
+      "PackagePath": "buildMultiTargeting\\HeathCare.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HeathCare.props",
+      "PackagePath": "buildTransitive\\HeathCare.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

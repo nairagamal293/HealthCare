@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Our Doctors | MediCare Center</title>
+</head>
+<body>
+     <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="MediCare Center" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Our Doctors</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-3">
+                    <div class="doctors-filter">
+                        <h3>Filter Doctors</h3>
+                        <div class="filter-group">
+                            <h4>By Specialty</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="all-specialties" value="all" checked>
+                                <label class="form-check-label" for="all-specialties">
+                                    All Specialties
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="cardiology" value="cardiology">
+                                <label class="form-check-label" for="cardiology">
+                                    Cardiology
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="neurology" value="neurology">
+                                <label class="form-check-label" for="neurology">
+                                    Neurology
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="orthopedics" value="orthopedics">
+                                <label class="form-check-label" for="orthopedics">
+                                    Orthopedics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="pediatrics" value="pediatrics">
+                                <label class="form-check-label" for="pediatrics">
+                                    Pediatrics
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="radiology" value="radiology">
+                                <label class="form-check-label" for="radiology">
+                                    Radiology
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="specialty" id="surgery" value="surgery">
+                                <label class="form-check-label" for="surgery">
+                                    Surgery
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>By Gender</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="all-genders" value="all" checked>
+                                <label class="form-check-label" for="all-genders">
+                                    All Genders
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                                <label class="form-check-label" for="male">
+                                    Male
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                                <label class="form-check-label" for="female">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>By Language</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="language" id="english" value="english" checked>
+                                <label class="form-check-label" for="english">
+                                    English
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="language" id="spanish" value="spanish">
+                                <label class="form-check-label" for="spanish">
+                                    Spanish
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="language" id="french" value="french">
+                                <label class="form-check-label" for="french">
+                                    French
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="language" id="mandarin" value="mandarin">
+                                <label class="form-check-label" for="mandarin">
+                                    Mandarin
+                                </label>
+                            </div>
+                        </div>
+                        <button id="resetFilters" class="btn btn-outline-secondary btn-sm">Reset Filters</button>
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <div class="doctors-list">
+                        <div class="row g-4">
+                            <!-- Doctor 1 -->
+                            <div class="col-12" data-specialty="cardiology" data-gender="female" data-language="english spanish">
+                                <div class="doctor-card-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div class="doctor-img">
+                                                <img src="images/doctor-1.jpg" alt="Dr. Sarah Johnson" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="doctor-info">
+                                                <h3>Dr. Sarah Johnson</h3>
+                                                <p class="specialty">Cardiologist</p>
+                                                <div class="doctor-meta">
+                                                    <span><i class="fas fa-star"></i> 4.9 (120 reviews)</span>
+                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 3, Room 302</span>
+                                                    <span><i class="fas fa-language"></i> English, Spanish</span>
+                                                </div>
+                                                <p class="doctor-bio">Board-certified cardiologist with 15 years of experience specializing in interventional cardiology and heart failure management.</p>
+                                                <div class="doctor-actions">
+                                                    <a href="appointment.html?doctor=dr-johnson" class="btn btn-primary">Book Appointment</a>
+                                                    <a href="doctor-profile.html?id=dr-johnson" class="btn btn-outline-primary">View Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 2 -->
+                            <div class="col-12" data-specialty="neurology" data-gender="male" data-language="english french">
+                                <div class="doctor-card-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div class="doctor-img">
+                                                <img src="images/doctor-2.jpg" alt="Dr. Michael Chen" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="doctor-info">
+                                                <h3>Dr. Michael Chen</h3>
+                                                <p class="specialty">Neurologist</p>
+                                                <div class="doctor-meta">
+                                                    <span><i class="fas fa-star"></i> 4.8 (95 reviews)</span>
+                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 2, Room 210</span>
+                                                    <span><i class="fas fa-language"></i> English, French</span>
+                                                </div>
+                                                <p class="doctor-bio">Specializes in stroke prevention, epilepsy, and movement disorders with a focus on patient-centered care.</p>
+                                                <div class="doctor-actions">
+                                                    <a href="appointment.html?doctor=dr-chen" class="btn btn-primary">Book Appointment</a>
+                                                    <a href="doctor-profile.html?id=dr-chen" class="btn btn-outline-primary">View Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 3 -->
+                            <div class="col-12" data-specialty="pediatrics" data-gender="female" data-language="english spanish">
+                                <div class="doctor-card-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div class="doctor-img">
+                                                <img src="images/doctor-3.jpg" alt="Dr. Emily Rodriguez" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="doctor-info">
+                                                <h3>Dr. Emily Rodriguez</h3>
+                                                <p class="specialty">Pediatrician</p>
+                                                <div class="doctor-meta">
+                                                    <span><i class="fas fa-star"></i> 4.9 (150 reviews)</span>
+                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 1, Room 105</span>
+                                                    <span><i class="fas fa-language"></i> English, Spanish</span>
+                                                </div>
+                                                <p class="doctor-bio">Pediatric specialist with expertise in childhood development, asthma management, and adolescent health.</p>
+                                                <div class="doctor-actions">
+                                                    <a href="appointment.html?doctor=dr-rodriguez" class="btn btn-primary">Book Appointment</a>
+                                                    <a href="doctor-profile.html?id=dr-rodriguez" class="btn btn-outline-primary">View Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 4 -->
+                            <div class="col-12" data-specialty="orthopedics" data-gender="male" data-language="english mandarin">
+                                <div class="doctor-card-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div class="doctor-img">
+                                                <img src="images/doctor-4.jpg" alt="Dr. James Wilson" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="doctor-info">
+                                                <h3>Dr. James Wilson</h3>
+                                                <p class="specialty">Orthopedic Surgeon</p>
+                                                <div class="doctor-meta">
+                                                    <span><i class="fas fa-star"></i> 4.7 (85 reviews)</span>
+                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 3, Room 315</span>
+                                                    <span><i class="fas fa-language"></i> English, Mandarin</span>
+                                                </div>
+                                                <p class="doctor-bio">Specializes in sports medicine, joint replacement, and minimally invasive orthopedic procedures.</p>
+                                                <div class="doctor-actions">
+                                                    <a href="appointment.html?doctor=dr-wilson" class="btn btn-primary">Book Appointment</a>
+                                                    <a href="doctor-profile.html?id=dr-wilson" class="btn btn-outline-primary">View Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Doctor 5 -->
+                            <div class="col-12" data-specialty="radiology" data-gender="female" data-language="english french">
+                                <div class="doctor-card-lg">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <div class="doctor-img">
+                                                <img src="images/doctor-5.jpg" alt="Dr. Lisa Patel" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="doctor-info">
+                                                <h3>Dr. Lisa Patel</h3>
+                                                <p class="specialty">Radiologist</p>
+                                                <div class="doctor-meta">
+                                                    <span><i class="fas fa-star"></i> 4.8 (75 reviews)</span>
+                                                    <span><i class="fas fa-map-marker-alt"></i> Floor B1, Imaging Center</span>
+                                                    <span><i class="fas fa-language"></i> English, French</span>
+                                                </div>
+                                                <p class="doctor-bio">Specializes in diagnostic imaging including MRI, CT, and ultrasound with fellowship training in neuroradiology.</p>
+                                                <div class="doctor-actions">
+                                                    <a href="appointment.html?doctor=dr-patel" class="btn btn-primary">Book Appointment</a>
+                                                    <a href="doctor-profile.html?id=dr-patel" class="btn btn-outline-primary">View Profile</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav aria-label="Page navigation" class="mt-5">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
+                            <div class="footer-contact">
+                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
+                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
+                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Quick Links</h3>
+                            <ul class="footer-links">
+                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
+                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
+                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Our Services</h3>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
+                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
+                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
+                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
+                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3>Newsletter</h3>
+                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your Email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                            <div class="footer-social">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Doctor filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterForm = document.querySelector('.doctors-filter');
+            const doctorCards = document.querySelectorAll('.doctors-list .col-12');
+            const resetButton = document.getElementById('resetFilters');
+
+            function filterDoctors() {
+                const specialty = document.querySelector('input[name="specialty"]:checked').value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const languages = Array.from(document.querySelectorAll('input[name="language"]:checked')).map(el => el.value);
+
+                doctorCards.forEach(card => {
+                    const cardSpecialty = card.dataset.specialty;
+                    const cardGender = card.dataset.gender;
+                    const cardLanguages = card.dataset.language.split(' ');
+
+                    // Check specialty filter
+                    const specialtyMatch = specialty === 'all' || cardSpecialty === specialty;
+                    
+                    // Check gender filter
+                    const genderMatch = gender === 'all' || cardGender === gender;
+                    
+                    // Check language filter
+                    const languageMatch = languages.length === 0 || 
+                                        languages.some(lang => cardLanguages.includes(lang));
+                    
+                    // Show/hide based on all filters
+                    if (specialtyMatch && genderMatch && languageMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Add event listeners to all filter inputs
+            document.querySelectorAll('.doctors-filter input').forEach(input => {
+                input.addEventListener('change', filterDoctors);
+            });
+
+            // Reset filters
+            resetButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('all-specialties').checked = true;
+                document.getElementById('all-genders').checked = true;
+                document.querySelectorAll('input[name="language"]').forEach(checkbox => {
+                    checkbox.checked = checkbox.id === 'english';
+                });
+                filterDoctors();
+            });
+
+            // Check for URL parameters to set initial filters
+            const urlParams = new URLSearchParams(window.location.search);
+            const specialtyParam = urlParams.get('specialty');
+            if (specialtyParam) {
+                const specialtyRadio = document.getElementById(specialtyParam);
+                if (specialtyRadio) {
+                    specialtyRadio.checked = true;
+                }
+            }
+            
+            // Initial filter
+            filterDoctors();
+        });
+    </script>
+</body>
+</html>
