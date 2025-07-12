@@ -19,7 +19,12 @@
             _logger = logger;
         }
 
-        public async Task<string> SaveImageAsync(IFormFile imageFile, string subFolder = "doctors")
+        public async Task<string> SaveImageAsync(IFormFile imageFile)
+        {
+            return await SaveImageAsync(imageFile, "blogs"); // Default to blogs folder
+        }
+
+        public async Task<string> SaveImageAsync(IFormFile imageFile, string subFolder)
         {
             if (imageFile == null || imageFile.Length == 0)
             {
@@ -70,10 +75,7 @@
             }
         }
 
-        public Task<string> SaveImageAsync(IFormFile imageFile)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 
 }

@@ -12,8 +12,26 @@ using AutoMapper;
 using HeathCare.Models.HeathCare.Models;
 using Microsoft.AspNetCore.Http.Features;
 using HeathCare;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("http://127.0.0.1:5500",
+                              "http://localhost:5500",
+                              "https://localhost:7230")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 
 // Add services to the container
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -140,19 +158,27 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+// Ensure this exists in your Program.cs
 app.UseStaticFiles(new StaticFileOptions
 {
-    OnPrepareResponse = ctx =>
-    {
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(builder.Environment.WebRootPath, "uploads")),
+    RequestPath = "/uploads",
+    OnPrepareResponse = ctx => {
         ctx.Context.Response.Headers.Append("Cache-Control", "public,max-age=3600");
     }
 });
 
+
+app.UseCors(MyAllowSpecificOrigins);
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+
 
 // Seed database with initial admin user
 using (var scope = app.Services.CreateScope())

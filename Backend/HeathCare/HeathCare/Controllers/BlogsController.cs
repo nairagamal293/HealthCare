@@ -40,25 +40,33 @@ public class BlogsController : ControllerBase
         return CreatedAtAction(nameof(GetBlog), new { id = blog.Id }, blog);
     }
 
-    [HttpPut("{id}")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> PutBlog(int id, BlogUpdateDTO blogDto)
-    {
-        if (id != blogDto.Id) return BadRequest();
-        
-        try
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> PutBlog(int id, [FromForm] BlogUpdateDTO blogDto)
         {
-            await _blogService.UpdateBlogAsync(id, blogDto);
-        }
-        catch (KeyNotFoundException)
-        {
-            return NotFound();
-        }
-        
-        return NoContent();
-    }
+            if (id != blogDto.Id)
+                return BadRequest();
 
-    [HttpDelete("{id}")]
+            try
+            {
+                await _blogService.UpdateBlogAsync(id, blogDto);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, new { message = "An error occurred while updating the blog" });
+            }
+        }
+
+        [HttpDelete("{id}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteBlog(int id)
     {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gzr9/CiO6If2w7+0t8Ei2J1Ossi0p4k5W27n32VF8EU=",
+  "Hash": "wIbOTS+sQwx33htNMWw/P7e9C2XVOzqsDzU44JpXKj4=",
   "Source": "HeathCare",
   "BasePath": "_content/HeathCare",
   "Mode": "Default",
@@ -1277,6 +1277,69 @@
       "OriginalItemSpec": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.0\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pfxo2ywoz0",
+      "Integrity": "uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pfxo2ywoz0",
+      "Integrity": "uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/blogs/f70cab15-364d-46dd-be43-72b13a6e7b6c#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uziuz7jhwi",
+      "Integrity": "qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg"
+    },
+    {
       "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
       "SourceId": "HeathCare",
       "SourceType": "Discovered",
@@ -1338,6 +1401,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dylsxtybzy",
+      "Integrity": "22zB8jkX3ZyYr41g8ixw9J9x8pe9Ezj2Xg0sL+i2+Kk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/doctors/83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oofr367d6r",
+      "Integrity": "KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
     }
   ],
   "Endpoints": [
@@ -3562,6 +3667,252 @@
       ]
     },
     {
+      "Route": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 07:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.pfxo2ywoz0.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 07:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pfxo2ywoz0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 08:34:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.pfxo2ywoz0.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 08:34:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pfxo2ywoz0"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 07:00:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/f70cab15-364d-46dd-be43-72b13a6e7b6c.uziuz7jhwi.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 07:00:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uziuz7jhwi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/blogs/f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="
+        }
+      ]
+    },
+    {
       "Route": "uploads/doctors/07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
       "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
       "Selectors": [],
@@ -3800,6 +4151,170 @@
         {
           "Name": "label",
           "Value": "uploads/doctors/62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.dylsxtybzy.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22zB8jkX3ZyYr41g8ixw9J9x8pe9Ezj2Xg0sL+i2+Kk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 08:47:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dylsxtybzy"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-22zB8jkX3ZyYr41g8ixw9J9x8pe9Ezj2Xg0sL+i2+Kk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "56090"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"22zB8jkX3ZyYr41g8ixw9J9x8pe9Ezj2Xg0sL+i2+Kk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 12 Jul 2025 08:47:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-22zB8jkX3ZyYr41g8ixw9J9x8pe9Ezj2Xg0sL+i2+Kk="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 13:52:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.oofr367d6r.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 13:52:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oofr367d6r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/doctors/83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
         },
         {
           "Name": "integrity",

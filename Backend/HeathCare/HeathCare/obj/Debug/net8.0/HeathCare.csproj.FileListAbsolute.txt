@@ -147,3 +147,4 @@ D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\refint\He
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.pdb
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.genruntimeconfig.cache
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\ref\HeathCare.dll
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.sourcelink.json

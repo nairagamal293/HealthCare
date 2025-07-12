@@ -28,8 +28,14 @@ namespace HeathCare.Services
 
         public async Task<ContactDTO> CreateContactAsync(ContactCreateDTO contactDto)
         {
-            var contact = _mapper.Map<Contact>(contactDto);
-            contact.CreatedAt = DateTime.UtcNow;
+            // Create contact entity manually to ensure proper initialization
+            var contact = new Contact
+            {
+                Name = contactDto.Name,
+                Email = contactDto.Email,
+                Message = contactDto.Message,
+                CreatedAt = DateTime.UtcNow
+            };
 
             _context.Contacts.Add(contact);
             await _context.SaveChangesAsync();

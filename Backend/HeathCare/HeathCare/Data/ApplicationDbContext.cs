@@ -38,9 +38,9 @@ namespace HealthCare.Data
 
             // Seed initial data if needed
             modelBuilder.Entity<Department>().HasData(
-                new Department { Id = 1, Name = "Cardiology", Description = "Heart care specialists", IconUrl = "/icons/heart.svg" },
-                new Department { Id = 2, Name = "Neurology", Description = "Brain and nervous system specialists", IconUrl = "/icons/brain.svg" },
-                new Department { Id = 3, Name = "Pediatrics", Description = "Child healthcare specialists", IconUrl = "/icons/baby.svg" }
+                new Department { Id = 1, Name = "Cardiology", Description = "Heart care specialists" },
+                new Department { Id = 2, Name = "Neurology", Description = "Brain and nervous system specialists" },
+                new Department { Id = 3, Name = "Pediatrics", Description = "Child healthcare specialists" }
             );
         }
     }

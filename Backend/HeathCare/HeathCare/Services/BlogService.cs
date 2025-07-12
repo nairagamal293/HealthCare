@@ -24,15 +24,18 @@ namespace HealthCare.Services
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
         private readonly IFileService _fileService;
+        private readonly ILogger<BlogService> _logger;
 
         public BlogService(
             ApplicationDbContext context,
             IMapper mapper,
-            IFileService fileService)
+            IFileService fileService,
+            ILogger<BlogService> logger)
         {
             _context = context;
             _mapper = mapper;
             _fileService = fileService;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<BlogDTO>> GetAllBlogsAsync()
@@ -53,12 +56,30 @@ namespace HealthCare.Services
 
         public async Task<BlogDTO> CreateBlogAsync(BlogCreateDTO blogDto)
         {
-            // Save the image file
-            var imagePath = await _fileService.SaveImageAsync(blogDto.ImageFile);
+            // Handle file upload
+            string imagePath = null;
+            if (blogDto.ImageFile != null && blogDto.ImageFile.Length > 0)
+            {
+                try
+                {
+                    imagePath = await _fileService.SaveImageAsync(blogDto.ImageFile, "blogs");
+                    // Ensure the path is stored as a relative path
+                    imagePath = imagePath.Replace("\\", "/"); // Normalize path
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error saving blog image");
+                    throw new Exception("Could not save image file");
+                }
+            }
 
-            var blog = _mapper.Map<Blog>(blogDto);
-            blog.ImagePath = imagePath;
-            blog.CreatedAt = DateTime.UtcNow;
+            var blog = new Blog
+            {
+                Title = blogDto.Title,
+                Content = blogDto.Content,
+                ImagePath = imagePath,
+                CreatedAt = DateTime.UtcNow
+            };
 
             _context.Blogs.Add(blog);
             await _context.SaveChangesAsync();
@@ -79,10 +100,13 @@ namespace HealthCare.Services
                     _fileService.DeleteImage(blog.ImagePath);
 
                 // Save new image
-                blog.ImagePath = await _fileService.SaveImageAsync(blogDto.ImageFile);
+                blog.ImagePath = await _fileService.SaveImageAsync(blogDto.ImageFile, "blogs");
             }
 
-            _mapper.Map(blogDto, blog);
+            // Update other properties
+            blog.Title = blogDto.Title;
+            blog.Content = blogDto.Content;
+
             _context.Blogs.Update(blog);
             await _context.SaveChangesAsync();
         }

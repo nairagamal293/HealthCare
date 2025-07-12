@@ -1,6 +1,18 @@
 {
   "Files": [
     {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg"
+    },
+    {
       "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
     },
@@ -11,6 +23,14 @@
     {
       "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
       "PackagePath": "staticwebassets\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg"
+    },
+    {
+      "Id": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

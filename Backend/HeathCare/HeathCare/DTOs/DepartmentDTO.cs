@@ -8,8 +8,7 @@ namespace HeathCare.DTOs
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string IconUrl { get; set; }
-        public int DoctorCount { get; set; } // Make sure this property exists
+        public int DoctorCount { get; set; }
     }
 
     public class DepartmentCreateDTO
@@ -21,16 +20,11 @@ namespace HeathCare.DTOs
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
-
-        [Required]
-        [Url]
-        public string IconUrl { get; set; }
     }
 
-    // DTOs/DepartmentDTOs.cs
     public class DepartmentUpdateDTO
     {
-        public int Id { get; set; } // Add this line
+        public int Id { get; set; }
 
         [Required]
         [StringLength(100, MinimumLength = 2)]
@@ -39,9 +33,5 @@ namespace HeathCare.DTOs
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
-
-        [Required]
-        [Url]
-        public string IconUrl { get; set; }
     }
 }

@@ -64,7 +64,18 @@ namespace HeathCare.Migrations
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -122,10 +133,6 @@ namespace HeathCare.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IconUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -139,21 +146,18 @@ namespace HeathCare.Migrations
                         {
                             Id = 1,
                             Description = "Heart care specialists",
-                            IconUrl = "/icons/heart.svg",
                             Name = "Cardiology"
                         },
                         new
                         {
                             Id = 2,
                             Description = "Brain and nervous system specialists",
-                            IconUrl = "/icons/brain.svg",
                             Name = "Neurology"
                         },
                         new
                         {
                             Id = 3,
                             Description = "Child healthcare specialists",
-                            IconUrl = "/icons/baby.svg",
                             Name = "Pediatrics"
                         });
                 });

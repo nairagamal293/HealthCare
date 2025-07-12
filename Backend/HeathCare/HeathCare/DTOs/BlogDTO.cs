@@ -23,13 +23,13 @@ namespace HeathCare.DTOs
         public string Content { get; set; }
 
         [Required]
-        public IFormFile ImageFile { get; set; } // Changed from ImageUrl to ImageFile
+        public IFormFile ImageFile { get; set; }
     }
 
     // DTOs/BlogDTOs.cs
     public class BlogUpdateDTO
     {
-        public int Id { get; set; } // Add this line
+        public int Id { get; set; }
 
         [Required]
         [StringLength(200, MinimumLength = 5)]
@@ -39,6 +39,6 @@ namespace HeathCare.DTOs
         [StringLength(5000)]
         public string Content { get; set; }
 
-        public IFormFile? ImageFile { get; set; } // Make nullable if not always required
+        public IFormFile? ImageFile { get; set; }
     }
 }
