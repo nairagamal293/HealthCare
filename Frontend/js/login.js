@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginSpinner.classList.remove('d-none');
 
         try {
-            const response = await fetch('https://localhost:7230/api/Auth/login', {
+            const response = await fetch('https://localhost:7230/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

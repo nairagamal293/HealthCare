@@ -3,25 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-
-    
+    <meta name="description" content="Contact MediCare Center for appointments, inquiries, or emergency services">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>Contact Us | MediCare Center</title>
+
+    <style>
+        /* Contact Section Styles */
+.contact-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-section .section-header {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-section .section-header .subtitle {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-section .section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2a2a2a;
+}
+
+.contact-section .section-header .divider {
+    width: 60px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin: 15px 0;
+}
+
+.contact-section .section-header p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Info Cards */
+.info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: #e6f0ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.info-content h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2a2a2a;
+}
+
+.info-content p {
+    margin-bottom: 5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-content a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-content a:hover {
+    color: #0d6efd;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 97%;
+}
+
+.contact-form .form-floating {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+    height: 55px;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+    background: white;
+}
+
+.contact-form textarea.form-control {
+    height: auto;
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-check-label {
+    color: #555;
+}
+
+.contact-form .form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+    
+    .contact-section .section-header h2 {
+        font-size: 30px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-section {
+        padding: 40px 0;
+    }
+    
+    .contact-section .section-header {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .contact-section .section-header .divider {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+}
+/* Map Container Styles */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    border: none;
+}
+    </style>
 </head>
 <body>
-    
-     <div class="top-bar">
+    <!-- Top Bar -->
+    <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -30,14 +226,7 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -54,7 +243,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -68,7 +257,6 @@
                             <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
                             <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
                             <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -78,7 +266,7 @@
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="contact.html">Contact</a>
                     </li>
                 </ul>
                 <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
@@ -86,99 +274,76 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Contact Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="section-header">
-                            <span class="subtitle">Get in Touch</span>
-                            <h2>Contact Information</h2>
-                            <div class="divider"></div>
-                        </div>
+<!-- Contact Section -->
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="subtitle">Get in Touch</span>
+                        <h2>We're ready to provide the right healthcare solution</h2>
+                        <div class="divider"></div>
+                    </div>
 
-                        <div class="info-cards">
-                            <div class="info-card">
-                                <div class="info-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Our Location</h4>
-                                    <p>123 Medical Drive, Health City, HC 12345</p>
-                                </div>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
                             </div>
-
-                            <div class="info-card">
-                                <div class="info-icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Phone Numbers</h4>
-                                    <p>Main: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
-                                    <p>Emergency: <a href="tel:+1234567899">+1 (234) 567-899</a></p>
-                                </div>
-                            </div>
-
-                            <div class="info-card">
-                                <div class="info-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Email Addresses</h4>
-                                    <p>General: <a href="mailto:info@medicare.com">info@medicare.com</a></p>
-                                    <p>Appointments: <a href="mailto:appointments@medicare.com">appointments@medicare.com</a></p>
-                                    <p>Billing: <a href="mailto:billing@medicare.com">billing@medicare.com</a></p>
-                                </div>
-                            </div>
-
-                            <div class="info-card">
-                                <div class="info-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="info-content">
-                                    <h4>Working Hours</h4>
-                                    <p>Monday-Friday: 8:00 AM - 8:00 PM</p>
-                                    <p>Saturday: 9:00 AM - 5:00 PM</p>
-                                    <p>Sunday: Emergency Services Only</p>
-                                </div>
+                            <div class="info-content">
+                                <h4>Our Location</h4>
+                                <p>123 Medical Drive, Health City, HC 12345</p>
                             </div>
                         </div>
 
-                        <div class="social-links mt-4">
-                            <h4>Follow Us</h4>
-                            <div class="social-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Phone Numbers</h4>
+                                <p><a href="tel:+1234567890">+1 (234) 567-890</a> (Main)</p>
+                                <p><a href="tel:+1234567891">+1 (234) 567-891</a> (Appointments)</p>
+                                <p><a href="tel:+1234567899">+1 (234) 567-899</a> (Emergency)</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email Addresses</h4>
+                                <p><a href="mailto:info@medicare.com">info@medicare.com</a> (General)</p>
+                                <p><a href="mailto:appointments@medicare.com">appointments@medicare.com</a></p>
+                                <p><a href="mailto:billing@medicare.com">billing@medicare.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Working Hours</h4>
+                                <p><strong>Monday-Friday:</strong> 8:00 AM - 8:00 PM</p>
+                                <p><strong>Saturday:</strong> 9:00 AM - 5:00 PM</p>
+                                <p><strong>Sunday:</strong> Emergency Services Only</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-form-wrapper">
                     <div class="contact-form">
                         <div class="section-header">
-                            <span class="subtitle">Send a Message</span>
+                            <span class="subtitle">Send us a message</span>
                             <h2>Contact Form</h2>
                             <div class="divider"></div>
                             <p>Have questions or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
@@ -187,47 +352,36 @@
                         <form id="contactForm" class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="contactName" class="form-label">Your Name *</label>
-                                    <input type="text" class="form-control" id="contactName" required>
-                                    <div class="invalid-feedback">
-                                        Please provide your name.
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                        <label for="name">Your Name *</label>
+                                        <div class="invalid-feedback">
+                                            Please provide your name.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="contactEmail" class="form-label">Your Email *</label>
-                                    <input type="email" class="form-control" id="contactEmail" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid email.
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                        <label for="email">Your Email *</label>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <label for="contactSubject" class="form-label">Subject *</label>
-                                    <input type="text" class="form-control" id="contactSubject" required>
-                                    <div class="invalid-feedback">
-                                        Please provide a subject.
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <label for="contactDepartment" class="form-label">Department (Optional)</label>
-                                    <select class="form-select" id="contactDepartment">
-                                        <option value="" selected>General Inquiry</option>
-                                        <option value="appointments">Appointments</option>
-                                        <option value="billing">Billing</option>
-                                        <option value="medical-records">Medical Records</option>
-                                        <option value="feedback">Feedback/Complaint</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <label for="contactMessage" class="form-label">Your Message *</label>
-                                    <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
-                                    <div class="invalid-feedback">
-                                        Please provide a message.
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" placeholder="Your Message" style="height: 120px" required></textarea>
+                                        <label for="message">Your Message *</label>
+                                        <div class="invalid-feedback">
+                                            Please provide a message.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="contactTerms" required>
-                                        <label class="form-check-label" for="contactTerms">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
                                             I agree to the <a href="privacy.html">Privacy Policy</a> *
                                         </label>
                                         <div class="invalid-feedback">
@@ -236,96 +390,99 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                    <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">
+                                        <span id="submitText">Send Message</span>
+                                        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                    
+                    <!-- Map Section - Moved under the contact form -->
+                    <div class="map-container mt-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423917!3d40.74844097138985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                                width="100%" 
+                                height="350" 
+                                style="border:0; border-radius: 8px;" 
+                                allowfullscreen="" 
+                                loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container-fluid p-0">
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423917!3d40.74844097138985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
 
-    <!-- Emergency Section -->
-    <section class="emergency-section bg-danger text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h2><i class="fas fa-exclamation-triangle"></i> Need Emergency Care?</h2>
-                    <p class="mb-md-0">Our emergency department is open 24/7 for urgent medical needs. For life-threatening emergencies, please call 911 immediately.</p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <a href="tel:+1234567899" class="btn btn-light">Emergency: +1 (234) 567-899</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-   <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
+        <div class="footer-main">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
-                            <div class="footer-contact">
-                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
-                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
-                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                                <span class="brand-name">MediCare Center</span>
+                            </div>
+                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to our Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h3>Quick Links</h3>
+                            <h4 class="footer-title">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
-                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
-                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="doctors.html">Our Doctors</a></li>
+                                <li><a href="blog.html">Health Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Our Services</h3>
+                            <h4 class="footer-title">Medical Departments</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
-                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
-                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
-                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
-                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
+                                <li><a href="departments.html#cardiology">Cardiology</a></li>
+                                <li><a href="departments.html#neurology">Neurology</a></li>
+                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Newsletter</h3>
-                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your Email" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -334,28 +491,28 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="footer-links">
+                    <div class="col-md-6">
+                        <div class="footer-legal">
                             <a href="privacy.html">Privacy Policy</a>
                             <a href="terms.html">Terms of Service</a>
+                            <a href="sitemap.html">Sitemap</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

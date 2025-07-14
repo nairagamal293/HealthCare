@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>Our Doctors | MediCare Center</title>
 </head>
 <body>
@@ -71,7 +72,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link" href="doctor.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
@@ -374,83 +375,110 @@
     </section>
 
    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget">
+ <footer class="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-brand">
                             <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
-                            <div class="footer-contact">
-                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
-                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
-                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
-                            </div>
+                            <span class="brand-name">MediCare Center</span>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Quick Links</h3>
-                            <ul class="footer-links">
-                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
-                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
-                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Our Services</h3>
-                            <ul class="footer-links">
-                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
-                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
-                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
-                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
-                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Newsletter</h3>
-                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
+                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                        <div class="footer-newsletter">
+                            <h4>Subscribe to our Newsletter</h4>
                             <form class="newsletter-form">
-                                <input type="email" placeholder="Your Email" required>
+                                <input type="email" placeholder="Your email address" required>
                                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
                             </form>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="doctors.html">Our Doctors</a></li>
+                            <li><a href="blog.html">Health Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Departments Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Medical Departments</h4>
+                        <ul class="footer-links">
+                            <li><a href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a href="departments.html#neurology">Neurology</a></li>
+                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a href="departments.html#radiology">Radiology</a></li>
+                            <li><a href="departments.html#surgery">General Surgery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Medical Drive, Health City, HC 12345</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="footer-links">
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
     
     <!-- Back to Top -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>

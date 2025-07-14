@@ -369,7 +369,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 text-center" id="doctorImagePreviewContainer">
-                                <img id="doctorImagePreview" src="images/1 (2).jpeg" alt="Doctor Preview" class="img-thumbnail" style="max-height: 200px;">
+                                <img id="doctorImagePreview" src="images/Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg" alt="Doctor Preview" class="img-thumbnail" style="max-height: 200px;">
                             </div>
                         </form>
                     </div>
@@ -419,26 +419,26 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="blogForm" enctype="multipart/form-data">
-                            <input type="hidden" id="blogId">
-                            <div class="mb-3">
-                                <label for="blogTitle" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="blogTitle" required>
-                            </div>
-                            <div class="mb-3">
-    <label for="blogContent" class="form-label">Content</label>
-    
-    <textarea class="form-control" id="blogContent" rows="8" required style="min-height: 200px;"></textarea>
+    <form id="blogForm" enctype="multipart/form-data">
+        <input type="hidden" id="blogId">
+        <div class="mb-3">
+            <label for="blogTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="blogTitle" required>
+        </div>
+        <div class="mb-3">
+            <label for="blogContent" class="form-label">Content</label>
+            <!-- Make sure this textarea exists and has proper ID -->
+            <textarea class="form-control" id="blogContent" rows="5" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="blogImage" class="form-label">Featured Image</label>
+            <input type="file" class="form-control" id="blogImage" accept="image/*">
+        </div>
+        <div class="mb-3 text-center" id="blogImagePreviewContainer">
+            <img id="blogImagePreview" src="https://via.placeholder.com/600x300" alt="Blog Preview" class="img-fluid" style="max-height: 200px;">
+        </div>
+    </form>
 </div>
-                            <div class="mb-3">
-                                <label for="blogImage" class="form-label">Featured Image</label>
-                                <input type="file" class="form-control" id="blogImage" accept="image/*">
-                            </div>
-                            <div class="mb-3 text-center" id="blogImagePreviewContainer">
-                                <img id="blogImagePreview" src="images/1 (1).jpeg" alt="Blog Preview" class="img-fluid" style="max-height: 200px;">
-                            </div>
-                        </form>
-                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" id="saveBlogBtn">Save</button>

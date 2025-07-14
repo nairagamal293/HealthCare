@@ -1,28 +1,52 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"38782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 07:41:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Lcwt9f2A9xnO9Nr\u002BMy2VbiZEkXJ0qBY3cRBOquGpb4U="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"44369"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Lcwt9f2A9xnO9Nr\u002BMy2VbiZEkXJ0qBY3cRBOquGpb4U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:19:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.pfxo2ywoz0.jpeg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.v1tzee3rrp.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pfxo2ywoz0"},{"Name":"integrity","Value":"sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"38782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 07:41:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"v1tzee3rrp"},{"Name":"integrity","Value":"sha256-Lcwt9f2A9xnO9Nr\u002BMy2VbiZEkXJ0qBY3cRBOquGpb4U="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"44369"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022Lcwt9f2A9xnO9Nr\u002BMy2VbiZEkXJ0qBY3cRBOquGpb4U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:19:43 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\2d697503-0c84-40cc-9604-495e32e8f764.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"38782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 08:34:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"50013"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 07:12:15 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.pfxo2ywoz0.jpeg">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.uziuz7jhwi.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\2d697503-0c84-40cc-9604-495e32e8f764.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pfxo2ywoz0"},{"Name":"integrity","Value":"sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"38782"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 12 Jul 2025 08:34:48 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uziuz7jhwi"},{"Name":"integrity","Value":"sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"50013"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 07:12:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"35654"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:24:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.oofr367d6r.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oofr367d6r"},{"Name":"integrity","Value":"sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"35654"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:24:17 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.176idwbv3c.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"176idwbv3c"},{"Name":"integrity","Value":"sha256-I/Pukdue1XeC\u002BWJWCsByHb4ZG1S3mKM2\u002BwcbSGeISLw="},{"Name":"label","Value":"_content/HeathCare/uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"110522"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022I/Pukdue1XeC\u002BWJWCsByHb4ZG1S3mKM2\u002BwcbSGeISLw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 07:11:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-I/Pukdue1XeC\u002BWJWCsByHb4ZG1S3mKM2\u002BwcbSGeISLw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"110522"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022I/Pukdue1XeC\u002BWJWCsByHb4ZG1S3mKM2\u002BwcbSGeISLw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 07:11:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/blogs/f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg'))</AssetFile>
@@ -72,6 +96,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oofr367d6r"},{"Name":"integrity","Value":"sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="},{"Name":"label","Value":"_content/HeathCare/uploads/doctors/62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"35654"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 13:08:49 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"31453"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:26:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.w8fxsbhyll.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w8fxsbhyll"},{"Name":"integrity","Value":"sha256-cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs="},{"Name":"label","Value":"_content/HeathCare/uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"31453"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:26:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.dylsxtybzy.jpeg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -95,6 +131,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"oofr367d6r"},{"Name":"integrity","Value":"sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="},{"Name":"label","Value":"_content/HeathCare/uploads/doctors/83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"35654"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 10 Jul 2025 13:52:44 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"46644"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:25:59 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/HeathCare/uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.yrqkmb29d6.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\doctors\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yrqkmb29d6"},{"Name":"integrity","Value":"sha256-cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c="},{"Name":"label","Value":"_content/HeathCare/uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"46644"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c=\u0022"},{"Name":"Last-Modified","Value":"Mon, 14 Jul 2025 08:25:59 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             doctors.forEach(doctor => {
                 doctorsTable.row.add([
-                    `<img src="${doctor.imagePath ? 'https://localhost:7230' + doctor.imagePath : 'https://via.placeholder.com/50'}" alt="${doctor.name}" width="50" class="rounded-circle">`,
+                   `<img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}" width="50" class="rounded-circle">`,
                     doctor.name,
                     doctor.specialty,
                     doctor.departmentName,
@@ -193,12 +193,50 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-   
+    // Load all blogs
+    async function loadBlogs() {
+        try {
+            const blogs = await fetchData('/api/blogs');
+            blogsTable.clear().draw();
+            
+            blogs.forEach(blog => {
+                blogsTable.row.add([
+                    
+                    `<img src="https://localhost:7230${blog.imagePath}" alt="${blog.title}" width="50">`,
+                    blog.title.length > 50 ? blog.title.substring(0, 50) + '...' : blog.title,
+                    new Date(blog.createdAt).toLocaleDateString(),
+                    `
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-primary edit-blog" data-id="${blog.id}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger delete-blog" data-id="${blog.id}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    `
+                ]).draw(false);
+            });
+
+            // Add event listeners to action buttons
+            document.querySelectorAll('.edit-blog').forEach(btn => {
+                btn.addEventListener('click', () => editBlog(btn.dataset.id));
+            });
+            
+            document.querySelectorAll('.delete-blog').forEach(btn => {
+                btn.addEventListener('click', () => confirmDelete('blog', btn.dataset.id));
+            });
+
+        } catch (error) {
+            console.error('Error loading blogs:', error);
+            showAlert('error', 'Failed to load blogs');
+        }
+    }
 
     // Load all appointments
     async function loadAppointments() {
         try {
-            const appointments = await fetchData('/api/bookings');
+            const appointments = await fetchData('/api/Bookings');
             appointmentsTable.clear().draw();
             
             appointments.forEach(appt => {
@@ -412,7 +450,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
- document.getElementById('saveDepartmentBtn').addEventListener('click', async () => {
+    document.getElementById('saveDepartmentBtn').addEventListener('click', async () => {
     const form = document.getElementById('departmentForm');
     const id = document.getElementById('departmentId').value;
     const isEdit = !!id;
@@ -424,29 +462,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     try {
         const data = {
-            name: document.getElementById('departmentName').value,
-            description: document.getElementById('departmentDescription').value
+            Name: document.getElementById('departmentName').value,
+            Description: document.getElementById('departmentDescription').value
         };
         
-        const token = localStorage.getItem('healthcare_token');
-        
         if (isEdit) {
-            data.id = parseInt(id);
-            await fetch(`https://localhost:7230/api/departments/${id}`, {
+            data.Id = parseInt(id);
+            await fetchData(`/api/departments/${id}`, {
                 method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
                 body: JSON.stringify(data)
             });
         } else {
-            await fetch(`https://localhost:7230/api/departments`, {
+            await fetchData('/api/departments', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
                 body: JSON.stringify(data)
             });
         }
@@ -463,7 +491,100 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-   
+    // Blog CRUD operations
+    document.getElementById('addBlogBtn').addEventListener('click', () => {
+        document.getElementById('blogModalTitle').textContent = 'Add New Blog Post';
+        document.getElementById('blogId').value = '';
+        document.getElementById('blogForm').reset();
+        document.getElementById('blogImagePreviewContainer').style.display = 'none';
+        
+        const modal = new bootstrap.Modal(document.getElementById('blogModal'));
+        modal.show();
+    });
+
+    async function editBlog(id) {
+        try {
+            const blog = await fetchData(`/api/blogs/${id}`);
+            
+            document.getElementById('blogModalTitle').textContent = 'Edit Blog Post';
+            document.getElementById('blogId').value = blog.id;
+            document.getElementById('blogTitle').value = blog.title;
+            document.getElementById('blogContent').value = blog.content;
+            
+            // Show image preview if exists
+            if (blog.imageUrl) {
+                document.getElementById('blogImagePreview').src = blog.imageUrl;
+                document.getElementById('blogImagePreviewContainer').style.display = 'block';
+            } else {
+                document.getElementById('blogImagePreviewContainer').style.display = 'none';
+            }
+            
+            const modal = new bootstrap.Modal(document.getElementById('blogModal'));
+            modal.show();
+            
+        } catch (error) {
+            console.error('Error loading blog:', error);
+            showAlert('error', 'Failed to load blog details');
+        }
+    }
+
+    // Blog Form Submission
+document.getElementById('saveBlogBtn').addEventListener('click', async () => {
+    const form = document.getElementById('blogForm');
+    const id = document.getElementById('blogId').value;
+    const isEdit = !!id;
+    
+    // Validate required fields
+    const title = document.getElementById('blogTitle').value;
+    const content = document.getElementById('blogContent').value;
+    
+    if (!title || !content) {
+        showAlert('error', 'Title and Content are required fields');
+        return;
+    }
+
+    try {
+        const formData = new FormData();
+        formData.append('Title', title);
+        formData.append('Content', content);
+        
+        const imageFile = document.getElementById('blogImage').files[0];
+        if (imageFile) {
+            formData.append('ImageFile', imageFile);
+        }
+
+        if (isEdit) {
+            formData.append('Id', id);
+            await fetchData(`/api/blogs/${id}`, {
+                method: 'PUT',
+                body: formData
+            }, false);
+        } else {
+            await fetchData('/api/blogs', {
+                method: 'POST',
+                body: formData
+            }, false);
+        }
+        
+        showAlert('success', `Blog post ${isEdit ? 'updated' : 'added'} successfully`);
+        loadBlogs();
+        
+        const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
+        modal.hide();
+        
+    } catch (error) {
+        console.error('Error saving blog:', error);
+        showAlert('error', `Failed to ${isEdit ? 'update' : 'add'} blog post: ${error.message}`);
+    }
+});
+
+
+// Temporary test in console
+document.getElementById('blogForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+    console.log('Content value:', document.getElementById('blogContent').value);
+});
 
     // Appointment status update
     async function updateAppointmentStatus(id, status) {
@@ -518,7 +639,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     endpoint = `/api/bookings/${currentDeleteId}`;
                     break;
                 case 'contact':
-                    endpoint = `/api/contact/${currentDeleteId}`;
+                    endpoint = `/api/contacts/${currentDeleteId}`;
                     break;
             }
             
@@ -591,32 +712,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper function to fetch data
     async function fetchData(endpoint, options = {}, isJson = true) {
-        const token = localStorage.getItem('healthcare_token');
-        
-        const defaultOptions = {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        };
-        
-        const finalOptions = {
-            ...defaultOptions,
-            ...options
-        };
-        
-        if (finalOptions.body && !(finalOptions.body instanceof FormData)) {
-            finalOptions.headers['Content-Type'] = 'application/json';
-        }
-        
-        const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
-        
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Request failed');
-        }
-        
-        return isJson ? await response.json() : response;
+    const token = localStorage.getItem('healthcare_token');
+    
+    if (!token) {
+        window.location.href = 'login.html';
+        throw new Error('No token found');
     }
+
+    const defaultOptions = {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    };
+    
+    const finalOptions = {
+        ...defaultOptions,
+        ...options
+    };
+    
+    // Don't set Content-Type for FormData
+    if (!(finalOptions.body instanceof FormData)) {
+        finalOptions.headers['Content-Type'] = 'application/json';
+    }
+    
+    const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
+    
+    if (!response.ok) {
+        let errorMsg = 'Request failed';
+        try {
+            const errorData = await response.json();
+            errorMsg = errorData.message || JSON.stringify(errorData);
+        } catch (e) {
+            errorMsg = await response.text();
+        }
+        throw new Error(errorMsg);
+    }
+    
+    // Handle empty responses (204 No Content)
+    if (response.status === 204) {
+        return null;
+    }
+    
+    return isJson ? await response.json() : response;
+}
+
 
     // Show alert message
     function showAlert(type, message) {
@@ -644,7 +783,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadDashboardData();
     loadDoctors();
     loadDepartments();
- 
+    loadBlogs();
     loadAppointments();
     loadContacts();
 });

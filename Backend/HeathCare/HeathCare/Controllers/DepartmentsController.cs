@@ -40,22 +40,22 @@ namespace HeathCare.Controllers
             return CreatedAtAction(nameof(GetDepartment), new { id = department.Id }, department);
         }
 
-        [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> PutDepartment(int id, DepartmentUpdateDTO departmentDto)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutDepartment(int id, [FromBody] DepartmentUpdateDTO departmentDto)
         {
-            if (id != departmentDto.Id) return BadRequest();
+            if (id != departmentDto.Id)
+                return BadRequest();
 
             try
             {
                 await _departmentService.UpdateDepartmentAsync(id, departmentDto);
+                return NoContent(); // Returns 204 status
             }
             catch (KeyNotFoundException)
             {
                 return NotFound();
             }
-
-            return NoContent();
         }
 
         [HttpDelete("{id}")]

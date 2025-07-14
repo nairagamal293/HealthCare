@@ -23,7 +23,7 @@ namespace HeathCare.DTOs
         public string Email { get; set; }
 
         [Required]
-        [StringLength(1000, MinimumLength = 10)]
+       
         public string Message { get; set; }
     }
 }

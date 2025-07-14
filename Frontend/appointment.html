@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+    <title>Book Appointment | MediCare Center</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>Book Appointment | MediCare Center</title>
 </head>
 <body>
-        <!-- Top Bar -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
@@ -28,14 +24,7 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -52,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -66,7 +55,6 @@
                             <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
                             <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
                             <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -84,22 +72,6 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Book an Appointment</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Appointment</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Appointment Section -->
     <section class="appointment-section">
@@ -117,76 +89,44 @@
                         <form id="appointmentForm" class="needs-validation" novalidate>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <label for="firstName" class="form-label">First Name *</label>
-                                    <input type="text" class="form-control" id="firstName" required>
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" id="fullName" required>
                                     <div class="invalid-feedback">
-                                        Please provide your first name.
+                                        Please provide your full name.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="lastName" class="form-label">Last Name *</label>
-                                    <input type="text" class="form-control" id="lastName" required>
-                                    <div class="invalid-feedback">
-                                        Please provide your last name.
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="phone" class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" id="phone" required>
+                                    <label for="phoneNumber" class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" id="phoneNumber" required>
                                     <div class="invalid-feedback">
                                         Please provide a valid phone number.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="email">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email address.
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="department" class="form-label">Department *</label>
                                     <select class="form-select" id="department" required>
                                         <option value="" selected disabled>Select Department</option>
-                                        <option value="cardiology">Cardiology</option>
-                                        <option value="neurology">Neurology</option>
-                                        <option value="orthopedics">Orthopedics</option>
-                                        <option value="pediatrics">Pediatrics</option>
-                                        <option value="radiology">Radiology</option>
-                                        <option value="surgery">Surgery</option>
-                                        <option value="primary-care">Primary Care</option>
+                                        <!-- Will be populated by JavaScript -->
                                     </select>
                                     <div class="invalid-feedback">
                                         Please select a department.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="doctor" class="form-label">Preferred Doctor (Optional)</label>
-                                    <select class="form-select" id="doctor">
-                                        <option value="" selected>Any Available Doctor</option>
-                                        <option value="dr-johnson">Dr. Sarah Johnson</option>
-                                        <option value="dr-chen">Dr. Michael Chen</option>
-                                        <option value="dr-rodriguez">Dr. Emily Rodriguez</option>
-                                        <option value="dr-wilson">Dr. James Wilson</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="date" class="form-label">Preferred Date *</label>
-                                    <input type="date" class="form-control" id="date" required>
+                                    <label for="preferredDate" class="form-label">Preferred Date *</label>
+                                    <input type="date" class="form-control" id="preferredDate" min="" required>
                                     <div class="invalid-feedback">
-                                        Please select a date.
+                                        Please select a future date.
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="time" class="form-label">Preferred Time *</label>
-                                    <select class="form-select" id="time" required>
-                                        <option value="" selected disabled>Select Time</option>
-                                        <option value="morning">Morning (8AM-12PM)</option>
-                                        <option value="afternoon">Afternoon (1PM-5PM)</option>
-                                        <option value="evening">Evening (5PM-8PM)</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please select a time.
-                                    </div>
-                                </div>
-                                <div class="col-12">
                                     <label for="message" class="form-label">Additional Information</label>
                                     <textarea class="form-control" id="message" rows="3"></textarea>
                                 </div>
@@ -202,7 +142,10 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary">Book Appointment</button>
+                                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                                        <span id="submitText">Book Appointment</span>
+                                        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -241,62 +184,103 @@
         </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Confirmation Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Appointment Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 class="mb-3">Thank You!</h4>
+                        <p>Your appointment request has been submitted successfully.</p>
+                        <p>We will contact you shortly to confirm your booking.</p>
+                        <div class="appointment-details mt-4 p-3 bg-light rounded">
+                            <p class="mb-1"><strong>Name:</strong> <span id="confirmName"></span></p>
+                            <p class="mb-1"><strong>Department:</strong> <span id="confirmDepartment"></span></p>
+                            <p class="mb-1"><strong>Date:</strong> <span id="confirmDate"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
+        <div class="footer-main">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
-                            <div class="footer-contact">
-                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
-                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
-                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                                <span class="brand-name">MediCare Center</span>
+                            </div>
+                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to our Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h3>Quick Links</h3>
+                            <h4 class="footer-title">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
-                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
-                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="doctors.html">Our Doctors</a></li>
+                                <li><a href="blog.html">Health Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Our Services</h3>
+                            <h4 class="footer-title">Medical Departments</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
-                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
-                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
-                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
-                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
+                                <li><a href="departments.html#cardiology">Cardiology</a></li>
+                                <li><a href="departments.html#neurology">Neurology</a></li>
+                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Newsletter</h3>
-                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your Email" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -305,28 +289,28 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="footer-links">
+                    <div class="col-md-6">
+                        <div class="footer-legal">
                             <a href="privacy.html">Privacy Policy</a>
                             <a href="terms.html">Terms of Service</a>
+                            <a href="sitemap.html">Sitemap</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script src="js/appointment.js"></script>
 </body>
 </html>

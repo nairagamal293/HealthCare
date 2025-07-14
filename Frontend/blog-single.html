@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read our latest health articles and medical news">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+         <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/blogdetails.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    
+    <!-- Custom CSS -->
+ 
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <title>Blog Post | MediCare Center</title>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-location"></i>حي جبل النور – جوار مكتبة جرير </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="MediCare Center" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
+                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Details Section -->
+    <section class="blog-details-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <article class="blog-details" id="blog-details-content">
+                        <!-- Blog content will be loaded here -->
+                        <div class="text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Author -->
+                    <div class="blog-author d-none" id="blog-author">
+                        <div class="author-img">
+                            <img src="" alt="Author" id="author-image" class="img-fluid">
+                        </div>
+                        <div class="author-info">
+                            <h4 id="author-name"></h4>
+                            <p id="author-bio"></p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="blog-comments mt-5 d-none" id="comments-section">
+                        <h3 class="comments-title">Comments</h3>
+                        <div class="comments-list" id="comments-list">
+                            <!-- Comments will be loaded here -->
+                        </div>
+                        <div class="comment-form mt-5">
+                            <h3>Leave a Comment</h3>
+                            <form id="comment-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" placeholder="Your Comment" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Post Comment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Search</h3>
+                            <form class="search-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search articles...">
+                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul class="category-list" id="blog-categories-sidebar">
+                                <!-- Categories will be loaded dynamically -->
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Recent Posts</h3>
+                            <div class="recent-posts" id="recent-posts-sidebar">
+                                <!-- Recent posts will be loaded dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tag-cloud" id="blog-tags-sidebar">
+                                <!-- Tags will be loaded dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                                <span class="brand-name">MediCare Center</span>
+                            </div>
+                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to our Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="doctors.html">Our Doctors</a></li>
+                                <li><a href="blog.html">Health Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Departments Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Medical Departments</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">Cardiology</a></li>
+                                <li><a href="departments.html#neurology">Neurology</a></li>
+                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                                <li><a href="departments.html#radiology">Radiology</a></li>
+                                <li><a href="departments.html#surgery">General Surgery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="sitemap.html">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Blog Details Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const API_BASE_URL = 'https://localhost:7230/api';
+        
+        // Get blog ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get('id');
+
+        if (!blogId) {
+            window.location.href = 'blog.html';
+            return;
+        }
+
+        // Load blog details
+        async function loadBlogDetails() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/blogs/${blogId}`);
+                const blog = await response.json();
+                
+                if (!blog) {
+                    window.location.href = 'blog.html';
+                    return;
+                }
+
+                displayBlogDetails(blog);
+                updateSidebar();
+            } catch (err) {
+                console.error('Error loading blog details:', err);
+                document.getElementById('blog-details-content').innerHTML = 
+                    '<div class="alert alert-danger">Error loading blog post. Please try again later.</div>';
+            }
+        }
+
+        // Display blog details
+        function displayBlogDetails(blog) {
+            const container = document.getElementById('blog-details-content');
+            
+            // Format date
+            const date = new Date(blog.createdAt);
+            const formattedDate = date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+
+            let html = `
+                <div class="post-img">
+                    <img src="https://localhost:7230${blog.imagePath}" alt="${blog.title}" class="img-fluid">
+                </div>
+                <div class="post-meta">
+                    <span><i class="far fa-calendar"></i> ${formattedDate}</span>
+                    <span><i class="far fa-user"></i> By ${blog.author || 'MediCare Team'}</span>
+                    ${blog.categories?.length ? `<span><i class="far fa-folder"></i> ${blog.categories.join(', ')}</span>` : ''}
+                </div>
+                <h1 class="post-title">${blog.title}</h1>
+                <div class="post-content">
+                    ${blog.content}
+                </div>
+                <div class="post-footer">
+                    <div class="post-tags">
+                        ${blog.tags?.map(tag => `<a href="blog.html?tag=${tag}">${tag}</a>`).join('') || ''}
+                    </div>
+                    <div class="social-share">
+                        <span>Share:</span>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+
+            // Show author section if author info exists
+            if (blog.author && blog.authorBio) {
+                const authorSection = document.getElementById('blog-author');
+                document.getElementById('author-name').textContent = blog.author;
+                document.getElementById('author-bio').textContent = blog.authorBio;
+                if (blog.authorImage) {
+                    document.getElementById('author-image').src = `https://localhost:7230${blog.authorImage}`;
+                }
+                authorSection.classList.remove('d-none');
+            }
+
+            // Show comments section
+            document.getElementById('comments-section').classList.remove('d-none');
+        }
+
+        // Update sidebar (similar to blog.html)
+        async function updateSidebar() {
+            try {
+                // Load all blogs for sidebar
+                const response = await fetch(`${API_BASE_URL}/blogs`);
+                const allBlogs = await response.json();
+
+                // Categories
+                const categories = {};
+                allBlogs.forEach(blog => {
+                    blog.categories?.forEach(cat => {
+                        categories[cat] = (categories[cat] || 0) + 1;
+                    });
+                });
+
+                let categoriesHtml = '';
+                for (const [category, count] of Object.entries(categories)) {
+                    categoriesHtml += `<li><a href="blog.html?category=${category}">${category} <span>(${count})</span></a></li>`;
+                }
+                document.getElementById('blog-categories-sidebar').innerHTML = categoriesHtml;
+
+                // Recent posts (latest 3, excluding current)
+                const recentPosts = [...allBlogs]
+                    .filter(blog => blog.id !== blogId)
+                    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                    .slice(0, 3);
+                
+                let recentHtml = '';
+                recentPosts.forEach(post => {
+                    recentHtml += `
+                        <div class="recent-post">
+                            <div class="post-thumb">
+                                <a href="blog-single.html?id=${post.id}"><img src="https://localhost:7230${post.imagePath}" alt="${post.title}" class="img-fluid"></a>
+                            </div>
+                            <div class="post-info">
+                                <h4><a href="blog-single.html?id=${post.id}">${post.title}</a></h4>
+                                <span>${new Date(post.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                document.getElementById('recent-posts-sidebar').innerHTML = recentHtml;
+
+                // Tags
+                const tags = new Set();
+                allBlogs.forEach(blog => {
+                    blog.tags?.forEach(tag => tags.add(tag));
+                });
+
+                let tagsHtml = '';
+                tags.forEach(tag => {
+                    tagsHtml += `<a href="blog.html?tag=${tag}">${tag}</a>`;
+                });
+                document.getElementById('blog-tags-sidebar').innerHTML = tagsHtml;
+
+            } catch (err) {
+                console.error('Error loading sidebar data:', err);
+            }
+        }
+
+        // Initial load
+        loadBlogDetails();
+    });
+    </script>
+</body>
+</html>

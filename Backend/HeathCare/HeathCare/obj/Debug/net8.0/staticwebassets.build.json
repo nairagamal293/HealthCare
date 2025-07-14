@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wIbOTS+sQwx33htNMWw/P7e9C2XVOzqsDzU44JpXKj4=",
+  "Hash": "Q/S7RjIZ9zkjQEHMl0O4Eyg8qbseKuyvdXFG0NdZqLQ=",
   "Source": "HeathCare",
   "BasePath": "_content/HeathCare",
   "Mode": "Default",
@@ -1277,12 +1277,12 @@
       "OriginalItemSpec": "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.0\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg",
       "SourceId": "HeathCare",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
       "BasePath": "_content/HeathCare",
-      "RelativePath": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6#[.{fingerprint}]?.jpeg",
+      "RelativePath": "uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1291,19 +1291,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pfxo2ywoz0",
-      "Integrity": "uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=",
+      "Fingerprint": "v1tzee3rrp",
+      "Integrity": "Lcwt9f2A9xnO9Nr+My2VbiZEkXJ0qBY3cRBOquGpb4U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg"
     },
     {
-      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\2d697503-0c84-40cc-9604-495e32e8f764.jpeg",
       "SourceId": "HeathCare",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
       "BasePath": "_content/HeathCare",
-      "RelativePath": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3#[.{fingerprint}]?.jpeg",
+      "RelativePath": "uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1312,11 +1312,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pfxo2ywoz0",
-      "Integrity": "uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=",
+      "Fingerprint": "uziuz7jhwi",
+      "Integrity": "qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\2d697503-0c84-40cc-9604-495e32e8f764.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oofr367d6r",
+      "Integrity": "KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "176idwbv3c",
+      "Integrity": "I/Pukdue1XeC+WJWCsByHb4ZG1S3mKM2+wcbSGeISLw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\blogs\\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg"
     },
     {
       "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg",
@@ -1403,6 +1445,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
     },
     {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w8fxsbhyll",
+      "Integrity": "cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg"
+    },
+    {
       "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
       "SourceId": "HeathCare",
       "SourceType": "Discovered",
@@ -1443,6 +1506,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\doctors\\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg"
+    },
+    {
+      "Identity": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg",
+      "SourceId": "HeathCare",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\",
+      "BasePath": "_content/HeathCare",
+      "RelativePath": "uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yrqkmb29d6",
+      "Integrity": "cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\doctors\\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg"
     }
   ],
   "Endpoints": [
@@ -3667,8 +3751,8 @@
       ]
     },
     {
-      "Route": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
-      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "Route": "uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3677,7 +3761,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38782"
+          "Value": "44369"
         },
         {
           "Name": "Content-Type",
@@ -3685,11 +3769,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+          "Value": "\"Lcwt9f2A9xnO9Nr+My2VbiZEkXJ0qBY3cRBOquGpb4U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Jul 2025 07:41:48 GMT"
+          "Value": "Mon, 14 Jul 2025 08:19:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3699,13 +3783,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+          "Value": "sha256-Lcwt9f2A9xnO9Nr+My2VbiZEkXJ0qBY3cRBOquGpb4U="
         }
       ]
     },
     {
-      "Route": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.pfxo2ywoz0.jpeg",
-      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg",
+      "Route": "uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.v1tzee3rrp.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3714,7 +3798,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38782"
+          "Value": "44369"
         },
         {
           "Name": "Content-Type",
@@ -3722,11 +3806,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+          "Value": "\"Lcwt9f2A9xnO9Nr+My2VbiZEkXJ0qBY3cRBOquGpb4U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Jul 2025 07:41:48 GMT"
+          "Value": "Mon, 14 Jul 2025 08:19:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3736,21 +3820,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pfxo2ywoz0"
+          "Value": "v1tzee3rrp"
         },
         {
           "Name": "label",
-          "Value": "uploads/blogs/37ead08e-df7c-49a7-a9a6-5d443e8863a6.jpeg"
+          "Value": "uploads/blogs/1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+          "Value": "sha256-Lcwt9f2A9xnO9Nr+My2VbiZEkXJ0qBY3cRBOquGpb4U="
         }
       ]
     },
     {
-      "Route": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
-      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "Route": "uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\2d697503-0c84-40cc-9604-495e32e8f764.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3759,7 +3843,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38782"
+          "Value": "50013"
         },
         {
           "Name": "Content-Type",
@@ -3767,11 +3851,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+          "Value": "\"qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Jul 2025 08:34:48 GMT"
+          "Value": "Mon, 14 Jul 2025 07:12:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3781,13 +3865,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+          "Value": "sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="
         }
       ]
     },
     {
-      "Route": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.pfxo2ywoz0.jpeg",
-      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg",
+      "Route": "uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.uziuz7jhwi.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\2d697503-0c84-40cc-9604-495e32e8f764.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3796,7 +3880,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38782"
+          "Value": "50013"
         },
         {
           "Name": "Content-Type",
@@ -3804,11 +3888,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE=\""
+          "Value": "\"qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 12 Jul 2025 08:34:48 GMT"
+          "Value": "Mon, 14 Jul 2025 07:12:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3818,15 +3902,179 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pfxo2ywoz0"
+          "Value": "uziuz7jhwi"
         },
         {
           "Name": "label",
-          "Value": "uploads/blogs/9be7c111-ed30-440c-9ff7-e8427ef909a3.jpeg"
+          "Value": "uploads/blogs/2d697503-0c84-40cc-9604-495e32e8f764.jpeg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uzaGfc4hXJO6UFvZdKtFYwU6vb5CX6MUk3tiLqUSGpE="
+          "Value": "sha256-qqpJxgUwpDsfHRwCDngP4TO/pw8iS6Cs39m4fa1TFvo="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.oofr367d6r.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35654"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:24:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oofr367d6r"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/blogs/be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.176idwbv3c.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I/Pukdue1XeC+WJWCsByHb4ZG1S3mKM2+wcbSGeISLw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 07:11:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "176idwbv3c"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-I/Pukdue1XeC+WJWCsByHb4ZG1S3mKM2+wcbSGeISLw="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/blogs/e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\blogs\\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"I/Pukdue1XeC+WJWCsByHb4ZG1S3mKM2+wcbSGeISLw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 07:11:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-I/Pukdue1XeC+WJWCsByHb4ZG1S3mKM2+wcbSGeISLw="
         }
       ]
     },
@@ -4159,6 +4407,88 @@
       ]
     },
     {
+      "Route": "uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:26:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.w8fxsbhyll.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31453"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:26:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w8fxsbhyll"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/doctors/79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cAN4LWZH1Gkh4KxtoRnM6FCR6GkmNS0HgYz5QUdryxs="
+        }
+      ]
+    },
+    {
       "Route": "uploads/doctors/831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.dylsxtybzy.jpeg",
       "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg",
       "Selectors": [],
@@ -4319,6 +4649,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-KPMk8vRIdRZnZGCrWONBmSWQeNLxbaGJaxDh9ATuO1c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46644"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:25:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.yrqkmb29d6.jpeg",
+      "AssetFile": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\wwwroot\\uploads\\doctors\\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46644"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 14 Jul 2025 08:25:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yrqkmb29d6"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/doctors/9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cvnkVlH8/8KtkVIKAUtUb0yTkFdxn9k/cyUr2kJfF9c="
         }
       ]
     }

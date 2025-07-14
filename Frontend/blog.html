@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,15 +11,420 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <!-- Custom CSS -->
+    <style>
+        /* NEW BLOG-SPECIFIC STYLES ONLY */
+        .blog-content-area {
+            --primary-color: #2a7fba;
+            --secondary-color: #3bb4c1;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --accent-color: #e74c3c;
+            --text-color: #555;
+            --text-light: #777;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        .blog-content-area {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .blog-content-area h1, 
+        .blog-content-area h2, 
+        .blog-content-area h3, 
+        .blog-content-area h4, 
+        .blog-content-area h5, 
+        .blog-content-area h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0 60px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .blog-header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Blog Posts */
+        .blog-posts-container {
+            padding: 40px 0;
+        }
+        
+        .modern-blog-post {
+            margin-bottom: 40px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: var(--transition);
+            background: white;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .modern-blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .modern-post-img {
+            overflow: hidden;
+            height: 220px;
+            position: relative;
+        }
+        
+        .modern-post-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .modern-blog-post:hover .modern-post-img img {
+            transform: scale(1.05);
+        }
+        
+        .modern-post-content {
+            padding: 25px;
+        }
+        
+        .modern-post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .modern-post-meta span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .modern-post-meta i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+        
+        .modern-blog-post h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .modern-blog-post h3 a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .modern-blog-post h3 a:hover {
+            color: var(--primary-color);
+        }
+        
+        .modern-blog-post p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .modern-read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .modern-read-more i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .modern-read-more:hover {
+            color: var(--secondary-color);
+        }
+        
+        .modern-read-more:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Featured Post */
+        .modern-featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .modern-featured-post .modern-post-img {
+            height: 100%;
+        }
+        
+        .modern-featured-post .modern-post-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .modern-featured-post h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .modern-featured-post p {
+            font-size: 1.05rem;
+        }
+        
+        .modern-post-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        /* Sidebar */
+        .modern-blog-sidebar {
+            padding-left: 30px;
+        }
+        
+        .modern-sidebar-widget {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .modern-widget-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            position: relative;
+        }
+        
+        .modern-widget-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .modern-search-form .input-group {
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        
+        .modern-search-form .form-control {
+            border-right: 0;
+            padding: 10px 15px;
+        }
+        
+        .modern-search-form .btn {
+            border-left: 0;
+            padding: 10px 15px;
+        }
+        
+        .modern-category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .modern-category-list li {
+            margin-bottom: 10px;
+        }
+        
+        .modern-category-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px 0;
+            transition: var(--transition);
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .modern-category-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .modern-category-list a span {
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+        }
+        
+        .modern-recent-posts {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .modern-recent-post {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .modern-recent-post .modern-post-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .modern-recent-post .modern-post-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .modern-recent-post:hover .modern-post-thumb img {
+            transform: scale(1.1);
+        }
+        
+        .modern-recent-post .modern-post-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+        
+        .modern-recent-post .modern-post-info h4 a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .modern-recent-post .modern-post-info h4 a:hover {
+            color: var(--primary-color);
+        }
+        
+        .modern-recent-post .modern-post-info span {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .modern-tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .modern-tag-cloud a {
+            display: inline-block;
+            background: #f5f5f5;
+            color: var(--text-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .modern-tag-cloud a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Pagination */
+        .modern-pagination {
+            margin-top: 50px;
+        }
+        
+        .modern-page-item {
+            margin: 0 5px;
+        }
+        
+        .modern-page-link {
+            border: none;
+            color: var(--text-color);
+            border-radius: var(--border-radius) !important;
+            padding: 8px 15px;
+            transition: var(--transition);
+        }
+        
+        .modern-page-link:hover {
+            background: #f0f0f0;
+            color: var(--primary-color);
+        }
+        
+        .modern-page-item.active .modern-page-link {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .modern-blog-sidebar {
+                padding-left: 0;
+                margin-top: 50px;
+            }
+            
+            .modern-featured-post {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .blog-header {
+                padding: 60px 0 40px;
+            }
+            
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
     <title>Health Blog | MediCare Center</title>
 </head>
 <body>
-     <div class="top-bar">
+    <!-- EXACT ORIGINAL NAVBAR -->
+    <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -29,19 +433,10 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -85,305 +480,587 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Health Blog</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- NEW BLOG CONTENT AREA (ONLY THIS SECTION CHANGED) -->
+    <div class="blog-content-area">
+      
 
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="blog-posts">
-                        <!-- Featured Post -->
-                        <div class="blog-post featured-post">
-                            <div class="post-img">
-                                <img src="images/blog-featured.jpg" alt="Featured Post" class="img-fluid">
-                                <div class="post-badge">Featured</div>
-                            </div>
-                            <div class="post-content">
-                                <div class="post-meta">
-                                    <span><i class="far fa-calendar"></i> June 15, 2023</span>
-                                    <span><i class="far fa-user"></i> By Dr. Sarah Johnson</span>
-                                    <span><i class="far fa-folder"></i> Cardiology, Prevention</span>
+        <!-- Blog Section -->
+        <section class="blog-posts-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div id="blog-posts-container">
+                            <!-- Featured Post -->
+                            <div class="modern-blog-post modern-featured-post">
+                                <div class="modern-post-img">
+                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dark Circles Treatment" class="img-fluid">
+                                    <div class="modern-post-badge">Featured</div>
                                 </div>
-                                <h2><a href="blog-single.html">Understanding Heart Disease: Risk Factors and Prevention</a></h2>
-                                <p>Heart disease remains the leading cause of death worldwide, but many cases are preventable. In this comprehensive guide, we explore the major risk factors for cardiovascular disease and evidence-based strategies to maintain a healthy heart...</p>
-                                <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <!-- Regular Posts -->
-                        <div class="row g-4">
-                            <!-- Post 1 -->
-                            <div class="col-md-6">
-                                <div class="blog-post">
-                                    <div class="post-img">
-                                        <img src="images/blog-1.jpg" alt="Summer Safety Tips" class="img-fluid">
+                                <div class="modern-post-content">
+                                    <div class="modern-post-meta">
+                                        <span><i class="far fa-calendar"></i> July 14, 2025</span>
+                                        <span><i class="far fa-user"></i> By MediCare Team</span>
                                     </div>
-                                    <div class="post-content">
-                                        <div class="post-meta">
-                                            <span><i class="far fa-calendar"></i> June 5, 2023</span>
-                                            <span><i class="far fa-user"></i> By Dr. Emily Rodriguez</span>
-                                        </div>
-                                        <h3><a href="blog-single.html">Summer Safety Tips for Children</a></h3>
-                                        <p>Keep your kids safe and healthy this summer with these expert recommendations from our pediatric team on sun protection, hydration, and water safety...</p>
-                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                                    </div>
+                                    <h2><a href="blog-single.html">Dark Circles Demystified: Causes, Risk Factors and Treatment Options</a></h2>
+                                    <p>Dark circles under the eyes, commonly known as periodical hyperpigmentation, can be caused by a combination of factors including genetics, aging, lifestyle habits, and medical conditions. Learn about the latest treatment options available.</p>
+                                    <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
-
-                            <!-- Post 2 -->
-                            <div class="col-md-6">
-                                <div class="blog-post">
-                                    <div class="post-img">
-                                        <img src="images/blog-2.jpg" alt="Back Pain Relief" class="img-fluid">
-                                    </div>
-                                    <div class="post-content">
-                                        <div class="post-meta">
-                                            <span><i class="far fa-calendar"></i> May 28, 2023</span>
-                                            <span><i class="far fa-user"></i> By Dr. James Wilson</span>
+                            
+                            <!-- Regular Posts -->
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="modern-blog-post">
+                                        <div class="modern-post-img">
+                                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ketamine Treatment" class="img-fluid">
                                         </div>
-                                        <h3><a href="blog-single.html">Managing Chronic Back Pain: New Approaches</a></h3>
-                                        <p>Discover the latest non-surgical treatments and exercises that can help alleviate persistent back pain, from physical therapy techniques to minimally invasive procedures...</p>
-                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        <div class="modern-post-content">
+                                            <div class="modern-post-meta">
+                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
+                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                            </div>
+                                            <h3><a href="blog-single.html">How Ketamine Can Help Chronic Pain & Neuropathic Pain Syndromes</a></h3>
+                                            <p>The anesthetic ketamine is used to treat various chronic pain syndromes, especially those that have been resistant to other treatments. Discover how it works and who might benefit.</p>
+                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Post 3 -->
-                            <div class="col-md-6">
-                                <div class="blog-post">
-                                    <div class="post-img">
-                                        <img src="images/blog-3.jpg" alt="Allergy Season" class="img-fluid">
-                                    </div>
-                                    <div class="post-content">
-                                        <div class="post-meta">
-                                            <span><i class="far fa-calendar"></i> May 15, 2023</span>
-                                            <span><i class="far fa-user"></i> By Dr. Michael Chen</span>
+                                
+                                <div class="col-md-6">
+                                    <div class="modern-blog-post">
+                                        <div class="modern-post-img">
+                                            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Swim Lessons" class="img-fluid">
                                         </div>
-                                        <h3><a href="blog-single.html">Surviving Allergy Season: Tips from Our Allergist</a></h3>
-                                        <p>Seasonal allergies can be miserable, but they don't have to ruin your spring. Learn about effective prevention strategies and treatment options to keep your symptoms under control...</p>
-                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        <div class="modern-post-content">
+                                            <div class="modern-post-meta">
+                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
+                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                            </div>
+                                            <h3><a href="blog-single.html">9 Steps to Teaching Swim Lessons</a></h3>
+                                            <p>Teaching swimming lessons involves a structured progression, prioritizing water safety and building confidence. Our experts break down the essential steps for effective swim instruction.</p>
+                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Post 4 -->
-                            <div class="col-md-6">
-                                <div class="blog-post">
-                                    <div class="post-img">
-                                        <img src="images/blog-4.jpg" alt="Healthy Eating" class="img-fluid">
-                                    </div>
-                                    <div class="post-content">
-                                        <div class="post-meta">
-                                            <span><i class="far fa-calendar"></i> April 30, 2023</span>
-                                            <span><i class="far fa-user"></i> By Nutrition Team</span>
+                                
+                                <div class="col-md-6">
+                                    <div class="modern-blog-post">
+                                        <div class="modern-post-img">
+                                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lower Cholesterol" class="img-fluid">
                                         </div>
-                                        <h3><a href="blog-single.html">Nutrition Myths Debunked: Facts from Our Dietitians</a></h3>
-                                        <p>Separating fact from fiction in the world of nutrition. Our registered dietitians address common misconceptions about carbs, fats, detoxes, and more...</p>
-                                        <a href="blog-single.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        <div class="modern-post-content">
+                                            <div class="modern-post-meta">
+                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
+                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                            </div>
+                                            <h3><a href="blog-single.html">How To Lower Cholesterol Naturally... Tips For Better Heart Health</a></h3>
+                                            <p>To naturally lower cholesterol and improve heart health, focus on dietary changes, particularly reducing saturated fats and increasing fiber intake. Learn which foods to eat and which to avoid.</p>
+                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Pagination -->
-                        <nav aria-label="Page navigation" class="mt-5">
+                        <nav aria-label="Page navigation" class="modern-pagination mt-5">
                             <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                <li class="modern-page-item disabled">
+                                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                                 </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
+                                <li class="modern-page-item active"><a class="modern-page-link" href="#">1</a></li>
+                                <li class="modern-page-item"><a class="modern-page-link" href="#">2</a></li>
+                                <li class="modern-page-item"><a class="modern-page-link" href="#">3</a></li>
+                                <li class="modern-page-item">
+                                    <a class="modern-page-link" href="#">Next</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="blog-sidebar">
-                        <!-- Search Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">Search</h3>
-                            <form class="search-form">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search articles...">
-                                    <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
+                    
+                    <!-- Sidebar -->
+                    <div class="col-lg-4">
+                        <div class="modern-blog-sidebar">
+                            <!-- Search Widget -->
+                            <div class="modern-sidebar-widget">
+                                <h3 class="modern-widget-title">Search</h3>
+                                <form class="modern-search-form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search articles...">
+                                        <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </div>
 
-                        <!-- Categories Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">Categories</h3>
-                            <ul class="category-list">
-                                <li><a href="#">Cardiology <span>(12)</span></a></li>
-                                <li><a href="#">Pediatrics <span>(8)</span></a></li>
-                                <li><a href="#">Orthopedics <span>(6)</span></a></li>
-                                <li><a href="#">Neurology <span>(5)</span></a></li>
-                                <li><a href="#">Prevention <span>(15)</span></a></li>
-                                <li><a href="#">Nutrition <span>(7)</span></a></li>
-                                <li><a href="#">Mental Health <span>(4)</span></a></li>
-                            </ul>
-                        </div>
+                            <!-- Categories Widget -->
+                            <div class="modern-sidebar-widget">
+                                <h3 class="modern-widget-title">Categories</h3>
+                                <ul class="modern-category-list">
+                                    <li><a href="#">Dermatology <span>(12)</span></a></li>
+                                    <li><a href="#">Pain Management <span>(8)</span></a></li>
+                                    <li><a href="#">Pediatrics <span>(15)</span></a></li>
+                                    <li><a href="#">Cardiology <span>(9)</span></a></li>
+                                    <li><a href="#">Nutrition <span>(11)</span></a></li>
+                                    <li><a href="#">Fitness <span>(7)</span></a></li>
+                                </ul>
+                            </div>
 
-                        <!-- Recent Posts Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">Recent Posts</h3>
-                            <div class="recent-posts">
-                                <div class="recent-post">
-                                    <div class="post-thumb">
-                                        <a href="blog-single.html"><img src="images/blog-thumb-1.jpg" alt="Post Thumbnail" class="img-fluid"></a>
+                            <!-- Recent Posts Widget -->
+                            <div class="modern-sidebar-widget">
+                                <h3 class="modern-widget-title">Recent Posts</h3>
+                                <div class="modern-recent-posts">
+                                    <div class="modern-recent-post">
+                                        <div class="modern-post-thumb">
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                        </div>
+                                        <div class="modern-post-info">
+                                            <h4><a href="#">Dark Circles Demystified</a></h4>
+                                            <span>July 14, 2025</span>
+                                        </div>
                                     </div>
-                                    <div class="post-info">
-                                        <h4><a href="blog-single.html">Understanding Heart Disease</a></h4>
-                                        <span>June 15, 2023</span>
+                                    <div class="modern-recent-post">
+                                        <div class="modern-post-thumb">
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                        </div>
+                                        <div class="modern-post-info">
+                                            <h4><a href="#">Ketamine for Chronic Pain</a></h4>
+                                            <span>July 14, 2025</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="post-thumb">
-                                        <a href="blog-single.html"><img src="images/blog-thumb-2.jpg" alt="Post Thumbnail" class="img-fluid"></a>
-                                    </div>
-                                    <div class="post-info">
-                                        <h4><a href="blog-single.html">Summer Safety Tips</a></h4>
-                                        <span>June 5, 2023</span>
-                                    </div>
-                                </div>
-                                <div class="recent-post">
-                                    <div class="post-thumb">
-                                        <a href="blog-single.html"><img src="images/blog-thumb-3.jpg" alt="Post Thumbnail" class="img-fluid"></a>
-                                    </div>
-                                    <div class="post-info">
-                                        <h4><a href="blog-single.html">Managing Back Pain</a></h4>
-                                        <span>May 28, 2023</span>
+                                    <div class="modern-recent-post">
+                                        <div class="modern-post-thumb">
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                        </div>
+                                        <div class="modern-post-info">
+                                            <h4><a href="#">Teaching Swim Lessons</a></h4>
+                                            <span>July 14, 2025</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Tags Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">Tags</h3>
-                            <div class="tag-cloud">
-                                <a href="#">Heart Health</a>
-                                <a href="#">Children</a>
-                                <a href="#">Exercise</a>
-                                <a href="#">Nutrition</a>
-                                <a href="#">Prevention</a>
-                                <a href="#">Vaccines</a>
-                                <a href="#">Diabetes</a>
-                                <a href="#">Mental Health</a>
+                            <!-- Tags Widget -->
+                            <div class="modern-sidebar-widget">
+                                <h3 class="modern-widget-title">Tags</h3>
+                                <div class="modern-tag-cloud">
+                                    <a href="#">Skin Care</a>
+                                    <a href="#">Pain Relief</a>
+                                    <a href="#">Children</a>
+                                    <a href="#">Heart Health</a>
+                                    <a href="#">Exercise</a>
+                                    <a href="#">Diet</a>
+                                    <a href="#">Treatment</a>
+                                    <a href="#">Prevention</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-   <!-- Footer -->
+    <!-- EXACT ORIGINAL FOOTER -->
     <footer class="footer">
-        <div class="footer-top">
+        <div class="footer-main">
             <div class="container">
                 <div class="row g-4">
+                    <!-- About Column -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <p class="footer-about">MediCare Center is a leading healthcare provider committed to delivering exceptional medical services with compassion and cutting-edge technology.</p>
-                            <div class="footer-contact">
-                                <p><i class="fas fa-map-marker-alt"></i> 123 Medical Drive, Health City, HC 12345</p>
-                                <p><i class="fas fa-phone-alt"></i> +1 (234) 567-890</p>
-                                <p><i class="fas fa-envelope"></i> info@medicare.com</p>
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                                <span class="brand-name">MediCare Center</span>
+                            </div>
+                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to our Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Quick Links Column -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h3>Quick Links</h3>
+                            <h4 class="footer-title">Quick Links</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-                                <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                                <li><a href="departments.html"><i class="fas fa-chevron-right"></i> Departments</a></li>
-                                <li><a href="doctors.html"><i class="fas fa-chevron-right"></i> Doctors</a></li>
-                                <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
-                                <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="doctors.html">Our Doctors</a></li>
+                                <li><a href="blog.html">Health Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Departments Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Our Services</h3>
+                            <h4 class="footer-title">Medical Departments</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology"><i class="fas fa-chevron-right"></i> Cardiology</a></li>
-                                <li><a href="departments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a></li>
-                                <li><a href="departments.html#orthopedics"><i class="fas fa-chevron-right"></i> Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a></li>
-                                <li><a href="departments.html#radiology"><i class="fas fa-chevron-right"></i> Radiology</a></li>
-                                <li><a href="departments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a></li>
+                                <li><a href="departments.html#cardiology">Cardiology</a></li>
+                                <li><a href="departments.html#neurology">Neurology</a></li>
+                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                                <li><a href="departments.html#radiology">Radiology</a></li>
+                                <li><a href="departments.html#surgery">General Surgery</a></li>
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h3>Newsletter</h3>
-                            <p>Subscribe to our newsletter for health tips, news, and updates.</p>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your Email" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                            <div class="footer-social">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
             <div class="container">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="mb-md-0">© 2023 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <div class="footer-links">
+                    <div class="col-md-6">
+                        <div class="footer-legal">
                             <a href="privacy.html">Privacy Policy</a>
                             <a href="terms.html">Terms of Service</a>
+                            <a href="sitemap.html">Sitemap</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <!-- Your existing JavaScript code remains the same -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const API_BASE_URL = 'https://localhost:7230/api';
+        let currentPage = 1;
+        const postsPerPage = 6;
+        let allBlogs = [];
+        let filteredBlogs = [];
+
+        // Load all blogs
+        async function loadBlogs() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/blogs`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                allBlogs = await response.json();
+                filteredBlogs = [...allBlogs];
+                renderBlogs();
+                updateSidebar();
+            } catch (err) {
+                console.error('Error loading blogs:', err);
+                const container = document.getElementById('blog-posts-container');
+                if (container) {
+                    container.innerHTML = '<div class="alert alert-danger">Error loading blogs. Please try again later.</div>';
+                }
+            }
+        }
+
+        // Render blogs based on current page and filter
+        function renderBlogs() {
+            const container = document.getElementById('blog-posts-container');
+            if (!container) return;
+
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = startIndex + postsPerPage;
+            const blogsToShow = filteredBlogs.slice(startIndex, endIndex);
+
+            if (blogsToShow.length === 0) {
+                container.innerHTML = '<div class="alert alert-info">No blog posts found.</div>';
+                document.getElementById('blog-pagination')?.classList.add('d-none');
+                return;
+            }
+
+            let html = '';
+            
+            // Featured post (first post)
+            if (currentPage === 1 && startIndex === 0 && blogsToShow.length > 0) {
+                const featured = blogsToShow[0];
+                html += `
+                    <div class="modern-blog-post modern-featured-post">
+                        <div class="modern-post-img">
+                            <img src="https://localhost:7230${featured.imagePath}" alt="${featured.title}" class="img-fluid">
+                            <div class="modern-post-badge">Featured</div>
+                        </div>
+                        <div class="modern-post-content">
+                            <div class="modern-post-meta">
+                                <span><i class="far fa-calendar"></i> ${formatDate(featured.createdAt)}</span>
+                                <span><i class="far fa-user"></i> By ${featured.author || 'MediCare Team'}</span>
+                            </div>
+                            <h2><a href="blog-single.html?id=${featured.id}">${featured.title}</a></h2>
+                            <p>${featured.summary || featured.content.substring(0, 150)}...</p>
+                            <a href="blog-single.html?id=${featured.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                `;
+                
+                // Regular posts (skip first if it's featured)
+                const regularPosts = blogsToShow.slice(1);
+                if (regularPosts.length > 0) {
+                    html += '<div class="row g-4">';
+                    regularPosts.forEach(blog => {
+                        html += `
+                            <div class="col-md-6">
+                                <div class="modern-blog-post">
+                                    <div class="modern-post-img">
+                                        <img src="https://localhost:7230${blog.imagePath}" alt="${blog.title}" class="img-fluid">
+                                    </div>
+                                    <div class="modern-post-content">
+                                        <div class="modern-post-meta">
+                                            <span><i class="far fa-calendar"></i> ${formatDate(blog.createdAt)}</span>
+                                            <span><i class="far fa-user"></i> By ${blog.author || 'MediCare Team'}</span>
+                                        </div>
+                                        <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
+                                        <p>${blog.summary || blog.content.substring(0, 100)}...</p>
+                                        <a href="blog-single.html?id=${blog.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    html += '</div>';
+                }
+            } else {
+                // Regular posts only
+                html += '<div class="row g-4">';
+                blogsToShow.forEach(blog => {
+                    html += `
+                        <div class="col-md-6">
+                            <div class="modern-blog-post">
+                                <div class="modern-post-img">
+                                    <img src="https://localhost:7230${blog.imagePath}" alt="${blog.title}" class="img-fluid">
+                                </div>
+                                <div class="modern-post-content">
+                                    <div class="modern-post-meta">
+                                        <span><i class="far fa-calendar"></i> ${formatDate(blog.createdAt)}</span>
+                                        <span><i class="far fa-user"></i> By ${blog.author || 'MediCare Team'}</span>
+                                    </div>
+                                    <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
+                                    <p>${blog.summary || blog.content.substring(0, 100)}...</p>
+                                    <a href="blog-single.html?id=${blog.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+
+            container.innerHTML = html;
+            updatePagination();
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+
+        // Update pagination controls
+        function updatePagination() {
+            const pagination = document.getElementById('blog-pagination');
+            if (!pagination) return;
+
+            const totalPages = Math.ceil(filteredBlogs.length / postsPerPage);
+            
+            if (totalPages <= 1) {
+                pagination.classList.add('d-none');
+                return;
+            }
+            
+            pagination.classList.remove('d-none');
+            let paginationHtml = `
+                <li class="modern-page-item ${currentPage === 1 ? 'disabled' : ''}" id="prev-page">
+                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+            `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                paginationHtml += `
+                    <li class="modern-page-item ${i === currentPage ? 'active' : ''}">
+                        <a class="modern-page-link" href="#" data-page="${i}">${i}</a>
+                    </li>
+                `;
+            }
+
+            paginationHtml += `
+                <li class="modern-page-item ${currentPage === totalPages ? 'disabled' : ''}" id="next-page">
+                    <a class="modern-page-link" href="#">Next</a>
+                </li>
+            `;
+
+            pagination.querySelector('ul').innerHTML = paginationHtml;
+            
+            // Add event listeners to pagination links
+            document.querySelectorAll('.modern-page-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (this.parentElement.classList.contains('disabled')) return;
+                    
+                    if (this.getAttribute('data-page')) {
+                        currentPage = parseInt(this.getAttribute('data-page'));
+                    } else if (this.textContent === 'Next') {
+                        currentPage++;
+                    } else if (this.textContent === 'Previous') {
+                        currentPage--;
+                    }
+                    
+                    renderBlogs();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+        }
+
+        // Update sidebar with categories, recent posts, and tags
+        function updateSidebar() {
+            // Categories
+            const categories = {};
+            allBlogs.forEach(blog => {
+                blog.categories?.forEach(cat => {
+                    categories[cat] = (categories[cat] || 0) + 1;
+                });
+            });
+
+            const categoriesContainer = document.getElementById('blog-categories');
+            if (categoriesContainer) {
+                let categoriesHtml = '';
+                for (const [category, count] of Object.entries(categories)) {
+                    categoriesHtml += `<li><a href="#" data-category="${category}">${category} <span>(${count})</span></a></li>`;
+                }
+                categoriesContainer.innerHTML = categoriesHtml;
+            }
+
+            // Recent posts (latest 3)
+            const recentPosts = [...allBlogs].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3);
+            const recentContainer = document.getElementById('recent-posts');
+            if (recentContainer) {
+                let recentHtml = '';
+                recentPosts.forEach(post => {
+                    recentHtml += `
+                        <div class="modern-recent-post">
+                            <div class="modern-post-thumb">
+                                <a href="blog-single.html?id=${post.id}"><img src="https://localhost:7230${post.imagePath}" alt="${post.title}" class="img-fluid"></a>
+                            </div>
+                            <div class="modern-post-info">
+                                <h4><a href="blog-single.html?id=${post.id}">${post.title}</a></h4>
+                                <span>${formatDate(post.createdAt)}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                recentContainer.innerHTML = recentHtml;
+            }
+
+            // Tags
+            const tags = new Set();
+            allBlogs.forEach(blog => {
+                blog.tags?.forEach(tag => tags.add(tag));
+            });
+
+            const tagsContainer = document.getElementById('blog-tags');
+            if (tagsContainer) {
+                let tagsHtml = '';
+                tags.forEach(tag => {
+                    tagsHtml += `<a href="#" data-tag="${tag}">${tag}</a>`;
+                });
+                tagsContainer.innerHTML = tagsHtml;
+            }
+
+            // Add event listeners to category and tag filters
+            document.querySelectorAll('[data-category]').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.getAttribute('data-category');
+                    filteredBlogs = allBlogs.filter(blog => 
+                        blog.categories?.includes(category)
+                    );
+                    currentPage = 1;
+                    renderBlogs();
+                });
+            });
+
+            document.querySelectorAll('[data-tag]').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tag = this.getAttribute('data-tag');
+                    filteredBlogs = allBlogs.filter(blog => 
+                        blog.tags?.includes(tag)
+                    );
+                    currentPage = 1;
+                    renderBlogs();
+                });
+            });
+        }
+
+        // Search functionality
+        const searchForm = document.getElementById('blog-search-form');
+        if (searchForm) {
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const searchInput = document.getElementById('blog-search-input');
+                const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+                
+                if (!searchTerm) {
+                    filteredBlogs = [...allBlogs];
+                } else {
+                    filteredBlogs = allBlogs.filter(blog => 
+                        (blog.title && blog.title.toLowerCase().includes(searchTerm)) || 
+                        (blog.content && blog.content.toLowerCase().includes(searchTerm)) ||
+                        (blog.summary && blog.summary.toLowerCase().includes(searchTerm)) ||
+                        (blog.author && blog.author.toLowerCase().includes(searchTerm))
+                    );
+                }
+                
+                currentPage = 1;
+                renderBlogs();
+            });
+        }
+
+        // Initial load
+        loadBlogs();
+    });
+    </script>
 </body>
 </html>
