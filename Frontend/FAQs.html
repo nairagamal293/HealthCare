@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about MediCare Center services, appointments, and policies">
+    <title>FAQs | MediCare Center</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <style>
+        /* FAQ Page Specific Styles */
+        .faq-hero {
+            background: linear-gradient(rgba(0, 82, 158, 0.85), rgba(0, 82, 158, 0.85)), 
+                        url('images/faq-bg.jpg') center/cover no-repeat;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-hero h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .faq-section {
+            padding: 4rem 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category h2 {
+            color: #00529e;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .faq-category h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #00529e, #4da8ff);
+        }
+        
+        .faq-item {
+            margin-bottom: 1.25rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e9f5;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 82, 158, 0.1);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background-color: #f8fafd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .faq-question:hover {
+            background-color: #f0f6ff;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #00529e;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question.collapsed:after {
+            content: '+';
+        }
+        
+        .faq-question:not(.collapsed):after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            border-top: 1px solid #e0e9f5;
+            background: white;
+        }
+        
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-promo {
+            background: linear-gradient(135deg, #00529e 0%, #4da8ff 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 82, 158, 0.2);
+        }
+        
+        .contact-promo h3 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-promo p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-promo .btn {
+            padding: 0.75rem 1.75rem;
+            font-weight: 500;
+            border-radius: 50px;
+            margin: 0 0.5rem;
+        }
+        
+        .contact-promo .btn-light {
+            background: white;
+            color: #00529e;
+        }
+        
+        .contact-promo .btn-outline-light {
+            border: 2px solid white;
+            background: transparent;
+        }
+        
+        .contact-promo .btn-outline-light:hover {
+            background: white;
+            color: #00529e;
+        }
+        
+        @media (max-width: 767.98px) {
+            .faq-hero {
+                padding: 4rem 0 3rem;
+            }
+            
+            .faq-question, .faq-answer {
+                padding: 1.25rem;
+            }
+            
+            .contact-promo {
+                padding: 2rem;
+            }
+            
+            .contact-promo .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="MediCare Center" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faq.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-container">
+                <!-- General Questions -->
+                <div class="faq-category">
+                    <h2>General Questions</h2>
+                    
+                    <div class="accordion" id="generalAccordion">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">
+                                What are your operating hours?
+                            </div>
+                            <div id="faq1" class="collapse faq-answer" data-bs-parent="#generalAccordion">
+                                <p>Our main clinic is open Monday through Friday from 8:00 AM to 7:00 PM, and Saturdays from 9:00 AM to 5:00 PM. We are closed on Sundays. Some departments may have different hours, so we recommend calling ahead for specific services.</p>
+                                <p>For after-hours emergencies, our on-call physician is available by phone at (234) 567-892.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                                Do I need an appointment to be seen?
+                            </div>
+                            <div id="faq2" class="collapse faq-answer" data-bs-parent="#generalAccordion">
+                                <p>While appointments are preferred to minimize wait times, we do accept walk-ins for urgent care needs. For routine check-ups and non-urgent visits, we strongly recommend scheduling an appointment in advance.</p>
+                                <p>Same-day appointments are often available for urgent needs. You can check availability through our <a href="patient-portal.html">patient portal</a> or by calling our appointment line.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Insurance & Payments -->
+                <div class="faq-category">
+                    <h2>Insurance & Payments</h2>
+                    
+                    <div class="accordion" id="insuranceAccordion">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                                What insurance plans do you accept?
+                            </div>
+                            <div id="faq3" class="collapse faq-answer" data-bs-parent="#insuranceAccordion">
+                                <p>We accept most major insurance plans including:</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Medicare</li>
+                                            <li>Blue Cross Blue Shield</li>
+                                            <li>Aetna</li>
+                                            <li>Cigna</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>UnitedHealthcare</li>
+                                            <li>Humana</li>
+                                            <li>Kaiser Permanente</li>
+                                            <li>Most Medicaid plans</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>For a complete list of accepted insurance providers, please visit our <a href="insurance.html">Insurance Information</a> page or contact our billing department at (234) 567-893.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                                What payment methods do you accept?
+                            </div>
+                            <div id="faq4" class="collapse faq-answer" data-bs-parent="#insuranceAccordion">
+                                <p>We offer multiple convenient payment options:</p>
+                                <ul>
+                                    <li><strong>Cash</strong> - Accepted at all locations</li>
+                                    <li><strong>Credit/Debit Cards</strong> - Visa, MasterCard, American Express, Discover</li>
+                                    <li><strong>Personal Checks</strong> - With valid photo ID</li>
+                                    <li><strong>HSA/FSA Cards</strong> - Health Savings and Flexible Spending Accounts</li>
+                                    <li><strong>Mobile Payments</strong> - Apple Pay, Google Pay, Samsung Pay</li>
+                                    <li><strong>Payment Plans</strong> - Available for qualifying patients</li>
+                                </ul>
+                                <p>Payment is expected at the time of service unless prior arrangements have been made with our billing department.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Appointments -->
+                <div class="faq-category">
+                    <h2>Appointments</h2>
+                    
+                    <div class="accordion" id="appointmentAccordion">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+                                How do I schedule an appointment?
+                            </div>
+                            <div id="faq5" class="collapse faq-answer" data-bs-parent="#appointmentAccordion">
+                                <p>You can schedule an appointment through several convenient methods:</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="method-card mb-3 p-3 bg-light rounded">
+                                            <h5 class="text-primary"><i class="fas fa-laptop me-2"></i>Online</h5>
+                                            <p>Use our <a href="appointment.html">Appointment Request</a> form available 24/7</p>
+                                        </div>
+                                        <div class="method-card mb-3 p-3 bg-light rounded">
+                                            <h5 class="text-primary"><i class="fas fa-phone me-2"></i>By Phone</h5>
+                                            <p>Call our appointment line at (234) 567-891 during business hours</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="method-card mb-3 p-3 bg-light rounded">
+                                            <h5 class="text-primary"><i class="fas fa-user-circle me-2"></i>Patient Portal</h5>
+                                            <p>Existing patients can schedule through our secure portal</p>
+                                        </div>
+                                        <div class="method-card mb-3 p-3 bg-light rounded">
+                                            <h5 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>In Person</h5>
+                                            <p>Visit our reception desk during business hours</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
+                                What is your cancellation policy?
+                            </div>
+                            <div id="faq6" class="collapse faq-answer" data-bs-parent="#appointmentAccordion">
+                                <p>We understand that schedules change, but we kindly request at least 24 hours notice for appointment cancellations or rescheduling. This allows us to offer the time slot to other patients in need of care.</p>
+                                <div class="alert alert-warning">
+                                    <p><strong>Cancellation fees may apply:</strong></p>
+                                    <ul>
+                                        <li>Regular appointments: $25 for late cancellations (less than 24 hours)</li>
+                                        <li>Procedures/specialty visits: $50 for late cancellations</li>
+                                        <li>No-show appointments: Full visit fee may be charged</li>
+                                    </ul>
+                                </div>
+                                <p>To cancel or reschedule, please call our office during business hours. Multiple late cancellations may result in restrictions on future scheduling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="faq-category">
+                    <h2>Services</h2>
+                    
+                    <div class="accordion" id="servicesAccordion">
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false">
+                                Do you offer telemedicine services?
+                            </div>
+                            <div id="faq7" class="collapse faq-answer" data-bs-parent="#servicesAccordion">
+                                <p>Yes, we offer secure video consultations for many types of visits through our MediCare Virtual Care platform. Telemedicine appointments are ideal for:</p>
+                                <ul>
+                                    <li>Follow-up visits</li>
+                                    <li>Medication management</li>
+                                    <li>Chronic condition monitoring</li>
+                                    <li>Mental health consultations</li>
+                                    <li>Minor acute conditions (colds, rashes, etc.)</li>
+                                </ul>
+                                <p>To schedule a virtual visit, select "Telemedicine" when booking your appointment. You'll receive instructions for connecting via email prior to your visit.</p>
+                                <div class="alert alert-info">
+                                    <p><strong>Note:</strong> Some services require in-person evaluation. Your provider will determine if telemedicine is appropriate for your needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false">
+                                What emergency services do you provide?
+                            </div>
+                            <div id="faq8" class="collapse faq-answer" data-bs-parent="#servicesAccordion">
+                                <div class="alert alert-danger">
+                                    <p><strong>For life-threatening emergencies, please call 911 immediately or go to the nearest emergency room.</strong></p>
+                                </div>
+                                <p>Our facility offers urgent care services for non-life-threatening conditions during business hours, including:</p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Minor injuries (sprains, minor cuts)</li>
+                                            <li>Fevers and infections</li>
+                                            <li>Allergic reactions (non-severe)</li>
+                                            <li>Asthma attacks (mild to moderate)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Dehydration</li>
+                                            <li>Urinary tract infections</li>
+                                            <li>Ear or eye infections</li>
+                                            <li>Minor burns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>Our on-call physician is available after hours for urgent medical concerns at (234) 567-894. For true emergencies, we recommend visiting a hospital emergency department.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Promo -->
+                <div class="contact-promo">
+                    <h3>Still Have Questions?</h3>
+                    <p>Our patient care team is available to answer any additional questions you may have about our services, policies, or your specific healthcare needs.</p>
+                    <a href="contact.html" class="btn btn-light me-2"><i class="fas fa-envelope me-2"></i>Send Us a Message</a>
+                    <a href="tel:+1234567890" class="btn btn-outline-light"><i class="fas fa-phone-alt me-2"></i>Call Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-brand">
+                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                            <span class="brand-name">MediCare Center</span>
+                        </div>
+                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                        <div class="footer-newsletter">
+                            <h4>Subscribe to our Newsletter</h4>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="doctors.html">Our Doctors</a></li>
+                            <li><a href="blog.html">Health Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Departments Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Medical Departments</h4>
+                        <ul class="footer-links">
+                            <li><a href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a href="departments.html#neurology">Neurology</a></li>
+                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a href="departments.html#radiology">Radiology</a></li>
+                            <li><a href="departments.html#surgery">General Surgery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Medical Drive, Health City, HC 12345</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

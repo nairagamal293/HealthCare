@@ -1,7 +1,9 @@
 ﻿using HeathCare.DTOs;
+using HeathCare.DTOs.HeathCare.DTOs;
 using HeathCare.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using static HeathCare.Services.DepartmentService;
 
 namespace HeathCare.Controllers
 {
@@ -11,10 +13,12 @@ namespace HeathCare.Controllers
     public class DepartmentsController : ControllerBase
     {
         private readonly IDepartmentService _departmentService;
+        private readonly ILogger<DoctorService> _logger;
 
-        public DepartmentsController(IDepartmentService departmentService)
+        public DepartmentsController(IDepartmentService departmentService, ILogger<DoctorService> logger)
         {
             _departmentService = departmentService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -34,15 +38,36 @@ namespace HeathCare.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<DepartmentDTO>> PostDepartment(DepartmentCreateDTO departmentDto)
+        public async Task<ActionResult<DepartmentDTO>> PostDepartment([FromForm] DepartmentCreateDTO departmentDto)
         {
-            var department = await _departmentService.CreateDepartmentAsync(departmentDto);
-            return CreatedAtAction(nameof(GetDepartment), new { id = department.Id }, department);
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var department = await _departmentService.CreateDepartmentAsync(departmentDto);
+                return CreatedAtAction(nameof(GetDepartment), new { id = department.Id }, department);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error creating department");
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while creating the department",
+                    detailedError = ex.Message
+                });
+            }
         }
 
         [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDepartment(int id, [FromBody] DepartmentUpdateDTO departmentDto)
+        public async Task<IActionResult> PutDepartment(int id, [FromForm] DepartmentUpdateDTO departmentDto)
         {
             if (id != departmentDto.Id)
                 return BadRequest();
@@ -50,11 +75,19 @@ namespace HeathCare.Controllers
             try
             {
                 await _departmentService.UpdateDepartmentAsync(id, departmentDto);
-                return NoContent(); // Returns 204 status
+                return NoContent();
             }
             catch (KeyNotFoundException)
             {
                 return NotFound();
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, new { message = "An error occurred while updating the department" });
             }
         }
 

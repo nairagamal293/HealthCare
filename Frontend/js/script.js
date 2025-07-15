@@ -180,11 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="doctor-img">
                         
                             <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}" class="img-fluid">
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                            
                         </div>
                         <div class="doctor-info">
                             <h4>${doctor.name}</h4>
@@ -193,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <div class="doctor-meta">
                                 <span><i class="fas fa-star"></i> 4.9 (120 reviews)</span>
                             </div>
-                            <a href="doctors.html#${doctor.id}" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            <a href="doctor-details.html?id=${doctor.id}" class="btn btn-sm btn-outline-primary">View Profile</a>
                         </div>
                     </div>
                 </div>

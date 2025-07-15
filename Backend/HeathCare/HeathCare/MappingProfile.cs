@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using HeathCare.DTOs;
+using HeathCare.DTOs.HeathCare.DTOs;
 using HeathCare.Models;
+using HeathCare.Models.HeathCare.Models;
 
 namespace HeathCare
 {
@@ -10,8 +12,13 @@ namespace HeathCare
         {
             // Department mapping
             CreateMap<Department, DepartmentDTO>()
-                .ForMember(dest => dest.DoctorCount,
-                           opt => opt.MapFrom(src => src.Doctors.Count));
+                    .ForMember(dest => dest.DoctorCount,
+                               opt => opt.MapFrom(src => src.Doctors.Count));
+            CreateMap<DepartmentCreateDTO, Department>()
+                    .ForMember(dest => dest.ImagePath, opt => opt.Ignore()); // Will be set manually
+
+            CreateMap<DepartmentUpdateDTO, Department>()
+                   .ForMember(dest => dest.ImagePath, opt => opt.Ignore()); // Will be set manually
 
             // Doctor mappings
             CreateMap<Doctor, DoctorDTO>()

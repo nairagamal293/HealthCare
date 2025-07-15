@@ -19,6 +19,67 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>Our Doctors | MediCare Center</title>
+
+    <style>
+        .doctor-card {
+    background-color: var(--white-color);
+    border-radius: 0px ;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 270px;
+    height: 500px;
+}
+         .doctor-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .doctor-img-container {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+        .doctor-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .doctor-overlay {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            text-align: center;
+            transition: bottom 0.3s ease;
+        }
+        .doctor-card:hover .doctor-overlay {
+            bottom: 0;
+        }
+        .doctor-card:hover img {
+            transform: scale(1.05);
+        }
+        .text-truncate-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 40px;
+        }
+        .filter-card {
+            position: sticky;
+            top: 20px;
+        }
+        @media (max-width: 767.98px) {
+            .doctor-img-container {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
      <div class="top-bar">
@@ -30,20 +91,12 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="MediCare Center" class="logo">
@@ -59,23 +112,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Departments
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
-                        </ul>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="doctor.html">Our Doctors</a>
+                        <a class="nav-link" href="departments.html">Departments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -86,293 +134,60 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Our Doctors</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Doctors</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Doctors Section -->
-    <section class="doctors-section">
+    <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-lg-3">
-                    <div class="doctors-filter">
-                        <h3>Filter Doctors</h3>
-                        <div class="filter-group">
-                            <h4>By Specialty</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="all-specialties" value="all" checked>
-                                <label class="form-check-label" for="all-specialties">
-                                    All Specialties
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="cardiology" value="cardiology">
-                                <label class="form-check-label" for="cardiology">
-                                    Cardiology
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="neurology" value="neurology">
-                                <label class="form-check-label" for="neurology">
-                                    Neurology
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="orthopedics" value="orthopedics">
-                                <label class="form-check-label" for="orthopedics">
-                                    Orthopedics
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="pediatrics" value="pediatrics">
-                                <label class="form-check-label" for="pediatrics">
-                                    Pediatrics
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="radiology" value="radiology">
-                                <label class="form-check-label" for="radiology">
-                                    Radiology
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="specialty" id="surgery" value="surgery">
-                                <label class="form-check-label" for="surgery">
-                                    Surgery
-                                </label>
-                            </div>
+                <!-- Filters Column -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card filter-card shadow-sm p-4">
+                        <h3 class="h5 mb-4">Find Your Doctor</h3>
+                        
+                        <!-- Search -->
+                        <div class="mb-4">
+                            <label for="doctor-search" class="form-label">Search</label>
+                            <input type="text" class="form-control" id="doctor-search" placeholder="Name or specialty...">
                         </div>
-                        <div class="filter-group">
-                            <h4>By Gender</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="all-genders" value="all" checked>
-                                <label class="form-check-label" for="all-genders">
-                                    All Genders
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                                <label class="form-check-label" for="male">
-                                    Male
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                <label class="form-check-label" for="female">
-                                    Female
-                                </label>
-                            </div>
+                        
+                        <!-- Department Filter -->
+                        <div class="mb-4">
+                            <label for="department-filter" class="form-label">Department</label>
+                            <select class="form-select" id="department-filter">
+                                <option value="all">All Departments</option>
+                            </select>
                         </div>
-                        <div class="filter-group">
-                            <h4>By Language</h4>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="language" id="english" value="english" checked>
-                                <label class="form-check-label" for="english">
-                                    English
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="language" id="spanish" value="spanish">
-                                <label class="form-check-label" for="spanish">
-                                    Spanish
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="language" id="french" value="french">
-                                <label class="form-check-label" for="french">
-                                    French
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="language" id="mandarin" value="mandarin">
-                                <label class="form-check-label" for="mandarin">
-                                    Mandarin
-                                </label>
-                            </div>
+                        
+                        <!-- Specialty Filter -->
+                        <div class="mb-4">
+                            <label for="specialty-filter" class="form-label">Specialty</label>
+                            <select class="form-select" id="specialty-filter">
+                                <option value="all">All Specialties</option>
+                            </select>
                         </div>
-                        <button id="resetFilters" class="btn btn-outline-secondary btn-sm">Reset Filters</button>
+                        
+                        <button id="reset-filters" class="btn btn-outline-secondary w-100">
+                            Reset Filters
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-8 col-lg-9">
-                    <div class="doctors-list">
-                        <div class="row g-4">
-                            <!-- Doctor 1 -->
-                            <div class="col-12" data-specialty="cardiology" data-gender="female" data-language="english spanish">
-                                <div class="doctor-card-lg">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <div class="doctor-img">
-                                                <img src="images/doctor-1.jpg" alt="Dr. Sarah Johnson" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="doctor-info">
-                                                <h3>Dr. Sarah Johnson</h3>
-                                                <p class="specialty">Cardiologist</p>
-                                                <div class="doctor-meta">
-                                                    <span><i class="fas fa-star"></i> 4.9 (120 reviews)</span>
-                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 3, Room 302</span>
-                                                    <span><i class="fas fa-language"></i> English, Spanish</span>
-                                                </div>
-                                                <p class="doctor-bio">Board-certified cardiologist with 15 years of experience specializing in interventional cardiology and heart failure management.</p>
-                                                <div class="doctor-actions">
-                                                    <a href="appointment.html?doctor=dr-johnson" class="btn btn-primary">Book Appointment</a>
-                                                    <a href="doctor-profile.html?id=dr-johnson" class="btn btn-outline-primary">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                
+                <!-- Doctors List -->
+                <div class="col-lg-9">
+                    <div class="row" id="doctors-container">
+                        <!-- Loading spinner -->
+                        <div class="col-12 text-center py-5">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
                             </div>
-
-                            <!-- Doctor 2 -->
-                            <div class="col-12" data-specialty="neurology" data-gender="male" data-language="english french">
-                                <div class="doctor-card-lg">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <div class="doctor-img">
-                                                <img src="images/doctor-2.jpg" alt="Dr. Michael Chen" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="doctor-info">
-                                                <h3>Dr. Michael Chen</h3>
-                                                <p class="specialty">Neurologist</p>
-                                                <div class="doctor-meta">
-                                                    <span><i class="fas fa-star"></i> 4.8 (95 reviews)</span>
-                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 2, Room 210</span>
-                                                    <span><i class="fas fa-language"></i> English, French</span>
-                                                </div>
-                                                <p class="doctor-bio">Specializes in stroke prevention, epilepsy, and movement disorders with a focus on patient-centered care.</p>
-                                                <div class="doctor-actions">
-                                                    <a href="appointment.html?doctor=dr-chen" class="btn btn-primary">Book Appointment</a>
-                                                    <a href="doctor-profile.html?id=dr-chen" class="btn btn-outline-primary">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Doctor 3 -->
-                            <div class="col-12" data-specialty="pediatrics" data-gender="female" data-language="english spanish">
-                                <div class="doctor-card-lg">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <div class="doctor-img">
-                                                <img src="images/doctor-3.jpg" alt="Dr. Emily Rodriguez" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="doctor-info">
-                                                <h3>Dr. Emily Rodriguez</h3>
-                                                <p class="specialty">Pediatrician</p>
-                                                <div class="doctor-meta">
-                                                    <span><i class="fas fa-star"></i> 4.9 (150 reviews)</span>
-                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 1, Room 105</span>
-                                                    <span><i class="fas fa-language"></i> English, Spanish</span>
-                                                </div>
-                                                <p class="doctor-bio">Pediatric specialist with expertise in childhood development, asthma management, and adolescent health.</p>
-                                                <div class="doctor-actions">
-                                                    <a href="appointment.html?doctor=dr-rodriguez" class="btn btn-primary">Book Appointment</a>
-                                                    <a href="doctor-profile.html?id=dr-rodriguez" class="btn btn-outline-primary">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Doctor 4 -->
-                            <div class="col-12" data-specialty="orthopedics" data-gender="male" data-language="english mandarin">
-                                <div class="doctor-card-lg">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <div class="doctor-img">
-                                                <img src="images/doctor-4.jpg" alt="Dr. James Wilson" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="doctor-info">
-                                                <h3>Dr. James Wilson</h3>
-                                                <p class="specialty">Orthopedic Surgeon</p>
-                                                <div class="doctor-meta">
-                                                    <span><i class="fas fa-star"></i> 4.7 (85 reviews)</span>
-                                                    <span><i class="fas fa-map-marker-alt"></i> Floor 3, Room 315</span>
-                                                    <span><i class="fas fa-language"></i> English, Mandarin</span>
-                                                </div>
-                                                <p class="doctor-bio">Specializes in sports medicine, joint replacement, and minimally invasive orthopedic procedures.</p>
-                                                <div class="doctor-actions">
-                                                    <a href="appointment.html?doctor=dr-wilson" class="btn btn-primary">Book Appointment</a>
-                                                    <a href="doctor-profile.html?id=dr-wilson" class="btn btn-outline-primary">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Doctor 5 -->
-                            <div class="col-12" data-specialty="radiology" data-gender="female" data-language="english french">
-                                <div class="doctor-card-lg">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <div class="doctor-img">
-                                                <img src="images/doctor-5.jpg" alt="Dr. Lisa Patel" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="doctor-info">
-                                                <h3>Dr. Lisa Patel</h3>
-                                                <p class="specialty">Radiologist</p>
-                                                <div class="doctor-meta">
-                                                    <span><i class="fas fa-star"></i> 4.8 (75 reviews)</span>
-                                                    <span><i class="fas fa-map-marker-alt"></i> Floor B1, Imaging Center</span>
-                                                    <span><i class="fas fa-language"></i> English, French</span>
-                                                </div>
-                                                <p class="doctor-bio">Specializes in diagnostic imaging including MRI, CT, and ultrasound with fellowship training in neuroradiology.</p>
-                                                <div class="doctor-actions">
-                                                    <a href="appointment.html?doctor=dr-patel" class="btn btn-primary">Book Appointment</a>
-                                                    <a href="doctor-profile.html?id=dr-patel" class="btn btn-outline-primary">View Profile</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="mt-2">Loading doctors...</p>
                         </div>
-
-                        <nav aria-label="Page navigation" class="mt-5">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
    <!-- Footer -->
  <footer class="footer">
@@ -489,71 +304,150 @@
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 
-    <script>
-        // Doctor filtering functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterForm = document.querySelector('.doctors-filter');
-            const doctorCards = document.querySelectorAll('.doctors-list .col-12');
-            const resetButton = document.getElementById('resetFilters');
-
-            function filterDoctors() {
-                const specialty = document.querySelector('input[name="specialty"]:checked').value;
-                const gender = document.querySelector('input[name="gender"]:checked').value;
-                const languages = Array.from(document.querySelectorAll('input[name="language"]:checked')).map(el => el.value);
-
-                doctorCards.forEach(card => {
-                    const cardSpecialty = card.dataset.specialty;
-                    const cardGender = card.dataset.gender;
-                    const cardLanguages = card.dataset.language.split(' ');
-
-                    // Check specialty filter
-                    const specialtyMatch = specialty === 'all' || cardSpecialty === specialty;
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+            const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+            
+            // Fetch and display doctors
+            async function fetchDoctors() {
+                try {
+                    const response = await fetch(`${apiBaseUrl}/doctors`);
+                    if (!response.ok) throw new Error('Network response was not ok');
                     
-                    // Check gender filter
-                    const genderMatch = gender === 'all' || cardGender === gender;
-                    
-                    // Check language filter
-                    const languageMatch = languages.length === 0 || 
-                                        languages.some(lang => cardLanguages.includes(lang));
-                    
-                    // Show/hide based on all filters
-                    if (specialtyMatch && genderMatch && languageMatch) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            // Add event listeners to all filter inputs
-            document.querySelectorAll('.doctors-filter input').forEach(input => {
-                input.addEventListener('change', filterDoctors);
-            });
-
-            // Reset filters
-            resetButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.getElementById('all-specialties').checked = true;
-                document.getElementById('all-genders').checked = true;
-                document.querySelectorAll('input[name="language"]').forEach(checkbox => {
-                    checkbox.checked = checkbox.id === 'english';
-                });
-                filterDoctors();
-            });
-
-            // Check for URL parameters to set initial filters
-            const urlParams = new URLSearchParams(window.location.search);
-            const specialtyParam = urlParams.get('specialty');
-            if (specialtyParam) {
-                const specialtyRadio = document.getElementById(specialtyParam);
-                if (specialtyRadio) {
-                    specialtyRadio.checked = true;
+                    const doctors = await response.json();
+                    displayDoctors(doctors);
+                    setupFiltering(doctors);
+                } catch (error) {
+                    console.error('Error fetching doctors:', error);
+                    document.getElementById('doctors-container').innerHTML = `
+                        <div class="alert alert-danger">
+                            Failed to load doctors. Please try again later.
+                        </div>
+                    `;
                 }
             }
             
-            // Initial filter
-            filterDoctors();
+            // Display doctors in the UI
+            function displayDoctors(doctors) {
+                const container = document.getElementById('doctors-container');
+                
+                if (doctors.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <h4>No doctors found</h4>
+                            <p>Please check back later or contact our support</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                let html = '';
+                doctors.forEach(doctor => {
+                    html += `
+                        <div class="col-md-6 col-lg-4 mb-4" 
+                             data-specialty="${doctor.specialty.toLowerCase()}" 
+                             data-department="${doctor.departmentName.toLowerCase()}">
+                            <div class="card doctor-card h-100 border-0 shadow-sm">
+                                <div class="doctor-img-container">
+                                    
+                                    <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}"'}" 
+                                         class="card-img-top" 
+                                         alt="Dr. ${doctor.name}">
+                                    <div class="doctor-overlay">
+                                        <a href="doctor-details.html?id=${doctor.id}" class="btn btn-primary btn-sm">
+                                            View Profile
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Dr. ${doctor.name}</h5>
+                                    <p class="text-primary mb-1">${doctor.specialty}</p>
+                                    <p class="text-muted small mb-2">
+                                        <i class="fas fa-clinic-medical"></i> ${doctor.departmentName}
+                                    </p>
+                                    <p class="card-text text-truncate-2">${doctor.bio || 'Specialist in ' + doctor.specialty}</p>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="appointment.html?doctor=${doctor.id}" 
+                                       class="btn btn-outline-primary w-100">
+                                        Book Appointment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = html;
+            }
+            
+            // Setup filtering functionality
+            function setupFiltering(doctors) {
+                const departmentFilter = document.getElementById('department-filter');
+                const specialtyFilter = document.getElementById('specialty-filter');
+                const searchInput = document.getElementById('doctor-search');
+                const resetBtn = document.getElementById('reset-filters');
+                
+                // Get unique departments and specialties
+                const departments = [...new Set(doctors.map(d => d.departmentName))];
+                const specialties = [...new Set(doctors.map(d => d.specialty))];
+                
+                // Populate department filter
+                departments.forEach(dept => {
+                    departmentFilter.innerHTML += `
+                        <option value="${dept.toLowerCase()}">${dept}</option>
+                    `;
+                });
+                
+                // Populate specialty filter
+                specialties.forEach(spec => {
+                    specialtyFilter.innerHTML += `
+                        <option value="${spec.toLowerCase()}">${spec}</option>
+                    `;
+                });
+                
+                // Filter function
+                function filterDoctors() {
+                    const selectedDept = departmentFilter.value.toLowerCase();
+                    const selectedSpec = specialtyFilter.value.toLowerCase();
+                    const searchTerm = searchInput.value.toLowerCase();
+                    
+                    document.querySelectorAll('#doctors-container .col-md-6').forEach(card => {
+                        const dept = card.dataset.department;
+                        const spec = card.dataset.specialty;
+                        const name = card.querySelector('.card-title').textContent.toLowerCase();
+                        const bio = card.querySelector('.card-text').textContent.toLowerCase();
+                        
+                        const deptMatch = selectedDept === 'all' || dept.includes(selectedDept);
+                        const specMatch = selectedSpec === 'all' || spec.includes(selectedSpec);
+                        const searchMatch = searchTerm === '' || 
+                                          name.includes(searchTerm) || 
+                                          bio.includes(searchTerm);
+                        
+                        if (deptMatch && specMatch && searchMatch) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+                
+                // Event listeners
+                departmentFilter.addEventListener('change', filterDoctors);
+                specialtyFilter.addEventListener('change', filterDoctors);
+                searchInput.addEventListener('input', filterDoctors);
+                
+                resetBtn.addEventListener('click', () => {
+                    departmentFilter.value = 'all';
+                    specialtyFilter.value = 'all';
+                    searchInput.value = '';
+                    filterDoctors();
+                });
+            }
+            
+            // Initialize
+            fetchDoctors();
         });
-    </script>
+  </script>
 </body>
 </html>

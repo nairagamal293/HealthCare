@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Doctor Profile | MediCare Center</title>
+    <!-- Add this script for fetching doctor details -->
+ 
+    <!-- Add this CSS -->
+    <style>
+        .doctor-profile-img-container {
+            height: 300px;
+            overflow: hidden;
+        }
+        .doctor-profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .timeline-point {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #0d6efd;
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 25px;
+            bottom: 0;
+            width: 2px;
+            background-color: #e9ecef;
+        }
+        .rating-display {
+            font-size: 1.1rem;
+        }
+        .review-item {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+        @media (max-width: 767.98px) {
+            .doctor-profile-img-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="MediCare Center" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">Departments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="doctor.html">Our Doctors</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Doctor Profile</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <div id="doctor-details">
+                <!-- Loading spinner -->
+                <div class="text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2">Loading doctor details...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keep your existing footer -->
+ <!-- Footer -->
+ <footer class="footer">
+    <div class="footer-main">
+        <div class="container">
+            <div class="row g-4">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <div class="footer-brand">
+                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                            <span class="brand-name">MediCare Center</span>
+                        </div>
+                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                        <div class="footer-newsletter">
+                            <h4>Subscribe to our Newsletter</h4>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="doctors.html">Our Doctors</a></li>
+                            <li><a href="blog.html">Health Blog</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Departments Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Medical Departments</h4>
+                        <ul class="footer-links">
+                            <li><a href="departments.html#cardiology">Cardiology</a></li>
+                            <li><a href="departments.html#neurology">Neurology</a></li>
+                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                            <li><a href="departments.html#radiology">Radiology</a></li>
+                            <li><a href="departments.html#surgery">General Surgery</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Contact Info</h4>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>123 Medical Drive, Health City, HC 12345</p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</footer>
+    
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const doctorId = urlParams.get('id');
+            
+            if (!doctorId) {
+                window.location.href = 'doctor.html';
+                return;
+            }
+            
+            // Fetch doctor details
+            async function fetchDoctorDetails() {
+                try {
+                    const response = await fetch(`${apiBaseUrl}/doctors/${doctorId}`);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    
+                    const doctor = await response.json();
+                    displayDoctorDetails(doctor);
+                } catch (error) {
+                    console.error('Error fetching doctor details:', error);
+                    document.getElementById('doctor-details').innerHTML = `
+                        <div class="alert alert-danger">
+                            Failed to load doctor details. Please try again later.
+                        </div>
+                    `;
+                }
+            }
+            
+            // Display doctor details
+            function displayDoctorDetails(doctor) {
+                const container = document.getElementById('doctor-details');
+                
+                container.innerHTML = `
+                    <div class="row">
+                        <!-- Doctor Image and Basic Info -->
+                        <div class="col-lg-4">
+                            <div class="card shadow-sm mb-4">
+                                <div class="doctor-profile-img-container">
+                                    <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}"'}" 
+                                
+                                         alt="Dr. ${doctor.name}" 
+                                         class="img-fluid rounded-top">
+                                </div>
+                                <div class="card-body text-center">
+                                    <h2 class="h4">Dr. ${doctor.name}</h2>
+                                    <p class="text-primary mb-2">${doctor.specialty}</p>
+                                    <p class="text-muted">
+                                        <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
+                                    </p>
+                                    
+                                    <hr>
+                                    
+                                    <div class="d-grid gap-2">
+                                        <a href="appointment.html?doctor=${doctor.id}" 
+                                           class="btn btn-primary">
+                                            Book Appointment
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Info -->
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header bg-light">
+                                    <h3 class="h6 mb-0">Contact Information</h3>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                            <span>Floor 3, Room 302</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-phone-alt text-primary me-2"></i>
+                                            <span>+1 (234) 567-8901</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-envelope text-primary me-2"></i>
+                                            <span>${doctor.name.toLowerCase().replace(/\s+/g, '.')}@medicare.com</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-clock text-primary me-2"></i>
+                                            <span>Mon-Fri: 9:00 AM - 5:00 PM</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Doctor Details -->
+                        <div class="col-lg-8">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-header bg-light">
+                                    <h3 class="h6 mb-0">About Dr. ${doctor.name.split(' ')[0]}</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>${doctor.bio || 'No biography available.'}</p>
+                                    
+                                    <h4 class="h5 mt-4">Education</h4>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="fas fa-graduation-cap text-primary me-2"></i>
+                                            <strong>MD in ${doctor.specialty}</strong> - Harvard Medical School (2010)
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="fas fa-graduation-cap text-primary me-2"></i>
+                                            <strong>Residency</strong> - Massachusetts General Hospital (2014)
+                                        </li>
+                                    </ul>
+                                    
+                                    <h4 class="h5 mt-4">Specializations</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-light text-dark border">${doctor.specialty}</span>
+                                        <span class="badge bg-light text-dark border">Cardiac Care</span>
+                                        <span class="badge bg-light text-dark border">Preventive Medicine</span>
+                                    </div>
+                                    
+                                    <h4 class="h5 mt-4">Experience</h4>
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <h5>Senior ${doctor.specialty}</h5>
+                                                <p class="text-muted small">MediCare Center (2018 - Present)</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-point"></div>
+                                            <div class="timeline-content">
+                                                <h5>${doctor.specialty}</h5>
+                                                <p class="text-muted small">City General Hospital (2014 - 2018)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Patient Reviews -->
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-light">
+                                    <h3 class="h6 mb-0">Patient Reviews</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rating-display">
+                                            <span class="text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </span>
+                                            <span class="ms-2">4.7 (124 reviews)</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-item mb-4">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <h5 class="mb-0">John D.</h5>
+                                            <small class="text-muted">2 weeks ago</small>
+                                        </div>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <p>Dr. ${doctor.name.split(' ')[0]} was very professional and took the time to explain everything clearly. I felt comfortable throughout my visit.</p>
+                                    </div>
+                                    
+                                    <div class="review-item">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <h5 class="mb-0">Sarah M.</h5>
+                                            <small class="text-muted">1 month ago</small>
+                                        </div>
+                                        <div class="rating mb-2">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <p>Excellent care and follow-up. The doctor was attentive and addressed all my concerns. Highly recommend!</p>
+                                    </div>
+                                    
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-outline-primary">
+                                            View All Reviews
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            // Initialize
+            fetchDoctorDetails();
+        });
+    </script>
+</body>
+</html>

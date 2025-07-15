@@ -1,5 +1,6 @@
 wwwroot\uploads\blogs\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg
 wwwroot\uploads\blogs\2d697503-0c84-40cc-9604-495e32e8f764.jpeg
+wwwroot\uploads\blogs\35e2763f-1bfb-4538-b2fe-069a7760cced.jpeg
 wwwroot\uploads\blogs\be8d07c9-4e21-4832-823a-fb5cf51ba971.jpeg
 wwwroot\uploads\blogs\e247e87b-8547-4c43-ae8b-333eff2972e0.jpeg
 wwwroot\uploads\blogs\f70cab15-364d-46dd-be43-72b13a6e7b6c.jpeg
@@ -10,3 +11,13 @@ wwwroot\uploads\doctors\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Mal
 wwwroot\uploads\doctors\831cdfda-299a-4c08-81cf-4c4371fe02bd_Download Free Photo _ Young arabic speaking doctor in medical uniform_.jpeg
 wwwroot\uploads\doctors\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg
 wwwroot\uploads\doctors\9aecea39-7317-4635-809d-02f3c9437684_Download Free Photo _ Muslim woman wearing a hijab becomes a doctor, helping people_.jpeg
+wwwroot\uploads\departments\e712af01-76ca-4379-8e35-74441c293d18.jpeg
+wwwroot\uploads\departments\df2d2130-e0d3-4bb1-badc-e97f5101626d.jpeg
+wwwroot\uploads\departments\aa9bfaea-3f2a-4ce8-9791-3c3f5cb26916.jpeg
+wwwroot\uploads\doctors\ea7d8982-e8cc-416d-9f68-13712d2c224f_basmala.jpeg
+wwwroot\uploads\departments\9ca5ad2c-4d6c-4017-b053-07d8455f685d.jpeg
+wwwroot\uploads\departments\67c9ec14-5500-4957-b1c3-8cb9d30e75b7.jpeg
+wwwroot\uploads\departments\2de6227f-beba-47d2-8721-47d1e70ab81a.jpeg
+wwwroot\uploads\departments\9034d1af-1f4d-49b2-b8b9-7aefdfad27d5.jpeg
+wwwroot\uploads\blogs\7b07c859-d771-469f-aaf1-0de9908f60b3.jpeg
+wwwroot\uploads\blogs\d9d4a71b-9194-4f80-9616-dd2d330fb770.jpeg

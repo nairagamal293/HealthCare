@@ -13,6 +13,7 @@ using HeathCare.Models.HeathCare.Models;
 using Microsoft.AspNetCore.Http.Features;
 using HeathCare;
 using Microsoft.Extensions.FileProviders;
+using static HeathCare.Services.DepartmentService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -179,6 +180,13 @@ app.UseAuthorization();
 app.MapControllers();
 
 
+// Add this near the other directory creation code
+var deptUploadsPath = Path.Combine(webRootPath, "uploads", "departments");
+if (!Directory.Exists(deptUploadsPath))
+{
+    Directory.CreateDirectory(deptUploadsPath);
+    Console.WriteLine($"Created departments upload directory at: {deptUploadsPath}");
+}
 
 
 // Seed database with initial admin user

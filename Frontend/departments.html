@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
     
@@ -15,12 +15,257 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>Medical Departments | MediCare Center</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+     <title>Our Departments | MediCare Center</title>
+    <!-- Add this CSS -->
+    <style>
+        /* Department Section Styling */
+       
+        
+        .breadcrumb {
+            background: transparent;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        
+        .breadcrumb-item.active {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .breadcrumb-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .section-header .subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .section-header h2 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .divider {
+            width: 60px;
+            height: 3px;
+            margin: 0 auto 1.5rem;
+            opacity: 1;
+        }
+        
+         .department-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .department-card .card-footer {
+        background: white;
+        border-top: none;
+        padding: 0 30px 30px;
+    }
+
+    #view-more-btn {
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    #view-more-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
+        
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .department-img {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .department-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .department-card:hover .department-img img {
+            transform: scale(1.1);
+        }
+        
+        .department-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            margin: -16px auto 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .department-icon i {
+            font-size: 2rem;
+            color: #0d6efd;
+        }
+        
+        .department-card .card-body {
+            padding: 30px;
+            flex-grow: 1;
+        }
+        
+        .department-card h3 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .department-card .card-text {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .doctor-count .badge {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 50px;
+            background-color: #e3f2fd;
+            color: #0d6efd;
+        }
+        
+        .department-services {
+            margin: 20px 0;
+            padding-left: 0;
+        }
+        
+        .department-services li {
+            padding: 8px 0;
+            color: #34495e;
+            position: relative;
+            padding-left: 25px;
+            list-style: none;
+        }
+        
+        .department-services li i {
+            color: #0d6efd;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        .department-card .card-footer {
+            background: white;
+            border-top: none;
+            padding: 0 30px 30px;
+        }
+        
+        .department-card .btn {
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .department-card .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+        }
+        
+        .cta-section {
+        padding: 4rem 0;
+        color: white;
+        position: relative;
+    }
+    
+    .cta-section h2 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .cta-section .lead {
+        opacity: 0.9;
+        margin-bottom: 0;
+    }
+    
+    .cta-section .btn-light {
+        color: #0d6efd;
+        font-weight: 600;
+    }
+    
+    .cta-section .btn-outline-light {
+        border-width: 2px;
+        font-weight: 600;
+    }
+    
+    .cta-section .btn-outline-light:hover {
+        color: #0d6efd;
+        background: white;
+    }
+    
+    @media (max-width: 767.98px) {
+        .cta-section .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+        
+        /* Responsive adjustments */
+        @media (max-width: 767.98px) {
+            .department-img {
+                height: 180px;
+            }
+            
+            .department-icon {
+                width: 60px;
+                height: 60px;
+                margin: -30px auto 15px;
+            }
+            
+            .department-icon i {
+                font-size: 1.5rem;
+            }
+            
+            .department-card .card-body {
+                padding: 20px;
+            }
+            
+            .cta-section .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Same top bar and navigation as index.html -->
-  <div class="top-bar">
+    
+       <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -29,20 +274,12 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                <div class="col-md-6 text-end">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    
+    <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="MediCare Center" class="logo">
@@ -58,23 +295,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Departments
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">Departments</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -85,304 +317,315 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Our Medical Departments</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Departments</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     <!-- Departments Section -->
-    <section class="departments-section">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="subtitle">Specialized Care</span>
-                <h2>Our Medical Departments</h2>
-                <div class="divider mx-auto"></div>
-                <p class="section-description">We offer comprehensive healthcare services across multiple specialties</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Cardiology -->
-                <div class="col-md-6 col-lg-4" id="cardiology">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-cardio.jpg" alt="Cardiology" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-heartbeat"></i>
-                            </div>
-                            <h3>Cardiology</h3>
-                            <p>Our cardiology department provides advanced diagnosis and treatment for heart conditions, including interventional cardiology, electrophysiology, and cardiac rehabilitation.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> Echocardiography</li>
-                                <li><i class="fas fa-check"></i> Cardiac Catheterization</li>
-                                <li><i class="fas fa-check"></i> Pacemaker Implantation</li>
-                                <li><i class="fas fa-check"></i> Stress Testing</li>
-                            </ul>
-                            <a href="doctors.html?specialty=cardiology" class="btn btn-outline-primary">View Cardiologists</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Neurology -->
-                <div class="col-md-6 col-lg-4" id="neurology">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-neuro.jpg" alt="Neurology" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h3>Neurology</h3>
-                            <p>Our neurology specialists diagnose and treat disorders of the nervous system, including stroke, epilepsy, multiple sclerosis, and movement disorders.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> EEG Testing</li>
-                                <li><i class="fas fa-check"></i> EMG/Nerve Conduction</li>
-                                <li><i class="fas fa-check"></i> Botox Therapy</li>
-                                <li><i class="fas fa-check"></i> Stroke Care</li>
-                            </ul>
-                            <a href="doctors.html?specialty=neurology" class="btn btn-outline-primary">View Neurologists</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Orthopedics -->
-                <div class="col-md-6 col-lg-4" id="orthopedics">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-ortho.jpg" alt="Orthopedics" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-bone"></i>
-                            </div>
-                            <h3>Orthopedics</h3>
-                            <p>Our orthopedic specialists provide comprehensive care for musculoskeletal conditions, including joint replacement, sports medicine, and spine surgery.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> Joint Replacement</li>
-                                <li><i class="fas fa-check"></i> Arthroscopic Surgery</li>
-                                <li><i class="fas fa-check"></i> Fracture Care</li>
-                                <li><i class="fas fa-check"></i> Physical Therapy</li>
-                            </ul>
-                            <a href="doctors.html?specialty=orthopedics" class="btn btn-outline-primary">View Orthopedists</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pediatrics -->
-                <div class="col-md-6 col-lg-4" id="pediatrics">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-peds.jpg" alt="Pediatrics" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-baby"></i>
-                            </div>
-                            <h3>Pediatrics</h3>
-                            <p>Our pediatric department provides compassionate care for infants, children, and adolescents, with specialized services for developmental and behavioral health.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> Well-child Visits</li>
-                                <li><i class="fas fa-check"></i> Vaccinations</li>
-                                <li><i class="fas fa-check"></i> Asthma Management</li>
-                                <li><i class="fas fa-check"></i> ADHD Evaluation</li>
-                            </ul>
-                            <a href="doctors.html?specialty=pediatrics" class="btn btn-outline-primary">View Pediatricians</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Radiology -->
-                <div class="col-md-6 col-lg-4" id="radiology">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-rad.jpg" alt="Radiology" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-x-ray"></i>
-                            </div>
-                            <h3>Radiology</h3>
-                            <p>Our radiology department offers advanced imaging services with board-certified radiologists interpreting all studies for accurate diagnosis.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> MRI & CT Scanning</li>
-                                <li><i class="fas fa-check"></i> Ultrasound</li>
-                                <li><i class="fas fa-check"></i> Mammography</li>
-                                <li><i class="fas fa-check"></i> Interventional Radiology</li>
-                            </ul>
-                            <a href="doctors.html?specialty=radiology" class="btn btn-outline-primary">View Radiologists</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Surgery -->
-                <div class="col-md-6 col-lg-4" id="surgery">
-                    <div class="department-card">
-                        <div class="department-img">
-                            <img src="images/dept-surgery.jpg" alt="Surgery" class="img-fluid">
-                        </div>
-                        <div class="department-content">
-                            <div class="department-icon">
-                                <i class="fas fa-procedures"></i>
-                            </div>
-                            <h3>Surgery</h3>
-                            <p>Our surgical department provides both inpatient and outpatient procedures using minimally invasive techniques for faster recovery.</p>
-                            <ul class="department-services">
-                                <li><i class="fas fa-check"></i> General Surgery</li>
-                                <li><i class="fas fa-check"></i> Laparoscopic Surgery</li>
-                                <li><i class="fas fa-check"></i> Robotic Surgery</li>
-                                <li><i class="fas fa-check"></i> Post-op Care</li>
-                            </ul>
-                            <a href="doctors.html?specialty=surgery" class="btn btn-outline-primary">View Surgeons</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="py-5 bg-light">
+    <div class="container py-5">
+        <div class="section-header text-center mb-5">
+            <span class="subtitle">SPECIALIZED CARE</span>
+            <h2>Comprehensive Healthcare Services</h2>
+            <div class="divider mx-auto"></div>
+            <p class="lead mx-auto" style="max-width: 700px;">
+                We offer comprehensive healthcare services across multiple specialties with expert physicians and state-of-the-art facilities
+            </p>
         </div>
-    </section>
+
+        <div class="row g-4" id="departments-container">
+            <!-- Departments will be loaded here -->
+        </div>
+
+        <div class="text-center mt-5" id="view-more-container">
+            <button id="view-more-btn" class="btn btn-primary btn-lg">
+                View More Departments <i class="fas fa-chevron-down ms-2"></i>
+            </button>
+        </div>
+    </div>
+</section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2>Need Help Choosing a Department?</h2>
-                    <p class="mb-lg-0">Our patient coordinators can help guide you to the right specialist for your needs.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="contact.html" class="btn btn-light me-2">Contact Us</a>
-                    <a href="tel:+1234567890" class="btn btn-outline-light">Call Now</a>
-                </div>
+   <section class="cta-section" style="background:  linear-gradient(rgba(0, 0, 0, 0.7)), url('images/cta.jpg') center/cover no-repeat;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="mb-3">Need Help Choosing a Department?</h2>
+                <p class="lead mb-0">Our patient coordinators can help guide you to the right specialist for your needs.</p>
             </div>
-        </div>
-    </section>
-
-     <!-- Footer -->
-<footer class="footer">
-    <div class="footer-main">
-        <div class="container">
-            <div class="row g-4">
-                <!-- About Column -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <div class="footer-brand">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <span class="brand-name">MediCare Center</span>
-                        </div>
-                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
-                        <div class="footer-newsletter">
-                            <h4>Subscribe to our Newsletter</h4>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links Column -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="doctors.html">Our Doctors</a></li>
-                            <li><a href="blog.html">Health Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Departments Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Medical Departments</h4>
-                        <ul class="footer-links">
-                            <li><a href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a href="departments.html#neurology">Neurology</a></li>
-                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a href="departments.html#radiology">Radiology</a></li>
-                            <li><a href="departments.html#surgery">General Surgery</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Contact Info</h4>
-                        <div class="footer-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone-alt"></i>
-                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-clock"></i>
-                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="contact.html" class="btn btn-light me-2">Contact Us</a>
+                <a href="tel:+1234567890" class="btn btn-outline-light">Call Now</a>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="footer-legal">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="sitemap.html">Sitemap</a>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
+                                <span class="brand-name">MediCare Center</span>
+                            </div>
+                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <div class="footer-newsletter">
+                                <h4>Subscribe to our Newsletter</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="Your email address" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="doctors.html">Our Doctors</a></li>
+                                <li><a href="blog.html">Health Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Departments Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Medical Departments</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">Cardiology</a></li>
+                                <li><a href="departments.html#neurology">Neurology</a></li>
+                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
+                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                                <li><a href="departments.html#radiology">Radiology</a></li>
+                                <li><a href="departments.html#surgery">General Surgery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">Contact Info</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
+                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="sitemap.html">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
     
     <!-- Back to Top -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const apiBaseUrl = 'https://localhost:7230/api';
+    let allDepartments = [];
+    let visibleDepartments = 3; // Initial number of departments to show
+    const viewMoreBtn = document.getElementById('view-more-btn');
+    const departmentsContainer = document.getElementById('departments-container');
+
+    // Fetch departments
+    async function fetchDepartments() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/Departments`);
+            if (!response.ok) throw new Error('Network response was not ok');
+            
+            allDepartments = await response.json();
+            displayDepartments();
+        } catch (error) {
+            console.error('Error fetching departments:', error);
+            departmentsContainer.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <div class="alert alert-danger">
+                        Failed to load departments. Please try again later.
+                    </div>
+                </div>
+            `;
+            document.getElementById('view-more-container').style.display = 'none';
+        }
+    }
+
+    // Display departments with pagination
+    function displayDepartments() {
+        if (allDepartments.length === 0) {
+            departmentsContainer.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <h4>No departments found</h4>
+                    <p>Please check back later or contact our support</p>
+                </div>
+            `;
+            document.getElementById('view-more-container').style.display = 'none';
+            return;
+        }
+
+        // Show only the current visible departments
+        const departmentsToShow = allDepartments.slice(0, visibleDepartments);
+        
+        let html = '';
+        departmentsToShow.forEach(dept => {
+            const imagePath = dept.imagePath 
+                ? `https://localhost:7230${dept.imagePath}`
+                : getDepartmentImage(dept.name);
+            
+            html += `
+    <div class="col-md-6 col-lg-4" id="${dept.name.toLowerCase().replace(/\s+/g, '-')}">
+        <div class="department-card card h-100">
+            <div class="department-img">
+                <img src="${imagePath}" 
+                     alt="${dept.name}" 
+                     class="card-img-top"
+                     onerror="this.src='images/dept-default.jpg'">
+            </div>
+            <div class="card-body">
+                <div class="department-icon">
+                    ${getDepartmentIcon(dept.name)}
+                </div>
+                <h3>${dept.name}</h3>
+                <p class="card-text">${dept.description || 'Specialized care for ' + dept.name}</p>
+                <div class="doctor-count mb-3 text-center">
+                    <span class="badge">
+                        ${dept.doctorCount} ${dept.doctorCount === 1 ? 'Specialist' : 'Specialists'}
+                    </span>
+                </div>
+                <ul class="department-services">
+                    ${getDepartmentServices(dept.name).map(service => `
+                        <li><i class="fas fa-check"></i>${service}</li>
+                    `).join('')}
+                </ul>
+            </div>
+            <div class="card-footer">
+                <a href="doctors.html?department=${dept.id}" 
+                   class="btn btn-outline-primary w-100 mb-2">
+                    View ${dept.name} Specialists
+                </a>
+                <a href="department-details.html?id=${dept.id}" 
+                   class="btn btn-primary w-100">
+                    View Details
+                </a>
+            </div>
+        </div>
+    </div>
+`;
+        });
+        
+        departmentsContainer.innerHTML = html;
+        
+        // Show/hide view more button
+        if (visibleDepartments >= allDepartments.length) {
+            document.getElementById('view-more-container').style.display = 'none';
+        } else {
+            document.getElementById('view-more-container').style.display = 'block';
+        }
+    }
+
+    // View more button click handler
+    viewMoreBtn.addEventListener('click', function() {
+        visibleDepartments += 3; // Show 3 more departments
+        displayDepartments();
+        
+        // Smooth scroll to the new departments
+        setTimeout(() => {
+            const lastDepartment = document.querySelector('#departments-container > div:last-child');
+            lastDepartment.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+    });
+
+    // Helper functions (keep your existing ones)
+    function getDepartmentImage(deptName) {
+        const images = {
+            'Cardiology': 'images/dept-cardio.jpg',
+            'Neurology': 'images/dept-neuro.jpg',
+            'Pediatrics': 'images/dept-peds.jpg',
+            'Orthopedics': 'images/dept-ortho.jpg',
+            'Radiology': 'images/dept-radio.jpg',
+            'Surgery': 'images/dept-surgery.jpg',
+            'Dermatology': 'images/dept-derma.jpg'
+        };
+        return images[deptName] || 'images/dept-default.jpg';
+    }
     
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    function getDepartmentIcon(deptName) {
+        const icons = {
+            'Cardiology': '<i class="fas fa-heartbeat"></i>',
+            'Neurology': '<i class="fas fa-brain"></i>',
+            'Pediatrics': '<i class="fas fa-baby"></i>',
+            'Orthopedics': '<i class="fas fa-bone"></i>',
+            'Radiology': '<i class="fas fa-x-ray"></i>',
+            'Surgery': '<i class="fas fa-scalpel"></i>',
+            'Dermatology': '<i class="fas fa-allergies"></i>'
+        };
+        return icons[deptName] || '<i class="fas fa-hospital"></i>';
+    }
+    
+    function getDepartmentServices(deptName) {
+        const services = {
+            'Cardiology': ['Echocardiography', 'Cardiac Catheterization', 'Pacemaker Implantation'],
+            'Neurology': ['EEG Testing', 'EMG/Nerve Conduction', 'Stroke Care'],
+            'Pediatrics': ['Well-child Visits', 'Vaccinations', 'Asthma Management'],
+            'Orthopedics': ['Joint Replacement', 'Fracture Care', 'Sports Medicine'],
+            'Radiology': ['MRI Scans', 'CT Scans', 'Ultrasound Imaging'],
+            'Surgery': ['Laparoscopic Surgery', 'Trauma Surgery', 'Minimally Invasive Procedures'],
+            'Dermatology': ['Acne Treatment', 'Eczema Care', 'Skin Cancer Screening']
+        };
+        return services[deptName] || ['Specialized Diagnostics', 'Advanced Treatments', 'Personalized Care'];
+    }
+
+    // Initialize
+    fetchDepartments();
+});
+</script>
 </body>
 </html>

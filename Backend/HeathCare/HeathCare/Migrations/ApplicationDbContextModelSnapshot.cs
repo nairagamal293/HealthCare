@@ -121,47 +121,6 @@ namespace HeathCare.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("HeathCare.Models.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Departments");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Description = "Heart care specialists",
-                            Name = "Cardiology"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Description = "Brain and nervous system specialists",
-                            Name = "Neurology"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Description = "Child healthcare specialists",
-                            Name = "Pediatrics"
-                        });
-                });
-
             modelBuilder.Entity("HeathCare.Models.Doctor", b =>
                 {
                     b.Property<int>("Id")
@@ -270,6 +229,54 @@ namespace HeathCare.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("HeathCare.Models.HeathCare.Models.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Heart care specialists",
+                            ImagePath = "/uploads/departments/default-cardiology.jpg",
+                            Name = "Cardiology"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Brain and nervous system specialists",
+                            ImagePath = "/uploads/departments/default-neurology.jpg",
+                            Name = "Neurology"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Child healthcare specialists",
+                            ImagePath = "/uploads/departments/default-pediatrics.jpg",
+                            Name = "Pediatrics"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -407,7 +414,7 @@ namespace HeathCare.Migrations
 
             modelBuilder.Entity("HeathCare.Models.Booking", b =>
                 {
-                    b.HasOne("HeathCare.Models.Department", "Department")
+                    b.HasOne("HeathCare.Models.HeathCare.Models.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -418,7 +425,7 @@ namespace HeathCare.Migrations
 
             modelBuilder.Entity("HeathCare.Models.Doctor", b =>
                 {
-                    b.HasOne("HeathCare.Models.Department", "Department")
+                    b.HasOne("HeathCare.Models.HeathCare.Models.Department", "Department")
                         .WithMany("Doctors")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -478,7 +485,7 @@ namespace HeathCare.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("HeathCare.Models.Department", b =>
+            modelBuilder.Entity("HeathCare.Models.HeathCare.Models.Department", b =>
                 {
                     b.Navigation("Doctors");
                 });

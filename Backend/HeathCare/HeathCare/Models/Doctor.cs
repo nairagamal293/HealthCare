@@ -1,4 +1,6 @@
-﻿namespace HeathCare.Models
+﻿using HeathCare.Models.HeathCare.Models;
+
+namespace HeathCare.Models
 {
     public class Doctor
     {

@@ -134,12 +134,6 @@ D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\scopedcss
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.build.json
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.development.json
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.HeathCare.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.build.HeathCare.props
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.HeathCare.props
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.HeathCare.props
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.csproj.Up2Date
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.dll
@@ -148,3 +142,8 @@ D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.genruntimeconfig.cache
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\ref\HeathCare.dll
 D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\HeathCare.sourcelink.json
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\obj\Debug\net8.0\staticwebassets.build.json.cache

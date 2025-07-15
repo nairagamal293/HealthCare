@@ -3,14 +3,15 @@
 
 /* Global Styles */
 :root {
-    --primary-color: #0962e8;       /* Deep navy blue – trust & authority */
-    --secondary-color: #800020;     /* Classic burgundy – care & strength */
-    --dark-color: #2c2c3c;          /* Very dark slate/navy – for text or contrast */
-    --light-color: #f5f7fa;         /* Soft light gray – clean background */
-    --success-color: #2e7d32;       /* Medical green for success/healing */
-    --danger-color: #800020;        /* Controlled burgundy-red for alerts */
-    --warning-color: #e0a800;       /* Muted golden mustard – fits both tones */
-    --info-color: #517ca8;          /* Muted healthcare blue for info sections */
+    /* Burgundy-based professional palette */
+    --primary-color: #007bff;       /* Deep Burgundy – bold and professional */
+    --secondary-color: #054284;     /* Dusty Rose Burgundy – complementary tone */
+    --dark-color: #2c1b25;          /* Charcoal Burgundy – very dark text/contrast */
+    --light-color: #f8f4f6;         /* Soft Blush Gray – clean and slightly warm background */
+    --success-color: #4e7c59;       /* Earthy Green – muted success with natural feel */
+    --danger-color: #17a2b8;        /* Burgundy-Red – sharp warning tone */
+    --warning-color: #c78f2f;       /* Muted Gold – sophisticated, warm warning */
+    --info-color: #7e6f9e;          /* Muted Plum – cool, readable info tone */
     --white-color: #ffffff;
     --black-color: #000000;
 
@@ -18,7 +19,7 @@
     --heading-font: 'Poppins', sans-serif;
 
     --transition: all 0.3s ease;
-    --box-shadow: 0 5px 15px rgba(11, 31, 58, 0.1); /* Navy-tinted shadow */
+    --box-shadow: 0 5px 15px rgba(128, 0, 32, 0.1); /* Burgundy-tinted shadow */
     --border-radius: 8px;
 }
 
@@ -87,8 +88,8 @@ ul {
 }
 
 .btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
+    background-color: #9c2424;
+    border-color: #9c2424;
     color: var(--white-color);
     transform: translateY(-3px);
     box-shadow: var(--box-shadow);
@@ -662,7 +663,7 @@ ul {
 
 .doctor-card {
     background-color: var(--white-color);
-    border-radius: var(--border-radius);
+    border-radius: 10px ;
     overflow: hidden;
     transition: var(--transition);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);

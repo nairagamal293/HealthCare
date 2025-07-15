@@ -17,6 +17,53 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>
+        .doctors-preview {
+        background-color: #f8f9fa;
+    }
+    .doctor-preview-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+         border-radius: 10px;
+    }
+    .doctor-preview-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .doctor-preview-img-container {
+        position: relative;
+        overflow: hidden;
+        height: 320px;
+         border-radius: 10px;
+       
+    }
+    .doctor-preview-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .doctor-preview-overlay {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        
+        padding: 15px;
+        text-align: center;
+        transition: bottom 0.3s ease;
+    }
+    .doctor-preview-card:hover .doctor-preview-overlay {
+        bottom: 0;
+    }
+    .doctor-preview-card:hover img {
+        transform: scale(1.05);
+    }
+    @media (max-width: 767.98px) {
+        .doctor-preview-img-container {
+            height: 180px;
+        }
+    }
+    </style>
 </head>
 <body>
     
@@ -35,7 +82,7 @@
     </div>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="MediCare Center" class="logo">
@@ -46,28 +93,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.html">About Us</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Departments
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#neurology">Neurology</a></li>
-                            <li><a class="dropdown-item" href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a class="dropdown-item" href="departments.html#radiology">Radiology</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">Departments</a>
                     </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">FAQs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -86,7 +128,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-img position-relative">
-                        <img src="images/2150780428.jpg" alt="MediCare Center Team" class="img-fluid rounded-3 shadow">
+                        <img src="images/about.jpeg" alt="MediCare Center Team" class="img-fluid rounded-3 shadow">
                         <div class="experience-badge bg-primary text-white rounded-pill p-3 text-center shadow">
                             <span class="display-4 fw-bold">15+</span>
                             <p class="mb-0">Years of Excellence</p>
@@ -255,64 +297,32 @@
 
     
     <!-- Leadership Section -->
-    <section class="leadership py-5 bg-light">
-        <div class="container">
-            <div class="section-header text-center mb-5">
-                <span class="subtitle text-primary">OUR TEAM</span>
-                <h2>Meet Our Leadership</h2>
-                <div class="divider mx-auto bg-primary"></div>
-                <p class="lead mx-auto" style="max-width: 700px;">Dedicated professionals guiding our mission to deliver exceptional healthcare</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="team-card text-center">
-                        <div class="team-img mb-3 overflow-hidden rounded-circle mx-auto">
-                            <img src="images/doctor1.jpg" alt="Dr. Ahmed Al-Mansour" class="img-fluid">
-                        </div>
-                        <h4 class="h5 mb-1">Dr. Ahmed Al-Mansour</h4>
-                        <p class="text-muted">Medical Director</p>
-                        
-                    </div>
+    <section class="doctors-preview py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <span class="subtitle text-primary">OUR SPECIALISTS</span>
+            <h2>Meet Our Expert Doctors</h2>
+            <div class="divider mx-auto bg-primary"></div>
+            <p class="lead mx-auto" style="max-width: 700px;">Our team of highly qualified specialists is dedicated to providing exceptional care</p>
+        </div>
+
+        <div class="row" id="doctors-preview-container">
+            <!-- Loading spinner -->
+            <div class="col-12 text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="team-card text-center">
-                        <div class="team-img mb-3 overflow-hidden rounded-circle mx-auto">
-                            <img src="images/doctor2.jpg" alt="Dr. Sarah Abdullah" class="img-fluid">
-                        </div>
-                        <h4 class="h5 mb-1">Dr. Sarah Abdullah</h4>
-                        <p class="text-muted">Chief of Surgery</p>
-                        
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="team-card text-center">
-                        <div class="team-img mb-3 overflow-hidden rounded-circle mx-auto">
-                            <img src="images/doctor3.jpg" alt="Dr. Mohammed Hassan" class="img-fluid">
-                        </div>
-                        <h4 class="h5 mb-1">Dr. Mohammed Hassan</h4>
-                        <p class="text-muted">Head of Cardiology</p>
-                        
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="team-card text-center">
-                        <div class="team-img mb-3 overflow-hidden rounded-circle mx-auto">
-                            <img src="images/doctor4.jpg" alt="Nora Al-Farsi" class="img-fluid">
-                        </div>
-                        <h4 class="h5 mb-1">Nora Al-Farsi</h4>
-                        <p class="text-muted">Administrative Director</p>
-                        
-                    </div>
-                </div>
+                <p class="mt-2">Loading our specialists...</p>
             </div>
         </div>
-    </section>
 
-
+        <div class="text-center mt-4">
+            <a href="doctors.html" class="btn btn-outline-primary btn-lg px-4">
+                View All Doctors <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section class="cta-section py-5">
@@ -440,5 +450,78 @@
     
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+        
+        // Fetch and display doctors preview
+        async function fetchDoctorsPreview() {
+            try {
+                const response = await fetch(`${apiBaseUrl}/doctors?limit=4`); // Limit to 4 doctors for preview
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const doctors = await response.json();
+                displayDoctorsPreview(doctors);
+            } catch (error) {
+                console.error('Error fetching doctors:', error);
+                document.getElementById('doctors-preview-container').innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <div class="alert alert-danger">
+                            Failed to load doctors. <a href="doctors.html" class="alert-link">View all doctors</a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Display doctors in the preview section
+        function displayDoctorsPreview(doctors) {
+            const container = document.getElementById('doctors-preview-container');
+            
+            if (!doctors || doctors.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <h4>No doctors found</h4>
+                        <p>Please check back later or <a href="contact.html">contact our support</a></p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '';
+            doctors.forEach(doctor => {
+                html += `
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card doctor-preview-card h-100 border-0 shadow-sm">
+                            <div class="doctor-preview-img-container">
+                                <img class = "doctor-img" src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}" '}" 
+                                
+                                     class="card-img-top" 
+                                     alt="Dr. ${doctor.name}">
+                                <div class="doctor-preview-overlay">
+                                    <a href="doctor-details.html?id=${doctor.id}" class="btn btn-primary btn-sm">
+                                        View Profile
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1">Dr. ${doctor.name}</h5>
+                                <p class="text-primary small mb-2">${doctor.specialty}</p>
+                                <p class="text-muted small">
+                                    <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // Initialize
+        fetchDoctorsPreview();
+    });
+</script>
 </body>
 </html>

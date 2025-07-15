@@ -36,11 +36,29 @@ namespace HealthCare.Data
                 .HasForeignKey(b => b.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Seed initial data if needed
+            // Seed initial data with ImagePath
             modelBuilder.Entity<Department>().HasData(
-                new Department { Id = 1, Name = "Cardiology", Description = "Heart care specialists" },
-                new Department { Id = 2, Name = "Neurology", Description = "Brain and nervous system specialists" },
-                new Department { Id = 3, Name = "Pediatrics", Description = "Child healthcare specialists" }
+                new Department
+                {
+                    Id = 1,
+                    Name = "Cardiology",
+                    Description = "Heart care specialists",
+                    ImagePath = "/uploads/departments/default-cardiology.jpg" // Add default image path
+                },
+                new Department
+                {
+                    Id = 2,
+                    Name = "Neurology",
+                    Description = "Brain and nervous system specialists",
+                    ImagePath = "/uploads/departments/default-neurology.jpg" // Add default image path
+                },
+                new Department
+                {
+                    Id = 3,
+                    Name = "Pediatrics",
+                    Description = "Child healthcare specialists",
+                    ImagePath = "/uploads/departments/default-pediatrics.jpg" // Add default image path
+                }
             );
         }
     }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HeathCare.Models.HeathCare.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace HeathCare.Models
 {
@@ -9,7 +10,6 @@ namespace HeathCare.Models
         [Required]
         public string FullName { get; set; }
 
-       
 
         [Required]
         public string PhoneNumber { get; set; }

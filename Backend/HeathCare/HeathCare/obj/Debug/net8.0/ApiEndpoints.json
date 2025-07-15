@@ -340,7 +340,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HeathCare.DTOs.DepartmentDTO, HeathCare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HeathCare.DTOs.HeathCare.DTOs.DepartmentDTO, HeathCare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -359,14 +359,24 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "departmentDto",
-        "Type": "HeathCare.DTOs.DepartmentCreateDTO",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "HeathCare.DTOs.DepartmentDTO",
+        "Type": "HeathCare.DTOs.HeathCare.DTOs.DepartmentDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -392,7 +402,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "HeathCare.DTOs.DepartmentDTO",
+        "Type": "HeathCare.DTOs.HeathCare.DTOs.DepartmentDTO",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -416,9 +426,24 @@
         "IsRequired": true
       },
       {
-        "Name": "departmentDto",
-        "Type": "HeathCare.DTOs.DepartmentUpdateDTO",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
