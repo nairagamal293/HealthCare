@@ -13,7 +13,10 @@ namespace HeathCare
             // Department mapping
             CreateMap<Department, DepartmentDTO>()
                     .ForMember(dest => dest.DoctorCount,
-                               opt => opt.MapFrom(src => src.Doctors.Count));
+                               opt => opt.MapFrom(src => src.Doctors.Count))
+                    .ForMember(dest => dest.Services,
+                               opt => opt.MapFrom(src => src.Services));
+
             CreateMap<DepartmentCreateDTO, Department>()
                     .ForMember(dest => dest.ImagePath, opt => opt.Ignore()); // Will be set manually
 
@@ -31,6 +34,15 @@ namespace HeathCare
             // Add other mappings as needed
             CreateMap<DepartmentCreateDTO, Department>();
             CreateMap<DepartmentUpdateDTO, Department>();
+
+
+            // Service mappings
+            CreateMap<Service, ServiceDTO>()
+                .ForMember(dest => dest.DepartmentName,
+                           opt => opt.MapFrom(src => src.Department.Name));
+
+            CreateMap<ServiceCreateDTO, Service>();
+            CreateMap<ServiceUpdateDTO, Service>();
 
             // Blog mappings
             CreateMap<BlogCreateDTO, Blog>()

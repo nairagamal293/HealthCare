@@ -12,8 +12,9 @@ namespace HeathCare.DTOs
             public int Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
-            public string ImagePath { get; set; } // Add this line
+            public string ImagePath { get; set; }
             public int DoctorCount { get; set; }
+            public List<ServiceDTO> Services { get; set; } = new List<ServiceDTO>();
         }
 
         public class DepartmentCreateDTO
@@ -26,7 +27,8 @@ namespace HeathCare.DTOs
             [StringLength(500)]
             public string Description { get; set; }
 
-            public IFormFile ImageFile { get; set; } // Add this line
+            public IFormFile ImageFile { get; set; }
+            public List<ServiceCreateDTO> Services { get; set; } = new List<ServiceCreateDTO>();
         }
 
         public class DepartmentUpdateDTO
@@ -41,7 +43,8 @@ namespace HeathCare.DTOs
             [StringLength(500)]
             public string Description { get; set; }
 
-            public IFormFile? ImageFile { get; set; } // Add this line (nullable)
+            public IFormFile? ImageFile { get; set; }
+            public List<ServiceCreateDTO> Services { get; set; } = new List<ServiceCreateDTO>();
         }
     }
 }

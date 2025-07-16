@@ -29,10 +29,13 @@ namespace HeathCare.Services
             _logger = logger;
         }
 
+        // In DepartmentService.cs, update GetAllDepartmentsAsync and GetDepartmentByIdAsync:
+
         public async Task<IEnumerable<DepartmentDTO>> GetAllDepartmentsAsync()
         {
             var departments = await _context.Departments
                 .Include(d => d.Doctors)
+                .Include(d => d.Services) // Add this line
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<DepartmentDTO>>(departments);
@@ -42,6 +45,7 @@ namespace HeathCare.Services
         {
             var department = await _context.Departments
                 .Include(d => d.Doctors)
+                .Include(d => d.Services) // Add this line
                 .FirstOrDefaultAsync(d => d.Id == id);
 
             if (department == null) return null;
@@ -78,12 +82,31 @@ namespace HeathCare.Services
             _context.Departments.Add(department);
             await _context.SaveChangesAsync();
 
+            // Add services if they exist
+            if (departmentDto.Services != null && departmentDto.Services.Any())
+            {
+                foreach (var serviceDto in departmentDto.Services)
+                {
+                    var service = new Service
+                    {
+                        Name = serviceDto.Name,
+                        Description = serviceDto.Description,
+                        DepartmentId = department.Id
+                    };
+                    _context.Services.Add(service);
+                }
+                await _context.SaveChangesAsync();
+            }
+
             return _mapper.Map<DepartmentDTO>(department);
         }
 
         public async Task UpdateDepartmentAsync(int id, DepartmentUpdateDTO departmentDto)
         {
-            var department = await _context.Departments.FindAsync(id);
+            var department = await _context.Departments
+                .Include(d => d.Services)
+                .FirstOrDefaultAsync(d => d.Id == id);
+
             if (department == null) throw new KeyNotFoundException("Department not found");
 
             // Handle image update if new file is provided
@@ -97,13 +120,33 @@ namespace HeathCare.Services
                 department.ImagePath = await _fileService.SaveImageAsync(departmentDto.ImageFile, "departments");
             }
 
-            // Update other properties
+            // Update department properties
             department.Name = departmentDto.Name;
             department.Description = departmentDto.Description;
+
+            // Handle services - only update if new services are provided
+            if (departmentDto.Services != null && departmentDto.Services.Any())
+            {
+                // Remove existing services
+                _context.Services.RemoveRange(department.Services);
+
+                // Add new services
+                foreach (var serviceDto in departmentDto.Services)
+                {
+                    department.Services.Add(new Service
+                    {
+                        Name = serviceDto.Name,
+                        Description = serviceDto.Description,
+                        DepartmentId = department.Id
+                    });
+                }
+            }
 
             _context.Departments.Update(department);
             await _context.SaveChangesAsync();
         }
+
+
 
         public async Task DeleteDepartmentAsync(int id)
         {

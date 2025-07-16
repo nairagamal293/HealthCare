@@ -18,6 +18,7 @@ namespace HealthCare.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Service> Services { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,12 @@ namespace HealthCare.Data
                 .WithMany()
                 .HasForeignKey(b => b.DepartmentId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Service>()
+               .HasOne(s => s.Department)
+               .WithMany(d => d.Services)
+               .HasForeignKey(s => s.DepartmentId)
+               .OnDelete(DeleteBehavior.Cascade);
 
             // Seed initial data with ImagePath
             modelBuilder.Entity<Department>().HasData(

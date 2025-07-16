@@ -3,6 +3,7 @@ using HeathCare.DTOs.HeathCare.DTOs;
 using HeathCare.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using static HeathCare.Services.DepartmentService;
 
 namespace HeathCare.Controllers
@@ -13,11 +14,13 @@ namespace HeathCare.Controllers
     public class DepartmentsController : ControllerBase
     {
         private readonly IDepartmentService _departmentService;
+        private readonly IServiceService _serviceService; // Add this line
         private readonly ILogger<DoctorService> _logger;
 
-        public DepartmentsController(IDepartmentService departmentService, ILogger<DoctorService> logger)
+        public DepartmentsController(IDepartmentService departmentService, IServiceService serviceService, ILogger<DoctorService> logger)
         {
             _departmentService = departmentService;
+            _serviceService = serviceService; // Add this line
             _logger = logger;
         }
 
@@ -38,7 +41,7 @@ namespace HeathCare.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult<DepartmentDTO>> PostDepartment([FromForm] DepartmentCreateDTO departmentDto)
+        public async Task<ActionResult<DepartmentDTO>> PostDepartment([FromForm] DepartmentCreateWithServicesDTO departmentDto)
         {
             try
             {
@@ -47,47 +50,53 @@ namespace HeathCare.Controllers
                     return BadRequest(ModelState);
                 }
 
-                var department = await _departmentService.CreateDepartmentAsync(departmentDto);
+                var departmentCreateDto = new DepartmentCreateDTO
+                {
+                    Name = departmentDto.Name,
+                    Description = departmentDto.Description,
+                    ImageFile = departmentDto.ImageFile,
+                    Services = JsonSerializer.Deserialize<List<ServiceCreateDTO>>(departmentDto.ServicesJson)
+                };
+
+                var department = await _departmentService.CreateDepartmentAsync(departmentCreateDto);
                 return CreatedAtAction(nameof(GetDepartment), new { id = department.Id }, department);
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error creating department");
-                return StatusCode(500, new
-                {
-                    message = "An error occurred while creating the department",
-                    detailedError = ex.Message
-                });
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDepartment(int id, [FromForm] DepartmentUpdateDTO departmentDto)
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> PutDepartment(int id, [FromForm] DepartmentUpdateWithServicesDTO departmentDto)
         {
             if (id != departmentDto.Id)
                 return BadRequest();
 
             try
             {
-                await _departmentService.UpdateDepartmentAsync(id, departmentDto);
+                var departmentUpdateDto = new DepartmentUpdateDTO
+                {
+                    Id = departmentDto.Id,
+                    Name = departmentDto.Name,
+                    Description = departmentDto.Description,
+                    ImageFile = departmentDto.ImageFile,
+                    Services = JsonSerializer.Deserialize<List<ServiceCreateDTO>>(departmentDto.ServicesJson)
+                };
+
+                await _departmentService.UpdateDepartmentAsync(id, departmentUpdateDto);
                 return NoContent();
             }
             catch (KeyNotFoundException)
             {
                 return NotFound();
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
-            }
-            catch (Exception)
-            {
-                return StatusCode(500, new { message = "An error occurred while updating the department" });
+                _logger.LogError(ex, "Error updating department");
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 

@@ -7,8 +7,9 @@
             public int Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
-            public string ImagePath { get; set; } // Add this line
+            public string ImagePath { get; set; }
             public ICollection<Doctor> Doctors { get; set; } = new List<Doctor>();
+            public ICollection<Service> Services { get; set; } = new List<Service>();
         }
     }
 }

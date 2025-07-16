@@ -340,7 +340,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show image preview if exists
             if (doctor.imagePath) {
-                document.getElementById('doctorImagePreview').src = doctor.imagePath;
+                 document.getElementById('doctorImagePreview').src = `https://localhost:7230${doctor.imagePath}`;
+                
                 document.getElementById('doctorImagePreviewContainer').style.display = 'block';
             } else {
                 document.getElementById('doctorImagePreviewContainer').style.display = 'none';
@@ -427,6 +428,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('departmentModalTitle').textContent = 'Add New Department';
         document.getElementById('departmentId').value = '';
         document.getElementById('departmentForm').reset();
+        document.getElementById('departmentImagePreviewContainer').style.display = 'none';
+        document.getElementById('servicesContainer').innerHTML = '';
+        
+        // Add initial service field
+        addServiceField();
         
         const modal = new bootstrap.Modal(document.getElementById('departmentModal'));
         modal.show();
@@ -435,11 +441,30 @@ document.addEventListener('DOMContentLoaded', function() {
     async function editDepartment(id) {
         try {
             const department = await fetchData(`/api/departments/${id}`);
+            const services = await fetchData(`/api/services/department/${id}`);
             
             document.getElementById('departmentModalTitle').textContent = 'Edit Department';
             document.getElementById('departmentId').value = department.id;
             document.getElementById('departmentName').value = department.name;
             document.getElementById('departmentDescription').value = department.description;
+            
+            // Show image preview if exists
+            if (department.imagePath) {
+                document.getElementById('departmentImagePreview').src = `https://localhost:7230${department.imagePath}`;
+                document.getElementById('departmentImagePreviewContainer').style.display = 'block';
+            } else {
+                document.getElementById('departmentImagePreviewContainer').style.display = 'none';
+            }
+            
+            // Clear existing services and add current ones
+            document.getElementById('servicesContainer').innerHTML = '';
+            if (services && services.length > 0) {
+                services.forEach(service => {
+                    addServiceField(service.id, service.name, service.description);
+                });
+            } else {
+                addServiceField();
+            }
             
             const modal = new bootstrap.Modal(document.getElementById('departmentModal'));
             modal.show();
@@ -450,33 +475,105 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Add service field to department form
+    function addServiceField(id = '', name = '', description = '') {
+        const container = document.getElementById('servicesContainer');
+        const serviceId = id || Date.now(); // Use existing ID or generate a temporary one
+        
+        const serviceDiv = document.createElement('div');
+        serviceDiv.className = 'service-entry mb-3 p-3 border rounded';
+        serviceDiv.dataset.serviceId = serviceId;
+        
+        serviceDiv.innerHTML = `
+            <div class="row">
+                <div class="col-md-5 mb-2">
+                    <label class="form-label">Service Name</label>
+                    <input type="text" class="form-control service-name" value="${name}" required>
+                </div>
+                <div class="col-md-5 mb-2">
+                    <label class="form-label">Description</label>
+                    <input type="text" class="form-control service-description" value="${description}" required>
+                </div>
+                <div class="col-md-2 d-flex align-items-end mb-2">
+                    <button type="button" class="btn btn-danger btn-sm remove-service">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        container.appendChild(serviceDiv);
+        
+        // Add event listener to remove button
+        serviceDiv.querySelector('.remove-service').addEventListener('click', function() {
+            if (container.children.length > 1) {
+                container.removeChild(serviceDiv);
+            } else {
+                // Clear fields instead of removing the last service
+                serviceDiv.querySelector('.service-name').value = '';
+                serviceDiv.querySelector('.service-description').value = '';
+            }
+        });
+    }
+
+    // Add service button
+    document.getElementById('addServiceBtn').addEventListener('click', function() {
+        addServiceField();
+    });
+
     document.getElementById('saveDepartmentBtn').addEventListener('click', async () => {
     const form = document.getElementById('departmentForm');
     const id = document.getElementById('departmentId').value;
     const isEdit = !!id;
     
-    if (!form.checkValidity()) {
-        form.classList.add('was-validated');
+    // Validate required fields
+    const name = document.getElementById('departmentName').value;
+    const description = document.getElementById('departmentDescription').value;
+    
+    if (!name || !description) {
+        showAlert('error', 'Name and Description are required fields');
         return;
     }
     
     try {
-        const data = {
-            Name: document.getElementById('departmentName').value,
-            Description: document.getElementById('departmentDescription').value
-        };
+        const formData = new FormData();
+        formData.append('Name', name);
+        formData.append('Description', description);
+        
+        // Add image file if selected
+        const imageFile = document.getElementById('departmentImage').files[0];
+        if (imageFile) {
+            formData.append('ImageFile', imageFile);
+        }
+        
+        // Collect services data
+        const services = [];
+        document.querySelectorAll('.service-entry').forEach(serviceDiv => {
+            const serviceName = serviceDiv.querySelector('.service-name').value;
+            const serviceDescription = serviceDiv.querySelector('.service-description').value;
+            
+            if (serviceName && serviceDescription) {
+                services.push({
+                    Name: serviceName,
+                    Description: serviceDescription
+                });
+            }
+        });
+        
+        // Add services to form data as JSON string
+        formData.append('ServicesJson', JSON.stringify(services));
         
         if (isEdit) {
-            data.Id = parseInt(id);
+            formData.append('Id', id);
             await fetchData(`/api/departments/${id}`, {
                 method: 'PUT',
-                body: JSON.stringify(data)
-            });
+                body: formData
+            }, false);
         } else {
             await fetchData('/api/departments', {
                 method: 'POST',
-                body: JSON.stringify(data)
-            });
+                body: formData
+            }, false);
         }
         
         showAlert('success', `Department ${isEdit ? 'updated' : 'added'} successfully`);
@@ -490,6 +587,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showAlert('error', `Failed to ${isEdit ? 'update' : 'add'} department: ${error.message}`);
     }
 });
+
+
+
+
 
     // Blog CRUD operations
     document.getElementById('addBlogBtn').addEventListener('click', () => {
@@ -529,62 +630,54 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Blog Form Submission
-document.getElementById('saveBlogBtn').addEventListener('click', async () => {
-    const form = document.getElementById('blogForm');
-    const id = document.getElementById('blogId').value;
-    const isEdit = !!id;
-    
-    // Validate required fields
-    const title = document.getElementById('blogTitle').value;
-    const content = document.getElementById('blogContent').value;
-    
-    if (!title || !content) {
-        showAlert('error', 'Title and Content are required fields');
-        return;
-    }
-
-    try {
-        const formData = new FormData();
-        formData.append('Title', title);
-        formData.append('Content', content);
+    document.getElementById('saveBlogBtn').addEventListener('click', async () => {
+        const form = document.getElementById('blogForm');
+        const id = document.getElementById('blogId').value;
+        const isEdit = !!id;
         
-        const imageFile = document.getElementById('blogImage').files[0];
-        if (imageFile) {
-            formData.append('ImageFile', imageFile);
+        // Validate required fields
+        const title = document.getElementById('blogTitle').value;
+        const content = document.getElementById('blogContent').value;
+        
+        if (!title || !content) {
+            showAlert('error', 'Title and Content are required fields');
+            return;
         }
 
-        if (isEdit) {
-            formData.append('Id', id);
-            await fetchData(`/api/blogs/${id}`, {
-                method: 'PUT',
-                body: formData
-            }, false);
-        } else {
-            await fetchData('/api/blogs', {
-                method: 'POST',
-                body: formData
-            }, false);
+        try {
+            const formData = new FormData();
+            formData.append('Title', title);
+            formData.append('Content', content);
+            
+            const imageFile = document.getElementById('blogImage').files[0];
+            if (imageFile) {
+                formData.append('ImageFile', imageFile);
+            }
+
+            if (isEdit) {
+                formData.append('Id', id);
+                await fetchData(`/api/blogs/${id}`, {
+                    method: 'PUT',
+                    body: formData
+                }, false);
+            } else {
+                await fetchData('/api/blogs', {
+                    method: 'POST',
+                    body: formData
+                }, false);
+            }
+            
+            showAlert('success', `Blog post ${isEdit ? 'updated' : 'added'} successfully`);
+            loadBlogs();
+            
+            const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
+            modal.hide();
+            
+        } catch (error) {
+            console.error('Error saving blog:', error);
+            showAlert('error', `Failed to ${isEdit ? 'update' : 'add'} blog post: ${error.message}`);
         }
-        
-        showAlert('success', `Blog post ${isEdit ? 'updated' : 'added'} successfully`);
-        loadBlogs();
-        
-        const modal = bootstrap.Modal.getInstance(document.getElementById('blogModal'));
-        modal.hide();
-        
-    } catch (error) {
-        console.error('Error saving blog:', error);
-        showAlert('error', `Failed to ${isEdit ? 'update' : 'add'} blog post: ${error.message}`);
-    }
-});
-
-
-// Temporary test in console
-document.getElementById('blogForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('Form submitted');
-    console.log('Content value:', document.getElementById('blogContent').value);
-});
+    });
 
     // Appointment status update
     async function updateAppointmentStatus(id, status) {
@@ -702,6 +795,18 @@ document.getElementById('blogForm').addEventListener('submit', (e) => {
         }
     });
 
+    document.getElementById('departmentImage').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                document.getElementById('departmentImagePreview').src = event.target.result;
+                document.getElementById('departmentImagePreviewContainer').style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
     // Logout
     document.getElementById('logoutBtn').addEventListener('click', function(e) {
         e.preventDefault();
@@ -712,50 +817,49 @@ document.getElementById('blogForm').addEventListener('submit', (e) => {
 
     // Helper function to fetch data
     async function fetchData(endpoint, options = {}, isJson = true) {
-    const token = localStorage.getItem('healthcare_token');
-    
-    if (!token) {
-        window.location.href = 'login.html';
-        throw new Error('No token found');
-    }
-
-    const defaultOptions = {
-        headers: {
-            'Authorization': `Bearer ${token}`
+        const token = localStorage.getItem('healthcare_token');
+        
+        if (!token) {
+            window.location.href = 'login.html';
+            throw new Error('No token found');
         }
-    };
-    
-    const finalOptions = {
-        ...defaultOptions,
-        ...options
-    };
-    
-    // Don't set Content-Type for FormData
-    if (!(finalOptions.body instanceof FormData)) {
-        finalOptions.headers['Content-Type'] = 'application/json';
-    }
-    
-    const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
-    
-    if (!response.ok) {
-        let errorMsg = 'Request failed';
-        try {
-            const errorData = await response.json();
-            errorMsg = errorData.message || JSON.stringify(errorData);
-        } catch (e) {
-            errorMsg = await response.text();
-        }
-        throw new Error(errorMsg);
-    }
-    
-    // Handle empty responses (204 No Content)
-    if (response.status === 204) {
-        return null;
-    }
-    
-    return isJson ? await response.json() : response;
-}
 
+        const defaultOptions = {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        };
+        
+        const finalOptions = {
+            ...defaultOptions,
+            ...options
+        };
+        
+        // Don't set Content-Type for FormData
+        if (!(finalOptions.body instanceof FormData)) {
+            finalOptions.headers['Content-Type'] = 'application/json';
+        }
+        
+        const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
+        
+        if (!response.ok) {
+            let errorMsg = 'Request failed';
+            try {
+                const errorData = await response.json();
+                errorMsg = errorData.message || JSON.stringify(errorData);
+            } catch (e) {
+                errorMsg = await response.text();
+            }
+            throw new Error(errorMsg);
+        }
+        
+        // Handle empty responses (204 No Content)
+        if (response.status === 204) {
+            return null;
+        }
+        
+        return isJson ? await response.json() : response;
+    }
 
     // Show alert message
     function showAlert(type, message) {

@@ -92,6 +92,7 @@ builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IContactService, ContactService>();
+builder.Services.AddScoped<IServiceService, ServiceService>();
 
 
 // Add AutoMapper

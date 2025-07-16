@@ -362,11 +362,16 @@
                         <p id="department-description">Loading department information...</p>
                         
                         <div class="department-services">
-                            <h3>Our Services</h3>
-                            <div id="department-services-list">
-                                <!-- Services will be loaded here -->
-                            </div>
-                        </div>
+    <h3>Our Services</h3>
+    <div id="department-services-list">
+        <!-- Services will be loaded here dynamically -->
+        <div class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading services...</span>
+            </div>
+        </div>
+    </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -530,67 +535,81 @@
         }
         
         // Fetch department details
-        async function fetchDepartmentDetails() {
-            try {
-                const response = await fetch(`${apiBaseUrl}/Departments/${departmentId}`);
-                if (!response.ok) throw new Error('Network response was not ok');
-                
-                const department = await response.json();
-                displayDepartmentDetails(department);
-                
-                // Fetch doctors for this department
-                fetchDepartmentDoctors(departmentId);
-            } catch (error) {
-                console.error('Error fetching department details:', error);
-                document.getElementById('department-description').innerHTML = `
-                    <div class="alert alert-danger">
-                        Failed to load department details. Please try again later.
-                    </div>
-                `;
-            }
-        }
+        // Fetch department details with services
+async function fetchDepartmentDetails() {
+    try {
+        document.getElementById('department-services-list').innerHTML = `
+            <div class="text-center py-4">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading services...</span>
+                </div>
+            </div>
+        `;
+
+        const [deptResponse, servicesResponse] = await Promise.all([
+            fetch(`${apiBaseUrl}/Departments/${departmentId}`),
+            fetch(`${apiBaseUrl}/Services/department/${departmentId}`)
+        ]);
+
+        if (!deptResponse.ok) throw new Error('Department not found');
+        if (!servicesResponse.ok) throw new Error('Services not available');
+
+        const department = await deptResponse.json();
+        const services = await servicesResponse.json();
+
+        displayDepartmentDetails(department, services);
+        fetchDepartmentDoctors(departmentId);
+        
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('department-description').innerHTML = `
+            <div class="alert alert-danger">
+                Failed to load department details: ${error.message}
+            </div>
+        `;
+        document.getElementById('department-services-list').innerHTML = `
+            <div class="alert alert-warning">
+                Could not load services at this time. Please try again later.
+            </div>
+        `;
+    }
+}
         
         // Display department details
-        function displayDepartmentDetails(department) {
-            // Set page title
-            document.title = `${department.name} | MediCare Center`;
-            
-            // Update hero section
-            document.getElementById('department-title').textContent = department.name;
-            document.getElementById('breadcrumb-dept').textContent = department.name;
-            
-            // Set hero background based on department
-            const hero = document.getElementById('department-hero');
-            const bgImage = getDepartmentBackground(department.name);
-            hero.style.setProperty('--bg-image', `url('${bgImage}')`);
-            
-            // Set department image
-            const deptImage = document.getElementById('department-image');
-            deptImage.src = department.imagePath 
-                ? `https://localhost:7230${department.imagePath}`
-                : getDepartmentImage(department.name);
-            deptImage.alt = department.name;
-            
-            // Set department description
-            document.getElementById('department-description').textContent = 
-                department.description || `Our ${department.name} department provides specialized care with state-of-the-art technology and experienced specialists.`;
-            
-            // Set department services
-            const servicesList = document.getElementById('department-services-list');
-            const services = getDepartmentServices(department.name);
-            
-            servicesList.innerHTML = services.map(service => `
-                <div class="service-item">
-                    <div class="service-icon">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="service-content">
-                        <h4>${service}</h4>
-                        <p>Comprehensive diagnosis and treatment for ${service.toLowerCase()} conditions</p>
-                    </div>
-                </div>
-            `).join('');
-        }
+        // Display department details with services
+function displayDepartmentDetails(department, services) {
+    // Set page title
+    document.title = `${department.name} | MediCare Center`;
+    
+    // Update hero section
+    document.getElementById('department-title').textContent = department.name;
+    document.getElementById('breadcrumb-dept').textContent = department.name;
+    
+    // Set hero background
+    const hero = document.getElementById('department-hero');
+    const bgImage = department.imagePath 
+        ? `url('https://localhost:7230${department.imagePath}')`
+        : `url('${getDepartmentBackground(department.name)}')`;
+    hero.style.setProperty('--bg-image', bgImage);
+    
+    // Set department image
+    const deptImage = document.getElementById('department-image');
+    deptImage.src = department.imagePath 
+        ? `https://localhost:7230${department.imagePath}`
+        : getDepartmentImage(department.name);
+    deptImage.alt = department.name;
+    
+    // Set department description
+    document.getElementById('department-description').textContent = 
+        department.description || `Our ${department.name} department provides specialized care with state-of-the-art technology and experienced specialists.`;
+    
+    // Display services
+    displayDepartmentServices(services);
+}
+
+
+
+
         
         // Fetch doctors for this department
         async function fetchDepartmentDoctors(departmentId) {
@@ -680,18 +699,32 @@
             return images[deptName] || 'images/dept-default.jpg';
         }
         
-        function getDepartmentServices(deptName) {
-            const services = {
-                'Cardiology': ['Echocardiography', 'Cardiac Catheterization', 'Pacemaker Implantation'],
-                'Neurology': ['EEG Testing', 'EMG/Nerve Conduction', 'Stroke Care'],
-                'Pediatrics': ['Well-child Visits', 'Vaccinations', 'Asthma Management'],
-                'Orthopedics': ['Joint Replacement', 'Fracture Care', 'Sports Medicine'],
-                'Radiology': ['MRI Scans', 'CT Scans', 'Ultrasound Imaging'],
-                'Surgery': ['Laparoscopic Surgery', 'Trauma Surgery', 'Minimally Invasive Procedures'],
-                'Dermatology': ['Acne Treatment', 'Eczema Care', 'Skin Cancer Screening']
-            };
-            return services[deptName] || ['Specialized Diagnostics', 'Advanced Treatments', 'Personalized Care'];
-        }
+        // Display department services
+function displayDepartmentServices(services) {
+    const servicesList = document.getElementById('department-services-list');
+    
+    if (!services || services.length === 0) {
+        servicesList.innerHTML = `
+            <div class="alert alert-info">
+                No services currently listed for this department.
+            </div>
+        `;
+        return;
+    }
+    
+    servicesList.innerHTML = services.map(service => `
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <div class="service-content">
+                <h4>${service.name}</h4>
+                <p>${service.description || 'Comprehensive diagnosis and treatment for this service'}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
         
         // Initialize
         fetchDepartmentDetails();

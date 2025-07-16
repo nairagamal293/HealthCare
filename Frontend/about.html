@@ -17,6 +17,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <style>
         .doctors-preview {
         background-color: #f8f9fa;
@@ -450,18 +451,20 @@
     
     <!-- Custom JS -->
     <script src="js/script.js"></script>
-    <script>
+  <script>
     document.addEventListener('DOMContentLoaded', function() {
         const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
         
         // Fetch and display doctors preview
         async function fetchDoctorsPreview() {
             try {
-                const response = await fetch(`${apiBaseUrl}/doctors?limit=4`); // Limit to 4 doctors for preview
+                const response = await fetch(`${apiBaseUrl}/doctors`);
                 if (!response.ok) throw new Error('Network response was not ok');
                 
                 const doctors = await response.json();
-                displayDoctorsPreview(doctors);
+                // Take only the first 4 doctors for preview
+                const previewDoctors = doctors.slice(0, 4);
+                displayDoctorsPreview(previewDoctors);
             } catch (error) {
                 console.error('Error fetching doctors:', error);
                 document.getElementById('doctors-preview-container').innerHTML = `
@@ -494,8 +497,7 @@
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="card doctor-preview-card h-100 border-0 shadow-sm">
                             <div class="doctor-preview-img-container">
-                                <img class = "doctor-img" src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}" '}" 
-                                
+                                <img src="https://localhost:7230${doctor.imagePath}" 
                                      class="card-img-top" 
                                      alt="Dr. ${doctor.name}">
                                 <div class="doctor-preview-overlay">
