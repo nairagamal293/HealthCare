@@ -130,23 +130,35 @@ namespace HeathCare.Services
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<DoctorDTO>> GetAllDoctorsAsync()
-        {
-            var doctors = await _context.Doctors
-                .Include(d => d.Department)
-                .ToListAsync();
-            return _mapper.Map<IEnumerable<DoctorDTO>>(doctors);
-        }
+        // In DoctorService.cs, update GetDoctorByIdAsync and GetAllDoctorsAsync:
 
+        // Services/DoctorService.cs
+        // Services/DoctorService.cs
         public async Task<DoctorDTO> GetDoctorByIdAsync(int id)
         {
             var doctor = await _context.Doctors
                 .Include(d => d.Department)
+                .Include(d => d.Reviews) // Include reviews
                 .FirstOrDefaultAsync(d => d.Id == id);
+
             if (doctor == null) return null;
 
-            return _mapper.Map<DoctorDTO>(doctor);
+            var doctorDTO = _mapper.Map<DoctorDTO>(doctor);
+
+            // These will be automatically mapped from the calculated properties
+            return doctorDTO;
         }
+
+        public async Task<IEnumerable<DoctorDTO>> GetAllDoctorsAsync()
+        {
+            var doctors = await _context.Doctors
+                .Include(d => d.Department)
+                .Include(d => d.Reviews)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<DoctorDTO>>(doctors);
+        }
+
     }
 
     public interface IDoctorService

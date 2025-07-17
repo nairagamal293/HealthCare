@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,12 +15,9 @@
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     <title>Doctor Profile | MediCare Center</title>
-    <!-- Add this script for fetching doctor details -->
- 
-    <!-- Add this CSS -->
+    
     <style>
         .doctor-profile-img-container {
             height: 300px;
@@ -67,16 +63,30 @@
             padding: 15px;
             background-color: #f8f9fa;
             border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .star-rating {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+        .empty-star {
+            color: #e4e5e9;
         }
         @media (max-width: 767.98px) {
             .doctor-profile-img-container {
                 height: 200px;
             }
         }
+        #reviewForm {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-   <div class="top-bar">
+    <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -90,7 +100,7 @@
     </div>
     
     <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="MediCare Center" class="logo">
@@ -109,14 +119,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="departments.html">Departments</a>
                     </li>
-                    
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">Our Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
-                      <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="FAQs.html">FAQs</a>
                     </li>
                     <li class="nav-item">
@@ -160,121 +169,17 @@
         </div>
     </section>
 
-    <!-- Keep your existing footer -->
- <!-- Footer -->
- <footer class="footer">
-    <div class="footer-main">
-        <div class="container">
-            <div class="row g-4">
-                <!-- About Column -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <div class="footer-brand">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <span class="brand-name">MediCare Center</span>
-                        </div>
-                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
-                        <div class="footer-newsletter">
-                            <h4>Subscribe to our Newsletter</h4>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links Column -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="doctors.html">Our Doctors</a></li>
-                            <li><a href="blog.html">Health Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Departments Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Medical Departments</h4>
-                        <ul class="footer-links">
-                            <li><a href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a href="departments.html#neurology">Neurology</a></li>
-                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a href="departments.html#radiology">Radiology</a></li>
-                            <li><a href="departments.html#surgery">General Surgery</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Contact Info</h4>
-                        <div class="footer-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone-alt"></i>
-                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-clock"></i>
-                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="footer-legal">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="sitemap.html">Sitemap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Your existing footer content -->
+    </footer>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-       <script>
+    
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+            const apiBaseUrl = 'https://localhost:7230/api';
             const urlParams = new URLSearchParams(window.location.search);
             const doctorId = urlParams.get('id');
             
@@ -291,11 +196,30 @@
                     
                     const doctor = await response.json();
                     displayDoctorDetails(doctor);
+                    fetchDoctorReviews(doctorId);
                 } catch (error) {
                     console.error('Error fetching doctor details:', error);
                     document.getElementById('doctor-details').innerHTML = `
                         <div class="alert alert-danger">
                             Failed to load doctor details. Please try again later.
+                        </div>
+                    `;
+                }
+            }
+            
+            // Fetch doctor reviews
+            async function fetchDoctorReviews(doctorId) {
+                try {
+                    const response = await fetch(`${apiBaseUrl}/reviews/doctor/${doctorId}`);
+                    if (!response.ok) throw new Error('Network response was not ok');
+                    
+                    const reviews = await response.json();
+                    displayDoctorReviews(reviews);
+                } catch (error) {
+                    console.error('Error fetching doctor reviews:', error);
+                    document.getElementById('reviews-container').innerHTML = `
+                        <div class="alert alert-warning">
+                            Failed to load reviews. Please try again later.
                         </div>
                     `;
                 }
@@ -311,10 +235,7 @@
                         <div class="col-lg-4">
                             <div class="card shadow-sm mb-4">
                                 <div class="doctor-profile-img-container">
-                                    <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}"'}" 
-                                
-                                         alt="Dr. ${doctor.name}" 
-                                         class="img-fluid rounded-top">
+                                    <img src="https://localhost:7230${doctor.imagePath}" alt="Dr. ${doctor.name}" class="img-fluid rounded-top">
                                 </div>
                                 <div class="card-body text-center">
                                     <h2 class="h4">Dr. ${doctor.name}</h2>
@@ -322,6 +243,11 @@
                                     <p class="text-muted">
                                         <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
                                     </p>
+                                    
+                                    <div class="rating-display my-3">
+                                        ${renderStarRating(doctor.averageRating || 0)}
+                                        <span class="ms-2">${doctor.averageRating ? doctor.averageRating.toFixed(1) : 'No'} (${doctor.reviewCount || 0} reviews)</span>
+                                    </div>
                                     
                                     <hr>
                                     
@@ -410,65 +336,175 @@
                                 </div>
                             </div>
                             
-                            <!-- Patient Reviews -->
+                            <!-- Patient Reviews Section -->
                             <div class="card shadow-sm">
                                 <div class="card-header bg-light">
                                     <h3 class="h6 mb-0">Patient Reviews</h3>
                                 </div>
                                 <div class="card-body">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <div class="rating-display">
-                                            <span class="text-warning">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </span>
-                                            <span class="ms-2">4.7 (124 reviews)</span>
-                                        </div>
+                                    <!-- Review Form -->
+                                    <div id="reviewForm">
+                                        <h4 class="h5 mb-3">Leave a Review</h4>
+                                        <form id="submitReviewForm">
+                                            <input type="hidden" name="doctorId" value="${doctor.id}">
+                                            <div class="mb-3">
+                                                <label for="visitorName" class="form-label">Your Name</label>
+                                                <input type="text" class="form-control" id="visitorName" name="visitorName" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="visitorEmail" class="form-label">Your Email</label>
+                                                <input type="email" class="form-control" id="visitorEmail" name="visitorEmail" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label">Rating</label>
+                                                <div class="star-rating">
+                                                    <input type="radio" id="star5" name="rating" value="5" required>
+                                                    <label for="star5" class="star"><i class="fas fa-star"></i></label>
+                                                    <input type="radio" id="star4" name="rating" value="4">
+                                                    <label for="star4" class="star"><i class="fas fa-star"></i></label>
+                                                    <input type="radio" id="star3" name="rating" value="3">
+                                                    <label for="star3" class="star"><i class="fas fa-star"></i></label>
+                                                    <input type="radio" id="star2" name="rating" value="2">
+                                                    <label for="star2" class="star"><i class="fas fa-star"></i></label>
+                                                    <input type="radio" id="star1" name="rating" value="1">
+                                                    <label for="star1" class="star"><i class="fas fa-star"></i></label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="content" class="form-label">Your Review</label>
+                                                <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                                        </form>
                                     </div>
                                     
-                                    <div class="review-item mb-4">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <h5 class="mb-0">John D.</h5>
-                                            <small class="text-muted">2 weeks ago</small>
+                                    <!-- Reviews Container -->
+                                    <div id="reviews-container">
+                                        <div class="text-center py-3">
+                                            <div class="spinner-border text-primary" role="status">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                            <p class="mt-2">Loading reviews...</p>
                                         </div>
-                                        <div class="rating mb-2">
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                        </div>
-                                        <p>Dr. ${doctor.name.split(' ')[0]} was very professional and took the time to explain everything clearly. I felt comfortable throughout my visit.</p>
-                                    </div>
-                                    
-                                    <div class="review-item">
-                                        <div class="d-flex justify-content-between mb-2">
-                                            <h5 class="mb-0">Sarah M.</h5>
-                                            <small class="text-muted">1 month ago</small>
-                                        </div>
-                                        <div class="rating mb-2">
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                            <i class="fas fa-star text-warning"></i>
-                                        </div>
-                                        <p>Excellent care and follow-up. The doctor was attentive and addressed all my concerns. Highly recommend!</p>
-                                    </div>
-                                    
-                                    <div class="text-center mt-4">
-                                        <button class="btn btn-outline-primary">
-                                            View All Reviews
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 `;
+                
+                // Add event listener for review form submission
+                document.getElementById('submitReviewForm')?.addEventListener('submit', handleReviewSubmit);
+            }
+            
+            // Display doctor reviews
+            function displayDoctorReviews(reviews) {
+                const container = document.getElementById('reviews-container');
+                
+                if (!reviews || reviews.length === 0) {
+                    container.innerHTML = `
+                        <div class="alert alert-info">
+                            No reviews yet. Be the first to review this doctor!
+                        </div>
+                    `;
+                    return;
+                }
+                
+                let html = `
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rating-display">
+                            <span>${reviews.length} ${reviews.length === 1 ? 'review' : 'reviews'}</span>
+                        </div>
+                    </div>
+                `;
+                
+                reviews.forEach(review => {
+                    html += `
+                        <div class="review-item">
+                            <div class="d-flex justify-content-between mb-2">
+                                <h5 class="mb-0">${review.visitorName}</h5>
+                                <small class="text-muted">${formatDate(review.createdAt)}</small>
+                            </div>
+                            <div class="rating mb-2">
+                                ${renderStarRating(review.rating)}
+                            </div>
+                            <p>${review.content}</p>
+                        </div>
+                    `;
+                });
+                
+                container.innerHTML = html;
+            }
+            
+            // Handle review form submission
+            async function handleReviewSubmit(e) {
+                e.preventDefault();
+                
+                const form = e.target;
+                const formData = new FormData(form);
+                const reviewData = {
+                    doctorId: formData.get('doctorId'),
+                    visitorName: formData.get('visitorName'),
+                    visitorEmail: formData.get('visitorEmail'),
+                    rating: parseInt(formData.get('rating')),
+                    content: formData.get('content')
+                };
+                
+                try {
+                    const response = await fetch(`${apiBaseUrl}/reviews`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(reviewData)
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Failed to submit review');
+                    }
+                    
+                    const result = await response.json();
+                    alert('Thank you for your review!');
+                    form.reset();
+                    fetchDoctorReviews(doctorId); // Refresh reviews
+                    fetchDoctorDetails(); // Refresh doctor details to update rating
+                } catch (error) {
+                    console.error('Error submitting review:', error);
+                    alert('Failed to submit review. Please try again.');
+                }
+            }
+            
+            // Helper function to render star rating
+            function renderStarRating(rating) {
+                let stars = '';
+                const fullStars = Math.floor(rating);
+                const hasHalfStar = rating % 1 >= 0.5;
+                
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= fullStars) {
+                        stars += '<i class="fas fa-star star-rating"></i>';
+                    } else if (i === fullStars + 1 && hasHalfStar) {
+                        stars += '<i class="fas fa-star-half-alt star-rating"></i>';
+                    } else {
+                        stars += '<i class="far fa-star star-rating empty-star"></i>';
+                    }
+                }
+                
+                return stars;
+            }
+            
+            // Helper function to format date
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                const now = new Date();
+                const diffInDays = Math.floor((now - date) / (1000 * 60 * 60 * 24));
+                
+                if (diffInDays === 0) return 'Today';
+                if (diffInDays === 1) return 'Yesterday';
+                if (diffInDays < 7) return `${diffInDays} days ago`;
+                if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} weeks ago`;
+                if (diffInDays < 365) return `${Math.floor(diffInDays / 30)} months ago`;
+                return `${Math.floor(diffInDays / 365)} years ago`;
             }
             
             // Initialize

@@ -19,12 +19,13 @@ namespace HealthCare.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure relationships
+            // Doctor configuration
             modelBuilder.Entity<Doctor>()
                 .HasOne(d => d.Department)
                 .WithMany(d => d.Doctors)
@@ -38,10 +39,17 @@ namespace HealthCare.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Service>()
-               .HasOne(s => s.Department)
-               .WithMany(d => d.Services)
-               .HasForeignKey(s => s.DepartmentId)
-               .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(s => s.Department)
+                .WithMany(d => d.Services)
+                .HasForeignKey(s => s.DepartmentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Review configuration - simplified
+            modelBuilder.Entity<Review>()
+                .HasOne(r => r.Doctor)
+                .WithMany(d => d.Reviews)
+                .HasForeignKey(r => r.DoctorId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Seed initial data with ImagePath
             modelBuilder.Entity<Department>().HasData(
@@ -50,21 +58,21 @@ namespace HealthCare.Data
                     Id = 1,
                     Name = "Cardiology",
                     Description = "Heart care specialists",
-                    ImagePath = "/uploads/departments/default-cardiology.jpg" // Add default image path
+                    ImagePath = "/uploads/departments/default-cardiology.jpg"
                 },
                 new Department
                 {
                     Id = 2,
                     Name = "Neurology",
                     Description = "Brain and nervous system specialists",
-                    ImagePath = "/uploads/departments/default-neurology.jpg" // Add default image path
+                    ImagePath = "/uploads/departments/default-neurology.jpg"
                 },
                 new Department
                 {
                     Id = 3,
                     Name = "Pediatrics",
                     Description = "Child healthcare specialists",
-                    ImagePath = "/uploads/departments/default-pediatrics.jpg" // Add default image path
+                    ImagePath = "/uploads/departments/default-pediatrics.jpg"
                 }
             );
         }

@@ -93,6 +93,7 @@ builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
 
 
 // Add AutoMapper

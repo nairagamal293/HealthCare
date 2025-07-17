@@ -3,15 +3,21 @@
 namespace HeathCare.DTOs
 {
     // DTOs/DoctorDTOs.cs
+    // DTOs/DoctorDTO.cs
     public class DoctorDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public string Specialty { get; set; }
         public string Bio { get; set; }
-        public string ImagePath { get; set; }  // Changed from ImageFile to ImagePath
+        public string ImagePath { get; set; }
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
+
+        // Review-related properties
+        public double? AverageRating { get; set; }
+        public int ReviewCount { get; set; }
+        public List<ReviewDTO> Reviews { get; set; } = new List<ReviewDTO>();
     }
 
     public class DoctorCreateDTO
