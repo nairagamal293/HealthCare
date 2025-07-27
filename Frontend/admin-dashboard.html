@@ -4,211 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لوحة تحكم إدارة الرعاية الصحية</title>
-    <!-- Bootstrap 5 RTL CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-rtl@5.3.0/dist/css/bootstrap-rtl.min.css">
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
     <!-- DataTables RTL CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.bootstrap5.min.css">
     <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #4e73df;
-            --secondary-color: #858796;
-            --success-color: #1cc88a;
-            --info-color: #36b9cc;
-            --warning-color: #f6c23e;
-            --danger-color: #e74a3b;
-            --light-color: #f8f9fc;
-            --dark-color: #5a5c69;
-        }
-
-        body {
-            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f8f9fc;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
-            transition: all 0.3s;
-        }
-
-        .sidebar .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            border-radius: 0.35rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .sidebar .nav-link:hover {
-            color: #fff;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .sidebar .nav-link.active {
-            color: #fff;
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .sidebar .nav-link i {
-            margin-left: 0.5rem;
-            margin-right: 0;
-        }
-
-        /* Cards */
-        .card {
-            border: none;
-            border-radius: 0.35rem;
-            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-        }
-
-        .card-header {
-            background-color: #f8f9fc;
-            border-bottom: 1px solid #e3e6f0;
-            padding: 1rem 1.35rem;
-            font-weight: 600;
-        }
-
-        /* Tables */
-        .table {
-            margin-bottom: 0;
-        }
-
-        .table th {
-            font-weight: 600;
-            color: var(--dark-color);
-            border-top: none;
-        }
-
-        /* Buttons */
-        .btn {
-            border-radius: 0.35rem;
-            font-weight: 600;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: #2e59d9;
-            border-color: #2653d4;
-        }
-
-        /* Dashboard Stats */
-        .stat-card {
-            border-right: 0.25rem solid;
-            border-radius: 0.35rem;
-        }
-
-        .stat-card.bg-primary {
-            border-right-color: var(--primary-color);
-        }
-
-        .stat-card.bg-success {
-            border-right-color: var(--success-color);
-        }
-
-        .stat-card.bg-info {
-            border-right-color: var(--info-color);
-        }
-
-        .stat-card.bg-warning {
-            border-right-color: var(--warning-color);
-        }
-
-        /* Image Previews */
-        .img-preview-container {
-            display: none;
-        }
-
-        .img-preview {
-            max-height: 200px;
-            object-fit: contain;
-        }
-
-        /* Ensure textarea is visible */
-        #blogContent {
-            display: block !important;
-            width: 100%;
-            min-height: 150px;
-        }
-
-        /* Fix modal body scrolling */
-        .modal-body {
-            max-height: 70vh;
-            overflow-y: auto;
-        }
-
-        /* Services table styling */
-        #servicesTable {
-            margin-bottom: 0;
-        }
-
-        #servicesTable tbody tr td {
-            vertical-align: middle;
-        }
-
-        #servicesTable .btn-group {
-            white-space: nowrap;
-        }
-
-        /* Department image preview */
-        #departmentImagePreviewContainer {
-            margin: 15px 0;
-        }
-
-        #departmentImagePreview {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* RTL adjustments */
-        .dropdown-menu {
-            text-align: right;
-        }
-        
-        .form-select {
-            background-position: left 0.75rem center;
-            padding-right: 0.75rem;
-            padding-left: 2.25rem;
-        }
-        
-        .dataTables_wrapper .dataTables_filter {
-            float: left;
-        }
-        
-        .dataTables_wrapper .dataTables_length {
-            float: right;
-        }
-        
-        .dataTables_wrapper .dataTables_paginate .paginate_button {
-            float: right;
-        }
-        
-        .me-2 {
-            margin-left: 0.5rem !important;
-            margin-right: 0 !important;
-        }
-        
-        .ms-2 {
-            margin-right: 0.5rem !important;
-            margin-left: 0 !important;
-        }
-        
-        .pe-2 {
-            padding-left: 0.5rem !important;
-            padding-right: 0 !important;
-        }
-        
-        .ps-2 {
-            padding-right: 0.5rem !important;
-            padding-left: 0 !important;
-        }
-    </style>
+      
+    <link rel="stylesheet" href="css/admin.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -227,36 +38,52 @@
                     لوحة التحكم
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#" class="nav-link text-white" id="doctorsTab">
                     <i class="fas fa-user-md me-2"></i>
                     الأطباء
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#" class="nav-link text-white" id="departmentsTab">
                     <i class="fas fa-procedures me-2"></i>
                     الأقسام
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#" class="nav-link text-white" id="blogsTab">
                     <i class="fas fa-blog me-2"></i>
                     المدونة
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="#" class="nav-link text-white" id="bookingsTab">
                     <i class="fas fa-calendar-check me-2"></i>
                     المواعيد
+                    <span class="notification-badge d-none" id="bookingsNotification">0</span>
                 </a>
             </li>
-            <li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" id="jobApplicationsTab">
+                    <i class="fas fa-file-alt me-2"></i>
+                    طلبات التوظيف
+                    <span class="notification-badge d-none" id="jobApplicationsNotification">0</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white" id="careersTab">
+                    <i class="fas fa-briefcase me-2"></i>
+                    الوظائف
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link text-white" id="contactsTab">
                     <i class="fas fa-envelope me-2"></i>
                     رسائل التواصل
+                    <span class="notification-badge d-none" id="contactsNotification">0</span>
                 </a>
             </li>
+            
         </ul>
         <hr>
         <div class="dropdown">
@@ -334,10 +161,10 @@
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <h6 class="card-title">الرسائل</h6>
-                                    <h2 class="mb-0" id="messagesCount">0</h2>
+                                    <h6 class="card-title">طلبات التوظيف</h6>
+                                    <h2 class="mb-0" id="jobApplicationsCount">0</h2>
                                 </div>
-                                <i class="fas fa-envelope fa-3x opacity-25"></i>
+                                <i class="fas fa-file-alt fa-3x opacity-25"></i>
                             </div>
                         </div>
                     </div>
@@ -372,10 +199,10 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h5>أحدث الرسائل</h5>
+                            <h5>أحدث طلبات التوظيف</h5>
                         </div>
                         <div class="card-body">
-                            <div class="list-group" id="recentMessagesList">
+                            <div class="list-group" id="recentJobApplicationsList">
                                 <!-- Will be populated by JS -->
                             </div>
                         </div>
@@ -503,6 +330,35 @@
             </div>
         </div>
 
+        <!-- Job Applications Content -->
+        <div id="jobApplicationsContent" class="d-none">
+            <h2 class="mb-3">إدارة طلبات التوظيف</h2>
+            
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="jobApplicationsTable">
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>الهاتف</th>
+                                    <th>الوظيفة</th>
+                                    <th>الخبرة</th>
+                                    <th>السيرة الذاتية</th>
+                                    <th>الحالة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Contact Messages Content -->
         <div id="contactsContent" class="d-none">
             <h2 class="mb-3">رسائل التواصل</h2>
@@ -517,6 +373,39 @@
                                     <th>البريد الإلكتروني</th>
                                     <th>الرسالة</th>
                                     <th>التاريخ</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Careers Content -->
+        <div id="careersContent" class="d-none">
+            <div class="d-flex justify-content-between mb-3">
+                <h2>إدارة الوظائف</h2>
+                <button class="btn btn-primary" id="addCareerBtn">
+                    <i class="fas fa-plus me-1"></i> إضافة وظيفة
+                </button>
+            </div>
+            
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover" id="careersTable">
+                            <thead>
+                                <tr>
+                                    <th>المسمى الوظيفي</th>
+                                    <th>الموقع</th>
+                                    <th>نوع الوظيفة</th>
+                                    <th>تاريخ النشر</th>
+                                    <th>تاريخ الإغلاق</th>
+                                    <th>الحالة</th>
                                     <th>الإجراءات</th>
                                 </tr>
                             </thead>
@@ -648,15 +537,115 @@
         <div class="mb-3">
             <label for="blogImage" class="form-label">الصورة الرئيسية</label>
             <input type="file" class="form-control" id="blogImage" accept="image/*">
+            
         </div>
         <div class="mb-3 text-center" id="blogImagePreviewContainer">
-            <img id="blogImagePreview" src="https://via.placeholder.com/600x300" alt="Blog Preview" class="img-fluid" style="max-height: 200px;">
+            <img id="blogImagePreview" src="" alt="Blog Preview" class="img-fluid" style="max-height: 200px;">
         </div>
     </form>
 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
                         <button type="button" class="btn btn-primary" id="saveBlogBtn">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Career Modal -->
+        <div class="modal fade" id="careerModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="careerModalTitle">إضافة وظيفة جديدة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="careerForm">
+                            <input type="hidden" id="careerId">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="careerTitle" class="form-label">المسمى الوظيفي</label>
+                                    <input type="text" class="form-control" id="careerTitle" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="careerLocation" class="form-label">الموقع</label>
+                                    <input type="text" class="form-control" id="careerLocation" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="careerEmploymentType" class="form-label">نوع الوظيفة</label>
+                                    <select class="form-select" id="careerEmploymentType" required>
+                                        <option value="">اختر نوع الوظيفة</option>
+                                        <option value="دوام كامل">دوام كامل</option>
+                                        <option value="دوام جزئي">دوام جزئي</option>
+                                        <option value="عقد">عقد</option>
+                                        <option value="عن بعد">عن بعد</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="careerClosingDate" class="form-label">تاريخ الإغلاق</label>
+                                    <input type="date" class="form-control" id="careerClosingDate">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="careerDescription" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="careerDescription" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="careerRequirements" class="form-label">المتطلبات</label>
+                                <textarea class="form-control" id="careerRequirements" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="careerResponsibilities" class="form-label">المسؤوليات</label>
+                                <textarea class="form-control" id="careerResponsibilities" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="careerIsActive">
+                                <label class="form-check-label" for="careerIsActive">وظيفة نشطة</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-primary" id="saveCareerBtn">حفظ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update Job Application Status Modal -->
+        <div class="modal fade" id="jobApplicationStatusModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">تحديث حالة طلب التوظيف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="jobApplicationStatusForm">
+                            <input type="hidden" id="jobApplicationId">
+                            <div class="mb-3">
+                                <label class="form-label">الحالة الحالية</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jobApplicationStatus" id="jobApplicationPending" value="false">
+                                    <label class="form-check-label" for="jobApplicationPending">
+                                        قيد المراجعة
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="jobApplicationStatus" id="jobApplicationReviewed" value="true">
+                                    <label class="form-check-label" for="jobApplicationReviewed">
+                                        تمت المراجعة
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-primary" id="saveJobApplicationStatusBtn">حفظ</button>
                     </div>
                 </div>
             </div>
@@ -738,46 +727,88 @@
     const departmentsTable = initDataTable('departmentsTable');
     const blogsTable = initDataTable('blogsTable');
     const appointmentsTable = initDataTable('appointmentsTable');
+    const jobApplicationsTable = initDataTable('jobApplicationsTable');
     const contactsTable = initDataTable('contactsTable');
+    const careersTable = initDataTable('careersTable');
 
     // Tab switching
-    const tabs = ['dashboard', 'doctors', 'departments', 'blogs', 'bookings', 'contacts'];
+    const tabs = ['dashboard', 'doctors', 'departments', 'blogs', 'bookings', 'jobApplications', 'contacts', 'careers'];
     tabs.forEach(tab => {
-        document.getElementById(`${tab}Tab`).addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Update active tab
-            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Update page title
-            document.getElementById('pageTitle').textContent = this.textContent.trim();
-            
-            // Show correct content
-            document.querySelectorAll('[id$="Content"]').forEach(content => content.classList.add('d-none'));
-            document.getElementById(`${tab}Content`).classList.remove('d-none');
-            
-            // Refresh data if needed
-            if (tab === 'dashboard') {
-                loadDashboardData();
-            }
-        });
+        const tabElement = document.getElementById(`${tab}Tab`);
+        if (tabElement) {
+            tabElement.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active tab
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update page title
+                document.getElementById('pageTitle').textContent = this.textContent.trim();
+                
+                // Show correct content
+                document.querySelectorAll('[id$="Content"]').forEach(content => content.classList.add('d-none'));
+                document.getElementById(`${tab}Content`).classList.remove('d-none');
+                
+                // Refresh data if needed
+                if (tab === 'dashboard') {
+                    loadDashboardData();
+                } else if (tab === 'jobApplications') {
+                    loadJobApplications();
+                    // Clear notifications when viewing job applications
+                    updateNotificationCount('jobApplications', 0);
+                } else if (tab === 'bookings') {
+                    loadAppointments();
+                    // Clear notifications when viewing appointments
+                    updateNotificationCount('bookings', 0);
+                } else if (tab === 'contacts') {
+                    loadContacts();
+                    // Clear notifications when viewing contacts
+                    updateNotificationCount('contacts', 0);
+                }
+            });
+        }
     });
+
+    // Update notification count
+    function updateNotificationCount(type, count) {
+        const notificationElement = document.getElementById(`${type}Notification`);
+        if (notificationElement) {
+            if (count > 0) {
+                notificationElement.textContent = count;
+                notificationElement.classList.remove('d-none');
+            } else {
+                notificationElement.classList.add('d-none');
+            }
+        }
+    }
 
     // Load dashboard data
     async function loadDashboardData() {
         try {
-            const [doctorsRes, departmentsRes, bookingsRes, contactsRes] = await Promise.all([
+            const [doctorsRes, departmentsRes, bookingsRes, contactsRes, careersRes, jobApplicationsRes] = await Promise.all([
                 fetchData('/api/doctors'),
                 fetchData('/api/departments'),
                 fetchData('/api/bookings'),
-                fetchData('/api/contact')
+                fetchData('/api/contact'),
+                fetchData('/api/careers?activeOnly=false'),
+                fetchData('/api/JobApplications')
             ]);
 
             document.getElementById('doctorsCount').textContent = doctorsRes.length;
             document.getElementById('departmentsCount').textContent = departmentsRes.length;
             document.getElementById('appointmentsCount').textContent = bookingsRes.length;
-            document.getElementById('messagesCount').textContent = contactsRes.length;
+            document.getElementById('jobApplicationsCount').textContent = jobApplicationsRes.length;
+
+            // Calculate pending notifications
+            const pendingBookings = bookingsRes.filter(b => !b.isConfirmed).length;
+            const pendingJobApplications = jobApplicationsRes.filter(j => !j.isReviewed).length;
+            const newContacts = contactsRes.length; // You might want to track which contacts are new
+
+            // Update notification badges
+            updateNotificationCount('bookings', pendingBookings);
+            updateNotificationCount('jobApplications', pendingJobApplications);
+            updateNotificationCount('contacts', newContacts);
 
             // Populate recent appointments
             const recentAppointments = bookingsRes.slice(0, 5);
@@ -799,23 +830,25 @@
                 appointmentsTable.appendChild(row);
             });
 
-            // Populate recent messages
-            const recentMessages = contactsRes.slice(0, 5);
-            const messagesList = document.getElementById('recentMessagesList');
-            messagesList.innerHTML = '';
+            // Populate recent job applications
+            const recentJobApplications = jobApplicationsRes.slice(0, 5);
+            const jobApplicationsList = document.getElementById('recentJobApplicationsList');
+            jobApplicationsList.innerHTML = '';
             
-            recentMessages.forEach(message => {
+            recentJobApplications.forEach(application => {
                 const item = document.createElement('a');
                 item.className = 'list-group-item list-group-item-action';
                 item.innerHTML = `
                     <div class="d-flex w-100 justify-content-between">
-                        <h6 class="mb-1">${message.name}</h6>
-                        <small>${new Date(message.createdAt).toLocaleDateString('ar-EG')}</small>
+                        <h6 class="mb-1">${application.fullName}</h6>
+                        <small class="${application.isReviewed ? 'text-success' : 'text-warning'}">
+                            ${application.isReviewed ? 'تمت المراجعة' : 'قيد المراجعة'}
+                        </small>
                     </div>
-                    <p class="mb-1 text-truncate">${message.message}</p>
-                    <small>${message.email}</small>
+                    <p class="mb-1">${application.careerTitle}</p>
+                    <small>${new Date(application.applicationDate).toLocaleDateString('ar-EG')}</small>
                 `;
-                messagesList.appendChild(item);
+                jobApplicationsList.appendChild(item);
             });
 
         } catch (error) {
@@ -989,6 +1022,95 @@
         }
     }
 
+    // Load all job applications
+    async function loadJobApplications() {
+        try {
+            const applications = await fetchData('/api/JobApplications');
+            jobApplicationsTable.clear().draw();
+            
+            applications.forEach(app => {
+                jobApplicationsTable.row.add([
+                    app.fullName,
+                    app.email,
+                    app.phoneNumber,
+                    app.careerTitle,
+                    `${app.yearsOfExperience} سنوات`,
+                    `<a href="https://localhost:7230${app.cvPath}" class="cv-download" target="_blank"><i class="fas fa-download"></i> تحميل</a>`,
+                    `
+                    <span class="badge ${app.isReviewed ? 'badge-reviewed' : 'badge-pending'}">
+                        ${app.isReviewed ? 'تمت المراجعة' : 'قيد المراجعة'}
+                    </span>
+                    `,
+                    `
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-primary update-job-application-status" data-id="${app.id}" data-reviewed="${app.isReviewed}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger delete-job-application" data-id="${app.id}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    `
+                ]).draw(false);
+            });
+
+            // Add event listeners to action buttons
+            document.querySelectorAll('.update-job-application-status').forEach(btn => {
+                btn.addEventListener('click', () => editJobApplicationStatus(btn.dataset.id, btn.dataset.reviewed === 'true'));
+            });
+            
+            document.querySelectorAll('.delete-job-application').forEach(btn => {
+                btn.addEventListener('click', () => confirmDelete('jobApplication', btn.dataset.id));
+            });
+
+        } catch (error) {
+            console.error('Error loading job applications:', error);
+            showAlert('error', 'فشل تحميل طلبات التوظيف');
+        }
+    }
+
+    // Edit job application status
+    async function editJobApplicationStatus(id, isReviewed) {
+        document.getElementById('jobApplicationId').value = id;
+        if (isReviewed) {
+            document.getElementById('jobApplicationReviewed').checked = true;
+        } else {
+            document.getElementById('jobApplicationPending').checked = true;
+        }
+        
+        const modal = new bootstrap.Modal(document.getElementById('jobApplicationStatusModal'));
+        modal.show();
+    }
+
+    // Save job application status
+    document.getElementById('saveJobApplicationStatusBtn').addEventListener('click', async () => {
+        const id = document.getElementById('jobApplicationId').value;
+        const isReviewed = document.querySelector('input[name="jobApplicationStatus"]:checked').value === 'true';
+        
+        try {
+            await fetchData(`/api/JobApplications/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    Id: parseInt(id),
+                    IsReviewed: isReviewed
+                })
+            });
+            
+            showAlert('success', 'تم تحديث حالة طلب التوظيف بنجاح');
+            loadJobApplications();
+            
+            const modal = bootstrap.Modal.getInstance(document.getElementById('jobApplicationStatusModal'));
+            modal.hide();
+            
+        } catch (error) {
+            console.error('Error updating job application:', error);
+            showAlert('error', 'فشل تحديث حالة طلب التوظيف');
+        }
+    });
+
     // Load all contacts
     async function loadContacts() {
         try {
@@ -1017,6 +1139,52 @@
         } catch (error) {
             console.error('Error loading contacts:', error);
             showAlert('error', 'فشل تحميل رسائل التواصل');
+        }
+    }
+
+    // Load all careers
+    async function loadCareers() {
+        try {
+            const careers = await fetchData('/api/careers?activeOnly=false');
+            careersTable.clear().draw();
+            
+            careers.forEach(career => {
+                careersTable.row.add([
+                    career.title,
+                    career.location,
+                    career.employmentType,
+                    new Date(career.postedDate).toLocaleDateString('ar-EG'),
+                    career.closingDate ? new Date(career.closingDate).toLocaleDateString('ar-EG') : 'لا يوجد',
+                    `
+                    <span class="badge ${career.isActive ? 'badge-active' : 'badge-inactive'}">
+                        ${career.isActive ? 'نشطة' : 'غير نشطة'}
+                    </span>
+                    `,
+                    `
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-primary edit-career" data-id="${career.id}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger delete-career" data-id="${career.id}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    `
+                ]).draw(false);
+            });
+
+            // Add event listeners to action buttons
+            document.querySelectorAll('.edit-career').forEach(btn => {
+                btn.addEventListener('click', () => editCareer(btn.dataset.id));
+            });
+            
+            document.querySelectorAll('.delete-career').forEach(btn => {
+                btn.addEventListener('click', () => confirmDelete('career', btn.dataset.id));
+            });
+
+        } catch (error) {
+            console.error('Error loading careers:', error);
+            showAlert('error', 'فشل تحميل الوظائف');
         }
     }
 
@@ -1244,7 +1412,7 @@
         showAlert('error', 'حقل الاسم والوصف مطلوبان');
         return;
     }
-    
+
     try {
         const formData = new FormData();
         formData.append('Name', name);
@@ -1385,6 +1553,114 @@
         }
     });
 
+    // Career CRUD operations
+    document.getElementById('addCareerBtn').addEventListener('click', () => {
+        document.getElementById('careerModalTitle').textContent = 'إضافة وظيفة جديدة';
+        document.getElementById('careerId').value = '';
+        document.getElementById('careerForm').reset();
+        
+        const modal = new bootstrap.Modal(document.getElementById('careerModal'));
+        modal.show();
+    });
+
+    async function editCareer(id) {
+        try {
+            const career = await fetchData(`/api/careers/${id}`);
+            
+            document.getElementById('careerModalTitle').textContent = 'تعديل الوظيفة';
+            document.getElementById('careerId').value = career.id;
+            document.getElementById('careerTitle').value = career.title;
+            document.getElementById('careerLocation').value = career.location;
+            document.getElementById('careerEmploymentType').value = career.employmentType;
+            document.getElementById('careerDescription').value = career.description;
+            document.getElementById('careerRequirements').value = career.requirements;
+            document.getElementById('careerResponsibilities').value = career.responsibilities;
+            document.getElementById('careerIsActive').checked = career.isActive;
+            
+            if (career.closingDate) {
+                const closingDate = new Date(career.closingDate);
+                document.getElementById('careerClosingDate').value = closingDate.toISOString().split('T')[0];
+            } else {
+                document.getElementById('careerClosingDate').value = '';
+            }
+            
+            const modal = new bootstrap.Modal(document.getElementById('careerModal'));
+            modal.show();
+            
+        } catch (error) {
+            console.error('Error loading career:', error);
+            showAlert('error', 'فشل تحميل بيانات الوظيفة');
+        }
+    }
+
+    // Career Form Submission
+    document.getElementById('saveCareerBtn').addEventListener('click', async () => {
+    const form = document.getElementById('careerForm');
+    const id = document.getElementById('careerId').value;
+    const isEdit = !!id;
+    
+    // Validate required fields
+    const title = document.getElementById('careerTitle').value;
+    const location = document.getElementById('careerLocation').value;
+    const employmentType = document.getElementById('careerEmploymentType').value;
+    const description = document.getElementById('careerDescription').value;
+    
+    if (!title || !location || !employmentType || !description) {
+        showAlert('error', 'الحقول المطلوبة: المسمى الوظيفي، الموقع، نوع الوظيفة، الوصف');
+        return;
+    }
+
+    try {
+        const careerData = {
+            Title: title,
+            Location: location,
+            EmploymentType: employmentType,
+            Description: description,
+            Requirements: document.getElementById('careerRequirements').value,
+            Responsibilities: document.getElementById('careerResponsibilities').value,
+            IsActive: document.getElementById('careerIsActive').checked
+        };
+        
+        // Add closing date if provided
+        const closingDate = document.getElementById('careerClosingDate').value;
+        if (closingDate) {
+            careerData.ClosingDate = closingDate;
+        }
+        
+        let response;
+        if (isEdit) {
+            careerData.Id = parseInt(id);
+            response = await fetchData(`/api/careers/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('healthcare_token')}`
+                },
+                body: JSON.stringify(careerData)
+            });
+        } else {
+            response = await fetchData('/api/careers', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('healthcare_token')}`
+                },
+                body: JSON.stringify(careerData)
+            });
+        }
+        
+        showAlert('success', `تم ${isEdit ? 'تحديث' : 'إضافة'} الوظيفة بنجاح`);
+        loadCareers();
+        
+        const modal = bootstrap.Modal.getInstance(document.getElementById('careerModal'));
+        modal.hide();
+        
+    } catch (error) {
+        console.error('Error saving career:', error);
+        showAlert('error', `فشل في ${isEdit ? 'تحديث' : 'إضافة'} الوظيفة: ${error.message}`);
+    }
+});
+
     // Appointment status update
     async function updateAppointmentStatus(id, status) {
         try {
@@ -1417,7 +1693,7 @@
         currentDeleteId = id;
         
         const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-        document.getElementById('confirmationMessage').textContent = `هل أنت متأكد أنك تريد حذف هذا ${type === 'doctor' ? 'الطبيب' : type === 'department' ? 'القسم' : type === 'blog' ? 'المقال' : type === 'appointment' ? 'الموعد' : 'الرسالة'}؟`;
+        document.getElementById('confirmationMessage').textContent = `هل أنت متأكد أنك تريد حذف هذا ${type === 'doctor' ? 'الطبيب' : type === 'department' ? 'القسم' : type === 'blog' ? 'المقال' : type === 'appointment' ? 'الموعد' : type === 'jobApplication' ? 'طلب التوظيف' : type === 'career' ? 'الوظيفة' : 'الرسالة'}؟`;
         modal.show();
     }
 
@@ -1437,8 +1713,14 @@
                 case 'appointment':
                     endpoint = `/api/bookings/${currentDeleteId}`;
                     break;
+                case 'jobApplication':
+                    endpoint = `/api/JobApplications/${currentDeleteId}`;
+                    break;
                 case 'contact':
                     endpoint = `/api/contacts/${currentDeleteId}`;
+                    break;
+                case 'career':
+                    endpoint = `/api/careers/${currentDeleteId}`;
                     break;
             }
             
@@ -1446,7 +1728,7 @@
                 method: 'DELETE'
             });
             
-            showAlert('success', `تم حذف ${currentDeleteType === 'doctor' ? 'الطبيب' : currentDeleteType === 'department' ? 'القسم' : currentDeleteType === 'blog' ? 'المقال' : currentDeleteType === 'appointment' ? 'الموعد' : 'الرسالة'} بنجاح`);
+            showAlert('success', `تم حذف ${currentDeleteType === 'doctor' ? 'الطبيب' : currentDeleteType === 'department' ? 'القسم' : currentDeleteType === 'blog' ? 'المقال' : currentDeleteType === 'appointment' ? 'الموعد' : currentDeleteType === 'jobApplication' ? 'طلب التوظيف' : currentDeleteType === 'career' ? 'الوظيفة' : 'الرسالة'} بنجاح`);
             
             // Refresh the appropriate table
             switch (currentDeleteType) {
@@ -1462,8 +1744,14 @@
                 case 'appointment':
                     loadAppointments();
                     break;
+                case 'jobApplication':
+                    loadJobApplications();
+                    break;
                 case 'contact':
                     loadContacts();
+                    break;
+                case 'career':
+                    loadCareers();
                     break;
             }
             
@@ -1472,7 +1760,7 @@
             
         } catch (error) {
             console.error('Error deleting:', error);
-            showAlert('error', `فشل حذف ${currentDeleteType === 'doctor' ? 'الطبيب' : currentDeleteType === 'department' ? 'القسم' : currentDeleteType === 'blog' ? 'المقال' : currentDeleteType === 'appointment' ? 'الموعد' : 'الرسالة'}`);
+            showAlert('error', `فشل حذف ${currentDeleteType === 'doctor' ? 'الطبيب' : currentDeleteType === 'department' ? 'القسم' : currentDeleteType === 'blog' ? 'المقال' : currentDeleteType === 'appointment' ? 'الموعد' : currentDeleteType === 'jobApplication' ? 'طلب التوظيف' : currentDeleteType === 'career' ? 'الوظيفة' : 'الرسالة'}`);
         }
     });
 
@@ -1543,28 +1831,41 @@
         
         // Don't set Content-Type for FormData
         if (!(finalOptions.body instanceof FormData)) {
-            finalOptions.headers['Content-Type'] = 'application/json';
-        }
-        
-        const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
-        
-        if (!response.ok) {
-            let errorMsg = 'Request failed';
-            try {
-                const errorData = await response.json();
-                errorMsg = errorData.message || JSON.stringify(errorData);
-            } catch (e) {
-                errorMsg = await response.text();
+            if (finalOptions.headers) {
+                finalOptions.headers['Content-Type'] = 'application/json';
+            } else {
+                finalOptions.headers = {
+                    'Content-Type': 'application/json'
+                };
             }
-            throw new Error(errorMsg);
         }
         
-        // Handle empty responses (204 No Content)
-        if (response.status === 204) {
-            return null;
+        try {
+            const response = await fetch(`https://localhost:7230${endpoint}`, finalOptions);
+            
+            if (!response.ok) {
+                let errorMsg = 'Request failed';
+                try {
+                    // Clone the response before reading it
+                    const errorResponse = response.clone();
+                    const errorData = await errorResponse.json();
+                    errorMsg = errorData.message || JSON.stringify(errorData);
+                } catch (e) {
+                    errorMsg = await response.text();
+                }
+                throw new Error(errorMsg);
+            }
+            
+            // Handle empty responses (204 No Content)
+            if (response.status === 204) {
+                return null;
+            }
+            
+            return isJson ? await response.json() : response;
+        } catch (error) {
+            console.error('Fetch error:', error);
+            throw error;
         }
-        
-        return isJson ? await response.json() : response;
     }
 
     // Show alert message
@@ -1595,7 +1896,33 @@
     loadDepartments();
     loadBlogs();
     loadAppointments();
+    loadJobApplications();
     loadContacts();
+    loadCareers();
+
+    // Poll for updates every 30 seconds
+    setInterval(async () => {
+        try {
+            const [bookingsRes, jobApplicationsRes, contactsRes] = await Promise.all([
+                fetchData('/api/bookings'),
+                fetchData('/api/JobApplications'),
+                fetchData('/api/contact')
+            ]);
+
+            // Calculate pending notifications
+            const pendingBookings = bookingsRes.filter(b => !b.isConfirmed).length;
+            const pendingJobApplications = jobApplicationsRes.filter(j => !j.isReviewed).length;
+            const newContacts = contactsRes.length; // You might want to track which contacts are new
+
+            // Update notification badges
+            updateNotificationCount('bookings', pendingBookings);
+            updateNotificationCount('jobApplications', pendingJobApplications);
+            updateNotificationCount('contacts', newContacts);
+
+        } catch (error) {
+            console.error('Error polling for updates:', error);
+        }
+    }, 30000); // 30 seconds
 });
     </script>
 </body>

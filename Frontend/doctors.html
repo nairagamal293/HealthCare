@@ -23,63 +23,166 @@
     <title>أطباؤنا | مركز ميديكير</title>
 
     <style>
+        /* Modern Doctor Cards */
         .doctor-card {
-    background-color: var(--white-color);
-    border-radius: 0px ;
-    overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    width: 270px;
-    height: 500px;
-}
-         .doctor-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            border: none;
+            position: relative;
         }
+        
         .doctor-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+        
         .doctor-img-container {
             position: relative;
             overflow: hidden;
             height: 250px;
         }
+        
         .doctor-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .doctor-overlay {
-            position: absolute;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            text-align: center;
-            transition: bottom 0.3s ease;
-        }
-        .doctor-card:hover .doctor-overlay {
-            bottom: 0;
-        }
+        
         .doctor-card:hover img {
             transform: scale(1.05);
         }
+        
+        .doctor-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 15px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .doctor-card:hover .doctor-overlay {
+            opacity: 1;
+        }
+        
+        .doctor-specialty {
+            color: #2c7be5;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .doctor-department {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+        
         .text-truncate-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            min-height: 40px;
+    display: -webkit-box;
+    display: box; /* future compatibility */
+    -webkit-box-orient: vertical;
+    box-orient: vertical; /* future compatibility */
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* proposed standard */
+    overflow: hidden;
+    min-height: 40px;
+}
+
+        
+        /* Modern Filter Section */
+        .filter-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .filter-card {
-            position: sticky;
-            top: 20px;
+        
+        .filter-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
         }
+        
+        .filter-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: #2c7be5;
+        }
+        
+        .filter-section .form-label {
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .filter-section .form-control,
+        .filter-section .form-select {
+            border-radius: 8px;
+            padding: 10px 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .filter-section .btn {
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: 600;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 767.98px) {
             .doctor-img-container {
                 height: 200px;
             }
+            
+            .filter-section {
+                padding: 15px;
+            }
+        }
+        
+        /* Loading animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .doctor-item {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        /* Staggered animation delay */
+        .doctor-item:nth-child(1) { animation-delay: 0.1s; }
+        .doctor-item:nth-child(2) { animation-delay: 0.2s; }
+        .doctor-item:nth-child(3) { animation-delay: 0.3s; }
+        .doctor-item:nth-child(4) { animation-delay: 0.4s; }
+        .doctor-item:nth-child(5) { animation-delay: 0.5s; }
+        .doctor-item:nth-child(6) { animation-delay: 0.6s; }
+        .doctor-item:nth-child(7) { animation-delay: 0.7s; }
+        .doctor-item:nth-child(8) { animation-delay: 0.8s; }
+        
+        /* No results message */
+        .no-results {
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            color: #e0e0e0;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -114,6 +217,17 @@
                     <li class="nav-item">
                         <a class="nav-link " href="about.html">من نحن</a>
                     </li>
+                    <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+  </ul>
+</li>
+
                     <li class="nav-item">
                         <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
@@ -127,7 +241,7 @@
                         <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                        <a class="nav-link" href="carrers.html">الوظائف</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">اتصل بنا</a>
@@ -138,60 +252,91 @@
         </div>
     </nav>
 
-
-    <!-- Doctors Section -->
-    <section class="py-5">
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
         <div class="container">
             <div class="row">
-                <!-- Filters Column -->
-                <div class="col-lg-3 mb-4">
-                    <div class="card filter-card shadow-sm p-4">
-                        <h3 class="h5 mb-4">ابحث عن طبيبك</h3>
-                        
-                        <!-- Search -->
-                        <div class="mb-4">
-                            <label for="doctor-search" class="form-label">بحث</label>
-                            <input type="text" class="form-control" id="doctor-search" placeholder="الاسم أو التخصص...">
-                        </div>
-                        
-                        <!-- Department Filter -->
-                        <div class="mb-4">
-                            <label for="department-filter" class="form-label">القسم</label>
-                            <select class="form-select" id="department-filter">
-                                <option value="all">جميع الأقسام</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Specialty Filter -->
-                        <div class="mb-4">
-                            <label for="specialty-filter" class="form-label">التخصص</label>
-                            <select class="form-select" id="specialty-filter">
-                                <option value="all">جميع التخصصات</option>
-                            </select>
-                        </div>
-                        
-                        <button id="reset-filters" class="btn btn-outline-secondary w-100">
-                            إعادة تعيين
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Doctors List -->
-                <div class="col-lg-9">
-                    <div class="row" id="doctors-container">
-                        <!-- Loading spinner -->
-                        <div class="col-12 text-center py-5">
-                            <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">جار التحميل...</span>
-                            </div>
-                            <p class="mt-2">جار تحميل بيانات الأطباء...</p>
-                        </div>
-                    </div>
+                <div class="col-12 text-center">
+                    <h1 class="fw-bold mb-3">أطباؤنا المتميزون</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">أطباؤنا</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Doctors Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Filter Section -->
+            <div class="filter-section mb-5">
+                <div class="row g-4">
+                    <div class="col-md-12">
+                        <h3>ابحث عن طبيبك</h3>
+                    </div>
+                    
+                    <!-- Search -->
+                    <div class="col-md-6 col-lg-4">
+                        <label for="doctor-search" class="form-label">بحث بالأسم أو التخصص</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="doctor-search" placeholder="ابحث هنا...">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Department Filter -->
+                    <div class="col-md-6 col-lg-3">
+                        <label for="department-filter" class="form-label">القسم الطبي</label>
+                        <select class="form-select" id="department-filter">
+                            <option value="all">جميع الأقسام</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Specialty Filter -->
+                    <div class="col-md-6 col-lg-3">
+                        <label for="specialty-filter" class="form-label">التخصص الدقيق</label>
+                        <select class="form-select" id="specialty-filter">
+                            <option value="all">جميع التخصصات</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Reset Button -->
+                    <div class="col-md-6 col-lg-2 d-flex align-items-end">
+                        <button id="reset-filters" class="btn btn-outline-secondary w-100">
+                            <i class="fas fa-undo me-2"></i>إعادة تعيين
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Doctors Grid -->
+            <div class="row" id="doctors-container">
+                <!-- Loading spinner -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جار التحميل...</span>
+                    </div>
+                    <p class="mt-2">جار تحميل بيانات الأطباء...</p>
+                </div>
+            </div>
+            
+            <!-- No Results Message (hidden by default) -->
+            <div id="no-results" class="no-results d-none">
+                <div class="col-12">
+                    <i class="fas fa-user-md"></i>
+                    <h4 class="mt-3">لا توجد نتائج مطابقة</h4>
+                    <p class="text-muted">لم نتمكن من العثور على أطباء مطابقين لبحثك. حاول تغيير معايير البحث.</p>
+                    <button id="reset-filters-2" class="btn btn-primary mt-3">
+                        <i class="fas fa-undo me-2"></i>إعادة تعيين الفلتر
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
    <!-- Footer -->
  <footer class="footer">
@@ -334,47 +479,44 @@
             // Display doctors in the UI
             function displayDoctors(doctors) {
                 const container = document.getElementById('doctors-container');
+                const noResults = document.getElementById('no-results');
                 
                 if (doctors.length === 0) {
-                    container.innerHTML = `
-                        <div class="col-12 text-center py-5">
-                            <h4>لا يوجد أطباء</h4>
-                            <p>يرجى المحاولة لاحقاً أو التواصل مع الدعم</p>
-                        </div>
-                    `;
+                    container.innerHTML = '';
+                    noResults.classList.remove('d-none');
                     return;
                 }
                 
                 let html = '';
-                doctors.forEach(doctor => {
+                doctors.forEach((doctor, index) => {
                     html += `
-                        <div class="col-md-6 col-lg-4 mb-4" 
+                        <div class="col-md-6 col-lg-4 mb-4 doctor-item" 
                              data-specialty="${doctor.specialty.toLowerCase()}" 
-                             data-department="${doctor.departmentName.toLowerCase()}">
+                             data-department="${doctor.departmentName.toLowerCase()}"
+                             style="animation-delay: ${index * 0.1}s">
                             <div class="card doctor-card h-100 border-0 shadow-sm">
                                 <div class="doctor-img-container">
-                                    
-                                    <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}"'}" 
+                                    <img src="https://localhost:7230${doctor.imagePath}" 
                                          class="card-img-top" 
                                          alt="د. ${doctor.name}">
                                     <div class="doctor-overlay">
                                         <a href="doctor-details.html?id=${doctor.id}" class="btn btn-primary btn-sm">
-                                            عرض الملف
+                                            <i class="fas fa-eye me-1"></i> عرض الملف
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title">د. ${doctor.name}</h5>
-                                    <p class="text-primary mb-1">${doctor.specialty}</p>
-                                    <p class="text-muted small mb-2">
-                                        <i class="fas fa-clinic-medical"></i> ${doctor.departmentName}
+                                    <p class="doctor-specialty mb-1">${doctor.specialty}</p>
+                                    <p class="doctor-department small mb-2">
+                                        <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
                                     </p>
                                     <p class="card-text text-truncate-2">${doctor.bio || 'متخصص في ' + doctor.specialty}</p>
                                 </div>
-                                <div class="card-footer bg-white border-0">
+                                <div class="card-footer bg-white border-0 pt-0">
                                     <a href="appointment.html?doctor=${doctor.id}" 
                                        class="btn btn-outline-primary w-100">
-                                        حجز موعد
+                                        <i class="fas fa-calendar-check me-1"></i> حجز موعد
                                     </a>
                                 </div>
                             </div>
@@ -383,6 +525,7 @@
                 });
                 
                 container.innerHTML = html;
+                noResults.classList.add('d-none');
             }
             
             // Setup filtering functionality
@@ -391,6 +534,8 @@
                 const specialtyFilter = document.getElementById('specialty-filter');
                 const searchInput = document.getElementById('doctor-search');
                 const resetBtn = document.getElementById('reset-filters');
+                const resetBtn2 = document.getElementById('reset-filters-2');
+                const noResults = document.getElementById('no-results');
                 
                 // Get unique departments and specialties
                 const departments = [...new Set(doctors.map(d => d.departmentName))];
@@ -416,24 +561,36 @@
                     const selectedSpec = specialtyFilter.value.toLowerCase();
                     const searchTerm = searchInput.value.toLowerCase();
                     
-                    document.querySelectorAll('#doctors-container .col-md-6').forEach(card => {
+                    let visibleCount = 0;
+                    
+                    document.querySelectorAll('#doctors-container .doctor-item').forEach(card => {
                         const dept = card.dataset.department;
                         const spec = card.dataset.specialty;
                         const name = card.querySelector('.card-title').textContent.toLowerCase();
                         const bio = card.querySelector('.card-text').textContent.toLowerCase();
+                        const specialty = card.querySelector('.doctor-specialty').textContent.toLowerCase();
                         
                         const deptMatch = selectedDept === 'all' || dept.includes(selectedDept);
                         const specMatch = selectedSpec === 'all' || spec.includes(selectedSpec);
                         const searchMatch = searchTerm === '' || 
                                           name.includes(searchTerm) || 
-                                          bio.includes(searchTerm);
+                                          bio.includes(searchTerm) ||
+                                          specialty.includes(searchTerm);
                         
                         if (deptMatch && specMatch && searchMatch) {
                             card.style.display = 'block';
+                            visibleCount++;
                         } else {
                             card.style.display = 'none';
                         }
                     });
+                    
+                    // Show no results message if no cards are visible
+                    if (visibleCount === 0) {
+                        noResults.classList.remove('d-none');
+                    } else {
+                        noResults.classList.add('d-none');
+                    }
                 }
                 
                 // Event listeners
@@ -441,12 +598,16 @@
                 specialtyFilter.addEventListener('change', filterDoctors);
                 searchInput.addEventListener('input', filterDoctors);
                 
-                resetBtn.addEventListener('click', () => {
+                // Reset filters
+                function resetFilters() {
                     departmentFilter.value = 'all';
                     specialtyFilter.value = 'all';
                     searchInput.value = '';
                     filterDoctors();
-                });
+                }
+                
+                resetBtn.addEventListener('click', resetFilters);
+                resetBtn2.addEventListener('click', resetFilters);
             }
             
             // Initialize

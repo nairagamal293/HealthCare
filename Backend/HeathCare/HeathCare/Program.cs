@@ -94,6 +94,9 @@ builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IContactService, ContactService>();
 builder.Services.AddScoped<IServiceService, ServiceService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<ICareerService, CareerService>();
+// Add to services
+builder.Services.AddScoped<IJobApplicationService, JobApplicationService>();
 
 
 // Add AutoMapper
@@ -209,6 +212,14 @@ using (var scope = app.Services.CreateScope())
         var logger = services.GetRequiredService<ILogger<Program>>();
         logger.LogError(ex, "An error occurred while seeding the database.");
     }
+}
+
+// Add to Program.cs before app.Run()
+var cvUploadsPath = Path.Combine(webRootPath, "uploads", "cvs");
+if (!Directory.Exists(cvUploadsPath))
+{
+    Directory.CreateDirectory(cvUploadsPath);
+    Console.WriteLine($"Created CVs upload directory at: {cvUploadsPath}");
 }
 
 app.Run();

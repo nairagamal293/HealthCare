@@ -79,6 +79,18 @@ namespace HeathCare
             CreateMap<ReviewCreateDTO, Review>();
             CreateMap<ReviewUpdateDTO, Review>();
 
+            // Career mappings
+            CreateMap<Career, CareerDTO>();
+            CreateMap<CareerCreateDTO, Career>();
+            CreateMap<CareerUpdateDTO, Career>();
+
+            // Add to MappingProfile.cs
+            CreateMap<JobApplication, JobApplicationDTO>()
+                .ForMember(dest => dest.CareerTitle, opt => opt.MapFrom(src => src.Career.Title));
+
+            CreateMap<JobApplicationCreateDTO, JobApplication>();
+            CreateMap<JobApplicationUpdateDTO, JobApplication>();
+
         }
     }
 }

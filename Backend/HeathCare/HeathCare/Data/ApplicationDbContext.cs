@@ -20,7 +20,8 @@ namespace HealthCare.Data
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Review> Reviews { get; set; }
-
+        public DbSet<Career> Careers { get; set; }
+        public DbSet<JobApplication> JobApplications { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -50,6 +51,12 @@ namespace HealthCare.Data
                 .WithMany(d => d.Reviews)
                 .HasForeignKey(r => r.DoctorId)
                 .OnDelete(DeleteBehavior.Cascade);
+            // Add to OnModelCreating
+            modelBuilder.Entity<JobApplication>()
+                .HasOne(j => j.Career)
+                .WithMany()
+                .HasForeignKey(j => j.CareerId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             // Seed initial data with ImagePath
             modelBuilder.Entity<Department>().HasData(

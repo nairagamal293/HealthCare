@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قسم الأشعة والتصوير الطبي في مركز ميديكير يقدم أحدث خدمات التشخيص الشعاعي بدقة عالية">
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>الأشعة والتصوير الطبي | مركز ميديكير</title>
+    <style>
+        /* Hero Section */
+        .radiology-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/radiology.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .radiology-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .radiology-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 90%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .service-content .btn {
+            font-weight: 600;
+            padding: 8px 20px;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 30px;
+        }
+        
+        .feature-box h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .feature-box p {
+            color: #666;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+            color: var(--white-color);
+            position: relative;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .cta-section h2::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--white-color);
+            border-radius: 3px;
+        }
+
+        .cta-section .btn-primary {
+            background-color: transparent;
+            border: 2px solid var(--white-color);
+            color: var(--white-color);
+            padding: 12px 30px;
+            font-weight: 600;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: var(--white-color);
+            color: var(--primary-color);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .radiology-hero {
+                padding: 100px 0 60px;
+            }
+            
+            .radiology-hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .radiology-hero {
+                padding: 80px 0 40px;
+            }
+            
+            .radiology-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .radiology-hero p {
+                font-size: 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                      <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+  </ul>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">الأقسام</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrers.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="radiology-hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">الأشعة والتصوير الطبي</h1>
+            <p class="animate__animated animate__fadeInUp">نقدم أحدث خدمات التصوير الطبي والتشخيص الشعاعي بدقة عالية باستخدام أحدث الأجهزة والتقنيات العالمية</p>
+            <a href="appointment.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">حجز موعد للأشعة</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>خدمات الأشعة والتصوير الطبي</h2>
+                <p>نقدم مجموعة شاملة من خدمات التصوير الطبي التي تساعد في التشخيص الدقيق والمتابعة العلاجية</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp">
+                        <div class="service-img">
+                            <img src="images/xray.jpg" alt="الأشعة السينية">
+                        </div>
+                        <div class="service-content">
+                            <h3>الأشعة السينية (X-Ray)</h3>
+                            <p>تشمل أشعة الصدر، العظام، المفاصل، الجمجمة، والعمود الفقري باستخدام أحدث الأجهزة الرقمية</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-img">
+                            <img src="images/ultrasound.jpg" alt="الموجات فوق الصوتية">
+                        </div>
+                        <div class="service-content">
+                            <h3>الموجات فوق الصوتية</h3>
+                            <p>تشمل أشعة البطن، الحوض، الحمل، الثدي، الغدة الدرقية، والدوبلر للأوعية الدموية</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-img">
+                            <img src="images/ct-scan.jpg" alt="الأشعة المقطعية">
+                        </div>
+                        <div class="service-content">
+                            <h3>الأشعة المقطعية (CT Scan)</h3>
+                            <p>تشمل تصوير الرأس، الصدر، البطن، الحوض، العمود الفقري، والأطراف بدقة عالية</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp">
+                        <div class="service-img">
+                            <img src="images/mri.jpg" alt="الرنين المغناطيسي">
+                        </div>
+                        <div class="service-content">
+                            <h3>الرنين المغناطيسي (MRI)</h3>
+                            <p>تشمل تصوير المخ، العمود الفقري، المفاصل، الأنسجة الرخوة، والأوعية الدموية بدون إشعاع</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-img">
+                            <img src="images/mammography.jpg" alt="ماموجرام">
+                        </div>
+                        <div class="service-content">
+                            <h3>ماموجرام الثدي</h3>
+                            <p>الكشف المبكر عن أورام الثدي باستخدام أحدث أجهزة الماموجرام الرقمية بدقة عالية</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-img">
+                            <img src="images/bone-density.jpg" alt="قياس كثافة العظام">
+                        </div>
+                        <div class="service-content">
+                            <h3>قياس كثافة العظام</h3>
+                            <p>تشخيص هشاشة العظام ومتابعة استجابة المريض للعلاج باستخدام جهاز DEXA</p>
+                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>لماذا تختار قسم الأشعة في ميديكير؟</h2>
+                <p>نتميز بتقديم خدمات تصويرية عالية الجودة وفق أعلى المعايير العالمية</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box animate__animated animate__fadeIn">
+                        <div class="feature-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h3>أجهزة حديثة</h3>
+                        <p>نستخدم أحدث أجهزة الأشعة والتصوير الطبي ذات التقنية العالية لضمان نتائج دقيقة</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.1s">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h3>فريق متخصص</h3>
+                        <p>فريق من أطباء الأشعة والفنيين المتخصصين ذوي الخبرة العالية في التشخيص الشعاعي</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>نتائج سريعة</h3>
+                        <p>تقديم النتائج والتقارير في أسرع وقت ممكن مع الحفاظ على الدقة والجودة</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.3s">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>سلامة المرضى</h3>
+                        <p>نلتزم بأعلى معايير السلامة والإجراءات الوقائية لتقليل التعرض للإشعاع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center animate-slide-up">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="mb-3">هل أنت مستعد لتجربة رعاية صحية استثنائية؟</h2>
+                    <p class="lead mb-0">احجز موعدك اليوم ودع فريقنا الخبير يعتني باحتياجاتك الصحية.</p>
+                </div>
+                <div class="col-lg-4 text-lg-start">
+                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">حجز موعد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
+                            </div>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف وأحدث التقنيات منذ عام 1998. صحتك هي أولويتنا.</p>
+                            <div class="footer-newsletter">
+                                <h4>اشترك في نشرتنا البريدية</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">روابط سريعة</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">مدونة الصحة</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">الأقسام الطبية</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">معلومات الاتصال</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>المواعيد: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>من الاثنين إلى الجمعة: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>السبت والأحد: 9:00 صباحًا - 5:00 مساءً</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

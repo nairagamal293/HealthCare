@@ -1,178 +1,242 @@
-:root {
-    --primary-color: #4e73df;
-    --secondary-color: #858796;
-    --success-color: #1cc88a;
-    --info-color: #36b9cc;
-    --warning-color: #f6c23e;
-    --danger-color: #e74a3b;
-    --light-color: #f8f9fc;
-    --dark-color: #5a5c69;
-}
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #858796;
+            --success-color: #1cc88a;
+            --info-color: #36b9cc;
+            --warning-color: #f6c23e;
+            --danger-color: #e74a3b;
+            --light-color: #f8f9fc;
+            --dark-color: #5a5c69;
+        }
 
-body {
-    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f8f9fc;
-}
+        body {
+            font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fc;
+        }
 
-/* Sidebar */
-.sidebar {
-    background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
-    transition: all 0.3s;
-}
+        /* Sidebar */
+        .sidebar {
+            background: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
+            transition: all 0.3s;
+        }
 
-.sidebar .nav-link {
-    color: rgba(255, 255, 255, 0.8);
-    border-radius: 0.35rem;
-    margin-bottom: 0.2rem;
-}
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 0.35rem;
+            margin-bottom: 0.2rem;
+        }
 
-.sidebar .nav-link:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-}
+        .sidebar .nav-link:hover {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
 
-.sidebar .nav-link.active {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-}
+        .sidebar .nav-link.active {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
-.sidebar .nav-link i {
-    margin-right: 0.5rem;
-}
+        .sidebar .nav-link i {
+            margin-left: 0.5rem;
+            margin-right: 0;
+        }
 
-/* Cards */
-.card {
-    border: none;
-    border-radius: 0.35rem;
-    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
-}
+        /* Notification badge */
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 0.7rem;
+            background-color: var(--danger-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.card-header {
-    background-color: #f8f9fc;
-    border-bottom: 1px solid #e3e6f0;
-    padding: 1rem 1.35rem;
-    font-weight: 600;
-}
+        .nav-item {
+            position: relative;
+        }
 
-/* Tables */
-.table {
-    margin-bottom: 0;
-}
+        /* Cards */
+        .card {
+            border: none;
+            border-radius: 0.35rem;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        }
 
-.table th {
-    font-weight: 600;
-    color: var(--dark-color);
-    border-top: none;
-}
+        .card-header {
+            background-color: #f8f9fc;
+            border-bottom: 1px solid #e3e6f0;
+            padding: 1rem 1.35rem;
+            font-weight: 600;
+        }
 
-/* Buttons */
-.btn {
-    border-radius: 0.35rem;
-    font-weight: 600;
-}
+        /* Tables */
+        .table {
+            margin-bottom: 0;
+        }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
+        .table th {
+            font-weight: 600;
+            color: var(--dark-color);
+            border-top: none;
+        }
 
-.btn-primary:hover {
-    background-color: #2e59d9;
-    border-color: #2653d4;
-}
+        /* Buttons */
+        .btn {
+            border-radius: 0.35rem;
+            font-weight: 600;
+        }
 
-/* Login Page */
-.min-vh-100 {
-    min-height: 100vh;
-}
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
 
-.login-card {
-    border-radius: 1rem;
-    overflow: hidden;
-}
+        .btn-primary:hover {
+            background-color: #2e59d9;
+            border-color: #2653d4;
+        }
 
-/* Dashboard Stats */
-.stat-card {
-    border-left: 0.25rem solid;
-    border-radius: 0.35rem;
-}
+        /* Dashboard Stats */
+        .stat-card {
+            border-right: 0.25rem solid;
+            border-radius: 0.35rem;
+        }
 
-.stat-card.bg-primary {
-    border-left-color: var(--primary-color);
-}
+        .stat-card.bg-primary {
+            border-right-color: var(--primary-color);
+        }
 
-.stat-card.bg-success {
-    border-left-color: var(--success-color);
-}
+        .stat-card.bg-success {
+            border-right-color: var(--success-color);
+        }
 
-.stat-card.bg-info {
-    border-left-color: var(--info-color);
-}
+        .stat-card.bg-info {
+            border-right-color: var(--info-color);
+        }
 
-.stat-card.bg-warning {
-    border-left-color: var(--warning-color);
-}
+        .stat-card.bg-warning {
+            border-right-color: var(--warning-color);
+        }
 
-/* Image Previews */
-.img-preview-container {
-    display: none;
-}
+        /* Image Previews */
+        .img-preview-container {
+            display: none;
+        }
 
-.img-preview {
-    max-height: 200px;
-    object-fit: contain;
-}
+        .img-preview {
+            max-height: 200px;
+            object-fit: contain;
+        }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidebar .nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .sidebar .nav-link {
-        padding: 0.5rem;
-        margin: 0.2rem;
-    }
-}
+        /* Ensure textarea is visible */
+        #blogContent {
+            display: block !important;
+            width: 100%;
+            min-height: 150px;
+        }
 
+        /* Fix modal body scrolling */
+        .modal-body {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
 
-/* Ensure textarea is visible */
-#blogContent {
-    display: block !important;
-    width: 100%;
-    min-height: 150px;
-}
+        /* Services table styling */
+        #servicesTable {
+            margin-bottom: 0;
+        }
 
-/* Fix modal body scrolling */
-.modal-body {
-    max-height: 70vh;
-    overflow-y: auto;
-}
+        #servicesTable tbody tr td {
+            vertical-align: middle;
+        }
 
-/* Services table styling */
-#servicesTable {
-    margin-bottom: 0;
-}
+        #servicesTable .btn-group {
+            white-space: nowrap;
+        }
 
-#servicesTable tbody tr td {
-    vertical-align: middle;
-}
+        /* Department image preview */
+        #departmentImagePreviewContainer {
+            margin: 15px 0;
+        }
 
-#servicesTable .btn-group {
-    white-space: nowrap;
-}
+        #departmentImagePreview {
+            max-width: 100%;
+            height: auto;
+        }
 
-/* Department image preview */
-#departmentImagePreviewContainer {
-    margin: 15px 0;
-}
+        /* Career status badge */
+        .badge-active {
+            background-color: var(--success-color);
+        }
+        
+        .badge-inactive {
+            background-color: var(--secondary-color);
+        }
 
-#departmentImagePreview {
-    max-width: 100%;
-    height: auto;
-}
+        /* RTL adjustments */
+        .dropdown-menu {
+            text-align: right;
+        }
+        
+        .form-select {
+            background-position: left 0.75rem center;
+            padding-right: 0.75rem;
+            padding-left: 2.25rem;
+        }
+        
+        .dataTables_wrapper .dataTables_filter {
+            float: left;
+        }
+        
+        .dataTables_wrapper .dataTables_length {
+            float: right;
+        }
+        
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            float: right;
+        }
+        
+        .me-2 {
+            margin-left: 0.5rem !important;
+            margin-right: 0 !important;
+        }
+        
+        .ms-2 {
+            margin-right: 0.5rem !important;
+            margin-left: 0 !important;
+        }
+        
+        .pe-2 {
+            padding-left: 0.5rem !important;
+            padding-right: 0 !important;
+        }
+        
+        .ps-2 {
+            padding-right: 0.5rem !important;
+            padding-left: 0 !important;
+        }
+
+        /* Application status badge */
+        .badge-reviewed {
+            background-color: var(--success-color);
+        }
+        
+        .badge-pending {
+            background-color: var(--warning-color);
+        }
+
+        /* CV download link */
+        .cv-download {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .cv-download:hover {
+            text-decoration: underline;
+        }
+    

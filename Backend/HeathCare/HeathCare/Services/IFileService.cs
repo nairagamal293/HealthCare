@@ -5,6 +5,7 @@
     {
         Task<string> SaveImageAsync(IFormFile imageFile);
         Task<string> SaveImageAsync(IFormFile imageFile, string subFolder);
+        Task<string> SaveFileAsync(IFormFile file, string subFolder);
         void DeleteImage(string imagePath);
     }
 
@@ -75,7 +76,42 @@
             }
         }
 
-       
-    }
+        // Add this to FileService implementation
+        public async Task<string> SaveFileAsync(IFormFile file, string subFolder)
+        {
+            if (file == null || file.Length == 0)
+            {
+                return null;
+            }
 
+            try
+            {
+                var uploadsPath = Path.Combine(_environment.WebRootPath, "uploads", subFolder);
+
+                if (!Directory.Exists(uploadsPath))
+                {
+                    Directory.CreateDirectory(uploadsPath);
+                }
+
+                var fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+                var filePath = Path.Combine(uploadsPath, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await file.CopyToAsync(stream);
+                }
+
+                return $"/uploads/{subFolder}/{fileName}";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error saving file");
+                throw;
+            }
+
+
+
+        }
+
+    }
 }

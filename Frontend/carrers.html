@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فرص عمل في مركز ميديكير، تقدم بطلبك للانضمام إلى فريقنا الطبي المحترف">
+    <title>الوظائف | مركز ميديكير</title>
+    
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <style>
+        :root {
+        --primary-color: #2a7fba;
+        --primary-light: rgba(42, 127, 186, 0.1);
+        --secondary-color: #3bb4c1;
+        --dark-color: #2c3e50;
+        --light-color: #f8f9fa;
+        --white-color: #ffffff;
+        --body-font: 'Cairo', sans-serif;
+        --heading-font: 'Changa', sans-serif;
+        --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+        --border-radius: 12px;
+        --gradient-primary: linear-gradient(135deg, #2a7fba 0%, #3bb4c1 100%);
+    }
+         body {
+        font-family: var(--body-font);
+        color: var(--dark-color);
+        line-height: 1.7;
+        background-color: var(--white-color);
+        overflow-x: hidden;
+        text-align: right;
+    }
+        .career-section {
+            padding: 4rem 0;
+        }
+        
+        .career-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .career-intro h2 {
+            color: #2a7fba;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .career-intro h2:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to left, #2a7fba, #4da8ff);
+        }
+        
+        .career-intro p {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .job-filters {
+            background-color: #f8fafd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .job-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e9f5;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 82, 158, 0.1);
+        }
+        
+        .job-card-header {
+            background-color: #f8fafd;
+            padding: 1.5rem;
+            border-bottom: 1px solid #e0e9f5;
+        }
+        
+        .job-title {
+            color: #2a7fba;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            color: #555;
+        }
+        
+        .job-meta-item i {
+            margin-left: 0.5rem;
+            color: #2a7fba;
+        }
+        
+        .job-card-body {
+            padding: 1.5rem;
+        }
+        
+        .job-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-requirements, .job-responsibilities {
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-requirements h5, .job-responsibilities h5 {
+            color: #2a7fba;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .job-card-footer {
+            padding: 1rem 1.5rem;
+            background-color: #f8fafd;
+            border-top: 1px solid #e0e9f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .job-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .job-status.active {
+            background-color: #e1f5e1;
+            color: #2e7d32;
+        }
+        
+        .job-status.closed {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .no-jobs {
+            text-align: center;
+            padding: 3rem;
+            background-color: #f8fafd;
+            border-radius: 8px;
+        }
+        
+        .benefits-section {
+            background-color: #f8fafd;
+            padding: 4rem 0;
+        }
+        
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .benefits-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .benefits-intro h2 {
+            color: #2a7fba;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .benefits-intro h2:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to left, #2a7fba, #4da8ff);
+        }
+        
+        .benefit-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 82, 158, 0.1);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: #2a7fba;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-card h4 {
+            color: #2a7fba;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .application-modal .modal-header {
+            background-color: #2a7fba;
+            color: white;
+        }
+        
+        .application-modal .close {
+            color: white;
+        }
+        
+        @media (max-width: 767.98px) {
+            .career-hero {
+                padding: 4rem 0;
+            }
+            
+            .job-card-header, .job-card-body, .job-card-footer {
+                padding: 1.25rem;
+            }
+            
+            .job-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .job-card-footer {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        .custom-alert {
+    animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 4.5s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+
+.alert-success {
+    border-left-color: #2e7d32;
+}
+
+.alert-danger {
+    border-left-color: #c62828;
+}
+    </style>
+</head>
+<body>
+    <div id="alertContainer" style="position: fixed; top: 20px; right: 20px; z-index: 1100; width: 350px;"></div>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
+                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+  </ul>
+</li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html">الأقسام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="careers.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Career Section -->
+    <section class="career-section">
+        <div class="container">
+            <div class="career-intro">
+                <h2>فرص العمل المتاحة</h2>
+                <p>نحن نبحث دائمًا عن محترفين موهوبين ومتحمسين للانضمام إلى فريقنا. تصفح الوظائف الحالية أدناه وتقدم للوظيفة التي تناسب مهاراتك وخبراتك.</p>
+            </div>
+            
+            <!-- Job Filters -->
+            <div class="job-filters">
+                <form id="jobFilterForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="jobTypeFilter" class="form-label">نوع الوظيفة</label>
+                            <select class="form-select" id="jobTypeFilter">
+                                <option value="">جميع أنواع الوظائف</option>
+                                <option value="دوام كامل">دوام كامل</option>
+                                <option value="دوام جزئي">دوام جزئي</option>
+                                <option value="عقد">عقد</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="departmentFilter" class="form-label">القسم</label>
+                            <select class="form-select" id="departmentFilter">
+                                <option value="">جميع الأقسام</option>
+                                <option value="التمريض">التمريض</option>
+                                <option value="الإدارة">الإدارة</option>
+                                <option value="المختبر">المختبر</option>
+                                <option value="الأشعة">الأشعة</option>
+                                <option value="الصيدلة">الصيدلة</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="locationFilter" class="form-label">الموقع</label>
+                            <select class="form-select" id="locationFilter">
+                                <option value="">جميع المواقع</option>
+                                <option value="الفرع الرئيسي">الفرع الرئيسي</option>
+                                <option value="فرع المدينة الطبية">فرع المدينة الطبية</option>
+                                <option value="فرع غرب المدينة">فرع غرب المدينة</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="statusFilter" class="form-label">حالة الوظيفة</label>
+                            <select class="form-select" id="statusFilter">
+                                <option value="active">الوظائف النشطة فقط</option>
+                                <option value="all">جميع الوظائف</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="filterJobs" class="btn btn-primary">تصفية الوظائف</button>
+                            <button type="reset" class="btn btn-outline-secondary">إعادة تعيين</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Jobs List -->
+            <div id="jobsList">
+                <!-- Jobs will be loaded here via JavaScript -->
+                <div class="text-center my-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                    <p class="mt-2">جاري تحميل الوظائف...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-intro">
+                <h2>مزايا العمل معنا</h2>
+                <p>في ميديكير، نعتني بموظفينا كما نعتني بمرضانا. نقدم مجموعة من المزايا المصممة لدعم صحتك ورفاهيتك ونموك المهني.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>تغطية صحية شاملة</h4>
+                        <p>نقدم تأمينًا صحيًا ممتازًا يشمل الموظف وأفراد أسرته، مع خيارات متنوعة تناسب احتياجاتك.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>التطوير المهني</h4>
+                        <p>ندعم نموك المهني من خلال برامج التدريب وورش العمل والمؤتمرات، مع مساعدة مالية للتعليم المستمر.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h4>خطط تقاعد متميزة</h4>
+                        <p>نقدم خطة تقاعد تنافسية مع مساهمات من الشركة لضمان مستقبل مالي آمن لموظفينا.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>إجازات مرنة</h4>
+                        <p>نظام إجازات مرن يشمل الإجازات السنوية المدفوعة، والإجازات المرضية، والعطلات الرسمية.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h4>رعاية الأسرة</h4>
+                        <p>نقدم إجازات أبوة وأمومة مدفوعة الأجر، ومساعدات رعاية الأطفال، وبرامج دعم الأسرة.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h4>بيئة عمل داعمة</h4>
+                        <p>ثقافة عمل تعاونية مع فرق داعمة، ومرافق حديثة، وبرامج للصحة النفسية والبدنية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Modal -->
+   <!-- Application Modal -->
+<div class="modal fade" id="applicationModal" tabindex="-1" aria-labelledby="applicationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content application-modal">
+            <div class="modal-header">
+                <h5 class="modal-title" id="applicationModalLabel">تقديم طلب توظيف</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="jobApplicationForm">
+                    <input type="hidden" id="applyingJobId">
+                    <div class="mb-3">
+                        <label for="applicantName" class="form-label">الاسم الكامل</label>
+                        <input type="text" class="form-control" id="applicantName" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantEmail" class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="applicantEmail" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantPhone" class="form-label">رقم الهاتف</label>
+                            <input type="tel" class="form-control" id="applicantPhone" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantPosition" class="form-label">الوظيفة المتقدم لها</label>
+                            <input type="text" class="form-control" id="applicantPosition" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="applicantDepartment" class="form-label">القسم</label>
+                            <input type="text" class="form-control" id="applicantDepartment" readonly>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="applicantExperience" class="form-label">سنوات الخبرة</label>
+                        <input type="number" class="form-control" id="applicantExperience" min="0" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="applicantSkills" class="form-label">المهارات</label>
+                        <textarea class="form-control" id="applicantSkills" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="applicantResume" class="form-label">السيرة الذاتية (PDF فقط)</label>
+                        <input type="file" class="form-control" id="applicantResume" accept=".pdf" required>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                        <label class="form-check-label" for="agreeTerms">
+                            أوافق على شروط الخصوصية ومعالجة بياناتي الشخصية وفقًا لسياسة التوظيف في ميديكير
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                <button type="button" class="btn btn-primary" id="submitApplication" onclick="submitApplication()">إرسال الطلب</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
+                            </div>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف وأحدث التقنيات منذ عام 1998. صحتك هي أولويتنا.</p>
+                            <div class="footer-newsletter">
+                                <h4>اشترك في نشرتنا البريدية</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">روابط سريعة</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">مدونة الصحة</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Departments Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">الأقسام الطبية</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                                <li><a href="departments.html#radiology">الأشعة</a></li>
+                                <li><a href="departments.html#surgery">الجراحة العامة</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">معلومات الاتصال</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>المواعيد: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>من الاثنين إلى الجمعة: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>السبت والأحد: 9:00 صباحًا - 5:00 مساءً</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch careers from API
+            fetchCareers();
+            
+            // Set up filter button
+            document.getElementById('filterJobs').addEventListener('click', fetchCareers);
+            
+            // Set up application form submission
+            document.getElementById('submitApplication').addEventListener('click', submitApplication);
+        });
+        
+        function fetchCareers() {
+            const loadingDiv = document.getElementById('jobsList');
+            loadingDiv.innerHTML = `
+                <div class="text-center my-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                    <p class="mt-2">جاري تحميل الوظائف...</p>
+                </div>
+            `;
+            
+            // Get filter values
+            const jobType = document.getElementById('jobTypeFilter').value;
+            const department = document.getElementById('departmentFilter').value;
+            const location = document.getElementById('locationFilter').value;
+            const status = document.getElementById('statusFilter').value;
+            
+            // Build query parameters
+            let queryParams = [];
+            if (jobType) queryParams.push(`employmentType=${encodeURIComponent(jobType)}`);
+            if (department) queryParams.push(`department=${encodeURIComponent(department)}`);
+            if (location) queryParams.push(`location=${encodeURIComponent(location)}`);
+            if (status === 'active') queryParams.push('activeOnly=true');
+            
+            const queryString = queryParams.length ? `?${queryParams.join('&')}` : '';
+            
+            // Fetch from your API
+            fetch(`https://localhost:7230/api/Careers${queryString}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayCareers(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching careers:', error);
+                    loadingDiv.innerHTML = `
+                        <div class="alert alert-danger">
+                            <p>حدث خطأ أثناء جلب بيانات الوظائف. يرجى المحاولة مرة أخرى لاحقًا.</p>
+                            <button class="btn btn-sm btn-outline-danger" onclick="fetchCareers()">إعادة المحاولة</button>
+                        </div>
+                    `;
+                });
+        }
+        
+        function displayCareers(careers) {
+            const jobsList = document.getElementById('jobsList');
+            
+            if (!careers || careers.length === 0) {
+                jobsList.innerHTML = `
+                    <div class="no-jobs">
+                        <i class="fas fa-briefcase fa-3x mb-3 text-muted"></i>
+                        <h4>لا توجد وظائف متاحة حاليًا</h4>
+                        <p>لا توجد وظائف تطابق معايير البحث الخاصة بك. يرجى المحاولة بمعايير مختلفة أو التحقق مرة أخرى لاحقًا.</p>
+                        <button class="btn btn-outline-primary" onclick="document.getElementById('jobFilterForm').reset(); fetchCareers();">إعادة تعيين الفلتر</button>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '';
+            
+            careers.forEach(job => {
+                const formattedDate = new Date(job.postedDate).toLocaleDateString('ar-EG');
+                const closingDate = job.closingDate ? new Date(job.closingDate).toLocaleDateString('ar-EG') : 'غير محدد';
+                
+                html += `
+                    <div class="job-card animate__animated animate__fadeIn">
+                        <div class="job-card-header">
+                            <h3 class="job-title">${job.title}</h3>
+                            <div class="job-meta">
+                                <span class="job-meta-item"><i class="fas fa-building"></i> ${job.department || 'غير محدد'}</span>
+                                <span class="job-meta-item"><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
+                                <span class="job-meta-item"><i class="fas fa-clock"></i> ${job.employmentType}</span>
+                                <span class="job-meta-item"><i class="fas fa-calendar-alt"></i> نشرت في: ${formattedDate}</span>
+                            </div>
+                            <span class="job-status ${job.isActive ? 'active' : 'closed'}">
+                                ${job.isActive ? 'مفتوحة للتقديم' : 'مغلقة'}
+                            </span>
+                        </div>
+                        <div class="job-card-body">
+                            <div class="job-description">
+                                <p>${job.description}</p>
+                            </div>
+                            
+                            ${job.requirements ? `
+                            <div class="job-requirements">
+                                <h5>المتطلبات:</h5>
+                                <p>${job.requirements}</p>
+                            </div>
+                            ` : ''}
+                            
+                            ${job.responsibilities ? `
+                            <div class="job-responsibilities">
+                                <h5>المسؤوليات:</h5>
+                                <p>${job.responsibilities}</p>
+                            </div>
+                            ` : ''}
+                        </div>
+                        <div class="job-card-footer">
+                            <small class="text-muted">آخر موعد للتقديم: ${closingDate}</small>
+                            <button class="btn btn-primary btn-sm ${!job.isActive ? 'disabled' : ''}" 
+                                onclick="openApplicationModal(${job.id}, '${job.title}', '${job.department || ''}')"
+                                ${!job.isActive ? 'disabled' : ''}>
+                                التقدم للوظيفة
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            jobsList.innerHTML = html;
+        }
+        
+        function openApplicationModal(jobId, jobTitle, jobDepartment) {
+    try {
+        // Set job ID
+        const jobIdField = document.getElementById('applyingJobId');
+        if (jobIdField) jobIdField.value = jobId;
+        
+        // Set position (if field exists)
+        const positionField = document.getElementById('applicantPosition');
+        if (positionField) positionField.value = jobTitle || 'غير محدد';
+        
+        // Set department (if field exists)
+        const departmentField = document.getElementById('applicantDepartment');
+        if (departmentField) departmentField.value = jobDepartment || 'غير محدد';
+        
+        // Initialize and show modal
+        const modalElement = document.getElementById('applicationModal');
+        if (modalElement) {
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
+        } else {
+            console.error('Modal element not found');
+        }
+    } catch (error) {
+        console.error('Error opening application modal:', error);
+        // Fallback - open a simple alert with the job title
+        alert(`تقديم طلب للوظيفة: ${jobTitle}`);
+    }
+}
+        
+       // Updated submitApplication function with alerts
+async function submitApplication() {
+    const form = document.getElementById('jobApplicationForm');
+    
+    if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        showAlert('danger', 'الرجاء ملء جميع الحقول المطلوبة بشكل صحيح');
+        return;
+    }
+    
+    const submitBtn = document.getElementById('submitApplication');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> جاري الإرسال...';
+    
+    try {
+        // Get form data
+        const jobId = document.getElementById('applyingJobId').value;
+        const fullName = document.getElementById('applicantName').value;
+        const email = document.getElementById('applicantEmail').value;
+        const phoneNumber = document.getElementById('applicantPhone').value;
+        const yearsOfExperience = document.getElementById('applicantExperience').value;
+        const skills = document.getElementById('applicantSkills').value;
+        const cvFile = document.getElementById('applicantResume').files[0];
+        
+        // Validate CV file
+        if (!cvFile) {
+            throw new Error('الرجاء تحميل السيرة الذاتية');
+        }
+        
+        if (cvFile.type !== 'application/pdf') {
+            throw new Error('يجب أن يكون ملف السيرة الذاتية بصيغة PDF');
+        }
+        
+        // Create FormData object
+        const formData = new FormData();
+        formData.append('CareerId', jobId);
+        formData.append('FullName', fullName);
+        formData.append('Email', email);
+        formData.append('PhoneNumber', phoneNumber);
+        formData.append('YearsOfExperience', yearsOfExperience);
+        formData.append('Skills', skills);
+        formData.append('CvFile', cvFile);
+        
+        // Send to API
+        const response = await fetch('https://localhost:7230/api/JobApplications', {
+            method: 'POST',
+            body: formData
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'حدث خطأ أثناء إرسال الطلب');
+        }
+        
+        // Success - close modal and show success message
+        const modal = bootstrap.Modal.getInstance(document.getElementById('applicationModal'));
+        if (modal) modal.hide();
+        
+        showAlert('success', 'تم إرسال طلبك بنجاح! سنراجع طلبك وسنتصل بك إذا تم اختيارك للمقابلة.');
+        
+        // Reset form
+        form.reset();
+        form.classList.remove('was-validated');
+        
+    } catch (error) {
+        console.error('Error submitting application:', error);
+        showAlert('danger', error.message || 'حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'إرسال الطلب';
+    }
+}
+
+// Function to show alert messages
+function showAlert(type, message) {
+    const alertContainer = document.getElementById('alertContainer');
+    if (!alertContainer) return;
+    
+    const alertId = 'alert-' + Date.now();
+    const alertDiv = document.createElement('div');
+    alertDiv.id = alertId;
+    alertDiv.className = `alert alert-${type} custom-alert alert-dismissible fade show`;
+    alertDiv.role = 'alert';
+    alertDiv.innerHTML = `
+        <div class="d-flex align-items-center">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} me-2"></i>
+            <div>${message}</div>
+            <button type="button" class="btn-close ms-auto" onclick="document.getElementById('${alertId}').remove()"></button>
+        </div>
+    `;
+    
+    alertContainer.appendChild(alertDiv);
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+        const alertToRemove = document.getElementById(alertId);
+        if (alertToRemove) {
+            alertToRemove.remove();
+        }
+    }, 5000);
+}
+
+    </script>
+</body>
+</html>
