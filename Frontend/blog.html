@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+    <meta name="description" content="خدمات صحية متميزة مع أطباء عالميين ومرافق حديثة">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo&family=Changa&display=swap" rel="stylesheet">
+
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
      <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../images/logo.png">
-    <!-- Custom CSS -->
+    
     <style>
         /* NEW BLOG-SPECIFIC STYLES ONLY */
         .blog-content-area {
@@ -35,7 +39,7 @@
         }
         
         .blog-content-area {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Tajawal', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
         }
@@ -46,7 +50,7 @@
         .blog-content-area h4, 
         .blog-content-area h5, 
         .blog-content-area h6 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Tajawal', sans-serif;
             color: var(--dark-color);
             font-weight: 600;
         }
@@ -122,13 +126,13 @@
         }
         
         .modern-post-meta span {
-            margin-right: 20px;
+            margin-left: 20px;
             display: flex;
             align-items: center;
         }
         
         .modern-post-meta i {
-            margin-right: 5px;
+            margin-left: 5px;
             color: var(--primary-color);
         }
         
@@ -163,7 +167,7 @@
         }
         
         .modern-read-more i {
-            margin-left: 5px;
+            margin-right: 5px;
             transition: var(--transition);
         }
         
@@ -205,8 +209,8 @@
         
         .modern-post-badge {
             position: absolute;
+            left: 15px;
             top: 15px;
-            right: 15px;
             background: var(--accent-color);
             color: white;
             padding: 5px 12px;
@@ -218,7 +222,7 @@
         
         /* Sidebar */
         .modern-blog-sidebar {
-            padding-left: 30px;
+            padding-right: 30px;
         }
         
         .modern-sidebar-widget {
@@ -240,7 +244,7 @@
         .modern-widget-title::after {
             content: '';
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: -2px;
             width: 50px;
             height: 2px;
@@ -253,12 +257,12 @@
         }
         
         .modern-search-form .form-control {
-            border-right: 0;
+            border-left: 0;
             padding: 10px 15px;
         }
         
         .modern-search-form .btn {
-            border-left: 0;
+            border-right: 0;
             padding: 10px 15px;
         }
         
@@ -285,7 +289,7 @@
         
         .modern-category-list a:hover {
             color: var(--primary-color);
-            padding-left: 5px;
+            padding-right: 5px;
         }
         
         .modern-category-list a span {
@@ -398,7 +402,7 @@
         /* Responsive */
         @media (max-width: 991.98px) {
             .modern-blog-sidebar {
-                padding-left: 0;
+                padding-right: 0;
                 margin-top: 50px;
             }
             
@@ -420,7 +424,7 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
-    <title>Health Blog | MediCare Center</title>
+    <title>المدونة الصحية | مركز ميديكير</title>
 </head>
 <body>
     <!-- EXACT ORIGINAL NAVBAR -->
@@ -437,48 +441,49 @@
         </div>
     </div>
     
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link active" href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
 
     <!-- NEW BLOG CONTENT AREA (ONLY THIS SECTION CHANGED) -->
     <div class="blog-content-area">
-      
-
         <!-- Blog Section -->
         <section class="blog-posts-container">
             <div class="container">
@@ -488,17 +493,17 @@
                             <!-- Featured Post -->
                             <div class="modern-blog-post modern-featured-post">
                                 <div class="modern-post-img">
-                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Dark Circles Treatment" class="img-fluid">
-                                    <div class="modern-post-badge">Featured</div>
+                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="علاج الهالات السوداء" class="img-fluid">
+                                    <div class="modern-post-badge">مميز</div>
                                 </div>
                                 <div class="modern-post-content">
                                     <div class="modern-post-meta">
-                                        <span><i class="far fa-calendar"></i> July 14, 2025</span>
-                                        <span><i class="far fa-user"></i> By MediCare Team</span>
+                                        <span><i class="far fa-calendar"></i> 14 يوليو 2025</span>
+                                        <span><i class="far fa-user"></i> بواسطة فريق ميديكير</span>
                                     </div>
-                                    <h2><a href="blog-single.html">Dark Circles Demystified: Causes, Risk Factors and Treatment Options</a></h2>
-                                    <p>Dark circles under the eyes, commonly known as periodical hyperpigmentation, can be caused by a combination of factors including genetics, aging, lifestyle habits, and medical conditions. Learn about the latest treatment options available.</p>
-                                    <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <h2><a href="blog-single.html">الهالات السوداء: الأسباب، عوامل الخيار وطرق العلاج</a></h2>
+                                    <p>الهالات السوداء تحت العينين، المعروفة طبياً بفرط التصبغ حول الحجاج، يمكن أن تنتج عن مجموعة من العوامل تشمل الوراثة، التقدم في العمر، العادات الحياتية والحالات الطبية. تعرف على أحدث خيارات العلاج المتاحة.</p>
+                                    <a href="blog-single.html" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                 </div>
                             </div>
                             
@@ -507,16 +512,16 @@
                                 <div class="col-md-6">
                                     <div class="modern-blog-post">
                                         <div class="modern-post-img">
-                                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ketamine Treatment" class="img-fluid">
+                                            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="علاج الكيتامين" class="img-fluid">
                                         </div>
                                         <div class="modern-post-content">
                                             <div class="modern-post-meta">
-                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
-                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                                <span><i class="far fa-calendar"></i> 14 يوليو 2025</span>
+                                                <span><i class="far fa-user"></i> بواسطة فريق ميديكير</span>
                                             </div>
-                                            <h3><a href="blog-single.html">How Ketamine Can Help Chronic Pain & Neuropathic Pain Syndromes</a></h3>
-                                            <p>The anesthetic ketamine is used to treat various chronic pain syndromes, especially those that have been resistant to other treatments. Discover how it works and who might benefit.</p>
-                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                            <h3><a href="blog-single.html">كيف يمكن للكيتامين المساعدة في علاج الآلام المزمنة ومتلازمات الألم العصبي</a></h3>
+                                            <p>يستخدم الكيتامين المخدر لعلاج مختلف متلازمات الألم المزمن، خاصة تلك المقاومة للعلاجات الأخرى. اكتشف كيف يعمل ومن يمكنه الاستفادة منه.</p>
+                                            <a href="blog-single.html" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -524,16 +529,16 @@
                                 <div class="col-md-6">
                                     <div class="modern-blog-post">
                                         <div class="modern-post-img">
-                                            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Swim Lessons" class="img-fluid">
+                                            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="دروس السباحة" class="img-fluid">
                                         </div>
                                         <div class="modern-post-content">
                                             <div class="modern-post-meta">
-                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
-                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                                <span><i class="far fa-calendar"></i> 14 يوليو 2025</span>
+                                                <span><i class="far fa-user"></i> بواسطة فريق ميديكير</span>
                                             </div>
-                                            <h3><a href="blog-single.html">9 Steps to Teaching Swim Lessons</a></h3>
-                                            <p>Teaching swimming lessons involves a structured progression, prioritizing water safety and building confidence. Our experts break down the essential steps for effective swim instruction.</p>
-                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                            <h3><a href="blog-single.html">9 خطوات لتعليم دروس السباحة</a></h3>
+                                            <p>يتضمن تعليم دروس السباحة تدرجاً منظماً، مع إعطاء الأولوية لسلامة المياه وبناء الثقة. يشرح خبراؤنا الخطوات الأساسية للتعليم الفعال للسباحة.</p>
+                                            <a href="blog-single.html" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -541,16 +546,16 @@
                                 <div class="col-md-6">
                                     <div class="modern-blog-post">
                                         <div class="modern-post-img">
-                                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lower Cholesterol" class="img-fluid">
+                                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="خفض الكوليسترول" class="img-fluid">
                                         </div>
                                         <div class="modern-post-content">
                                             <div class="modern-post-meta">
-                                                <span><i class="far fa-calendar"></i> July 14, 2025</span>
-                                                <span><i class="far fa-user"></i> By MediCare Team</span>
+                                                <span><i class="far fa-calendar"></i> 14 يوليو 2025</span>
+                                                <span><i class="far fa-user"></i> بواسطة فريق ميديكير</span>
                                             </div>
-                                            <h3><a href="blog-single.html">How To Lower Cholesterol Naturally... Tips For Better Heart Health</a></h3>
-                                            <p>To naturally lower cholesterol and improve heart health, focus on dietary changes, particularly reducing saturated fats and increasing fiber intake. Learn which foods to eat and which to avoid.</p>
-                                            <a href="blog-single.html" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                            <h3><a href="blog-single.html">كيف تخفض الكوليسترول طبيعياً... نصائح لصحة قلب أفضل</a></h3>
+                                            <p>لخفض الكوليسترول طبيعياً وتحسين صحة القلب، ركز على التغييرات الغذائية، خاصة تقليل الدهون المشبعة وزيادة تناول الألياف. تعرف على الأطعمة التي يجب تناولها وتلك التي يجب تجنبها.</p>
+                                            <a href="blog-single.html" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -561,13 +566,13 @@
                         <nav aria-label="Page navigation" class="modern-pagination mt-5">
                             <ul class="pagination justify-content-center">
                                 <li class="modern-page-item disabled">
-                                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">السابق</a>
                                 </li>
                                 <li class="modern-page-item active"><a class="modern-page-link" href="#">1</a></li>
                                 <li class="modern-page-item"><a class="modern-page-link" href="#">2</a></li>
                                 <li class="modern-page-item"><a class="modern-page-link" href="#">3</a></li>
                                 <li class="modern-page-item">
-                                    <a class="modern-page-link" href="#">Next</a>
+                                    <a class="modern-page-link" href="#">التالي</a>
                                 </li>
                             </ul>
                         </nav>
@@ -578,10 +583,10 @@
                         <div class="modern-blog-sidebar">
                             <!-- Search Widget -->
                             <div class="modern-sidebar-widget">
-                                <h3 class="modern-widget-title">Search</h3>
+                                <h3 class="modern-widget-title">بحث</h3>
                                 <form class="modern-search-form">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search articles...">
+                                        <input type="text" class="form-control" placeholder="ابحث عن مقالات...">
                                         <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
                                     </div>
                                 </form>
@@ -589,46 +594,46 @@
 
                             <!-- Categories Widget -->
                             <div class="modern-sidebar-widget">
-                                <h3 class="modern-widget-title">Categories</h3>
+                                <h3 class="modern-widget-title">التصنيفات</h3>
                                 <ul class="modern-category-list">
-                                    <li><a href="#">Dermatology <span>(12)</span></a></li>
-                                    <li><a href="#">Pain Management <span>(8)</span></a></li>
-                                    <li><a href="#">Pediatrics <span>(15)</span></a></li>
-                                    <li><a href="#">Cardiology <span>(9)</span></a></li>
-                                    <li><a href="#">Nutrition <span>(11)</span></a></li>
-                                    <li><a href="#">Fitness <span>(7)</span></a></li>
+                                    <li><a href="#">الأمراض الجلدية <span>(12)</span></a></li>
+                                    <li><a href="#">إدارة الألم <span>(8)</span></a></li>
+                                    <li><a href="#">طب الأطفال <span>(15)</span></a></li>
+                                    <li><a href="#">أمراض القلب <span>(9)</span></a></li>
+                                    <li><a href="#">التغذية <span>(11)</span></a></li>
+                                    <li><a href="#">اللياقة البدنية <span>(7)</span></a></li>
                                 </ul>
                             </div>
 
                             <!-- Recent Posts Widget -->
                             <div class="modern-sidebar-widget">
-                                <h3 class="modern-widget-title">Recent Posts</h3>
+                                <h3 class="modern-widget-title">المشاركات الحديثة</h3>
                                 <div class="modern-recent-posts">
                                     <div class="modern-recent-post">
                                         <div class="modern-post-thumb">
-                                            <a href="#"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="مقال حديث"></a>
                                         </div>
                                         <div class="modern-post-info">
-                                            <h4><a href="#">Dark Circles Demystified</a></h4>
-                                            <span>July 14, 2025</span>
+                                            <h4><a href="#">الهالات السوداء</a></h4>
+                                            <span>14 يوليو 2025</span>
                                         </div>
                                     </div>
                                     <div class="modern-recent-post">
                                         <div class="modern-post-thumb">
-                                            <a href="#"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="مقال حديث"></a>
                                         </div>
                                         <div class="modern-post-info">
-                                            <h4><a href="#">Ketamine for Chronic Pain</a></h4>
-                                            <span>July 14, 2025</span>
+                                            <h4><a href="#">الكيتامين للألم المزمن</a></h4>
+                                            <span>14 يوليو 2025</span>
                                         </div>
                                     </div>
                                     <div class="modern-recent-post">
                                         <div class="modern-post-thumb">
-                                            <a href="#"><img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Recent Post"></a>
+                                            <a href="#"><img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="مقال حديث"></a>
                                         </div>
                                         <div class="modern-post-info">
-                                            <h4><a href="#">Teaching Swim Lessons</a></h4>
-                                            <span>July 14, 2025</span>
+                                            <h4><a href="#">تعليم دروس السباحة</a></h4>
+                                            <span>14 يوليو 2025</span>
                                         </div>
                                     </div>
                                 </div>
@@ -636,16 +641,16 @@
 
                             <!-- Tags Widget -->
                             <div class="modern-sidebar-widget">
-                                <h3 class="modern-widget-title">Tags</h3>
+                                <h3 class="modern-widget-title">الوسوم</h3>
                                 <div class="modern-tag-cloud">
-                                    <a href="#">Skin Care</a>
-                                    <a href="#">Pain Relief</a>
-                                    <a href="#">Children</a>
-                                    <a href="#">Heart Health</a>
-                                    <a href="#">Exercise</a>
-                                    <a href="#">Diet</a>
-                                    <a href="#">Treatment</a>
-                                    <a href="#">Prevention</a>
+                                    <a href="#">العناية بالبشرة</a>
+                                    <a href="#">تخفيف الألم</a>
+                                    <a href="#">الأطفال</a>
+                                    <a href="#">صحة القلب</a>
+                                    <a href="#">التمارين</a>
+                                    <a href="#">النظام الغذائي</a>
+                                    <a href="#">العلاج</a>
+                                    <a href="#">الوقاية</a>
                                 </div>
                             </div>
                         </div>
@@ -664,14 +669,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-brand">
-                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                                <span class="brand-name">MediCare Center</span>
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
                             </div>
-                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <p class="footer-about">نقدم خدمات صحية استثنائية برعاية وتقنيات حديثة منذ عام 1998. صحتك هي أولويتنا.</p>
                             <div class="footer-newsletter">
-                                <h4>Subscribe to our Newsletter</h4>
+                                <h4>اشترك في نشرتنا البريدية</h4>
                                 <form class="newsletter-form">
-                                    <input type="email" placeholder="Your email address" required>
+                                    <input type="email" placeholder="بريدك الإلكتروني" required>
                                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                                 </form>
                             </div>
@@ -681,14 +686,14 @@
                     <!-- Quick Links Column -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Quick Links</h4>
+                            <h4 class="footer-title">روابط سريعة</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Our Doctors</a></li>
-                                <li><a href="blog.html">Health Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">المدونة الصحية</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
                             </ul>
                         </div>
                     </div>
@@ -696,14 +701,14 @@
                     <!-- Departments Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Medical Departments</h4>
+                            <h4 class="footer-title">الأقسام الطبية</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology">Cardiology</a></li>
-                                <li><a href="departments.html#neurology">Neurology</a></li>
-                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                                <li><a href="departments.html#radiology">Radiology</a></li>
-                                <li><a href="departments.html#surgery">General Surgery</a></li>
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                                <li><a href="departments.html#radiology">الأشعة</a></li>
+                                <li><a href="departments.html#surgery">الجراحة العامة</a></li>
                             </ul>
                         </div>
                     </div>
@@ -711,16 +716,16 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Contact Info</h4>
+                            <h4 class="footer-title">معلومات التواصل</h4>
                             <div class="footer-contact">
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                    <p>123 شارع طبي، مدينة الصحة، 12345</p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
-                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
@@ -728,8 +733,8 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-clock"></i>
-                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                    <p>من الاثنين إلى الجمعة: 8 صباحاً - 7 مساءً</p>
+                                    <p>السبت والأحد: 9 صباحاً - 5 مساءً</p>
                                 </div>
                             </div>
                         </div>
@@ -742,13 +747,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-legal">
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                            <a href="sitemap.html">Sitemap</a>
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
                         </div>
                     </div>
                 </div>
@@ -788,7 +793,7 @@
                 console.error('Error loading blogs:', err);
                 const container = document.getElementById('blog-posts-container');
                 if (container) {
-                    container.innerHTML = '<div class="alert alert-danger">Error loading blogs. Please try again later.</div>';
+                    container.innerHTML = '<div class="alert alert-danger">خطأ في تحميل المدونة. يرجى المحاولة لاحقاً.</div>';
                 }
             }
         }
@@ -803,7 +808,7 @@
             const blogsToShow = filteredBlogs.slice(startIndex, endIndex);
 
             if (blogsToShow.length === 0) {
-                container.innerHTML = '<div class="alert alert-info">No blog posts found.</div>';
+                container.innerHTML = '<div class="alert alert-info">لا توجد مقالات.</div>';
                 document.getElementById('blog-pagination')?.classList.add('d-none');
                 return;
             }
@@ -817,16 +822,16 @@
                     <div class="modern-blog-post modern-featured-post">
                         <div class="modern-post-img">
                             <img src="https://localhost:7230${featured.imagePath}" alt="${featured.title}" class="img-fluid">
-                            <div class="modern-post-badge">Featured</div>
+                            <div class="modern-post-badge">مميز</div>
                         </div>
                         <div class="modern-post-content">
                             <div class="modern-post-meta">
                                 <span><i class="far fa-calendar"></i> ${formatDate(featured.createdAt)}</span>
-                                <span><i class="far fa-user"></i> By ${featured.author || 'MediCare Team'}</span>
+                                <span><i class="far fa-user"></i> بواسطة ${featured.author || 'فريق ميديكير'}</span>
                             </div>
                             <h2><a href="blog-single.html?id=${featured.id}">${featured.title}</a></h2>
                             <p>${featured.summary || featured.content.substring(0, 150)}...</p>
-                            <a href="blog-single.html?id=${featured.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="blog-single.html?id=${featured.id}" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                         </div>
                     </div>
                 `;
@@ -845,11 +850,11 @@
                                     <div class="modern-post-content">
                                         <div class="modern-post-meta">
                                             <span><i class="far fa-calendar"></i> ${formatDate(blog.createdAt)}</span>
-                                            <span><i class="far fa-user"></i> By ${blog.author || 'MediCare Team'}</span>
+                                            <span><i class="far fa-user"></i> بواسطة ${blog.author || 'فريق ميديكير'}</span>
                                         </div>
                                         <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
                                         <p>${blog.summary || blog.content.substring(0, 100)}...</p>
-                                        <a href="blog-single.html?id=${blog.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                        <a href="blog-single.html?id=${blog.id}" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -870,11 +875,11 @@
                                 <div class="modern-post-content">
                                     <div class="modern-post-meta">
                                         <span><i class="far fa-calendar"></i> ${formatDate(blog.createdAt)}</span>
-                                        <span><i class="far fa-user"></i> By ${blog.author || 'MediCare Team'}</span>
+                                        <span><i class="far fa-user"></i> بواسطة ${blog.author || 'فريق ميديكير'}</span>
                                     </div>
                                     <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
                                     <p>${blog.summary || blog.content.substring(0, 100)}...</p>
-                                    <a href="blog-single.html?id=${blog.id}" class="modern-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                    <a href="blog-single.html?id=${blog.id}" class="modern-read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -890,7 +895,7 @@
         // Format date
         function formatDate(dateString) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString(undefined, options);
+            return new Date(dateString).toLocaleDateString('ar-SA', options);
         }
 
         // Update pagination controls
@@ -908,7 +913,7 @@
             pagination.classList.remove('d-none');
             let paginationHtml = `
                 <li class="modern-page-item ${currentPage === 1 ? 'disabled' : ''}" id="prev-page">
-                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    <a class="modern-page-link" href="#" tabindex="-1" aria-disabled="true">السابق</a>
                 </li>
             `;
 
@@ -922,7 +927,7 @@
 
             paginationHtml += `
                 <li class="modern-page-item ${currentPage === totalPages ? 'disabled' : ''}" id="next-page">
-                    <a class="modern-page-link" href="#">Next</a>
+                    <a class="modern-page-link" href="#">التالي</a>
                 </li>
             `;
 
@@ -936,9 +941,9 @@
                     
                     if (this.getAttribute('data-page')) {
                         currentPage = parseInt(this.getAttribute('data-page'));
-                    } else if (this.textContent === 'Next') {
+                    } else if (this.textContent === 'التالي') {
                         currentPage++;
-                    } else if (this.textContent === 'Previous') {
+                    } else if (this.textContent === 'السابق') {
                         currentPage--;
                     }
                     

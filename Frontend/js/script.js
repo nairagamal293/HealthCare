@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                         <h3>${dept.name}</h3>
                         <p>${dept.description || 'Comprehensive care and treatment for all related conditions.'}</p>
-                        <a href="departments.html#${dept.name.toLowerCase()}" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="departments.html#${dept.name.toLowerCase()}" class="service-link">أقرء المزيد <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             `).join('');
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 
                                 <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
                                 <p>${blog.content.substring(0, 100)}...</p>
-                                <a href="blog-single.html?id=${blog.id}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                <a href="blog-single.html?id=${blog.id}" class="read-more">أقرء المزيد <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

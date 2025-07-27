@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
+    <meta name="description" content="خدمات صحية متخصصة مع أخصائيين عالميين ومرافق متطورة">
+    <title>أقسامنا | مركز ميديكير</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
-    
-    <!-- Custom CSS -->
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/departments.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-     <title>Our Departments | MediCare Center</title>
+     <link rel="stylesheet" href="css/departments.css">
+
     
-    <!-- Add this CSS -->
-   
+ 
 </head>
 <body>
     
-       <div class="top-bar">
+     <!-- Top Bar -->
+    <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -38,86 +40,80 @@
     </div>
     
     <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link " href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link active" href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
-
-  
-
+    
     <!-- Departments Section -->
-    <section class="py-5 bg-light">
-    <div class="container py-5">
-        <div class="section-header text-center mb-5">
-            <span class="subtitle">SPECIALIZED CARE</span>
-            <h2>Comprehensive Healthcare Services</h2>
-            <div class="divider mx-auto"></div>
-            <p class="lead mx-auto" style="max-width: 700px;">
-                We offer comprehensive healthcare services across multiple specialties with expert physicians and state-of-the-art facilities
-            </p>
-        </div>
-
-        <div class="row g-4" id="departments-container">
-            <!-- Departments will be loaded here -->
-        </div>
-
-        <div class="text-center mt-5" id="view-more-container">
-            <button id="view-more-btn" class="btn btn-primary btn-lg">
-                View More Departments <i class="fas fa-chevron-down ms-2"></i>
-            </button>
-        </div>
-    </div>
-</section>
-
-    <!-- CTA Section -->
-   <section class="cta-section" style="background:  linear-gradient(rgba(0, 0, 0, 0.7)), url('images/cta.jpg') center/cover no-repeat;">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="mb-3">Need Help Choosing a Department?</h2>
-                <p class="lead mb-0">Our patient coordinators can help guide you to the right specialist for your needs.</p>
+    <section class="departments-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="subtitle">رعاية متخصصة</span>
+                <h2>خدمات رعاية صحية شاملة</h2>
+                <p class="lead">
+                    نقدم خدمات رعاية صحية شاملة عبر تخصصات متعددة مع أطباء خبراء ومرافق متطورة
+                </p>
             </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="contact.html" class="btn btn-light me-2">Contact Us</a>
-                <a href="tel:+1234567890" class="btn btn-outline-light">Call Now</a>
+
+            <div class="row g-4" id="departments-container">
+                <!-- Department cards will be loaded here dynamically -->
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+
+       <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center animate-slide-up">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="mb-3">هل أنت مستعد لتجربة رعاية صحية استثنائية؟</h2>
+                    <p class="lead mb-0">احجز موعدك اليوم ودع فريقنا الخبير يعتني باحتياجاتك الصحية.</p>
+                </div>
+                <div class="col-lg-4 text-lg-start">
+                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">حجز موعد</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
     <footer class="footer">
         <div class="footer-main">
             <div class="container">
@@ -126,14 +122,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-brand">
-                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                                <span class="brand-name">MediCare Center</span>
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
                             </div>
-                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف والتكنولوجيا المتقدمة منذ عام 1998. صحتك هي أولويتنا.</p>
                             <div class="footer-newsletter">
-                                <h4>Subscribe to our Newsletter</h4>
+                                <h4>اشترك في نشرتنا البريدية</h4>
                                 <form class="newsletter-form">
-                                    <input type="email" placeholder="Your email address" required>
+                                    <input type="email" placeholder="بريدك الإلكتروني" required>
                                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                                 </form>
                             </div>
@@ -143,14 +139,14 @@
                     <!-- Quick Links Column -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Quick Links</h4>
+                            <h4 class="footer-title">روابط سريعة</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Our Doctors</a></li>
-                                <li><a href="blog.html">Health Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">المدونة الصحية</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
                             </ul>
                         </div>
                     </div>
@@ -158,14 +154,14 @@
                     <!-- Departments Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Medical Departments</h4>
+                            <h4 class="footer-title">الأقسام الطبية</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology">Cardiology</a></li>
-                                <li><a href="departments.html#neurology">Neurology</a></li>
-                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                                <li><a href="departments.html#radiology">Radiology</a></li>
-                                <li><a href="departments.html#surgery">General Surgery</a></li>
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                                <li><a href="departments.html#radiology">الأشعة</a></li>
+                                <li><a href="departments.html#surgery">الجراحة العامة</a></li>
                             </ul>
                         </div>
                     </div>
@@ -173,16 +169,16 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Contact Info</h4>
+                            <h4 class="footer-title">معلومات الاتصال</h4>
                             <div class="footer-contact">
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                    <p>123 شارع طبي، مدينة الصحة، 12345</p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
-                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
@@ -190,8 +186,8 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-clock"></i>
-                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                    <p>من الأحد إلى الخميس: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>الجمعة والسبت: 9:00 صباحًا - 5:00 مساءً</p>
                                 </div>
                             </div>
                         </div>
@@ -204,13 +200,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-legal">
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                            <a href="sitemap.html">Sitemap</a>
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
                         </div>
                     </div>
                 </div>
@@ -222,151 +218,121 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
- <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const apiBaseUrl = 'https://localhost:7230/api';
-    let allDepartments = [];
-    let visibleDepartments = 3; // Initial number of departments to show
-    const viewMoreBtn = document.getElementById('view-more-btn');
-    const departmentsContainer = document.getElementById('departments-container');
 
-    // Fetch departments
-    async function fetchDepartments() {
-        try {
-            const response = await fetch(`${apiBaseUrl}/Departments`);
-            if (!response.ok) throw new Error('Network response was not ok');
-            
-            allDepartments = await response.json();
-            displayDepartments();
-        } catch (error) {
-            console.error('Error fetching departments:', error);
-            departmentsContainer.innerHTML = `
-                <div class="col-12 text-center py-5">
-                    <div class="alert alert-danger">
-                        Failed to load departments. Please try again later.
-                    </div>
-                </div>
-            `;
-            document.getElementById('view-more-container').style.display = 'none';
-        }
-    }
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const apiBaseUrl = 'https://localhost:7230/api';
+        const departmentsContainer = document.getElementById('departments-container');
 
-    // Display departments with pagination
-    function displayDepartments() {
-        if (allDepartments.length === 0) {
-            departmentsContainer.innerHTML = `
-                <div class="col-12 text-center py-5">
-                    <h4>No departments found</h4>
-                    <p>Please check back later or contact our support</p>
-                </div>
-            `;
-            document.getElementById('view-more-container').style.display = 'none';
-            return;
-        }
-
-        // Show only the current visible departments
-        const departmentsToShow = allDepartments.slice(0, visibleDepartments);
-        
-        let html = '';
-        departmentsToShow.forEach(dept => {
-            const imagePath = dept.imagePath 
-                ? `https://localhost:7230${dept.imagePath}`
-                : getDepartmentImage(dept.name);
-            
-            html += `
-                <div class="col-md-6 col-lg-4" id="${dept.name.toLowerCase().replace(/\s+/g, '-')}">
-                    <div class="department-card card h-100">
-                        <div class="department-img">
-                            <img src="${imagePath}" 
-                                 alt="${dept.name}" 
-                                 class="card-img-top"
-                                 onerror="this.src='images/dept-default.jpg'">
+        // Fetch departments
+        async function fetchDepartments() {
+            try {
+                const response = await fetch(`${apiBaseUrl}/Departments`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const allDepartments = await response.json();
+                displayDepartments(allDepartments);
+            } catch (error) {
+                console.error('Error fetching departments:', error);
+                departmentsContainer.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <div class="alert alert-danger">
+                            فشل تحميل الأقسام. يرجى المحاولة لاحقًا.
                         </div>
-                        <div class="card-body">
+                    </div>
+                `;
+            }
+        }
+
+        // Display all departments at once
+        function displayDepartments(departments) {
+            if (departments.length === 0) {
+                departmentsContainer.innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <h4>لا توجد أقسام متاحة</h4>
+                        <p>يرجى المحاولة لاحقًا أو الاتصال بالدعم</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            departments.forEach(dept => {
+                const imagePath = dept.imagePath 
+                    ? `https://localhost:7230${dept.imagePath}`
+                    : getDepartmentImage(dept.name);
+                
+                html += `
+                    <div class="col-md-6 col-lg-4" id="${dept.name.toLowerCase().replace(/\s+/g, '-')}">
+                        <div class="department-card">
+                            <div class="department-img-container">
+                                <img src="${imagePath}" 
+                                     alt="${dept.name}" 
+                                     class="card-img-top"
+                                     onerror="this.src='images/dept-default.jpg'">
+                                <div class="department-overlay">
+                                    <h3>${dept.name}</h3>
+                                </div>
+                            </div>
                             <div class="department-icon">
                                 ${getDepartmentIcon(dept.name)}
                             </div>
-                            <h3>${dept.name}</h3>
-                            <p class="card-text">${dept.description || 'Specialized care for ' + dept.name}</p>
-                            <div class="doctor-count mb-3 text-center">
-                                <span class="badge">
-                                    ${dept.doctorCount} ${dept.doctorCount === 1 ? 'Specialist' : 'Specialists'}
-                                </span>
+                            <div class="department-content">
+                                <p>${dept.description || 'رعاية متخصصة في ' + dept.name}</p>
+                                <div class="department-meta">
+                                    <div class="doctor-count">
+                                        <span class="badge">${dept.doctorCount} ${dept.doctorCount === 1 ? 'أخصائي' : 'أخصائيين'}</span>
+                                    </div>
+                                    <div class="department-actions">
+                                        <a href="doctors.html?department=${dept.id}" 
+                                           class="btn btn-outline-primary">
+                                            عرض الأخصائيين
+                                        </a>
+                                        <a href="department-details.html?id=${dept.id}" 
+                                           class="btn btn-primary">
+                                            التفاصيل
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <a href="doctors.html?department=${dept.id}" 
-                               class="btn btn-outline-primary w-100 mb-2">
-                                View ${dept.name} Specialists
-                            </a>
-                            <a href="department-details.html?id=${dept.id}" 
-                               class="btn btn-primary w-100">
-                                View Details
-                            </a>
-                        </div>
                     </div>
-                </div>
-            `;
-        });
-        
-        departmentsContainer.innerHTML = html;
-        
-        // Show/hide view more button
-        if (visibleDepartments >= allDepartments.length) {
-            document.getElementById('view-more-container').style.display = 'none';
-        } else {
-            document.getElementById('view-more-container').style.display = 'block';
+                `;
+            });
+            
+            departmentsContainer.innerHTML = html;
         }
-    }
 
-    // View more button click handler
-    viewMoreBtn.addEventListener('click', function() {
-        visibleDepartments += 3; // Show 3 more departments
-        displayDepartments();
+        // Helper functions for department images and icons
+        function getDepartmentImage(deptName) {
+            const images = {
+                'Cardiology': 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Neurology': 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Pediatrics': 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Orthopedics': 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Radiology': 'https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Surgery': 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+                'Dermatology': 'https://images.unsplash.com/photo-1576091160501-bbe57469278b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'
+            };
+            return images[deptName] || 'images/dept-default.jpg';
+        }
         
-        // Smooth scroll to the new departments
-        setTimeout(() => {
-            const lastDepartment = document.querySelector('#departments-container > div:last-child');
-            lastDepartment.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
+        function getDepartmentIcon(deptName) {
+            const icons = {
+                'Cardiology': '<i class="fas fa-heartbeat"></i>',
+                'Neurology': '<i class="fas fa-brain"></i>',
+                'Pediatrics': '<i class="fas fa-baby"></i>',
+                'Orthopedics': '<i class="fas fa-bone"></i>',
+                'Radiology': '<i class="fas fa-x-ray"></i>',
+                'Surgery': '<i class="fas fa-scalpel"></i>',
+                'Dermatology': '<i class="fas fa-allergies"></i>'
+            };
+            return icons[deptName] || '<i class="fas fa-hospital"></i>';
+        }
+
+        // Initialize
+        fetchDepartments();
     });
-
-    // Helper functions for department images and icons
-    function getDepartmentImage(deptName) {
-        const images = {
-            'Cardiology': 'images/dept-cardio.jpg',
-            'Neurology': 'images/dept-neuro.jpg',
-            'Pediatrics': 'images/dept-peds.jpg',
-            'Orthopedics': 'images/dept-ortho.jpg',
-            'Radiology': 'images/dept-radio.jpg',
-            'Surgery': 'images/dept-surgery.jpg',
-            'Dermatology': 'images/dept-derma.jpg'
-        };
-        return images[deptName] || 'images/dept-default.jpg';
-    }
-    
-    function getDepartmentIcon(deptName) {
-        const icons = {
-            'Cardiology': '<i class="fas fa-heartbeat"></i>',
-            'Neurology': '<i class="fas fa-brain"></i>',
-            'Pediatrics': '<i class="fas fa-baby"></i>',
-            'Orthopedics': '<i class="fas fa-bone"></i>',
-            'Radiology': '<i class="fas fa-x-ray"></i>',
-            'Surgery': '<i class="fas fa-scalpel"></i>',
-            'Dermatology': '<i class="fas fa-allergies"></i>'
-        };
-        return icons[deptName] || '<i class="fas fa-hospital"></i>';
-    }
-
-    // Initialize
-    fetchDepartments();
-});
-</script>
+    </script>
 </body>
 </html>

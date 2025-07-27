@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-
+    <meta name="description" content="خدمات صحية متميزة مع أطباء عالميين ومرافق حديثة">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
-    <!-- Custom CSS -->
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
-    <title>Our Doctors | MediCare Center</title>
+    <title>أطباؤنا | مركز ميديكير</title>
 
     <style>
         .doctor-card {
@@ -95,41 +97,43 @@
         </div>
     </div>
     
-    <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+ <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link " href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link active" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
@@ -142,32 +146,32 @@
                 <!-- Filters Column -->
                 <div class="col-lg-3 mb-4">
                     <div class="card filter-card shadow-sm p-4">
-                        <h3 class="h5 mb-4">Find Your Doctor</h3>
+                        <h3 class="h5 mb-4">ابحث عن طبيبك</h3>
                         
                         <!-- Search -->
                         <div class="mb-4">
-                            <label for="doctor-search" class="form-label">Search</label>
-                            <input type="text" class="form-control" id="doctor-search" placeholder="Name or specialty...">
+                            <label for="doctor-search" class="form-label">بحث</label>
+                            <input type="text" class="form-control" id="doctor-search" placeholder="الاسم أو التخصص...">
                         </div>
                         
                         <!-- Department Filter -->
                         <div class="mb-4">
-                            <label for="department-filter" class="form-label">Department</label>
+                            <label for="department-filter" class="form-label">القسم</label>
                             <select class="form-select" id="department-filter">
-                                <option value="all">All Departments</option>
+                                <option value="all">جميع الأقسام</option>
                             </select>
                         </div>
                         
                         <!-- Specialty Filter -->
                         <div class="mb-4">
-                            <label for="specialty-filter" class="form-label">Specialty</label>
+                            <label for="specialty-filter" class="form-label">التخصص</label>
                             <select class="form-select" id="specialty-filter">
-                                <option value="all">All Specialties</option>
+                                <option value="all">جميع التخصصات</option>
                             </select>
                         </div>
                         
                         <button id="reset-filters" class="btn btn-outline-secondary w-100">
-                            Reset Filters
+                            إعادة تعيين
                         </button>
                     </div>
                 </div>
@@ -178,9 +182,9 @@
                         <!-- Loading spinner -->
                         <div class="col-12 text-center py-5">
                             <div class="spinner-border text-primary" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                                <span class="visually-hidden">جار التحميل...</span>
                             </div>
-                            <p class="mt-2">Loading doctors...</p>
+                            <p class="mt-2">جار تحميل بيانات الأطباء...</p>
                         </div>
                     </div>
                 </div>
@@ -198,14 +202,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-brand">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <span class="brand-name">MediCare Center</span>
+                            <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                            <span class="brand-name">مركز ميديكير</span>
                         </div>
-                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                        <p class="footer-about">نقدم خدمات صحية استثنائية برعاية وتقنيات حديثة منذ عام 1998. صحتك هي أولويتنا.</p>
                         <div class="footer-newsletter">
-                            <h4>Subscribe to our Newsletter</h4>
+                            <h4>اشترك في نشرتنا البريدية</h4>
                             <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
+                                <input type="email" placeholder="بريدك الإلكتروني" required>
                                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
                             </form>
                         </div>
@@ -215,14 +219,14 @@
                 <!-- Quick Links Column -->
                 <div class="col-lg-2 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Quick Links</h4>
+                        <h4 class="footer-title">روابط سريعة</h4>
                         <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="doctors.html">Our Doctors</a></li>
-                            <li><a href="blog.html">Health Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="services.html">الخدمات</a></li>
+                            <li><a href="doctors.html">أطباؤنا</a></li>
+                            <li><a href="blog.html">المدونة الصحية</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
                         </ul>
                     </div>
                 </div>
@@ -230,14 +234,14 @@
                 <!-- Departments Column -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Medical Departments</h4>
+                        <h4 class="footer-title">الأقسام الطبية</h4>
                         <ul class="footer-links">
-                            <li><a href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a href="departments.html#neurology">Neurology</a></li>
-                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a href="departments.html#radiology">Radiology</a></li>
-                            <li><a href="departments.html#surgery">General Surgery</a></li>
+                            <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                            <li><a href="departments.html#neurology">الأعصاب</a></li>
+                            <li><a href="departments.html#orthopedics">العظام</a></li>
+                            <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                            <li><a href="departments.html#radiology">الأشعة</a></li>
+                            <li><a href="departments.html#surgery">الجراحة العامة</a></li>
                         </ul>
                     </div>
                 </div>
@@ -245,16 +249,16 @@
                 <!-- Contact Column -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Contact Info</h4>
+                        <h4 class="footer-title">معلومات التواصل</h4>
                         <div class="footer-contact">
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
+                                <p>123 شارع طبي، مدينة الصحة، 12345</p>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone-alt"></i>
-                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
@@ -262,8 +266,8 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
-                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                <p>من الاثنين إلى الجمعة: 8 صباحاً - 7 مساءً</p>
+                                <p>السبت والأحد: 9 صباحاً - 5 مساءً</p>
                             </div>
                         </div>
                     </div>
@@ -276,13 +280,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                    <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="footer-legal">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="sitemap.html">Sitemap</a>
+                        <a href="privacy.html">سياسة الخصوصية</a>
+                        <a href="terms.html">شروط الخدمة</a>
+                        <a href="sitemap.html">خريطة الموقع</a>
                     </div>
                 </div>
             </div>
@@ -321,7 +325,7 @@
                     console.error('Error fetching doctors:', error);
                     document.getElementById('doctors-container').innerHTML = `
                         <div class="alert alert-danger">
-                            Failed to load doctors. Please try again later.
+                            فشل تحميل بيانات الأطباء. يرجى المحاولة لاحقاً.
                         </div>
                     `;
                 }
@@ -334,8 +338,8 @@
                 if (doctors.length === 0) {
                     container.innerHTML = `
                         <div class="col-12 text-center py-5">
-                            <h4>No doctors found</h4>
-                            <p>Please check back later or contact our support</p>
+                            <h4>لا يوجد أطباء</h4>
+                            <p>يرجى المحاولة لاحقاً أو التواصل مع الدعم</p>
                         </div>
                     `;
                     return;
@@ -352,25 +356,25 @@
                                     
                                     <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}"'}" 
                                          class="card-img-top" 
-                                         alt="Dr. ${doctor.name}">
+                                         alt="د. ${doctor.name}">
                                     <div class="doctor-overlay">
                                         <a href="doctor-details.html?id=${doctor.id}" class="btn btn-primary btn-sm">
-                                            View Profile
+                                            عرض الملف
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Dr. ${doctor.name}</h5>
+                                    <h5 class="card-title">د. ${doctor.name}</h5>
                                     <p class="text-primary mb-1">${doctor.specialty}</p>
                                     <p class="text-muted small mb-2">
                                         <i class="fas fa-clinic-medical"></i> ${doctor.departmentName}
                                     </p>
-                                    <p class="card-text text-truncate-2">${doctor.bio || 'Specialist in ' + doctor.specialty}</p>
+                                    <p class="card-text text-truncate-2">${doctor.bio || 'متخصص في ' + doctor.specialty}</p>
                                 </div>
                                 <div class="card-footer bg-white border-0">
                                     <a href="appointment.html?doctor=${doctor.id}" 
                                        class="btn btn-outline-primary w-100">
-                                        Book Appointment
+                                        حجز موعد
                                     </a>
                                 </div>
                             </div>

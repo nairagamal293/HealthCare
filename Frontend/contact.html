@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact MediCare Center for appointments, inquiries, or emergency services">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="اتصل بمركز ميديكير للحصول على مواعيد أو استفسارات أو خدمات طارئة">
+     <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
-    <title>Contact Us | MediCare Center</title>
- <link rel="icon" type="image/png" href="images/logo.png">
+    <title>اتصل بنا | مركز ميديكير</title>
     <style>
         /* Contact Section Styles */
 .contact-section {
@@ -23,7 +28,7 @@
 
 .contact-section .section-header {
     margin-bottom: 40px;
-    text-align: left;
+    text-align: right;
 }
 
 .contact-section .section-header .subtitle {
@@ -47,7 +52,7 @@
     width: 60px;
     height: 3px;
     background-color: #0d6efd;
-    margin: 15px 0;
+    margin: 15px 0 15px auto;
 }
 
 .contact-section .section-header p {
@@ -188,8 +193,8 @@
     }
     
     .contact-section .section-header .divider {
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
     }
     
     .info-card {
@@ -226,190 +231,187 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
     
-    <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link " href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
-   
+
 
     <!-- Contact Section -->
-<!-- Contact Section -->
-<!-- Contact Section -->
-<section class="contact-section">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-5">
-                <div class="contact-info">
-                    <div class="section-header">
-                        <span class="subtitle">Get in Touch</span>
-                        <h2>We're ready to provide the right healthcare solution</h2>
-                        <div class="divider"></div>
-                    </div>
-
-                    <div class="info-cards">
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="info-content">
-                                <h4>Our Location</h4>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
-                            </div>
+    <section class="contact-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <div class="section-header">
+                            <span class="subtitle">تواصل معنا</span>
+                            <h2>نحن جاهزون لتقديم الحل الصحي المناسب</h2>
+                            <div class="divider"></div>
                         </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-phone-alt"></i>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>موقعنا</h4>
+                                    <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
+                                </div>
                             </div>
-                            <div class="info-content">
-                                <h4>Phone Numbers</h4>
-                                <p><a href="tel:+1234567890">+1 (234) 567-890</a> (Main)</p>
-                                <p><a href="tel:+1234567891">+1 (234) 567-891</a> (Appointments)</p>
-                                <p><a href="tel:+1234567899">+1 (234) 567-899</a> (Emergency)</p>
-                            </div>
-                        </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>أرقام الهواتف</h4>
+                                    <p><a href="tel:+1234567890">+1 (234) 567-890</a> (الرئيسي)</p>
+                                    <p><a href="tel:+1234567891">+1 (234) 567-891</a> (المواعيد)</p>
+                                    <p><a href="tel:+1234567899">+1 (234) 567-899</a> (الطوارئ)</p>
+                                </div>
                             </div>
-                            <div class="info-content">
-                                <h4>Email Addresses</h4>
-                                <p><a href="mailto:info@medicare.com">info@medicare.com</a> (General)</p>
-                                <p><a href="mailto:appointments@medicare.com">appointments@medicare.com</a></p>
-                                <p><a href="mailto:billing@medicare.com">billing@medicare.com</a></p>
-                            </div>
-                        </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>عنوان البريد الإلكتروني</h4>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a> (عام)</p>
+                                    <p><a href="mailto:appointments@medicare.com">appointments@medicare.com</a></p>
+                                    <p><a href="mailto:billing@medicare.com">billing@medicare.com</a></p>
+                                </div>
                             </div>
-                            <div class="info-content">
-                                <h4>Working Hours</h4>
-                                <p><strong>Monday-Friday:</strong> 8:00 AM - 8:00 PM</p>
-                                <p><strong>Saturday:</strong> 9:00 AM - 5:00 PM</p>
-                                <p><strong>Sunday:</strong> Emergency Services Only</p>
+
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4>ساعات العمل</h4>
+                                    <p><strong>من الاثنين إلى الجمعة:</strong> 8:00 صباحًا - 8:00 مساءً</p>
+                                    <p><strong>السبت:</strong> 9:00 صباحًا - 5:00 مساءً</p>
+                                    <p><strong>الأحد:</strong> خدمات الطوارئ فقط</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="contact-form-wrapper">
-                    <div class="contact-form">
-                        <div class="section-header">
-                            <span class="subtitle">Send us a message</span>
-                            <h2>Contact Form</h2>
-                            <div class="divider"></div>
-                            <p>Have questions or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
-                        </div>
-
-                        <form id="contactForm" class="needs-validation" novalidate>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                                        <label for="name">Your Name *</label>
-                                        <div class="invalid-feedback">
-                                            Please provide your name.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                                        <label for="email">Your Email *</label>
-                                        <div class="invalid-feedback">
-                                            Please provide a valid email.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" style="height: 120px" required></textarea>
-                                        <label for="message">Your Message *</label>
-                                        <div class="invalid-feedback">
-                                            Please provide a message.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="terms" required>
-                                        <label class="form-check-label" for="terms">
-                                            I agree to the <a href="privacy.html">Privacy Policy</a> *
-                                        </label>
-                                        <div class="invalid-feedback">
-                                            You must agree before submitting.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">
-                                        <span id="submitText">Send Message</span>
-                                        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                    </button>
-                                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper">
+                        <div class="contact-form">
+                            <div class="section-header">
+                                <span class="subtitle">أرسل لنا رسالة</span>
+                                <h2>نموذج الاتصال</h2>
+                                <div class="divider"></div>
+                                <p>هل لديك أسئلة أو تحتاج إلى مزيد من المعلومات؟ املأ النموذج أدناه وسنرد عليك في أقرب وقت ممكن.</p>
                             </div>
-                        </form>
-                    </div>
-                    
-                    <!-- Map Section - Moved under the contact form -->
-                    <div class="map-container mt-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423917!3d40.74844097138985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
-                                width="100%" 
-                                height="350" 
-                                style="border:0; border-radius: 8px;" 
-                                allowfullscreen="" 
-                                loading="lazy"></iframe>
+
+                            <form id="contactForm" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="اسمك" required>
+                                            <label for="name">اسمك *</label>
+                                            <div class="invalid-feedback">
+                                                يرجى تقديم اسمك.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="بريدك الإلكتروني" required>
+                                            <label for="email">بريدك الإلكتروني *</label>
+                                            <div class="invalid-feedback">
+                                                يرجى تقديم بريد إلكتروني صحيح.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" placeholder="رسالتك" style="height: 120px" required></textarea>
+                                            <label for="message">رسالتك *</label>
+                                            <div class="invalid-feedback">
+                                                يرجى تقديم رسالة.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="terms" required>
+                                            <label class="form-check-label" for="terms">
+                                                أوافق على <a href="privacy.html">سياسة الخصوصية</a> *
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                يجب الموافقة قبل الإرسال.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3" id="submitBtn">
+                                            <span id="submitText">إرسال الرسالة</span>
+                                            <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- Map Section -->
+                        <div class="map-container mt-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179329!2d-73.98784492423917!3d40.74844097138985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjQiTiA3M8KwNTknMDkuNyJX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                                    width="100%" 
+                                    height="350" 
+                                    style="border:0; border-radius: 8px;" 
+                                    allowfullscreen="" 
+                                    loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -419,14 +421,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-brand">
-                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                                <span class="brand-name">MediCare Center</span>
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
                             </div>
-                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف وأحدث التقنيات منذ عام 1998. صحتك هي أولويتنا.</p>
                             <div class="footer-newsletter">
-                                <h4>Subscribe to our Newsletter</h4>
+                                <h4>اشترك في نشرتنا البريدية</h4>
                                 <form class="newsletter-form">
-                                    <input type="email" placeholder="Your email address" required>
+                                    <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
                                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                                 </form>
                             </div>
@@ -434,40 +436,40 @@
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Quick Links</h4>
+                            <h4 class="footer-title">روابط سريعة</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Our Doctors</a></li>
-                                <li><a href="blog.html">Health Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">مدونة الصحة</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Medical Departments</h4>
+                            <h4 class="footer-title">الأقسام الطبية</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology">Cardiology</a></li>
-                                <li><a href="departments.html#neurology">Neurology</a></li>
-                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Contact Info</h4>
+                            <h4 class="footer-title">معلومات الاتصال</h4>
                             <div class="footer-contact">
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                    <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
-                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>المواعيد: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
@@ -475,8 +477,8 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-clock"></i>
-                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                    <p>من الاثنين إلى الجمعة: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>السبت والأحد: 9:00 صباحًا - 5:00 مساءً</p>
                                 </div>
                             </div>
                         </div>
@@ -488,13 +490,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-legal">
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                            <a href="sitemap.html">Sitemap</a>
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
                         </div>
                     </div>
                 </div>
@@ -508,6 +510,118 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
-    <script src="js/contact.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // API Configuration
+            const API_BASE_URL = 'https://localhost:7230';
+            const CONTACT_API_ENDPOINT = `${API_BASE_URL}/api/Contact`;
+            
+            // DOM Elements
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const spinner = document.getElementById('spinner');
+            
+            // Form Submission Handler
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate form
+                if (!contactForm.checkValidity()) {
+                    e.stopPropagation();
+                    contactForm.classList.add('was-validated');
+                    return;
+                }
+                
+                // Get only the fields the API accepts
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitText.textContent = 'جاري الإرسال...';
+                spinner.classList.remove('d-none');
+                
+                try {
+                    // Send data to API
+                    const response = await fetch(CONTACT_API_ENDPOINT, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    const responseData = await response.json();
+                    
+                    if (!response.ok) {
+                        throw new Error(responseData.message || 'فشل إرسال الرسالة');
+                    }
+                    
+                    // Show success message
+                    showAlert('تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.', 'success');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+                    
+                } catch (error) {
+                    console.error('Error submitting contact form:', error);
+                    showAlert(error.message || 'حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.', 'danger');
+                } finally {
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitText.textContent = 'إرسال الرسالة';
+                    spinner.classList.add('d-none');
+                }
+            });
+            
+            // Show alert message
+            function showAlert(message, type) {
+                // Remove any existing alerts
+                const existingAlert = document.querySelector('.alert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+                
+                // Create alert element
+                const alertDiv = document.createElement('div');
+                alertDiv.className = `alert alert-${type} alert-dismissible fade show mt-3`;
+                alertDiv.setAttribute('role', 'alert');
+                alertDiv.innerHTML = `
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                `;
+                
+                // Insert alert after the form
+                contactForm.parentNode.insertBefore(alertDiv, contactForm.nextSibling);
+                
+                // Auto-dismiss after 5 seconds
+                setTimeout(() => {
+                    const bsAlert = new bootstrap.Alert(alertDiv);
+                    bsAlert.close();
+                }, 5000);
+            }
+            
+            // Back to top button functionality
+            const backToTopButton = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>

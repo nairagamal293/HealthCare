@@ -24,3 +24,4 @@ wwwroot\uploads\departments\c05113b4-4f8d-4586-a917-2e9ae2439606.jpeg
 wwwroot\uploads\departments\1d5cec4e-4b0c-4e9e-b8b5-16955af5499e.jpeg
 wwwroot\uploads\departments\2b89faa0-4994-4167-8034-f3c394665c44.jpeg
 wwwroot\uploads\departments\7ebab2e5-bd38-41bc-9082-2201366c2c75.jpeg
+wwwroot\uploads\blogs\499793a7-10dd-44c2-9063-546d13cee243.jpeg

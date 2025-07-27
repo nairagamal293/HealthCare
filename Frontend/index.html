@@ -1,22 +1,1375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-    <title>MediCare Center | Premium Healthcare Services</title>
+    <meta name="description" content="خدمات صحية متميزة مع أخصائيين عالميين ومرافق متطورة">
+    <title>مركز ميديكير | خدمات صحية متميزة</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Custom CSS -->
+    <style>
+    :root {
+        --primary-color: #2a7fba;
+        --primary-light: rgba(42, 127, 186, 0.1);
+        --secondary-color: #3bb4c1;
+        --dark-color: #2c3e50;
+        --light-color: #f8f9fa;
+        --white-color: #ffffff;
+        --body-font: 'Cairo', sans-serif;
+        --heading-font: 'Changa', sans-serif;
+        --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+        --border-radius: 12px;
+        --gradient-primary: linear-gradient(135deg, #2a7fba 0%, #3bb4c1 100%);
+    }
+
+    body {
+        font-family: var(--body-font);
+        color: var(--dark-color);
+        line-height: 1.7;
+        background-color: var(--white-color);
+        overflow-x: hidden;
+        text-align: right;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--heading-font);
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--dark-color);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: var(--transition);
+    }
+
+    a:hover {
+        color: var(--dark-color);
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        list-style: none;
+        padding-right: 0;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    .btn-primary {
+        background: var(--gradient-primary);
+        border-color: var(--primary-color);
+        color: var(--white-color);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .btn-primary::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #3bb4c1 0%, #2a7fba 100%);
+        opacity: 0;
+        z-index: -1;
+        transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(42, 127, 186, 0.4);
+    }
+
+    .btn-primary:hover::before {
+        opacity: 1;
+    }
+
+    .btn-outline-primary {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        background-color: transparent;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    .btn-lg {
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    /* Preloader */
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--white-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease;
+    }
+
+    .loader {
+        display: flex;
+        gap: 10px;
+    }
+
+    .loader-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    .loader-circle:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Top Bar */
+    .top-bar {
+        background-color: var(--dark-color);
+        color: var(--white-color);
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .contact-info a {
+        color: var(--white-color);
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    .contact-info a:hover {
+        color: var(--primary-color);
+    }
+
+    .contact-info i {
+        margin-left: 5px;
+    }
+
+    .social-links a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--white-color);
+        border-radius: 50%;
+        margin-right: 8px;
+        transition: var(--transition);
+    }
+
+    .social-links a:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        transform: translateY(-3px);
+    }
+
+  
+
+    /* Hero Banner */
+    .hero {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-item {
+        height: 100vh;
+        min-height: 600px;
+    }
+
+    .carousel-overlay {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
+    .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .carousel-caption h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--white-color);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.carousel-caption p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+}
+
+    /* Improve button styling */
+.hero-btns .btn {
+    min-width: 180px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    margin: 0 10px;
+}
+
+.hero-btns .btn-primary {
+    box-shadow: 0 5px 15px rgba(42, 127, 186, 0.4);
+}
+
+.hero-btns .btn-outline-light {
+    border-width: 2px;
+}
+
+/* Add container for better content organization */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        transition: var(--transition);
+    }
+
+    .carousel-control-prev {
+    left: 30px;
+    right: auto;
+}
+
+.carousel-control-next {
+    right: 30px;
+    left: auto;
+}
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: var(--primary-color);
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translate3d(-50%, -60%, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translate3d(0, 30px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Appointment Bar */
+    .appointment-bar {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 30px 0;
+        position: relative;
+        z-index: 2;
+        margin-top: -50px;
+        box-shadow: var(--box-shadow);
+    }
+
+    .appointment-card {
+        text-align: center;
+        padding: 30px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .appointment-card:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .appointment-card i {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--white-color);
+    }
+
+    .appointment-card h4 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        color: var(--white-color);
+    }
+
+    .appointment-card p {
+        margin-bottom: 0;
+        opacity: 0.9;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 100px 0;
+        position: relative;
+    }
+
+    .about-img {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+    }
+
+    .experience-badge {
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(42, 127, 186, 0.3);
+        z-index: 2;
+    }
+
+    .experience-badge span {
+        font-size: 2.5rem;
+        font-weight: 700;
+        display: block;
+        line-height: 1;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header .subtitle {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .section-header .subtitle::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-header h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background: var(--gradient-primary);
+        border-radius: 3px;
+    }
+
+    .section-header .divider {
+        height: 3px;
+        width: 70px;
+        background-color: var(--primary-color);
+        margin: 20px 0;
+    }
+
+    .section-description {
+        color: var(--secondary-color);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Services Section */
+    .services-section {
+        padding: 100px 0;
+        background-color: #f9fbfd;
+        position: relative;
+    }
+
+    .services-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNDIsMjQ0LDI0OSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+') repeat;
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .service-card {
+        background-color: var(--white-color);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        height: 100%;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(42, 127, 186, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+        z-index: -1;
+        opacity: 0;
+        transition: var(--transition);
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .service-card:hover::before {
+        opacity: 1;
+    }
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(42, 127, 186, 0.1);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        color: var(--primary-color);
+        font-size: 1.75rem;
+        transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        transform: rotateY(180deg);
+    }
+
+    .service-card h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    .service-card p {
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .service-link {
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .service-link i {
+        margin-right: 5px;
+        transition: var(--transition);
+    }
+
+    .service-link:hover i {
+        transform: translateX(-5px);
+    }
+
+   .counter-section {
+    position: relative;
+    z-index: 1;
+}
+
+.counter-card {
+    background: transparent;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(42, 127, 186, 0.1);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.counter-card:hover::before {
+    border-color: rgba(42, 127, 186, 0.3);
+    transform: scale(1.05);
+}
+
+.counter-icon {
+    transition: var(--transition);
+}
+
+.counter-card:hover .counter-icon {
+    transform: translateY(-5px);
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    font-family: var(--heading-font);
+    transition: var(--transition);
+}
+
+.counter-card:hover .counter {
+    color: var(--primary-color);
+}
+
+@media (max-width: 767.98px) {
+    .counter {
+        font-size: 2rem;
+    }
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
+    .counter-icon i {
+        font-size: 2.5rem !important;
+    }
+}
+
+    /* Doctors Section */
+    .doctors-section {
+        padding: 100px 0;
+    }
+
+    .doctor-card {
+        background-color: var(--white-color);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: var(--box-shadow);
+        height: 100%;
+    }
+
+    .doctor-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .doctor-img {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    .doctor-img img {
+        transition: var(--transition);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .doctor-card:hover .doctor-img img {
+        transform: scale(1.1);
+    }
+
+    .social-links {
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(42, 127, 186, 0.8);
+        padding: 15px;
+        transition: var(--transition);
+    }
+
+    .doctor-card:hover .social-links {
+        bottom: 0;
+    }
+
+    .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: var(--white-color);
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: var(--transition);
+    }
+
+    .social-links a:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    .doctor-info {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .doctor-info h4 {
+        margin-bottom: 5px;
+        font-size: 1.25rem;
+    }
+
+    .doctor-info p {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .doctor-meta {
+        margin-bottom: 15px;
+    }
+
+    .doctor-meta span {
+        display: inline-block;
+        color: var(--secondary-color);
+        font-size: 0.9rem;
+    }
+
+    .doctor-meta i {
+        color: var(--warning-color);
+    }
+
+    /* Blog Section */
+    .blog-section {
+        padding: 100px 0;
+        background-color: #f9fbfd;
+    }
+
+    .blog-card {
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: var(--box-shadow);
+        height: 100%;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .blog-img {
+        position: relative;
+        overflow: hidden;
+        height: 230px;
+    }
+
+    .blog-img img {
+        transition: var(--transition);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .blog-card:hover .blog-img img {
+        transform: scale(1.1);
+    }
+
+    .blog-date {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: 10px 15px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .blog-date span:first-child {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: block;
+    }
+
+    .blog-content {
+        padding: 25px;
+    }
+
+    .blog-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+        color: var(--secondary-color);
+    }
+
+    .blog-meta a {
+        color: var(--secondary-color);
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .blog-meta a:hover {
+        color: var(--primary-color);
+    }
+
+    .blog-meta i {
+        margin-left: 5px;
+        font-size: 0.8rem;
+    }
+
+    .blog-content h3 {
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+    }
+
+    .blog-content h3 a {
+        color: var(--dark-color);
+        transition: var(--transition);
+    }
+
+    .blog-content h3 a:hover {
+        color: var(--primary-color);
+    }
+
+    .blog-content p {
+        margin-bottom: 20px;
+        color: var(--secondary-color);
+    }
+
+    .read-more {
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary-color);
+    }
+
+    .read-more i {
+        margin-right: 5px;
+        transition: var(--transition);
+    }
+
+    .read-more:hover i {
+        transform: translateX(-5px);
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+        color: var(--white-color);
+        position: relative;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cta-section h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+    }
+
+    .cta-section .btn {
+        padding: 12px 30px;
+        font-weight: 600;
+    }
+
+    .cta-section .btn-light {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--dark-color);
+    }
+
+    .cta-section .btn-light:hover {
+        background-color: var(--white-color);
+    }
+
+    .cta-section .btn-outline-light {
+        border: 2px solid var(--white-color);
+        background-color: transparent;
+        color: var(--white-color);
+    }
+
+    .cta-section .btn-outline-light:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    /* Insurance Section */
+    .insurance-section {
+        padding: 80px 0;
+    }
+
+    .insurance-logos {
+         height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .logo-item {
+        flex: 0 0 calc(20% - 30px);
+        text-align: center;
+        height: 120px;
+        padding: 20px;
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        transition: var(--transition);
+    }
+
+    .logo-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .logo-item img {
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: var(--transition);
+        max-height: 60px;
+        width: auto;
+    }
+
+    .logo-item:hover img {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    /* Footer Styles */
+    .footer {
+        background: linear-gradient(135deg, #0b1f3a, #1a365d);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary-color), #800020);
+    }
+
+    .footer-main {
+        padding: 80px 0 40px;
+        position: relative;
+    }
+
+    .footer-widget {
+        margin-bottom: 40px;
+    }
+
+    .footer-brand {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        max-height: 50px;
+        margin-left: 15px;
+    }
+
+    .brand-name {
+        font-family: var(--heading-font);
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .footer-about {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+        margin-bottom: 25px;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 25px;
+        position: relative;
+        color: #fff;
+        padding-bottom: 10px;
+    }
+
+    .footer-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50px;
+        height: 2px;
+        background: linear-gradient(90deg, #800020, transparent);
+    }
+
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        display: inline-block;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .footer-links a::before {
+        content: '←';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #800020;
+        font-weight: bold;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #fff;
+        transform: translateX(-10px);
+        text-decoration: none;
+    }
+
+    .footer-links a:hover::before {
+        opacity: 1;
+        right: -5px;
+    }
+
+    .footer-contact .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact .contact-item i {
+        color: #800020;
+        margin-left: 15px;
+        font-size: 1.1rem;
+        margin-top: 3px;
+    }
+
+    .footer-contact .contact-item p,
+    .footer-contact .contact-item a {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .footer-contact .contact-item a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    .footer-newsletter {
+        margin-top: 30px;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        color: #fff;
+    }
+
+    .newsletter-form {
+        display: flex;
+        border-radius: 50px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsletter-form input {
+        flex: 1;
+        padding: 12px 20px;
+        border: none;
+        outline: none;
+        background: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+    }
+
+    .newsletter-form button {
+        background: #800020;
+        color: #fff;
+        border: none;
+        padding: 0 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+        background: var(--primary-color);
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+        background: rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .copyright {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+
+    .footer-legal {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .footer-legal a {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        background: #800020;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .back-to-top:hover {
+        background: var(--primary-color);
+        transform: translateY(-5px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1199.98px) {
+        .carousel-caption h1 {
+            font-size: 3rem;
+        }
+        
+        .insurance-logos {
+            gap: 20px;
+        }
+        
+        .logo-item {
+            flex: 0 0 calc(25% - 20px);
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .navbar {
+            padding: 15px 0;
+        }
+        
+        .carousel-caption h1 {
+            font-size: 2.5rem;
+        }
+        
+        .carousel-caption p.lead {
+            font-size: 1.1rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+        }
+        
+        .about-section,
+        .services-section,
+        .doctors-section,
+        .blog-section {
+            padding: 80px 0;
+        }
+        
+        .logo-item {
+            flex: 0 0 calc(33.333% - 20px);
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .top-bar .contact-info {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .top-bar .social-links {
+            justify-content: center;
+        }
+        
+        .carousel-item {
+            height: 80vh;
+            min-height: 500px;
+        }
+        
+        .carousel-caption h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-btns {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .appointment-bar {
+            margin-top: 0;
+        }
+        
+        .experience-badge {
+            left: 0;
+            bottom: -20px;
+            padding: 15px;
+        }
+        
+        .experience-badge span {
+            font-size: 2rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.75rem;
+        }
+        
+        .about-section,
+        .services-section,
+        .doctors-section,
+        .blog-section {
+            padding: 60px 0;
+        }
+        
+        .logo-item {
+            flex: 0 0 calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .carousel-item {
+            height: 70vh;
+            min-height: 400px;
+        }
+        
+       .carousel-caption {
+    text-align: right;
+    padding: 0 50px;
+}
+        
+        .carousel-caption h1 {
+            font-size: 1.75rem;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        
+        .stat-card {
+            padding: 20px;
+        }
+        
+        .stat-card .counter {
+            font-size: 2rem;
+        }
+        
+        .logo-item {
+            flex: 0 0 100%;
+            max-width: 200px;
+        }
+    }
+
+    /* Animation Classes */
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 1s ease-in-out;
+    }
+
+    .animate-delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .animate-delay-2 {
+        animation-delay: 0.4s;
+    }
+
+    .animate-delay-3 {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        from { 
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -37,7 +1390,14 @@
                         <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
                     </div>
                 </div>
-                
+                <div class="col-md-6 text-start">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -46,39 +1406,39 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" >
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link" href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
                     </li>
-
-                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
@@ -89,379 +1449,644 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="carousel-overlay"></div>
-                    <img src="images/2148980721.jpg" class="d-block w-100" alt="Advanced Medical Care">
+                    <img src="images/2148980721.jpg" class="d-block w-100" alt="رعاية طبية متطورة">
                     <div class="carousel-caption">
-                        <h1>Advanced Medical Care You Can Trust</h1>
-                        <p class="lead">World-class healthcare services with compassion and cutting-edge technology</p>
-                        <div class="hero-btns">
-                            <a href="appointment.html" class="btn btn-primary btn-lg">Book Appointment</a>
-                            <a href="departments.html" class="btn btn-outline-light btn-lg">Our Services</a>
+                        <h1 class="animate__animated animate__fadeInDown">رعاية طبية متطورة يمكنك الوثوق بها</h1>
+                        <p class="lead animate__animated animate__fadeInUp">خدمات صحية عالمية مع التعاطف وأحدث التقنيات</p>
+                        <div class="hero-btns animate__animated animate__fadeIn">
+                            <a href="appointment.html" class="btn btn-primary btn-lg">حجز موعد</a>
+                            <a href="departments.html" class="btn btn-outline-light btn-lg">خدماتنا</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-overlay"></div>
-                    <img src="images/2148969982.jpg" class="d-block w-100" alt="Pediatric Specialists">
+                    <img src="images/2148969982.jpg" class="d-block w-100" alt="أخصائيون في طب الأطفال">
                     <div class="carousel-caption">
-                        <h1>Specialized Care for Your Family</h1>
-                        <p class="lead">Comprehensive healthcare services for all ages with expert physicians</p>
-                        <div class="hero-btns">
-                            <a href="appointment.html" class="btn btn-primary btn-lg">Book Appointment</a>
-                            <a href="doctors.html" class="btn btn-outline-light btn-lg">Meet Our Doctors</a>
+                        <h1 class="animate__animated animate__fadeInDown">رعاية متخصصة لعائلتك</h1>
+                        <p class="lead animate__animated animate__fadeInUp">خدمات صحية شاملة لجميع الأعمار مع أطباء خبراء</p>
+                        <div class="hero-btns animate__animated animate__fadeIn">
+                            <a href="appointment.html" class="btn btn-primary btn-lg">حجز موعد</a>
+                            <a href="doctors.html" class="btn btn-outline-light btn-lg">تعرف على أطبائنا</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-overlay"></div>
-                    <img src="images/2148492112.jpg" class="d-block w-100" alt="Emergency Services">
+                    <img src="images/2148492112.jpg" class="d-block w-100" alt="خدمات الطوارئ">
                     <div class="carousel-caption">
-                        <h1>24/7 Emergency Services</h1>
-                        <p class="lead">Immediate care when you need it most with our dedicated emergency team</p>
-                        <div class="hero-btns">
-                            <a href="tel:+1234567890" class="btn btn-danger btn-lg">Emergency Call</a>
-                            <a href="contact.html" class="btn btn-outline-light btn-lg">Get Directions</a>
+                        <h1 class="animate__animated animate__fadeInDown">خدمات الطوارئ على مدار الساعة</h1>
+                        <p class="lead animate__animated animate__fadeInUp">رعاية فورية عندما تحتاجها أكثر مع فريق الطوارئ المخصص لدينا</p>
+                        <div class="hero-btns animate__animated animate__fadeIn">
+                            <a href="tel:+1234567890" class="btn btn-danger btn-lg">اتصال طوارئ</a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg">احصل على الاتجاهات</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden">السابق</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden">التالي</span>
             </button>
         </div>
     </section>
-    
-    <!-- Appointment Bar -->
-    <section class="appointment-bar">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="appointment-card">
-                        <i class="fas fa-calendar-check"></i>
-                        <h4>Easy Appointment</h4>
-                        <p>Book your visit online in just a few clicks</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="appointment-card">
-                        <i class="fas fa-user-md"></i>
-                        <h4>Expert Doctors</h4>
-                        <p>Board-certified specialists in every field</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="appointment-card">
-                        <i class="fas fa-clock"></i>
-                        <h4>24/7 Emergency</h4>
-                        <p>Immediate care when you need it most</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     
     <!-- About Section -->
     <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
                     <div class="about-img">
-                        <img src="images/2149408808.jpg" alt="About MediCare Center" class="img-fluid rounded">
+                        <img src="images/2149408808.jpg" alt="عن مركز ميديكير" class="img-fluid rounded">
                         <div class="experience-badge">
                             <span>25+</span>
-                            <p>Years of Experience</p>
+                            <p>سنوات من الخبرة</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
                     <div class="section-header">
-                        <span class="subtitle">About Us</span>
-                        <h2>We Provide The Best Quality Healthcare</h2>
+                        <span class="subtitle">من نحن</span>
+                        <h2>نقدم أفضل رعاية صحية بجودة عالية</h2>
                         <div class="divider"></div>
                     </div>
-                    <p class="about-text">MediCare Center is a leading multi-specialty healthcare provider dedicated to delivering exceptional patient care through advanced technology, expert physicians, and compassionate service.</p>
+                    <p class="about-text">مركز ميديكير هو مزود رعاية صحية متعدد التخصصات مخصص لتقديم رعاية استثنائية للمرضى من خلال التكنولوجيا المتقدمة والأطباء الخبراء والخدمة التعاطفية.</p>
                     <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Comprehensive diagnostic services</li>
-                        <li><i class="fas fa-check-circle"></i> State-of-the-art treatment facilities</li>
-                        <li><i class="fas fa-check-circle"></i> Personalized care plans</li>
-                        <li><i class="fas fa-check-circle"></i> Multidisciplinary approach</li>
+                        <li><i class="fas fa-check-circle"></i> خدمات تشخيصية شاملة</li>
+                        <li><i class="fas fa-check-circle"></i> مرافق علاجية متطورة</li>
+                        <li><i class="fas fa-check-circle"></i> خطط رعاية شخصية</li>
+                        <li><i class="fas fa-check-circle"></i> نهج متعدد التخصصات</li>
                     </ul>
-                    <a href="about.html" class="btn btn-outline-primary">Learn More</a>
+                    <a href="about.html" class="btn btn-outline-primary">المزيد عنا</a>
                 </div>
             </div>
         </div>
     </section>
     
- <!-- Departments Section -->
-<section class="services-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="subtitle">Our Services</span>
-            <h2>Specialized Medical Departments</h2>
-            <div class="divider mx-auto"></div>
-            <p class="section-description">We offer a wide range of specialized healthcare services to meet all your medical needs</p>
-        </div>
-        <div class="row g-4" id="departments-container">
-            <!-- Departments will be loaded here dynamically -->
-        </div>
-        <div class="text-center mt-5">
-            <a href="departments.html" class="btn btn-primary">View All Departments</a>
-        </div>
-    </div>
-</section>
-  <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Departments Section -->
+    <section class="services-section">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-6 col-md-3">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <div class="counter" data-count="120">0</div>
-                        <h5>Expert Doctors</h5>
+            <div class="section-header text-center">
+                <span class="subtitle">خدماتنا</span>
+                <h2>الأقسام الطبية المتخصصة</h2>
+                <div class="divider mx-auto"></div>
+                <p class="section-description">نقدم مجموعة واسعة من الخدمات الصحية المتخصصة لتلبية جميع احتياجاتك الطبية</p>
+            </div>
+            <div class="row g-4" id="departments-container">
+                <!-- Departments will be loaded here dynamically -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
                     </div>
+                    <p class="mt-2">جاري تحميل الأقسام...</p>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-procedures"></i>
-                        </div>
-                        <div class="counter" data-count="350">0</div>
-                        <h5>Medical Beds</h5>
+            </div>
+            <div class="text-center mt-5">
+                <a href="departments.html" class="btn btn-primary">عرض جميع الأقسام</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Counter Section -->
+<section class="counter-section py-5">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <!-- Patients Counter -->
+            <div class="col-6 col-md-3">
+                <div class="counter-card text-center px-3 py-4">
+                    <div class="counter-icon mb-3">
+                        <i class="fas fa-user-injured fa-3x" style="color: var(--primary-color);"></i>
                     </div>
+                    <h3 class="counter mb-2" data-count="25000">0</h3>
+                    <p class="mb-0 text-muted">مرضى راضون</p>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-smile"></i>
-                        </div>
-                        <div class="counter" data-count="10000">0</div>
-                        <h5>Happy Patients</h5>
+            </div>
+            
+            <!-- Doctors Counter -->
+            <div class="col-6 col-md-3">
+                <div class="counter-card text-center px-3 py-4">
+                    <div class="counter-icon mb-3">
+                        <i class="fas fa-user-md fa-3x" style="color: var(--secondary-color);"></i>
                     </div>
+                    <h3 class="counter mb-2" data-count="120">0</h3>
+                    <p class="mb-0 text-muted">أطباء متخصصون</p>
                 </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div class="counter" data-count="25">0</div>
-                        <h5>Years Experience</h5>
+            </div>
+            
+            <!-- Departments Counter -->
+            <div class="col-6 col-md-3">
+                <div class="counter-card text-center px-3 py-4">
+                    <div class="counter-icon mb-3">
+                        <i class="fas fa-clinic-medical fa-3x" style="color: #6c63ff;"></i>
                     </div>
+                    <h3 class="counter mb-2" data-count="25">0</h3>
+                    <p class="mb-0 text-muted">قسم طبي</p>
                 </div>
+            </div>
+            
+            <!-- Years Counter -->
+            <div class="col-6 col-md-3">
+                <div class="counter-card text-center px-3 py-4">
+                    <div class="counter-icon mb-3">
+                        <i class="fas fa-award fa-3x" style="color: #ff6b6b;"></i>
+                    </div>
+                    <h3 class="counter mb-2" data-count="25">0</h3>
+                    <p class="mb-0 text-muted">سنة من الخبرة</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  
+    <!-- Doctors Section -->
+    <section class="doctors-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">فريقنا</span>
+                <h2>تعرف على أخصائينا</h2>
+                <div class="divider mx-auto"></div>
+                <p class="section-description">أطباؤنا المعتمدون هم رواد في مجالاتهم ومكرسون لرعايتك</p>
+            </div>
+            <div class="row g-4" id="doctors-container">
+                <!-- Doctors will be loaded here dynamically -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                    <p class="mt-2">جاري تحميل الأطباء...</p>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="doctors.html" class="btn btn-primary">عرض جميع الأطباء</a>
             </div>
         </div>
     </section>
 
-
-
-<!-- Doctors Section -->
-<section class="doctors-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="subtitle">Our Team</span>
-            <h2>Meet Our Specialists</h2>
-            <div class="divider mx-auto"></div>
-            <p class="section-description">Our board-certified physicians are leaders in their fields and dedicated to your care</p>
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">مقالات صحية</span>
+                <h2>أحدث من مدونتنا</h2>
+                <div class="divider mx-auto"></div>
+                <p class="section-description">ابق على اطلاع مع نصائحنا الصحية وأخبارنا الطبية ونصائحنا للعافية</p>
+            </div>
+            <div class="row g-4" id="blogs-container">
+                <!-- Blogs will be loaded here dynamically -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">جاري التحميل...</span>
+                    </div>
+                    <p class="mt-2">جاري تحميل المقالات...</p>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="blog.html" class="btn btn-primary">عرض جميع المقالات</a>
+            </div>
         </div>
-        <div class="row g-4" id="doctors-container">
-            <!-- Doctors will be loaded here dynamically -->
-        </div>
-        <div class="text-center mt-5">
-            <a href="doctors.html" class="btn btn-primary">View All Doctors</a>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Blog Section -->
-<section class="blog-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="subtitle">Health Articles</span>
-            <h2>Latest From Our Blog</h2>
-            <div class="divider mx-auto"></div>
-            <p class="section-description">Stay informed with our health tips, medical news, and wellness advice</p>
-        </div>
-        <div class="row g-4" id="blogs-container">
-            <!-- Blogs will be loaded here dynamically -->
-        </div>
-        <div class="text-center mt-5">
-            <a href="blog.html" class="btn btn-primary">View All Articles</a>
-        </div>
-    </div>
-</section>
-
-      
-  
-    
- 
+    </section>
     
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center animate__animated animate__fadeInUp">
                 <div class="col-lg-8">
-                    <h2>Ready to Schedule Your Appointment?</h2>
-                    <p class="mb-lg-0">Contact us today to book a consultation with one of our specialists. Our team is here to provide you with the highest quality healthcare.</p>
+                    <h2>هل أنت مستعد لحجز موعدك؟</h2>
+                    <p class="mb-lg-0">اتصل بنا اليوم لحجز استشارة مع أحد أخصائينا. فريقنا هنا لتقديم أفضل رعاية صحية لك.</p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="appointment.html" class="btn btn-light me-2">Book Online</a>
-                    <a href="tel:+1234567890" class="btn btn-outline-light">Call Now</a>
+                <div class="col-lg-4 text-lg-start">
+                    <a href="appointment.html" class="btn btn-light me-2">الحجز عبر الإنترنت</a>
+                    <a href="tel:+1234567890" class="btn btn-outline-light">اتصل الآن</a>
                 </div>
             </div>
         </div>
     </section>
     
-      
     <!-- Insurance Partners -->
     <section class="insurance-section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="subtitle">Our Partners</span>
-                <h2>Insurance Providers</h2>
+                <span class="subtitle">شركاؤنا</span>
+                <h2>مزودو التأمين</h2>
                 <div class="divider mx-auto"></div>
-                <p class="section-description">We work with most major insurance providers to make healthcare accessible</p>
+                <p class="section-description">نعمل مع معظم مزودي التأمين الرئيسيين لجعل الرعاية الصحية في متناول الجميع</p>
             </div>
             <div class="insurance-logos">
-                <div class="logo-item">
-                    <img src="images/بوبا.jpg" alt="Blue Cross" class="img-fluid">
+                <div class="logo-item animate__animated animate__fadeIn">
+                    <img src="images/بوبا.jpg" alt="بوبا" class="img-fluid">
                 </div>
-                <div class="logo-item">
-                    <img src="images/ساب تكافل.png" alt="Aetna" class="img-fluid">
+                <div class="logo-item animate__animated animate__fadeIn animate-delay-1">
+                    <img src="images/ساب تكافل.png" alt="ساب تكافل" class="img-fluid">
                 </div>
-                <div class="logo-item">
-                    <img src="images/شركة-التعاونية-للتأمين.jpg" alt="United Healthcare" class="img-fluid">
+                <div class="logo-item animate__animated animate__fadeIn animate-delay-2">
+                    <img src="images/شركة-التعاونية-للتأمين.jpg" alt="التعاونية" class="img-fluid">
                 </div>
-                <div class="logo-item">
-                    <img src="images/لراجحي للتأمين التكافلي.png" alt="Cigna" class="img-fluid">
+                <div class="logo-item animate__animated animate__fadeIn animate-delay-3">
+                    <img src="images/لراجحي للتأمين التكافلي.png" alt="الراجحي" class="img-fluid">
                 </div>
-                <div class="logo-item">
-                    <img src="images/ميدغلف.png" alt="Humana" class="img-fluid">
+                <div class="logo-item animate__animated animate__fadeIn animate-delay-4">
+                    <img src="images/ميدغلف.png" alt="ميدغلف" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-main">
-        <div class="container">
-            <div class="row g-4">
-                <!-- About Column -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <div class="footer-brand">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <span class="brand-name">MediCare Center</span>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
+                            </div>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف والتكنولوجيا المتقدمة منذ عام 1998. صحتك هي أولويتنا.</p>
+                            <div class="footer-newsletter">
+                                <h4>اشترك في نشرتنا البريدية</h4>
+                                <form class="newsletter-form">
+                                    <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
                         </div>
-                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
-                        <div class="footer-newsletter">
-                            <h4>Subscribe to our Newsletter</h4>
-                            <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
-                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                            </form>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">روابط سريعة</h4>
+                            <ul class="footer-links">
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">المدونة الصحية</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
 
-                <!-- Quick Links Column -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Quick Links</h4>
-                        <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="doctors.html">Our Doctors</a></li>
-                            <li><a href="blog.html">Health Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
+                    <!-- Departments Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">الأقسام الطبية</h4>
+                            <ul class="footer-links">
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                                <li><a href="departments.html#radiology">الأشعة</a></li>
+                                <li><a href="departments.html#surgery">الجراحة العامة</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Departments Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Medical Departments</h4>
-                        <ul class="footer-links">
-                            <li><a href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a href="departments.html#neurology">Neurology</a></li>
-                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a href="departments.html#radiology">Radiology</a></li>
-                            <li><a href="departments.html#surgery">General Surgery</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Column -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h4 class="footer-title">Contact Info</h4>
-                        <div class="footer-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone-alt"></i>
-                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-clock"></i>
-                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                    <!-- Contact Column -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h4 class="footer-title">معلومات الاتصال</h4>
+                            <div class="footer-contact">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>123 شارع طبي، مدينة الصحة، 12345</p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <p><a href="mailto:info@medicare.com">info@medicare.com</a></p>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <p>من الأحد إلى الخميس: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>الجمعة والسبت: 9:00 صباحًا - 5:00 مساءً</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="footer-legal">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="sitemap.html">Sitemap</a>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-legal">
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-</footer>
-    
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </footer>
     
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        /*** UI BEHAVIOR ***/
+
+        // Preloader
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+            window.addEventListener('load', function () {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            });
+        }
+
+        // Sticky Navbar
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('sticky', window.scrollY > 100);
+            });
+        }
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        if (backToTop) {
+            window.addEventListener('scroll', function () {
+                backToTop.classList.toggle('active', window.scrollY > 300);
+            });
+
+            backToTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        if (counters.length > 0) {
+            const speed = 200;
+
+            function animateCounters() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-count');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(animateCounters, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+        }
+
+        // Smooth Scroll for Anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Bootstrap Tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+
+        // Bootstrap Carousels
+        const heroCarousel = document.getElementById('heroCarousel');
+        if (heroCarousel) {
+            new bootstrap.Carousel(heroCarousel, {
+                interval: 6000,
+                pause: 'hover',
+                ride: 'carousel'
+            });
+        }
+
+        // Mobile Dropdown Animations
+        document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
+            dropdown.addEventListener('show.bs.dropdown', function () {
+                this.querySelector('.dropdown-menu').classList.add('animate__animated', 'animate__fadeIn');
+            });
+        });
+
+        // Form Validation
+        document.querySelectorAll('.needs-validation').forEach(form => {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+
+        /*** API DATA LOADING ***/
+        const API_BASE_URL = 'https://localhost:7230/api';
+
+        // Load Departments
+        async function loadDepartments() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/departments`);
+                const departments = await response.json();
+                const container = document.getElementById('departments-container');
+                if (!container) return;
+
+                const limited = departments.slice(0, 6);
+                container.innerHTML = limited.map(dept => `
+                    <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="${getDepartmentIcon(dept.name)}"></i>
+                            </div>
+                            <h3>${dept.name}</h3>
+                            <p>${dept.description || 'رعاية شاملة وعلاج لجميع الحالات ذات الصلة.'}</p>
+                            <a href="departments.html#${dept.name.toLowerCase()}" class="service-link">أقرء المزيد <i class="fas fa-arrow-left"></i></a>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error('Error loading departments:', err);
+                document.getElementById('departments-container').innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <div class="alert alert-danger">
+                            فشل تحميل بيانات الأقسام. <a href="departments.html" class="alert-link">عرض جميع الأقسام</a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Get Icon for Department
+        function getDepartmentIcon(name) {
+            const icons = {
+                'Cardiology': 'fas fa-heartbeat',
+                'Neurology': 'fas fa-brain',
+                'Orthopedics': 'fas fa-bone',
+                'Pediatrics': 'fas fa-baby',
+                'Radiology': 'fas fa-x-ray',
+                'Surgery': 'fas fa-procedures'
+            };
+            return icons[name] || 'fas fa-stethoscope';
+        }
+
+        // Load Doctors
+        async function loadDoctors() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/doctors`);
+                const doctors = await response.json();
+                const container = document.getElementById('doctors-container');
+                if (!container) return;
+
+                const limited = doctors.slice(0, 4);
+                container.innerHTML = limited.map(doctor => `
+                    <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp">
+                        <div class="doctor-card">
+                            <div class="doctor-img">
+                                <img src="https://localhost:7230${doctor.imagePath}" alt="${doctor.name}" class="img-fluid" onerror="this.src='https://via.placeholder.com/300x400?text=صورة+الطبيب'">
+                                
+                            </div>
+                            <div class="doctor-info">
+                                <h4>${doctor.name}</h4>
+                                <p>${doctor.specialty}</p>
+                                <div class="doctor-meta">
+                                    <span><i class="fas fa-star"></i> 4.9 (120 تقييم)</span>
+                                </div>
+                                <a href="doctor-details.html?id=${doctor.id}" class="btn btn-sm btn-outline-primary">عرض الملف</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (err) {
+                console.error('Error loading doctors:', err);
+                document.getElementById('doctors-container').innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <div class="alert alert-danger">
+                            فشل تحميل بيانات الأطباء. <a href="doctors.html" class="alert-link">عرض جميع الأطباء</a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Load Blogs
+        async function loadBlogs() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/blogs`);
+                const blogs = await response.json();
+                const container = document.getElementById('blogs-container');
+                if (!container) return;
+
+                const limited = blogs.slice(0, 3);
+                container.innerHTML = limited.map(blog => {
+                    const date = new Date(blog.createdAt);
+                    const month = date.toLocaleString('ar-SA', { month: 'short' });
+                    const day = date.getDate();
+
+                    return `
+                        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+                            <div class="blog-card">
+                                <div class="blog-img">
+                                    <img src="https://localhost:7230${blog.imagePath}" alt="${blog.title}" class="img-fluid" onerror="this.src='https://via.placeholder.com/600x400?text=صورة+المقال'">
+                                    <div class="blog-date">
+                                        <span>${day}</span>
+                                        <span>${month}</span>
+                                    </div>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <a href="#"><i class="far fa-user"></i> بواسطة الإدارة</a>
+                                        <a href="#"><i class="far fa-calendar-alt"></i> ${new Date(blog.createdAt).toLocaleDateString('ar-SA')}</a>
+                                    </div>
+                                    <h3><a href="blog-single.html?id=${blog.id}">${blog.title}</a></h3>
+                                    <p>${blog.content.substring(0, 100)}...</p>
+                                    <a href="blog-single.html?id=${blog.id}" class="read-more">أقرء المزيد <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } catch (err) {
+                console.error('Error loading blogs:', err);
+                document.getElementById('blogs-container').innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <div class="alert alert-danger">
+                            فشل تحميل بيانات المقالات. <a href="blog.html" class="alert-link">عرض جميع المقالات</a>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        /*** INITIALIZE DATA FETCHING ***/
+        loadDepartments();
+        loadDoctors();
+        loadBlogs();
+
+        // Initialize animations when elements come into view
+        const animateElements = document.querySelectorAll('.animate__animated');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(entry.target.dataset.animate);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+
+    
+    </script>
 </body>
 </html>

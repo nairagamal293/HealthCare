@@ -1,74 +1,600 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Premium healthcare services with world-class specialists and state-of-the-art facilities">
-    <title>About Us | MediCare Center</title>
+    <meta name="description" content="خدمات صحية متميزة مع أخصائيين عالميين ومرافق متطورة">
+    <title>من نحن | مركز ميديكير</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
-    <!-- Custom CSS -->
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="icon" type="image/png" href="images/logo.png">
+    <!-- Custom CSS -->
     <style>
-        .doctors-preview {
-        background-color: #f8f9fa;
+    :root {
+        --primary-color: #2a7fba;
+        --primary-light: rgba(42, 127, 186, 0.1);
+        --secondary-color: #3bb4c1;
+        --dark-color: #2c3e50;
+        --light-color: #f8f9fa;
+        --white-color: #ffffff;
+        --body-font: 'Cairo', sans-serif;
+        --heading-font: 'Changa', sans-serif;
+        --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+        --border-radius: 12px;
+        --gradient-primary: linear-gradient(135deg, #2a7fba 0%, #3bb4c1 100%);
     }
-    .doctor-preview-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-         border-radius: 10px;
+
+    body {
+        font-family: var(--body-font);
+        color: var(--dark-color);
+        line-height: 1.7;
+        background-color: var(--white-color);
+        overflow-x: hidden;
+        text-align: right;
     }
-    .doctor-preview-card:hover {
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--heading-font);
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--dark-color);
+    }
+
+    /* About Intro Section */
+    .about-intro {
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-intro::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background: var(--gradient-primary);
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    }
+
+    .about-img {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--box-shadow);
+        transform: perspective(1000px) rotateY(-5deg);
+        transition: var(--transition);
+    }
+
+    .about-img:hover {
+        transform: perspective(1000px) rotateY(0deg);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .experience-badge {
+        position: absolute;
+        bottom: -25px;
+        left: -25px;
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        padding: 25px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(42, 127, 186, 0.3);
+        z-index: 2;
+        transition: var(--transition);
+    }
+
+    .about-img:hover .experience-badge {
+        transform: scale(1.05) rotate(5deg);
+    }
+
+    .experience-badge span {
+        font-size: 2.8rem;
+        font-weight: 700;
+        display: block;
+        line-height: 1;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+
+    .section-header .subtitle {
+        display: inline-block;
+        color: var(--primary-color);
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+        padding-right: 15px;
+    }
+
+    .section-header .subtitle::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+    }
+
+    .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .section-header h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background: var(--gradient-primary);
+        border-radius: 3px;
+    }
+
+    /* Vision Mission Section */
+    .vision-mission {
+        padding: 100px 0;
+        background-color: #f9fbfd;
+        position: relative;
+    }
+
+    .vision-mission::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNDIsMjQ0LDI0OSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+') repeat;
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .vm-card {
+        background-color: var(--white-color);
+        padding: 40px 30px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        height: 100%;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: none;
+    }
+
+    .vm-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(42, 127, 186, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+        z-index: -1;
+        opacity: 0;
+        transition: var(--transition);
+    }
+
+    .vm-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
+    .vm-card:hover::before {
+        opacity: 1;
+    }
+
+    .vm-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, rgba(42, 127, 186, 0.1) 0%, rgba(59, 180, 193, 0.1) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: var(--primary-color);
+        font-size: 2rem;
+        transition: var(--transition);
+    }
+
+    .vm-card:hover .vm-icon {
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        transform: rotateY(180deg);
+    }
+
+    .vm-card h3 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .vm-card h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--gradient-primary);
+        border-radius: 3px;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us {
+        padding: 100px 0;
+        background-color: var(--white-color);
+        position: relative;
+    }
+
+    .feature-card {
+        background-color: var(--white-color);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        height: 100%;
+        box-shadow: var(--box-shadow);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(42, 127, 186, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+        z-index: -1;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+        border-color: rgba(42, 127, 186, 0.1);
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, rgba(42, 127, 186, 0.1) 0%, rgba(59, 180, 193, 0.1) 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        color: var(--primary-color);
+        font-size: 1.75rem;
+        transition: var(--transition);
+    }
+
+    .feature-card:hover .feature-icon {
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        transform: scale(1.1);
+    }
+
+    .feature-card h4 {
+        margin-bottom: 15px;
+        font-size: 1.25rem;
+    }
+
+    /* Stats Section */
+    .stats-section {
+        padding: 100px 0;
+        background: var(--gradient-primary);
+        color: var(--white-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .stats-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==') repeat;
+        z-index: 0;
+    }
+
+    .stat-item {
+        position: relative;
+        z-index: 1;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: var(--transition);
+        height: 100%;
+    }
+
+    .stat-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
+
+    .stat-item h3 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: var(--heading-font);
+    }
+
+    /* Doctors Preview Section */
+    .doctors-preview {
+        padding: 100px 0;
+        background-color: #f9fbfd;
+        position: relative;
+    }
+
+    .doctor-preview-card {
+        background-color: var(--white-color);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: var(--box-shadow);
+        height: 100%;
+        position: relative;
+    }
+
+    .doctor-preview-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--box-shadow-hover);
+    }
+
     .doctor-preview-img-container {
         position: relative;
         overflow: hidden;
         height: 320px;
-         border-radius: 10px;
-       
     }
+
     .doctor-preview-img-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: var(--transition);
     }
+
+    .doctor-preview-card:hover .doctor-preview-img-container img {
+        transform: scale(1.1);
+    }
+
     .doctor-preview-overlay {
         position: absolute;
-        bottom: -50px;
-        left: 0;
+        bottom: -70px;
         right: 0;
-        
-        padding: 15px;
+        left: 0;
+        background: linear-gradient(to top, rgba(42, 127, 186, 0.9), transparent);
+        padding: 20px;
         text-align: center;
-        transition: bottom 0.3s ease;
+        transition: var(--transition);
     }
+
     .doctor-preview-card:hover .doctor-preview-overlay {
         bottom: 0;
     }
-    .doctor-preview-card:hover img {
-        transform: scale(1.05);
+
+    .doctor-preview-overlay .btn {
+        border: 2px solid var(--white-color);
+        background-color: transparent;
+        color: var(--white-color);
+        font-weight: 600;
+        transition: var(--transition);
     }
+
+    .doctor-preview-overlay .btn:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    .doctor-preview-card .card-body {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .doctor-preview-card h5 {
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+    }
+
+    .doctor-preview-card .text-primary {
+        color: var(--primary-color) !important;
+        font-weight: 600;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+        color: var(--white-color);
+        position: relative;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cta-section h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+    }
+
+    .cta-section .btn-primary {
+        background-color: transparent;
+        border: 2px solid var(--white-color);
+        color: var(--white-color);
+        padding: 12px 30px;
+        font-weight: 600;
+    }
+
+    .cta-section .btn-primary:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1199.98px) {
+        .about-intro::before {
+            width: 50%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .about-intro::before {
+            display: none;
+        }
+        
+        .about-img {
+            transform: none;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2rem;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+        }
+    }
+
     @media (max-width: 767.98px) {
+        .about-intro,
+        .vision-mission,
+        .why-choose-us,
+        .stats-section,
+        .doctors-preview {
+            padding: 60px 0;
+        }
+        
+        .experience-badge {
+            left: 0;
+            bottom: -20px;
+            padding: 20px;
+        }
+        
         .doctor-preview-img-container {
-            height: 180px;
+            height: 250px;
+        }
+        
+        .cta-section h2 {
+            font-size: 1.75rem;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .section-header h2 {
+            font-size: 1.5rem;
+        }
+        
+        .experience-badge span {
+            font-size: 2rem;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 2rem;
+        }
+        
+        .vm-icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+    }
+
+    /* Animation Classes */
+    .animate-fade-in {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 1s ease-in-out;
+    }
+
+    .animate-delay-1 {
+        animation-delay: 0.2s;
+    }
+
+    .animate-delay-2 {
+        animation-delay: 0.4s;
+    }
+
+    .animate-delay-3 {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        from { 
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
         }
     }
     </style>
 </head>
 <body>
     
-    <!-- Top Bar -->
+     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
@@ -83,103 +609,98 @@
     </div>
     
     <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link active" href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="FAQs.html">FAQs</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الأسئلة الشائعة</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
 
-   
-
     <!-- About Intro Section -->
-    <section class="about-intro py-5">
+    <section class="about-intro py-5 animate-fade-in">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="col-lg-6 mb-4 mb-lg-0 animate-slide-up">
                     <div class="about-img position-relative">
-                        <img src="images/about.jpeg" alt="MediCare Center Team" class="img-fluid rounded-3 shadow">
-                        <div class="experience-badge bg-primary text-white rounded-pill p-3 text-center shadow">
+                        <img src="images/about.jpeg" alt="فريق مركز ميديكير" class="img-fluid">
+                        <div class="experience-badge">
                             <span class="display-4 fw-bold">15+</span>
-                            <p class="mb-0">Years of Excellence</p>
+                            <p class="mb-0">سنوات من التميز</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 animate-slide-up animate-delay-1">
                     <div class="section-header mb-4">
-                        <span class="subtitle text-primary">WHO WE ARE</span>
-                        <h2 class="mb-3">Your Trusted Healthcare Partner in Makkah</h2>
-                        <div class="divider bg-primary"></div>
+                        <span class="subtitle text-primary">من نحن</span>
+                        <h2 class="mb-3">شريكك الموثوق في الرعاية الصحية بمكة المكرمة</h2>
+                        <p class="lead">مركز ميديكير هو مزود رعاية صحية رائد في منطقة مكة المكرمة، ملتزم بتقديم خدمات طبية شاملة بأعلى معايير الجودة والكفاءة.</p>
+                        <p>منذ تأسيسنا، أصبحنا اسمًا موثوقًا به في مجال الرعاية الصحية، حيث نخدم آلاف المرضى سنويًا بنهج يركز على المريض ويضع الراحة والسلامة والنتائج الاستثنائية في المقام الأول.</p>
                     </div>
-                    <p class="lead">MediCare Center is a leading healthcare provider in the Makkah region, committed to delivering comprehensive medical services with the highest standards of quality and efficiency.</p>
-                    <p>Since our establishment, we have grown to become a trusted name in healthcare, serving thousands of patients annually with a patient-centered approach that prioritizes comfort, safety, and exceptional outcomes.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Vision Mission Section -->
-    <section class="vision-mission py-5 bg-light">
+    <section class="vision-mission py-5">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <span class="subtitle text-primary">OUR COMMITMENT</span>
-                <h2>Our Vision & Mission</h2>
-                <div class="divider mx-auto bg-primary"></div>
+            <div class="section-header text-center mb-5 animate-slide-up">
+                <span class="subtitle text-primary">التزامنا</span>
+                <h2>رؤيتنا ورسالتنا</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">الأساس الذي تقوم عليه خدماتنا الطبية المتميزة</p>
             </div>
             
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-box bg-primary-light mb-4 mx-auto rounded-circle">
-                                <i class="fas fa-eye text-primary fa-2x"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Our Vision</h3>
-                            <p class="mb-0">To become a leading center in enhancing the quality of healthcare in the Makkah region by providing comprehensive medical services with the highest standards of quality and efficiency.</p>
+                <div class="col-md-6 animate-slide-up animate-delay-1">
+                    <div class="vm-card h-100">
+                        <div class="vm-icon">
+                            <i class="fas fa-eye"></i>
                         </div>
+                        <h3>رؤيتنا</h3>
+                        <p class="mb-0">أن نصبح مركزًا رائدًا في تعزيز جودة الرعاية الصحية في منطقة مكة المكرمة من خلال تقديم خدمات طبية شاملة بأعلى معايير الجودة والكفاءة.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-box bg-primary-light mb-4 mx-auto rounded-circle">
-                                <i class="fas fa-bullseye text-primary fa-2x"></i>
-                            </div>
-                            <h3 class="h4 mb-3">Our Mission</h3>
-                            <p class="mb-0">To deliver exceptional and safe healthcare to all segments of society through a qualified medical team, specialized departments, and integrated medical facilities focused on patient comfort and needs.</p>
+                <div class="col-md-6 animate-slide-up animate-delay-2">
+                    <div class="vm-card h-100">
+                        <div class="vm-icon">
+                            <i class="fas fa-bullseye"></i>
                         </div>
+                        <h3>رسالتنا</h3>
+                        <p class="mb-0">تقديم رعاية صحية استثنائية وآمنة لجميع فئات المجتمع من خلال فريق طبي مؤهل وأقسام متخصصة ومرافق طبية متكاملة تركز على راحة المريض واحتياجاته.</p>
                     </div>
                 </div>
             </div>
@@ -189,137 +710,130 @@
     <!-- Why Choose Us Section -->
     <section class="why-choose-us py-5">
         <div class="container">
-            <div class="section-header text-center mb-5">
-                <span class="subtitle text-primary">ADVANTAGES</span>
-                <h2>Why Choose MediCare Center?</h2>
-                <div class="divider mx-auto bg-primary"></div>
-                <p class="lead mx-auto" style="max-width: 700px;">Discover the features that make us the preferred healthcare provider in the region</p>
+            <div class="section-header text-center mb-5 animate-slide-up">
+                <span class="subtitle text-primary">مميزاتنا</span>
+                <h2>لماذا تختار مركز ميديكير؟</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">اكتشف الميزات التي تجعلنا مزود الرعاية الصحية المفضل في المنطقة</p>
             </div>
             
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-procedures text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-procedures"></i>
                         </div>
-                        <h4 class="h5 mb-3">All Specialties Under One Roof</h4>
-                        <p class="mb-0">Comprehensive medical services across all specialties, eliminating the need for multiple healthcare providers.</p>
+                        <h4 class="h5 mb-3">جميع التخصصات تحت سقف واحد</h4>
+                        <p class="mb-0">خدمات طبية شاملة تغطي جميع التخصصات، مما يلغي الحاجة للذهاب إلى عدة مزودي رعاية صحية.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-user-md text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
                         </div>
-                        <h4 class="h5 mb-3">Expert Medical Team</h4>
-                        <p class="mb-0">Highly experienced and qualified medical staff dedicated to providing personalized care.</p>
+                        <h4 class="h5 mb-3">فريق طبي خبير</h4>
+                        <p class="mb-0">طاقم طبي مؤهل وذو خبرة عالية مكرس لتقديم رعاية شخصية.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-microscope text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microscope"></i>
                         </div>
-                        <h4 class="h5 mb-3">Advanced Technologies</h4>
-                        <p class="mb-0">State-of-the-art diagnostic and treatment technologies for accurate and effective care.</p>
+                        <h4 class="h5 mb-3">تقنيات متطورة</h4>
+                        <p class="mb-0">أحدث تقنيات التشخيص والعلاج لضمان رعاية دقيقة وفعالة.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-clock text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-1">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
                         </div>
-                        <h4 class="h5 mb-3">One-Day Surgery</h4>
-                        <p class="mb-0">Convenient same-day surgical procedures with minimal recovery time.</p>
+                        <h4 class="h5 mb-3">جراحة اليوم الواحد</h4>
+                        <p class="mb-0">إجراءات جراحية مريحة في يوم واحد مع وقت تعافي قصير.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-map-marker-alt text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h4 class="h5 mb-3">Strategic Location</h4>
-                        <p class="mb-0">Easily accessible location designed for your convenience in the heart of Makkah.</p>
+                        <h4 class="h5 mb-3">موقع استراتيجي</h4>
+                        <p class="mb-0">موقع سهل الوصول مصمم لراحتك في قلب مكة المكرمة.</p>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4">
-                    <div class="feature-card p-4 h-100 border rounded">
-                        <div class="feature-icon bg-primary-light mb-3 rounded-circle">
-                            <i class="fas fa-hand-holding-heart text-primary"></i>
+                <div class="col-md-6 col-lg-4 animate-slide-up animate-delay-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
                         </div>
-                        <h4 class="h5 mb-3">Patient-Centered Care</h4>
-                        <p class="mb-0">Comfortable and safe healing environment focused on your needs and well-being.</p>
+                        <h4 class="h5 mb-3">رعاية تركز على المريض</h4>
+                        <p class="mb-0">بيئة علاج مريحة وآمنة تركز على احتياجاتك ورفاهيتك.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-        <!-- Stats Section -->
-    <section class="stats-section py-5 bg-primary text-white">
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
         <div class="container">
             <div class="row g-4 text-center">
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3 animate-slide-up">
                     <div class="stat-item">
                         <h3 class="display-4 fw-bold mb-2">15+</h3>
-                        <p class="mb-0">Medical Specialties</p>
+                        <p class="mb-0">تخصصات طبية</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3 animate-slide-up animate-delay-1">
                     <div class="stat-item">
                         <h3 class="display-4 fw-bold mb-2">50+</h3>
-                        <p class="mb-0">Qualified Doctors</p>
+                        <p class="mb-0">أطباء مؤهلين</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3 animate-slide-up animate-delay-2">
                     <div class="stat-item">
                         <h3 class="display-4 fw-bold mb-2">10K+</h3>
-                        <p class="mb-0">Patients Annually</p>
+                        <p class="mb-0">مرضى سنويًا</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-md-3 animate-slide-up animate-delay-3">
                     <div class="stat-item">
                         <h3 class="display-4 fw-bold mb-2">24/7</h3>
-                        <p class="mb-0">Emergency Care</p>
+                        <p class="mb-0">رعاية طوارئ</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-    <!-- Leadership Section -->
-    <section class="doctors-preview py-5">
+  <!-- Doctors Preview Section -->
+<section class="doctors-preview py-5">
     <div class="container">
-        <div class="section-header text-center mb-5">
-            <span class="subtitle text-primary">OUR SPECIALISTS</span>
-            <h2>Meet Our Expert Doctors</h2>
-            <div class="divider mx-auto bg-primary"></div>
-            <p class="lead mx-auto" style="max-width: 700px;">Our team of highly qualified specialists is dedicated to providing exceptional care</p>
+        <div class="section-header text-center mb-5 animate-slide-up">
+            <span class="subtitle text-primary">أخصائيونا</span>
+            <h2>تعرف على أطبائنا الخبراء</h2>
+            <p class="lead mx-auto" style="max-width: 700px;">فريقنا من الأخصائيين المؤهلين عاليًا مكرس لتقديم رعاية استثنائية</p>
         </div>
 
         <div class="row" id="doctors-preview-container">
-            <!-- Loading spinner -->
+            <!-- Loading spinner - shown while fetching data -->
             <div class="col-12 text-center py-5">
                 <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden">جاري التحميل...</span>
                 </div>
-                <p class="mt-2">Loading our specialists...</p>
+                <p class="mt-2">جاري تحميل الأخصائيين...</p>
             </div>
         </div>
 
-        <div class="text-center mt-4">
+        <div class="text-center mt-4 animate-slide-up">
             <a href="doctors.html" class="btn btn-outline-primary btn-lg px-4">
-                View All Doctors <i class="fas fa-arrow-right ms-2"></i>
+                عرض جميع الأطباء <i class="fas fa-arrow-left ms-2"></i>
             </a>
         </div>
     </div>
@@ -328,19 +842,19 @@
     <!-- CTA Section -->
     <section class="cta-section py-5">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center animate-slide-up">
                 <div class="col-lg-8 mb-4 mb-lg-0">
-                    <h2 class="mb-3">Ready to Experience Exceptional Healthcare?</h2>
-                    <p class="lead mb-0">Schedule your appointment today and let our expert team take care of your health needs.</p>
+                    <h2 class="mb-3">هل أنت مستعد لتجربة رعاية صحية استثنائية؟</h2>
+                    <p class="lead mb-0">احجز موعدك اليوم ودع فريقنا الخبير يعتني باحتياجاتك الصحية.</p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">Book an Appointment</a>
+                <div class="col-lg-4 text-lg-start">
+                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">حجز موعد</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
     <footer class="footer">
         <div class="footer-main">
             <div class="container">
@@ -349,14 +863,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-widget">
                             <div class="footer-brand">
-                                <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                                <span class="brand-name">MediCare Center</span>
+                                <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                                <span class="brand-name">مركز ميديكير</span>
                             </div>
-                            <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                            <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف والتكنولوجيا المتقدمة منذ عام 1998. صحتك هي أولويتنا.</p>
                             <div class="footer-newsletter">
-                                <h4>Subscribe to our Newsletter</h4>
+                                <h4>اشترك في نشرتنا البريدية</h4>
                                 <form class="newsletter-form">
-                                    <input type="email" placeholder="Your email address" required>
+                                    <input type="email" placeholder="بريدك الإلكتروني" required>
                                     <button type="submit"><i class="fas fa-paper-plane"></i></button>
                                 </form>
                             </div>
@@ -366,14 +880,14 @@
                     <!-- Quick Links Column -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Quick Links</h4>
+                            <h4 class="footer-title">روابط سريعة</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="doctors.html">Our Doctors</a></li>
-                                <li><a href="blog.html">Health Blog</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="index.html">الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="services.html">الخدمات</a></li>
+                                <li><a href="doctors.html">أطباؤنا</a></li>
+                                <li><a href="blog.html">المدونة الصحية</a></li>
+                                <li><a href="contact.html">اتصل بنا</a></li>
                             </ul>
                         </div>
                     </div>
@@ -381,14 +895,14 @@
                     <!-- Departments Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Medical Departments</h4>
+                            <h4 class="footer-title">الأقسام الطبية</h4>
                             <ul class="footer-links">
-                                <li><a href="departments.html#cardiology">Cardiology</a></li>
-                                <li><a href="departments.html#neurology">Neurology</a></li>
-                                <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                                <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                                <li><a href="departments.html#radiology">Radiology</a></li>
-                                <li><a href="departments.html#surgery">General Surgery</a></li>
+                                <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                                <li><a href="departments.html#neurology">الأعصاب</a></li>
+                                <li><a href="departments.html#orthopedics">العظام</a></li>
+                                <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                                <li><a href="departments.html#radiology">الأشعة</a></li>
+                                <li><a href="departments.html#surgery">الجراحة العامة</a></li>
                             </ul>
                         </div>
                     </div>
@@ -396,16 +910,16 @@
                     <!-- Contact Column -->
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h4 class="footer-title">Contact Info</h4>
+                            <h4 class="footer-title">معلومات الاتصال</h4>
                             <div class="footer-contact">
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <p>123 Medical Drive, Health City, HC 12345</p>
+                                    <p>123 شارع طبي، مدينة الصحة، 12345</p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone-alt"></i>
-                                    <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                    <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                    <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                    <p>الحجوزات: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
@@ -413,8 +927,8 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-clock"></i>
-                                    <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                    <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                    <p>من الأحد إلى الخميس: 8:00 صباحًا - 7:00 مساءً</p>
+                                    <p>الجمعة والسبت: 9:00 صباحًا - 5:00 مساءً</p>
                                 </div>
                             </div>
                         </div>
@@ -427,13 +941,13 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                        <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                     </div>
                     <div class="col-md-6">
                         <div class="footer-legal">
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                            <a href="sitemap.html">Sitemap</a>
+                            <a href="privacy.html">سياسة الخصوصية</a>
+                            <a href="terms.html">شروط الخدمة</a>
+                            <a href="sitemap.html">خريطة الموقع</a>
                         </div>
                     </div>
                 </div>
@@ -445,85 +959,112 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/script.js"></script>
-  <script>
+    <script>
+    // Animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
-        const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+        const animateElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
         
-        // Fetch and display doctors preview
-        async function fetchDoctorsPreview() {
-            try {
-                const response = await fetch(`${apiBaseUrl}/doctors`);
-                if (!response.ok) throw new Error('Network response was not ok');
-                
-                const doctors = await response.json();
-                // Take only the first 4 doctors for preview
-                const previewDoctors = doctors.slice(0, 4);
-                displayDoctorsPreview(previewDoctors);
-            } catch (error) {
-                console.error('Error fetching doctors:', error);
-                document.getElementById('doctors-preview-container').innerHTML = `
-                    <div class="col-12 text-center py-5">
-                        <div class="alert alert-danger">
-                            Failed to load doctors. <a href="doctors.html" class="alert-link">View all doctors</a>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-        
-        // Display doctors in the preview section
-        function displayDoctorsPreview(doctors) {
-            const container = document.getElementById('doctors-preview-container');
-            
-            if (!doctors || doctors.length === 0) {
-                container.innerHTML = `
-                    <div class="col-12 text-center py-5">
-                        <h4>No doctors found</h4>
-                        <p>Please check back later or <a href="contact.html">contact our support</a></p>
-                    </div>
-                `;
-                return;
-            }
-            
-            let html = '';
-            doctors.forEach(doctor => {
-                html += `
-                    <div class="col-md-6 col-lg-3 mb-4">
-                        <div class="card doctor-preview-card h-100 border-0 shadow-sm">
-                            <div class="doctor-preview-img-container">
-                                <img src="https://localhost:7230${doctor.imagePath}" 
-                                     class="card-img-top" 
-                                     alt="Dr. ${doctor.name}">
-                                <div class="doctor-preview-overlay">
-                                    <a href="doctor-details.html?id=${doctor.id}" class="btn btn-primary btn-sm">
-                                        View Profile
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title mb-1">Dr. ${doctor.name}</h5>
-                                <p class="text-primary small mb-2">${doctor.specialty}</p>
-                                <p class="text-muted small">
-                                    <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                `;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated');
+                    if (entry.target.classList.contains('animate-slide-up')) {
+                        entry.target.classList.add('animate__fadeInUp');
+                    } else {
+                        entry.target.classList.add('animate__fadeIn');
+                    }
+                    observer.unobserve(entry.target);
+                }
             });
+        }, {
+            threshold: 0.1
+        });
+
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const apiBaseUrl = 'https://localhost:7230/api'; // Replace with your API base URL
+    
+    // Fetch and display doctors preview
+    async function fetchDoctorsPreview() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/doctors`);
+            if (!response.ok) throw new Error('Network response was not ok');
             
-            container.innerHTML = html;
+            const doctors = await response.json();
+            // Take only the first 4 doctors for preview
+            const previewDoctors = doctors.slice(0, 4);
+            displayDoctorsPreview(previewDoctors);
+        } catch (error) {
+            console.error('Error fetching doctors:', error);
+            document.getElementById('doctors-preview-container').innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <div class="alert alert-danger">
+                        فشل تحميل بيانات الأطباء. <a href="doctors.html" class="alert-link">عرض جميع الأطباء</a>
+                    </div>
+                </div>
+            `;
+        }
+    }
+    
+    // Display doctors in the preview section with modern design
+    function displayDoctorsPreview(doctors) {
+        const container = document.getElementById('doctors-preview-container');
+        
+        if (!doctors || doctors.length === 0) {
+            container.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <h4>لا توجد بيانات للأطباء</h4>
+                    <p>يرجى المحاولة لاحقًا أو <a href="contact.html">الاتصال بالدعم</a></p>
+                </div>
+            `;
+            return;
         }
         
-        // Initialize
-        fetchDoctorsPreview();
-    });
-</script>
+        let html = '';
+        let delay = 0;
+        
+        doctors.forEach(doctor => {
+            html += `
+                <div class="col-md-6 col-lg-3 mb-4 animate-slide-up" style="animation-delay: ${delay}s">
+                    <div class="doctor-preview-card">
+                        <div class="doctor-preview-img-container">
+                            <img src="https://localhost:7230${doctor.imagePath}" 
+                                 class="card-img-top" 
+                                 alt="د. ${doctor.name}"
+                                 onerror="this.src='https://via.placeholder.com/300x400?text=Doctor+Image'">
+                            <div class="doctor-preview-overlay">
+                                <a href="doctor-details.html?id=${doctor.id}" class="btn btn-sm">
+                                    عرض الملف
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-1">د. ${doctor.name}</h5>
+                            <p class="text-primary small mb-2">${doctor.specialty}</p>
+                            <p class="text-muted small">
+                                <i class="fas fa-clinic-medical me-1"></i> ${doctor.departmentName}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            delay += 0.1;
+        });
+        
+        container.innerHTML = html;
+    }
+    
+    // Initialize
+    fetchDoctorsPreview();
+});
+    </script>
 </body>
 </html>

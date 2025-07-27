@@ -1,38 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frequently asked questions about MediCare Center services, appointments, and policies">
-    <title>FAQs | MediCare Center</title>
+    <meta name="description" content="الأسئلة الشائعة حول خدمات مركز ميديكير، المواعيد، والسياسات">
+    <title>الأسئلة الشائعة | مركز ميديكير</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Bootstrap CSS RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Changa:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
-    <!-- Custom CSS -->
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo.png">
     
     <style>
-        /* FAQ Page Specific Styles */
-        .faq-hero {
-            background: linear-gradient(rgba(0, 82, 158, 0.85), rgba(0, 82, 158, 0.85)), 
-                        url('images/faq-bg.jpg') center/cover no-repeat;
-            color: white;
-            padding: 6rem 0 4rem;
-            text-align: center;
-            margin-bottom: 3rem;
-        }
         
-        .faq-hero h1 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
         
         .faq-hero p {
             font-size: 1.2rem;
@@ -65,11 +56,11 @@
         .faq-category h2:after {
             content: '';
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: 0;
             width: 60px;
             height: 3px;
-            background: linear-gradient(to right, #00529e, #4da8ff);
+            background: linear-gradient(to left, #00529e, #4da8ff);
         }
         
         .faq-item {
@@ -109,6 +100,7 @@
             font-size: 1.2rem;
             color: #00529e;
             transition: all 0.3s ease;
+            margin-right: 10px;
         }
         
         .faq-question.collapsed:after {
@@ -209,43 +201,47 @@
         </div>
     </div>
     
-    <!-- Navigation -->
+  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="MediCare Center" class="logo">
+                <img src="images/logo.png" alt="مركز ميديكير" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="تبديل التنقل">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link " href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">Departments</a>
+                        <a class="nav-link " href="departments.html">الأقسام</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                        <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="blog.html">المدونة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="faq.html">FAQs</a>
+                        <a class="nav-link active" href="FAQs.html">الأسئلة الشائعة</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="FAQs.html">الوظائف</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
-                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+                <a href="appointment.html" class="btn btn-primary me-lg-3">حجز موعد</a>
             </div>
         </div>
     </nav>
+
 
 
     <!-- FAQ Section -->
@@ -254,26 +250,26 @@
             <div class="faq-container">
                 <!-- General Questions -->
                 <div class="faq-category">
-                    <h2>General Questions</h2>
+                    <h2>أسئلة عامة</h2>
                     
                     <div class="accordion" id="generalAccordion">
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false">
-                                What are your operating hours?
+                                ما هي ساعات العمل لديكم؟
                             </div>
                             <div id="faq1" class="collapse faq-answer" data-bs-parent="#generalAccordion">
-                                <p>Our main clinic is open Monday through Friday from 8:00 AM to 7:00 PM, and Saturdays from 9:00 AM to 5:00 PM. We are closed on Sundays. Some departments may have different hours, so we recommend calling ahead for specific services.</p>
-                                <p>For after-hours emergencies, our on-call physician is available by phone at (234) 567-892.</p>
+                                <p>العيادة الرئيسية مفتوحة من الاثنين إلى الجمعة من الساعة 8:00 صباحًا حتى 7:00 مساءً، ويوم السبت من الساعة 9:00 صباحًا حتى 5:00 مساءً. نحن مغلقون يوم الأحد. قد يكون لبعض الأقسام ساعات عمل مختلفة، لذا نوصي بالاتصال مسبقًا للخدمات المحددة.</p>
+                                <p>للحالات الطارئة بعد ساعات العمل، الطبيب المناوب متاح عبر الهاتف على الرقم (234) 567-892.</p>
                             </div>
                         </div>
                         
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
-                                Do I need an appointment to be seen?
+                                هل أحتاج إلى موعد لكي يتم فحصي؟
                             </div>
                             <div id="faq2" class="collapse faq-answer" data-bs-parent="#generalAccordion">
-                                <p>While appointments are preferred to minimize wait times, we do accept walk-ins for urgent care needs. For routine check-ups and non-urgent visits, we strongly recommend scheduling an appointment in advance.</p>
-                                <p>Same-day appointments are often available for urgent needs. You can check availability through our <a href="patient-portal.html">patient portal</a> or by calling our appointment line.</p>
+                                <p>بينما نفضل تحديد المواعيد لتقليل أوقات الانتظار، فإننا نقبل الحالات الواردة دون موعد مسبق للرعاية العاجلة. بالنسبة للفحوصات الروتينية والزيارات غير العاجلة، نوصي بشدة بحجز موعد مسبق.</p>
+                                <p>غالبًا ما تكون المواعيد في نفس اليوم متاحة للحاجات العاجلة. يمكنك التحقق من التوفر عبر <a href="patient-portal.html">بوابة المريض</a> أو عن طريق الاتصال بخط المواعيد لدينا.</p>
                             </div>
                         </div>
                     </div>
@@ -281,52 +277,52 @@
                 
                 <!-- Insurance & Payments -->
                 <div class="faq-category">
-                    <h2>Insurance & Payments</h2>
+                    <h2>التأمين والدفع</h2>
                     
                     <div class="accordion" id="insuranceAccordion">
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
-                                What insurance plans do you accept?
+                                ما هي خطط التأمين التي تقبلونها؟
                             </div>
                             <div id="faq3" class="collapse faq-answer" data-bs-parent="#insuranceAccordion">
-                                <p>We accept most major insurance plans including:</p>
+                                <p>نقبل معظم خطط التأمين الرئيسية بما في ذلك:</p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <ul>
-                                            <li>Medicare</li>
-                                            <li>Blue Cross Blue Shield</li>
-                                            <li>Aetna</li>
-                                            <li>Cigna</li>
+                                            <li>تأمين الرعاية الطبية (Medicare)</li>
+                                            <li>بلو كروس بلو شيلد</li>
+                                            <li>أيتنا</li>
+                                            <li>سيجنا</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <ul>
-                                            <li>UnitedHealthcare</li>
-                                            <li>Humana</li>
-                                            <li>Kaiser Permanente</li>
-                                            <li>Most Medicaid plans</li>
+                                            <li>يونايتد هيلث كير</li>
+                                            <li>هيومانا</li>
+                                            <li>كايزر بيرماننت</li>
+                                            <li>معظم خطط تأمين الرعاية الطبية للمحتاجين (Medicaid)</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <p>For a complete list of accepted insurance providers, please visit our <a href="insurance.html">Insurance Information</a> page or contact our billing department at (234) 567-893.</p>
+                                <p>للحصول على قائمة كاملة بمقدمي خدمات التأمين المقبولين، يرجى زيارة صفحة <a href="insurance.html">معلومات التأمين</a> أو الاتصال بقسم الفواتير لدينا على الرقم (234) 567-893.</p>
                             </div>
                         </div>
                         
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
-                                What payment methods do you accept?
+                                ما هي طرق الدفع التي تقبلونها؟
                             </div>
                             <div id="faq4" class="collapse faq-answer" data-bs-parent="#insuranceAccordion">
-                                <p>We offer multiple convenient payment options:</p>
+                                <p>نحن نقدم خيارات دفع متعددة:</p>
                                 <ul>
-                                    <li><strong>Cash</strong> - Accepted at all locations</li>
-                                    <li><strong>Credit/Debit Cards</strong> - Visa, MasterCard, American Express, Discover</li>
-                                    <li><strong>Personal Checks</strong> - With valid photo ID</li>
-                                    <li><strong>HSA/FSA Cards</strong> - Health Savings and Flexible Spending Accounts</li>
-                                    <li><strong>Mobile Payments</strong> - Apple Pay, Google Pay, Samsung Pay</li>
-                                    <li><strong>Payment Plans</strong> - Available for qualifying patients</li>
+                                    <li><strong>نقدًا</strong> - مقبول في جميع المواقع</li>
+                                    <li><strong>بطاقات الائتمان/الخصم</strong> - فيزا، ماستركارد، أمريكان إكسبريس، ديسكفر</li>
+                                    <li><strong>الشيكات الشخصية</strong> - مع هوية صالحة</li>
+                                    <li><strong>بطاقات HSA/FSA</strong> - حسابات التوفير الصحية وحسابات الإنفاق المرن</li>
+                                    <li><strong>الدفع عبر الهاتف المحمول</strong> - أبل باي، جوجل باي، سامسونج باي</li>
+                                    <li><strong>خطط الدفع</strong> - متاحة للمرضى المؤهلين</li>
                                 </ul>
-                                <p>Payment is expected at the time of service unless prior arrangements have been made with our billing department.</p>
+                                <p>يتوقع الدفع في وقت الخدمة ما لم يتم الترتيب مسبقًا مع قسم الفواتير لدينا.</p>
                             </div>
                         </div>
                     </div>
@@ -334,34 +330,34 @@
                 
                 <!-- Appointments -->
                 <div class="faq-category">
-                    <h2>Appointments</h2>
+                    <h2>المواعيد</h2>
                     
                     <div class="accordion" id="appointmentAccordion">
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
-                                How do I schedule an appointment?
+                                كيف يمكنني حجز موعد؟
                             </div>
                             <div id="faq5" class="collapse faq-answer" data-bs-parent="#appointmentAccordion">
-                                <p>You can schedule an appointment through several convenient methods:</p>
+                                <p>يمكنك حجز موعد من خلال عدة طرق:</p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="method-card mb-3 p-3 bg-light rounded">
-                                            <h5 class="text-primary"><i class="fas fa-laptop me-2"></i>Online</h5>
-                                            <p>Use our <a href="appointment.html">Appointment Request</a> form available 24/7</p>
+                                            <h5 class="text-primary"><i class="fas fa-laptop me-2"></i>عبر الإنترنت</h5>
+                                            <p>استخدم نموذج <a href="appointment.html">طلب الموعد</a> المتاح على مدار الساعة</p>
                                         </div>
                                         <div class="method-card mb-3 p-3 bg-light rounded">
-                                            <h5 class="text-primary"><i class="fas fa-phone me-2"></i>By Phone</h5>
-                                            <p>Call our appointment line at (234) 567-891 during business hours</p>
+                                            <h5 class="text-primary"><i class="fas fa-phone me-2"></i>هاتفيًا</h5>
+                                            <p>اتصل بخط المواعيد لدينا على الرقم (234) 567-891 خلال ساعات العمل</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="method-card mb-3 p-3 bg-light rounded">
-                                            <h5 class="text-primary"><i class="fas fa-user-circle me-2"></i>Patient Portal</h5>
-                                            <p>Existing patients can schedule through our secure portal</p>
+                                            <h5 class="text-primary"><i class="fas fa-user-circle me-2"></i>بوابة المريض</h5>
+                                            <p>يمكن للمرضى الحاليين الحجز من خلال بوابتنا الآمنة</p>
                                         </div>
                                         <div class="method-card mb-3 p-3 bg-light rounded">
-                                            <h5 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>In Person</h5>
-                                            <p>Visit our reception desk during business hours</p>
+                                            <h5 class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>شخصيًا</h5>
+                                            <p>قم بزيارة مكتب الاستقبال خلال ساعات العمل</p>
                                         </div>
                                     </div>
                                 </div>
@@ -370,19 +366,19 @@
                         
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
-                                What is your cancellation policy?
+                                ما هي سياسة الإلغاء لديكم؟
                             </div>
                             <div id="faq6" class="collapse faq-answer" data-bs-parent="#appointmentAccordion">
-                                <p>We understand that schedules change, but we kindly request at least 24 hours notice for appointment cancellations or rescheduling. This allows us to offer the time slot to other patients in need of care.</p>
+                                <p>نحن نتفهم أن المواعيد قد تتغير، ولكن نطلب بلطف إشعارًا قبل 24 ساعة على الأقل لإلغاء الموعد أو إعادة جدولته. وهذا يسمح لنا بتقديم الفترة الزمنية لمرضى آخرين بحاجة إلى الرعاية.</p>
                                 <div class="alert alert-warning">
-                                    <p><strong>Cancellation fees may apply:</strong></p>
+                                    <p><strong>قد تنطبق رسوم إلغاء:</strong></p>
                                     <ul>
-                                        <li>Regular appointments: $25 for late cancellations (less than 24 hours)</li>
-                                        <li>Procedures/specialty visits: $50 for late cancellations</li>
-                                        <li>No-show appointments: Full visit fee may be charged</li>
+                                        <li>المواعيد العادية: 25$ للإلغاء المتأخر (أقل من 24 ساعة)</li>
+                                        <li>المواعيد الخاصة/الإجراءات: 50$ للإلغاء المتأخر</li>
+                                        <li>عدم الحضور للموعد: قد يتم فرض رسوم كاملة للزيارة</li>
                                     </ul>
                                 </div>
-                                <p>To cancel or reschedule, please call our office during business hours. Multiple late cancellations may result in restrictions on future scheduling.</p>
+                                <p>للإلغاء أو إعادة الجدولة، يرجى الاتصال بمكتبنا خلال ساعات العمل. قد تؤدي حالات الإلغاء المتأخر المتعددة إلى قيود على الجدولة المستقبلية.</p>
                             </div>
                         </div>
                     </div>
@@ -390,57 +386,57 @@
                 
                 <!-- Services -->
                 <div class="faq-category">
-                    <h2>Services</h2>
+                    <h2>الخدمات</h2>
                     
                     <div class="accordion" id="servicesAccordion">
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false">
-                                Do you offer telemedicine services?
+                                هل تقدمون خدمات الطب عن بعد؟
                             </div>
                             <div id="faq7" class="collapse faq-answer" data-bs-parent="#servicesAccordion">
-                                <p>Yes, we offer secure video consultations for many types of visits through our MediCare Virtual Care platform. Telemedicine appointments are ideal for:</p>
+                                <p>نعم، نقدم استشارات فيديو آمنة للعديد من أنواع الزيارات من خلال منصة ميديكير للرعاية الافتراضية. مواعيد الطب عن بعد مثالية لـ:</p>
                                 <ul>
-                                    <li>Follow-up visits</li>
-                                    <li>Medication management</li>
-                                    <li>Chronic condition monitoring</li>
-                                    <li>Mental health consultations</li>
-                                    <li>Minor acute conditions (colds, rashes, etc.)</li>
+                                    <li>زيارات المتابعة</li>
+                                    <li>إدارة الأدوية</li>
+                                    <li>مراقبة الحالات المزمنة</li>
+                                    <li>استشارات الصحة النفسية</li>
+                                    <li>الحالات الحادة البسيطة (نزلات البرد، الطفح الجلدي، إلخ)</li>
                                 </ul>
-                                <p>To schedule a virtual visit, select "Telemedicine" when booking your appointment. You'll receive instructions for connecting via email prior to your visit.</p>
+                                <p>لحجز موعد افتراضي، اختر "الطب عن بعد" عند حجز موعدك. سوف تتلقى تعليمات الاتصال عبر البريد الإلكتروني قبل موعدك.</p>
                                 <div class="alert alert-info">
-                                    <p><strong>Note:</strong> Some services require in-person evaluation. Your provider will determine if telemedicine is appropriate for your needs.</p>
+                                    <p><strong>ملاحظة:</strong> بعض الخدمات تتطلب تقييمًا شخصيًا. سيحدد مقدم الخدمة ما إذا كان الطب عن بعد مناسبًا لاحتياجاتك.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="faq-item">
                             <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false">
-                                What emergency services do you provide?
+                                ما هي خدمات الطوارئ التي تقدمونها؟
                             </div>
                             <div id="faq8" class="collapse faq-answer" data-bs-parent="#servicesAccordion">
                                 <div class="alert alert-danger">
-                                    <p><strong>For life-threatening emergencies, please call 911 immediately or go to the nearest emergency room.</strong></p>
+                                    <p><strong>للحالات الطارئة المهددة للحياة، يرجى الاتصال بالرقم 911 فورًا أو التوجه إلى أقرب غرفة طوارئ.</strong></p>
                                 </div>
-                                <p>Our facility offers urgent care services for non-life-threatening conditions during business hours, including:</p>
+                                <p>يوفر منشأتنا خدمات رعاية عاجلة للحالات غير المهددة للحياة خلال ساعات العمل، بما في ذلك:</p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <ul>
-                                            <li>Minor injuries (sprains, minor cuts)</li>
-                                            <li>Fevers and infections</li>
-                                            <li>Allergic reactions (non-severe)</li>
-                                            <li>Asthma attacks (mild to moderate)</li>
+                                            <li>الإصابات البسيطة (الالتواءات، الجروح البسيطة)</li>
+                                            <li>الحمى والالتهابات</li>
+                                            <li>ردود الفعل التحسسية (غير الشديدة)</li>
+                                            <li>نوبات الربو (خفيفة إلى متوسطة)</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-6">
                                         <ul>
-                                            <li>Dehydration</li>
-                                            <li>Urinary tract infections</li>
-                                            <li>Ear or eye infections</li>
-                                            <li>Minor burns</li>
+                                            <li>الجفاف</li>
+                                            <li>التهابات المسالك البولية</li>
+                                            <li>التهابات الأذن أو العين</li>
+                                            <li>الحروق البسيطة</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <p>Our on-call physician is available after hours for urgent medical concerns at (234) 567-894. For true emergencies, we recommend visiting a hospital emergency department.</p>
+                                <p>الطبيب المناوب متاح بعد ساعات العمل للحالات الطبية العاجلة على الرقم (234) 567-894. للحالات الطارئة الحقيقية، نوصي بزيارة قسم الطوارئ في المستشفى.</p>
                             </div>
                         </div>
                     </div>
@@ -448,10 +444,10 @@
                 
                 <!-- Contact Promo -->
                 <div class="contact-promo">
-                    <h3>Still Have Questions?</h3>
-                    <p>Our patient care team is available to answer any additional questions you may have about our services, policies, or your specific healthcare needs.</p>
-                    <a href="contact.html" class="btn btn-light me-2"><i class="fas fa-envelope me-2"></i>Send Us a Message</a>
-                    <a href="tel:+1234567890" class="btn btn-outline-light"><i class="fas fa-phone-alt me-2"></i>Call Our Team</a>
+                    <h3>لا تزال لديك أسئلة؟</h3>
+                    <p>فريق رعاية المرضى لدينا متاح للإجابة على أي أسئلة إضافية قد تكون لديك حول خدماتنا، سياساتنا، أو احتياجاتك الصحية المحددة.</p>
+                    <a href="contact.html" class="btn btn-light me-2"><i class="fas fa-envelope me-2"></i>أرسل لنا رسالة</a>
+                    <a href="tel:+1234567890" class="btn btn-outline-light"><i class="fas fa-phone-alt me-2"></i>اتصل بفريقنا</a>
                 </div>
             </div>
         </div>
@@ -466,14 +462,14 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-brand">
-                            <img src="images/logo.png" alt="MediCare Center" class="footer-logo">
-                            <span class="brand-name">MediCare Center</span>
+                            <img src="images/logo.png" alt="مركز ميديكير" class="footer-logo">
+                            <span class="brand-name">مركز ميديكير</span>
                         </div>
-                        <p class="footer-about">Providing exceptional healthcare services with compassion and cutting-edge technology since 1998. Your health is our priority.</p>
+                        <p class="footer-about">نقدم خدمات رعاية صحية استثنائية مع التعاطف وأحدث التقنيات منذ عام 1998. صحتك هي أولويتنا.</p>
                         <div class="footer-newsletter">
-                            <h4>Subscribe to our Newsletter</h4>
+                            <h4>اشترك في نشرتنا البريدية</h4>
                             <form class="newsletter-form">
-                                <input type="email" placeholder="Your email address" required>
+                                <input type="email" placeholder="عنوان بريدك الإلكتروني" required>
                                 <button type="submit"><i class="fas fa-paper-plane"></i></button>
                             </form>
                         </div>
@@ -483,14 +479,14 @@
                 <!-- Quick Links Column -->
                 <div class="col-lg-2 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Quick Links</h4>
+                        <h4 class="footer-title">روابط سريعة</h4>
                         <ul class="footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="doctors.html">Our Doctors</a></li>
-                            <li><a href="blog.html">Health Blog</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="services.html">الخدمات</a></li>
+                            <li><a href="doctors.html">أطباؤنا</a></li>
+                            <li><a href="blog.html">مدونة الصحة</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
                         </ul>
                     </div>
                 </div>
@@ -498,14 +494,14 @@
                 <!-- Departments Column -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Medical Departments</h4>
+                        <h4 class="footer-title">الأقسام الطبية</h4>
                         <ul class="footer-links">
-                            <li><a href="departments.html#cardiology">Cardiology</a></li>
-                            <li><a href="departments.html#neurology">Neurology</a></li>
-                            <li><a href="departments.html#orthopedics">Orthopedics</a></li>
-                            <li><a href="departments.html#pediatrics">Pediatrics</a></li>
-                            <li><a href="departments.html#radiology">Radiology</a></li>
-                            <li><a href="departments.html#surgery">General Surgery</a></li>
+                            <li><a href="departments.html#cardiology">أمراض القلب</a></li>
+                            <li><a href="departments.html#neurology">الأعصاب</a></li>
+                            <li><a href="departments.html#orthopedics">العظام</a></li>
+                            <li><a href="departments.html#pediatrics">طب الأطفال</a></li>
+                            <li><a href="departments.html#radiology">الأشعة</a></li>
+                            <li><a href="departments.html#surgery">الجراحة العامة</a></li>
                         </ul>
                     </div>
                 </div>
@@ -513,16 +509,16 @@
                 <!-- Contact Column -->
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
-                        <h4 class="footer-title">Contact Info</h4>
+                        <h4 class="footer-title">معلومات الاتصال</h4>
                         <div class="footer-contact">
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <p>123 Medical Drive, Health City, HC 12345</p>
+                                <p>123 شارع طبي، مدينة الصحة، HC 12345</p>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-phone-alt"></i>
-                                <p>Emergency: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                                <p>Appointments: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
+                                <p>الطوارئ: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                                <p>المواعيد: <a href="tel:+1234567891">+1 (234) 567-891</a></p>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
@@ -530,8 +526,8 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-clock"></i>
-                                <p>Mon-Fri: 8:00 AM - 7:00 PM</p>
-                                <p>Sat-Sun: 9:00 AM - 5:00 PM</p>
+                                <p>من الاثنين إلى الجمعة: 8:00 صباحًا - 7:00 مساءً</p>
+                                <p>السبت والأحد: 9:00 صباحًا - 5:00 مساءً</p>
                             </div>
                         </div>
                     </div>
@@ -544,13 +540,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="copyright">&copy; 2025 MediCare Center. All Rights Reserved.</p>
+                    <p class="copyright">© 2025 مركز ميديكير. جميع الحقوق محفوظة.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="footer-legal">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms of Service</a>
-                        <a href="sitemap.html">Sitemap</a>
+                        <a href="privacy.html">سياسة الخصوصية</a>
+                        <a href="terms.html">شروط الخدمة</a>
+                        <a href="sitemap.html">خريطة الموقع</a>
                     </div>
                 </div>
             </div>
