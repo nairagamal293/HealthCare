@@ -336,11 +336,14 @@
     <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
     <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
     <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+    <li><a class="dropdown-item" href="nursing.html">قسم التمريض</a></li>
+    <li><a class="dropdown-item" href="sterilization.html">قسم التعقيم الطبي</a></li>
+    <li><a class="dropdown-item" href="ambulance.html">قسم الإسعاف</a></li>
   </ul>
 </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">الأقسام</a>
+                        <a class="nav-link" href="departments.html">العيادات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">أطباؤنا</a>
@@ -372,54 +375,30 @@
                 <p>نحن نبحث دائمًا عن محترفين موهوبين ومتحمسين للانضمام إلى فريقنا. تصفح الوظائف الحالية أدناه وتقدم للوظيفة التي تناسب مهاراتك وخبراتك.</p>
             </div>
             
-            <!-- Job Filters -->
-            <div class="job-filters">
-                <form id="jobFilterForm">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="jobTypeFilter" class="form-label">نوع الوظيفة</label>
-                            <select class="form-select" id="jobTypeFilter">
-                                <option value="">جميع أنواع الوظائف</option>
-                                <option value="دوام كامل">دوام كامل</option>
-                                <option value="دوام جزئي">دوام جزئي</option>
-                                <option value="عقد">عقد</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="departmentFilter" class="form-label">القسم</label>
-                            <select class="form-select" id="departmentFilter">
-                                <option value="">جميع الأقسام</option>
-                                <option value="التمريض">التمريض</option>
-                                <option value="الإدارة">الإدارة</option>
-                                <option value="المختبر">المختبر</option>
-                                <option value="الأشعة">الأشعة</option>
-                                <option value="الصيدلة">الصيدلة</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="locationFilter" class="form-label">الموقع</label>
-                            <select class="form-select" id="locationFilter">
-                                <option value="">جميع المواقع</option>
-                                <option value="الفرع الرئيسي">الفرع الرئيسي</option>
-                                <option value="فرع المدينة الطبية">فرع المدينة الطبية</option>
-                                <option value="فرع غرب المدينة">فرع غرب المدينة</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="statusFilter" class="form-label">حالة الوظيفة</label>
-                            <select class="form-select" id="statusFilter">
-                                <option value="active">الوظائف النشطة فقط</option>
-                                <option value="all">جميع الوظائف</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <button type="button" id="filterJobs" class="btn btn-primary">تصفية الوظائف</button>
-                            <button type="reset" class="btn btn-outline-secondary">إعادة تعيين</button>
-                        </div>
-                    </div>
-                </form>
+          <!-- Job Filters -->
+<div class="job-filters">
+    <form id="jobFilterForm">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="jobTitleFilter" class="form-label">اسم الوظيفة</label>
+                <input type="text" class="form-control" id="jobTitleFilter" placeholder="ابحث باسم الوظيفة">
             </div>
-            
+            <div class="col-md-6">
+                <label for="jobTypeFilter" class="form-label">نوع الوظيفة</label>
+                <select class="form-select" id="jobTypeFilter">
+                    <option value="">جميع أنواع الوظائف</option>
+                    <option value="دوام كامل">دوام كامل</option>
+                    <option value="دوام جزئي">دوام جزئي</option>
+                    <option value="عقد">عقد</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="button" id="filterJobs" class="btn btn-primary">تصفية الوظائف</button>
+                <button type="reset" class="btn btn-outline-secondary">إعادة تعيين</button>
+            </div>
+        </div>
+    </form>
+</div>
             <!-- Jobs List -->
             <div id="jobsList">
                 <!-- Jobs will be loaded here via JavaScript -->
@@ -691,54 +670,55 @@
             // Set up application form submission
             document.getElementById('submitApplication').addEventListener('click', submitApplication);
         });
+        // Add this to your event listeners
+            document.querySelector('button[type="reset"]').addEventListener('click', function() {
+                fetchCareers(); // Refetch all jobs when reset is clicked
+            });
         
         function fetchCareers() {
-            const loadingDiv = document.getElementById('jobsList');
+    const loadingDiv = document.getElementById('jobsList');
+    loadingDiv.innerHTML = `
+        <div class="text-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">جاري التحميل...</span>
+            </div>
+            <p class="mt-2">جاري تحميل الوظائف...</p>
+        </div>
+    `;
+    
+    // Get filter values
+    const jobTitle = document.getElementById('jobTitleFilter').value;
+    const jobType = document.getElementById('jobTypeFilter').value;
+    
+    // Build query parameters - make sure these match your API expectations
+    let queryParams = [];
+    if (jobTitle) queryParams.push(`title=${encodeURIComponent(jobTitle)}`);
+    if (jobType) queryParams.push(`type=${encodeURIComponent(jobType)}`);
+    
+    const queryString = queryParams.length ? `?${queryParams.join('&')}` : '';
+    
+    // Fetch from your API - make sure the URL is correct
+    fetch(`https://localhost:7230/api/Careers${queryString}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            displayCareers(data);
+        })
+        .catch(error => {
+            console.error('Error fetching careers:', error);
             loadingDiv.innerHTML = `
-                <div class="text-center my-5">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">جاري التحميل...</span>
-                    </div>
-                    <p class="mt-2">جاري تحميل الوظائف...</p>
+                <div class="alert alert-danger">
+                    <p>حدث خطأ أثناء جلب بيانات الوظائف. يرجى المحاولة مرة أخرى لاحقًا.</p>
+                    <button class="btn btn-sm btn-outline-danger" onclick="fetchCareers()">إعادة المحاولة</button>
                 </div>
             `;
-            
-            // Get filter values
-            const jobType = document.getElementById('jobTypeFilter').value;
-            const department = document.getElementById('departmentFilter').value;
-            const location = document.getElementById('locationFilter').value;
-            const status = document.getElementById('statusFilter').value;
-            
-            // Build query parameters
-            let queryParams = [];
-            if (jobType) queryParams.push(`employmentType=${encodeURIComponent(jobType)}`);
-            if (department) queryParams.push(`department=${encodeURIComponent(department)}`);
-            if (location) queryParams.push(`location=${encodeURIComponent(location)}`);
-            if (status === 'active') queryParams.push('activeOnly=true');
-            
-            const queryString = queryParams.length ? `?${queryParams.join('&')}` : '';
-            
-            // Fetch from your API
-            fetch(`https://localhost:7230/api/Careers${queryString}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    displayCareers(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching careers:', error);
-                    loadingDiv.innerHTML = `
-                        <div class="alert alert-danger">
-                            <p>حدث خطأ أثناء جلب بيانات الوظائف. يرجى المحاولة مرة أخرى لاحقًا.</p>
-                            <button class="btn btn-sm btn-outline-danger" onclick="fetchCareers()">إعادة المحاولة</button>
-                        </div>
-                    `;
-                });
-        }
+        });
+}
+
         
         function displayCareers(careers) {
             const jobsList = document.getElementById('jobsList');

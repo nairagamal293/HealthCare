@@ -1,10 +1,12 @@
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="قسم العلاج الطبيعي وإعادة التأهيل في مركز ميديكير يقدم برامج علاجية متكاملة لاستعادة الوظائف الحركية">
-    <!-- Bootstrap CSS RTL -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="قسم العلاج الطبيعي وإعادة التأهيل في مركز ميديكير يقدم برامج علاجية متكاملة تحت إشراف أخصائيين معتمدين باستخدام أحدث الأجهزة والتقنيات العلاجية.">
+  <title>العلاج الطبيعي وإعادة التأهيل | مركز ميديكير</title>
+
+ <!-- Bootstrap CSS RTL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
@@ -13,244 +15,401 @@
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
+    
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <title>العلاج الطبيعي وإعادة التأهيل | مركز ميديكير</title>
-    <style>
-        /* Hero Section */
-        .physio-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/physiotherapy.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-        
-        .physio-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .physio-hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Services Section */
-        .services-section {
-            padding: 80px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-header h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-header p {
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 20px auto 0;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            height: 90%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 25px;
-        }
-        
-        .service-content h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-        
-        .service-content p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .service-content .btn {
-            font-weight: 600;
-            padding: 8px 20px;
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-        
-        .feature-box {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(13, 110, 253, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--primary-color);
-            font-size: 30px;
-        }
-        
-        .feature-box h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .feature-box p {
-            color: #666;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
-            color: var(--white-color);
-            position: relative;
-        }
+  <style>
+   
+    .physio-hero {
+      background: url('images/physio.jpg') center/cover no-repeat;
+      height: 60vh;
+      min-height: 450px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    
+    .hero-text {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      color: #f8f9fa;
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .section-header {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
+    .section-header h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--dark-color);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
 
-        .cta-section h2::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -10px;
-            width: 50px;
-            height: 3px;
-            background-color: var(--white-color);
-            border-radius: 3px;
-        }
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
 
-        .cta-section .btn-primary {
-            background-color: transparent;
-            border: 2px solid var(--white-color);
-            color: var(--white-color);
-            padding: 12px 30px;
-            font-weight: 600;
-        }
+    .about-content {
+      position: relative;
+      padding-right: 30px;
+    }
+    
+    .about-content:before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary-color), #fff);
+      border-radius: 3px;
+    }
+    
+    .feature-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+    
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(42,127,186,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .feature-icon i {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+    }
+    
+    .feature-text h5 {
+      font-weight: 600;
+      color: var(--dark-color);
+      margin-bottom: 5px;
+    }
+    
+    .feature-text p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+    
+    .physio-image-container {
+      position: relative;
+      height: 100%;
+    }
+    
+    .main-physio-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      height: 400px;
+    }
+    
+    .main-physio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .secondary-physio-images {
+      position: absolute;
+      bottom: -30px;
+      left: -30px;
+      display: flex;
+      gap: 15px;
+      z-index: 2;
+    }
+    
+    .small-physio-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      border: 3px solid white;
+    }
+    
+    .small-physio-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .experience-badge {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      background: var(--primary-color);
+      color: white;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      box-shadow: 0 10px 30px rgba(42,127,186,0.3);
+    }
+    
+    .badge-content {
+      text-align: center;
+    }
+    
+    .badge-content .years {
+      font-size: 2rem;
+      font-weight: 700;
+      display: block;
+      line-height: 1;
+    }
+    
+    .badge-content .text {
+      font-size: 0.9rem;
+    }
 
-        .cta-section .btn-primary:hover {
-            background-color: var(--white-color);
-            color: var(--primary-color);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 991.98px) {
-            .physio-hero {
-                padding: 100px 0 60px;
-            }
-            
-            .physio-hero h1 {
-                font-size: 2.4rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 767.98px) {
-            .physio-hero {
-                padding: 80px 0 40px;
-            }
-            
-            .physio-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .physio-hero p {
-                font-size: 1rem;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    /* Services Section */
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+      transition: all 0.3s ease;
+      border-top: 4px solid transparent;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      border-top-color: var(--primary-color);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .service-card h4 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    /* Process Steps */
+    .process-steps {
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .process-steps:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 2px;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 0.2;
+    }
+
+    .step {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: absolute;
+      top: -25px;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+    /* Techniques Section */
+    .technique-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      border-left: 4px solid var(--primary-color);
+    }
+
+    .technique-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .technique-card i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    
+
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+      color: var(--white-color);
+      position: relative;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .cta-section h2::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      width: 50px;
+      height: 3px;
+      background-color: var(--white-color);
+      border-radius: 3px;
+    }
+
+    .cta-section .btn-primary {
+      background-color: transparent;
+      border: 2px solid var(--white-color);
+      color: var(--white-color);
+      padding: 12px 30px;
+      font-weight: 600;
+    }
+
+    .cta-section .btn-primary:hover {
+      background-color: var(--white-color);
+      color: var(--primary-color);
+    }
+
+    @media (max-width: 992px) {
+      .secondary-physio-images {
+        left: 0;
+      }
+      
+      .experience-badge {
+        right: 0;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .physio-hero {
+        height: auto;
+        padding: 100px 0;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+      
+      .main-physio-image {
+        height: 300px;
+      }
+      
+      .small-physio-image {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .experience-badge {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .badge-content .years {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Top Bar -->
+
+ <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
@@ -264,6 +423,7 @@
         </div>
     </div>
     
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
@@ -274,7 +434,6 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">الرئيسية</a>
@@ -282,18 +441,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">من نحن</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            الخدمات
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
-                            <li><a class="dropdown-item active" href="radiology.html">الأشعة والتصوير الطبي</a></li>
-                            <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
-                        </ul>
-                    </li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    الخدمات
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+    <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
+    <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
+    <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+    <li><a class="dropdown-item" href="nursing.html">قسم التمريض</a></li>
+    <li><a class="dropdown-item" href="sterilization.html">قسم التعقيم الطبي</a></li>
+    <li><a class="dropdown-item" href="ambulance.html">قسم الإسعاف</a></li>
+  </ul>
+</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">الأقسام</a></li>
+                        <a class="nav-link" href="departments.html">العيادات</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
@@ -315,173 +477,299 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="radiology-hero">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">الأشعة والتصوير الطبي</h1>
-            <p class="animate__animated animate__fadeInUp">نقدم أحدث خدمات التصوير الطبي والتشخيص الشعاعي بدقة عالية باستخدام أحدث الأجهزة والتقنيات العالمية</p>
-            <a href="appointment.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">حجز موعد للأشعة</a>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>خدمات الأشعة والتصوير الطبي</h2>
-                <p>نقدم مجموعة شاملة من خدمات التصوير الطبي التي تساعد في التشخيص الدقيق والمتابعة العلاجية</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp">
-                        <div class="service-img">
-                            <img src="images/xray.jpg" alt="الأشعة السينية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الأشعة السينية (X-Ray)</h3>
-                            <p>تشمل أشعة الصدر، العظام، المفاصل، الجمجمة، والعمود الفقري باستخدام أحدث الأجهزة الرقمية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-img">
-                            <img src="images/ultrasound.jpg" alt="الموجات فوق الصوتية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الموجات فوق الصوتية</h3>
-                            <p>تشمل أشعة البطن، الحوض، الحمل، الثدي، الغدة الدرقية، والدوبلر للأوعية الدموية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-img">
-                            <img src="images/ct-scan.jpg" alt="الأشعة المقطعية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الأشعة المقطعية (CT Scan)</h3>
-                            <p>تشمل تصوير الرأس، الصدر، البطن، الحوض، العمود الفقري، والأطراف بدقة عالية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp">
-                        <div class="service-img">
-                            <img src="images/mri.jpg" alt="الرنين المغناطيسي">
-                        </div>
-                        <div class="service-content">
-                            <h3>الرنين المغناطيسي (MRI)</h3>
-                            <p>تشمل تصوير المخ، العمود الفقري، المفاصل، الأنسجة الرخوة، والأوعية الدموية بدون إشعاع</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-img">
-                            <img src="images/mammography.jpg" alt="ماموجرام">
-                        </div>
-                        <div class="service-content">
-                            <h3>ماموجرام الثدي</h3>
-                            <p>الكشف المبكر عن أورام الثدي باستخدام أحدث أجهزة الماموجرام الرقمية بدقة عالية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-img">
-                            <img src="images/bone-density.jpg" alt="قياس كثافة العظام">
-                        </div>
-                        <div class="service-content">
-                            <h3>قياس كثافة العظام</h3>
-                            <p>تشخيص هشاشة العظام ومتابعة استجابة المريض للعلاج باستخدام جهاز DEXA</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section class="physio-hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">العلاج الطبيعي وإعادة التأهيل</h1>
+        <p class="hero-subtitle">برامج علاجية متكاملة لاستعادة الحركة وتحسين جودة الحياة</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary btn-lg">اكتشف خدماتنا</a>
+          <a href="appointment.html" class="btn btn-outline-light btn-lg">حجز موعد</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+</section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>لماذا تختار قسم الأشعة في ميديكير؟</h2>
-                <p>نتميز بتقديم خدمات تصويرية عالية الجودة وفق أعلى المعايير العالمية</p>
+<!-- About Physiotherapy Section -->
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="section-header">
+        <h2>مركز التميز في إعادة التأهيل</h2>
+      </div>
+      <div class="about-content">
+        <p class="lead mb-4">
+          يقدم قسم العلاج الطبيعي وإعادة التأهيل في مركز ميديكير برامج علاجية متكاملة تحت إشراف أخصائيين معتمدين باستخدام أحدث الأجهزة والتقنيات العلاجية.
+        </p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-user-md"></i>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn">
-                        <div class="feature-icon">
-                            <i class="fas fa-x-ray"></i>
-                        </div>
-                        <h3>أجهزة حديثة</h3>
-                        <p>نستخدم أحدث أجهزة الأشعة والتصوير الطبي ذات التقنية العالية لضمان نتائج دقيقة</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.1s">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <h3>فريق متخصص</h3>
-                        <p>فريق من أطباء الأشعة والفنيين المتخصصين ذوي الخبرة العالية في التشخيص الشعاعي</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.2s">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>نتائج سريعة</h3>
-                        <p>تقديم النتائج والتقارير في أسرع وقت ممكن مع الحفاظ على الدقة والجودة</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.3s">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>سلامة المرضى</h3>
-                        <p>نلتزم بأعلى معايير السلامة والإجراءات الوقائية لتقليل التعرض للإشعاع</p>
-                    </div>
-                </div>
+            <div class="feature-text">
+              <h5>فريق متخصص</h5>
+              <p>أخصائيون علاج طبيعي معتمدون دولياً بخبرات تصل إلى 15 عاماً في مختلف التخصصات التأهيلية</p>
             </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-dumbbell"></i>
+            </div>
+            <div class="feature-text">
+              <h5>أجهزة متطورة</h5>
+              <p>أحدث أجهزة العلاج الطبيعي والتأهيل بما في ذلك أجهزة التحفيز الكهربائي والعلاج المائي</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="feature-text">
+              <h5>برامج شخصية</h5>
+              <p>خطط علاجية مصممة خصيصاً لكل مريض بناءً على حالته وأهدافه العلاجية</p>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="row align-items-center animate-slide-up">
-                <div class="col-lg-8 mb-4 mb-lg-0">
-                    <h2 class="mb-3">هل أنت مستعد لتجربة رعاية صحية استثنائية؟</h2>
-                    <p class="lead mb-0">احجز موعدك اليوم ودع فريقنا الخبير يعتني باحتياجاتك الصحية.</p>
-                </div>
-                <div class="col-lg-4 text-lg-start">
-                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">حجز موعد</a>
-                </div>
-            </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+      <div class="physio-image-container">
+        <div class="main-physio-image">
+          <img src="images/physio1.jpeg" alt="جلسة علاج طبيعي" class="img-fluid rounded-3">
         </div>
-    </section>
+        <div class="secondary-physio-images">
+          <div class="small-physio-image">
+            <img src="images/physio2.jpeg" alt="العلاج المائي" class="img-fluid rounded-2">
+          </div>
+          <div class="small-physio-image">
+            <img src="images/physio3.png" alt="العلاج الكهربائي" class="img-fluid rounded-2">
+          </div>
+        </div>
+        <div class="experience-badge">
+          <div class="badge-content">
+            <span class="years">+15</span>
+            <span class="text">سنة خبرة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
+<!-- Services Section -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>خدمات العلاج الطبيعي</h2>
+      <p class="lead">نقدم مجموعة متكاملة من خدمات العلاج الطبيعي والتأهيل الطبي</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+        <div class="service-card">
+          <i class="fas fa-bone"></i>
+          <h4>إعادة تأهيل العظام</h4>
+          <p>علاج كسور العظام، إصابات المفاصل، ما بعد العمليات الجراحية وهشاشة العظام باستخدام تقنيات متقدمة.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="service-card">
+          <i class="fas fa-brain"></i>
+          <h4>إعادة تأهيل الأعصاب</h4>
+          <p>برامج متخصصة لمرضى السكتة الدماغية، إصابات النخاع الشوكي والشلل بأنواعه.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="service-card">
+          <i class="fas fa-heartbeat"></i>
+          <h4>إعادة تأهيل القلب</h4>
+          <p>برامج تأهيلية لمرضى القلب بعد العمليات الجراحية أو النوبات القلبية لاستعادة اللياقة.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+        <div class="service-card">
+          <i class="fas fa-child"></i>
+          <h4>علاج الأطفال</h4>
+          <p>برامج علاجية خاصة لأطفال الشلل الدماغي، تأخر النمو الحركي ومشاكل العظام الخلقية.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="service-card">
+          <i class="fas fa-water"></i>
+          <h4>العلاج المائي</h4>
+          <p>جلسات علاجية في أحواض خاصة للمساعدة في الحركة وتقليل الضغط على المفاصل.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <div class="service-card">
+          <i class="fas fa-running"></i>
+          <h4>إعادة تأهيل الرياضيين</h4>
+          <p>برامج متخصصة لإصابات الملاعب وإعادة اللاعبين إلى مستوياتهم التنافسية بأمان.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Treatment Techniques -->
+<section class="container py-5">
+  <div class="section-header text-center">
+    <h2>تقنيات العلاج المتقدمة</h2>
+    <p class="lead">نستخدم أحدث الأساليب العلمية في العلاج الطبيعي والتأهيل</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp">
+      <div class="technique-card">
+        <i class="fas fa-bolt"></i>
+        <h5>التحفيز الكهربائي</h5>
+        <p>استخدام التيارات الكهربائية لتحفيز العضلات وتخفيف الألم وتعزيز الشفاء.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="technique-card">
+        <i class="fas fa-temperature-low"></i>
+        <h5>العلاج الحراري والبارد</h5>
+        <p>استخدام الحرارة والبرودة للسيطرة على الالتهاب وتخفيف الألم وتحسين الحركة.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp animate__delay-2s">
+      <div class="technique-card">
+        <i class="fas fa-hands-helping"></i>
+        <h5>العلاج اليدوي</h5>
+        <p>تقنيات تدليك وتعبئة مفاصل متخصصة لتحسين المدى الحركي وتخفيف الألم.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3 animate__animated animate__fadeInUp animate__delay-3s">
+      <div class="technique-card">
+        <i class="fas fa-robot"></i>
+        <h5>الروبوت التأهيلي</h5>
+        <p>أجهزة روبوتية متطورة لمساعدة المرضى على استعادة القدرة على المشي والحركة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Treatment Process -->
+<section class="container py-5">
+  <div class="section-header text-center">
+    <h2>خطوات العلاج</h2>
+    <p class="lead">رحلة شفاء منظمة لضمان أفضل النتائج العلاجية</p>
+  </div>
+  <div class="process-steps">
+    <div class="row">
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>التقييم الشامل</h4>
+          <p>فحص طبي مفصل وتقييم للحالة لتحديد الأهداف العلاجية ووضع خطة علاجية شخصية.</p>
+        </div>
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>جلسات العلاج</h4>
+          <p>جلسات علاجية منتظمة تشمل تمارين علاجية وتقنيات متخصصة حسب الخطة الموضوعة.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>المتابعة والتعديل</h4>
+          <p>تقييم مستمر للتقدم وتعديل الخطة العلاجية حسب الحاجة لضمان أفضل النتائج.</p>
+        </div>
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>التمارين المنزلية</h4>
+          <p>برنامج تمارين منزلية مخصص للحفاظ على التقدم المحرز بين الجلسات.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CTA Section -->
+<section class="cta-section py-5">
+  <div class="container">
+    <div class="row align-items-center animate__animated animate__fadeIn">
+      <div class="col-lg-8 mb-4 mb-lg-0">
+        <h2 class="mb-3">هل أنت مستعد لبدء رحلة العلاج؟</h2>
+        <p class="lead mb-0">احجز موعدك الآن مع أخصائيي العلاج الطبيعي لدينا لاستعادة حركتك وجودة حياتك.</p>
+      </div>
+      <div class="col-lg-4 text-lg-start">
+        <a href="appointment.html" class="btn btn-light btn-lg px-4">حجز موعد <i class="fas fa-arrow-left ms-2"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container py-5">
+  <div class="section-header text-center">
+    <h2>أسئلة شائعة</h2>
+    <p class="lead">إجابات على أكثر الأسئلة شيوعاً حول العلاج الطبيعي</p>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item animate__animated animate__fadeInUp">
+          <h3 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              كم عدد جلسات العلاج الطبيعي التي أحتاجها؟
+            </button>
+          </h3>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              عدد الجلسات يختلف حسب الحالة وشدتها واستجابة الجسم للعلاج. بعد التقييم الأولي، سيحدد الأخصائي العدد المتوقع للجلسات وقد يتم تعديله حسب التقدم المحرز.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item animate__animated animate__fadeInUp">
+          <h3 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              هل العلاج الطبيعي مؤلم؟
+            </button>
+          </h3>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              معظم تقنيات العلاج الطبيعي غير مؤلمة، وقد يشعر المريض ببعض الانزعاج البسيط أثناء بعض التمارين أو التقنيات. يتم دائماً تعديل شدة العلاج حسب تحمل المريض.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item animate__animated animate__fadeInUp">
+          <h3 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              هل يمكن الحصول على العلاج الطبيعي في المنزل؟
+            </button>
+          </h3>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              نعم، نقدم خدمة العلاج الطبيعي المنزلي للمرضى الذين يواجهون صعوبة في الحضور إلى المركز. يتم تنسيق الزيارات حسب الحاجة وتحت إشراف نفس الأخصائيين المعتمدين.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="FAQs.html" class="btn btn-outline-primary">المزيد من الأسئلة الشائعة</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+     <!-- Footer -->
     <footer class="footer">
         <div class="footer-main">
             <div class="container">
@@ -574,27 +862,44 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
     
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Back to top button functionality
-            const backToTopButton = document.querySelector('.back-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('active');
-                } else {
-                    backToTopButton.classList.remove('active');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-    </script>
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.animate__animated');
+    
+    const animateOnScroll = () => {
+      animateElements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          const animationClass = element.classList[1];
+          element.classList.add(animationClass);
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
 </body>
 </html>

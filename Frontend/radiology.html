@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="قسم الأشعة والتصوير الطبي في مركز ميديكير يقدم أحدث خدمات التشخيص الشعاعي بدقة عالية">
-    <!-- Bootstrap CSS RTL -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="قسم الأشعة في مركز ميديكير يقدم أحدث خدمات التصوير الطبي بأعلى معايير الدقة والسلامة تحت إشراف أطباء وفنيين متخصصين.">
+  <title>قسم الأشعة | مركز ميديكير</title>
+
+ <!-- Bootstrap CSS RTL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
@@ -13,244 +15,523 @@
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Custom CSS -->
+    
+     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <title>الأشعة والتصوير الطبي | مركز ميديكير</title>
-    <style>
-        /* Hero Section */
-        .radiology-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/radiology.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-        
-        .radiology-hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .radiology-hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Services Section */
-        .services-section {
-            padding: 80px 0;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-header h2 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        
-        .section-header h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .section-header p {
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 20px auto 0;
-        }
-        
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            height: 90%;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
-        }
-        
-        .service-content {
-            padding: 25px;
-        }
-        
-        .service-content h3 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-        
-        .service-content p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .service-content .btn {
-            font-weight: 600;
-            padding: 8px 20px;
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-        
-        .feature-box {
-            text-align: center;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .feature-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background-color: rgba(13, 110, 253, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: var(--primary-color);
-            font-size: 30px;
-        }
-        
-        .feature-box h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-        }
-        
-        .feature-box p {
-            color: #666;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
-            color: var(--white-color);
-            position: relative;
-        }
+  <style>
+   
 
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
+     .radiology-hero {
+    background: url('images/radiology.jpg') center/cover no-repeat;
+    height: 60vh;
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+        color: #f8f9fa;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    text-align: center;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    padding: 20px 30px;
+    border-radius: 10px;
+    min-width: 120px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .stat-number span {
+    font-size: 1rem;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 992px) {
+    .hero-title {
+      font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero-stats {
+      gap: 20px;
+    }
+    
+    .stat-item {
+      padding: 15px 20px;
+      min-width: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .radiology-hero {
+      height: auto;
+      padding: 100px 0;
+    }
+    
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
 
-        .cta-section h2::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -10px;
-            width: 50px;
-            height: 3px;
-            background-color: var(--white-color);
-            border-radius: 3px;
-        }
+    .section-header {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      position: relative;
+    }
 
-        .cta-section .btn-primary {
-            background-color: transparent;
-            border: 2px solid var(--white-color);
-            color: var(--white-color);
-            padding: 12px 30px;
-            font-weight: 600;
-        }
+    .section-header h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--dark-color);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
 
-        .cta-section .btn-primary:hover {
-            background-color: var(--white-color);
-            color: var(--primary-color);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 991.98px) {
-            .radiology-hero {
-                padding: 100px 0 60px;
-            }
-            
-            .radiology-hero h1 {
-                font-size: 2.4rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 767.98px) {
-            .radiology-hero {
-                padding: 80px 0 40px;
-            }
-            
-            .radiology-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .radiology-hero p {
-                font-size: 1rem;
-            }
-            
-            .section-header h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .radiology-benefits {
+      transition: all 0.3s ease;
+    }
+
+    .radiology-benefits .icon-box {
+      width: 80px;
+      height: 80px;
+      background: rgba(42,127,186,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .radiology-benefits i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+    }
+
+    .radiology-benefits h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--dark-color);
+    }
+
+    .radiology-benefits p {
+      font-weight: 400;
+      color: #555;
+    }
+.about-content {
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  .about-content:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), #fff);
+    border-radius: 3px;
+  }
+  
+  .feature-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(42,127,186,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .feature-icon i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+  }
+  
+  .feature-text h5 {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+  }
+  
+  .feature-text p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .cert-img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  
+  .radiology-image-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .main-radiology-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    height: 400px;
+  }
+  
+  .main-radiology-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .secondary-radiology-images {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    display: flex;
+    gap: 15px;
+    z-index: 2;
+  }
+  
+  .small-radiology-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 3px solid white;
+  }
+  
+  .small-radiology-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .experience-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: var(--primary-color);
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(42,127,186,0.3);
+  }
+  
+  .badge-content {
+    text-align: center;
+  }
+  
+  .badge-content .years {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+  }
+  
+  .badge-content .text {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 992px) {
+    .secondary-radiology-images {
+      left: 0;
+    }
+    
+    .experience-badge {
+      right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-radiology-image {
+      height: 300px;
+    }
+    
+    .small-radiology-image {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .experience-badge {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .badge-content .years {
+      font-size: 1.5rem;
+    }
+  }
+
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+      transition: all 0.3s ease;
+      border-top: 4px solid transparent;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      border-top-color: var(--primary-color);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .feature-card h4 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .process-steps {
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .process-steps:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 2px;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 0.2;
+    }
+
+    .step {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: absolute;
+      top: -25px;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+     /* CTA Section */
+    .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+        color: var(--white-color);
+        position: relative;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cta-section h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+    }
+
+    .cta-section .btn-primary {
+        background-color: transparent;
+        border: 2px solid var(--white-color);
+        color: var(--white-color);
+        padding: 12px 30px;
+        font-weight: 600;
+    }
+
+    .cta-section .btn-primary:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      .radiology-hero {
+        padding: 100px 0;
+      }
+      
+      .radiology-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Safety Section */
+    .safety-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+    
+    .safety-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    .safety-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .safety-card i {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Top Bar -->
+
+ <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div class="row align-items-center">
@@ -263,6 +544,7 @@
             </div>
         </div>
     </div>
+    
     
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
@@ -281,7 +563,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">من نحن</a>
                     </li>
-                      <li class="nav-item dropdown">
+<li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     الخدمات
   </a>
@@ -289,10 +571,13 @@
     <li><a class="dropdown-item" href="lab-tests.html">التحاليل والمختبر</a></li>
     <li><a class="dropdown-item" href="radiology.html">الأشعة والتصوير الطبي</a></li>
     <li><a class="dropdown-item" href="physiotherapy.html">العلاج الطبيعي وإعادة التأهيل</a></li>
+    <li><a class="dropdown-item" href="nursing.html">قسم التمريض</a></li>
+    <li><a class="dropdown-item" href="sterilization.html">قسم التعقيم الطبي</a></li>
+    <li><a class="dropdown-item" href="ambulance.html">قسم الإسعاف</a></li>
   </ul>
 </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="departments.html">الأقسام</a></li>
+                        <a class="nav-link" href="departments.html">العيادات</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="doctors.html">أطباؤنا</a>
                     </li>
@@ -314,171 +599,334 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="radiology-hero">
-        <div class="container">
-            <h1 class="animate__animated animate__fadeInDown">الأشعة والتصوير الطبي</h1>
-            <p class="animate__animated animate__fadeInUp">نقدم أحدث خدمات التصوير الطبي والتشخيص الشعاعي بدقة عالية باستخدام أحدث الأجهزة والتقنيات العالمية</p>
-            <a href="appointment.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">حجز موعد للأشعة</a>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>خدمات الأشعة والتصوير الطبي</h2>
-                <p>نقدم مجموعة شاملة من خدمات التصوير الطبي التي تساعد في التشخيص الدقيق والمتابعة العلاجية</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp">
-                        <div class="service-img">
-                            <img src="images/xray.jpg" alt="الأشعة السينية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الأشعة السينية (X-Ray)</h3>
-                            <p>تشمل أشعة الصدر، العظام، المفاصل، الجمجمة، والعمود الفقري باستخدام أحدث الأجهزة الرقمية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-img">
-                            <img src="images/ultrasound.jpg" alt="الموجات فوق الصوتية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الموجات فوق الصوتية</h3>
-                            <p>تشمل أشعة البطن، الحوض، الحمل، الثدي، الغدة الدرقية، والدوبلر للأوعية الدموية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-img">
-                            <img src="images/ct-scan.jpg" alt="الأشعة المقطعية">
-                        </div>
-                        <div class="service-content">
-                            <h3>الأشعة المقطعية (CT Scan)</h3>
-                            <p>تشمل تصوير الرأس، الصدر، البطن، الحوض، العمود الفقري، والأطراف بدقة عالية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp">
-                        <div class="service-img">
-                            <img src="images/mri.jpg" alt="الرنين المغناطيسي">
-                        </div>
-                        <div class="service-content">
-                            <h3>الرنين المغناطيسي (MRI)</h3>
-                            <p>تشمل تصوير المخ، العمود الفقري، المفاصل، الأنسجة الرخوة، والأوعية الدموية بدون إشعاع</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.1s">
-                        <div class="service-img">
-                            <img src="images/mammography.jpg" alt="ماموجرام">
-                        </div>
-                        <div class="service-content">
-                            <h3>ماموجرام الثدي</h3>
-                            <p>الكشف المبكر عن أورام الثدي باستخدام أحدث أجهزة الماموجرام الرقمية بدقة عالية</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-img">
-                            <img src="images/bone-density.jpg" alt="قياس كثافة العظام">
-                        </div>
-                        <div class="service-content">
-                            <h3>قياس كثافة العظام</h3>
-                            <p>تشخيص هشاشة العظام ومتابعة استجابة المريض للعلاج باستخدام جهاز DEXA</p>
-                            <a href="appointment.html" class="btn btn-outline-primary">حجز أشعة</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section class="radiology-hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">قسم الأشعة والتصوير الطبي</h1>
+        <p class="hero-subtitle">تقنيات تصوير متطورة بأيدي فنيين متخصصين وتحت إشراف طبي دقيق</p>
+        <div class="hero-cta">
+          <a href="#services" class="btn btn-primary btn-lg">اكتشف خدماتنا</a>
+          <a href="appointment.html" class="btn btn-outline-light btn-lg">حجز موعد</a>
         </div>
-    </section>
+      </div>
+   
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+</section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>لماذا تختار قسم الأشعة في ميديكير؟</h2>
-                <p>نتميز بتقديم خدمات تصويرية عالية الجودة وفق أعلى المعايير العالمية</p>
+<!-- About Radiology Section -->
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="section-header">
+        <h2>مركز التميز في التصوير الطبي</h2>
+      </div>
+      <div class="about-content">
+        <p class="lead mb-4">
+          يقدم قسم الأشعة في مركز ميديكير أحدث تقنيات التصوير التشخيصي بدقة عالية، مع الالتزام بأعلى معايير السلامة للمرضى والعاملين.
+        </p>
+        
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-x-ray"></i>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn">
-                        <div class="feature-icon">
-                            <i class="fas fa-x-ray"></i>
-                        </div>
-                        <h3>أجهزة حديثة</h3>
-                        <p>نستخدم أحدث أجهزة الأشعة والتصوير الطبي ذات التقنية العالية لضمان نتائج دقيقة</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.1s">
-                        <div class="feature-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        <h3>فريق متخصص</h3>
-                        <p>فريق من أطباء الأشعة والفنيين المتخصصين ذوي الخبرة العالية في التشخيص الشعاعي</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.2s">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>نتائج سريعة</h3>
-                        <p>تقديم النتائج والتقارير في أسرع وقت ممكن مع الحفاظ على الدقة والجودة</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="feature-box animate__animated animate__fadeIn" data-wow-delay="0.3s">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>سلامة المرضى</h3>
-                        <p>نلتزم بأعلى معايير السلامة والإجراءات الوقائية لتقليل التعرض للإشعاع</p>
-                    </div>
-                </div>
+            <div class="feature-text">
+              <h5>أجهزة متطورة</h5>
+              <p>أحدث أجهزة التصوير بالرنين المغناطيسي، الأشعة المقطعية، الموجات فوق الصوتية والأشعة السينية الرقمية</p>
             </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-user-md"></i>
+            </div>
+            <div class="feature-text">
+              <h5>فريق متخصص</h5>
+              <p>أطباء أشعة معتمدين وفنيون متخصصون بخبرات تصل إلى 20 عاماً في مختلف مجالات التصوير الطبي</p>
+            </div>
+          </div>
+          
+          <div class="feature-item">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="feature-text">
+              <h5>سلامة المرضى</h5>
+              <p>نتبع بروتوكولات صارمة للحد من التعرض للإشعاع مع مراعاة الحالات الخاصة مثل الحوامل والأطفال</p>
+            </div>
+          </div>
         </div>
-    </section>
+        
+        <div class="certifications mt-4">
+          <h6 class="mb-3">شهادات الاعتماد:</h6>
+          <div class="d-flex flex-wrap gap-3">
+            <img src="images/ACR.png" alt="ACR Accreditation" class="cert-img">
+            <img src="images/JCI Accreditation Certificate.jpeg" alt="JCI Certification" class="cert-img">
+            <img src="images/ISO.png" alt="ISO Certification" class="cert-img">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-lg-6">
+      <div class="radiology-image-container">
+        <div class="main-radiology-image">
+          <img src="images/1.jpeg" alt="جهاز الرنين المغناطيسي" class="img-fluid rounded-3">
+        </div>
+        <div class="secondary-radiology-images">
+          <div class="small-radiology-image">
+            <img src="images/2.jpeg" alt="جهاز الأشعة المقطعية" class="img-fluid rounded-2">
+          </div>
+          <div class="small-radiology-image">
+            <img src="images/3.png" alt="جهاز الموجات فوق الصوتية" class="img-fluid rounded-2">
+          </div>
+        </div>
+        <div class="experience-badge">
+          <div class="badge-content">
+            <span class="years">+20</span>
+            <span class="text">سنة خبرة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="cta-section py-5">
-        <div class="container">
-            <div class="row align-items-center animate-slide-up">
-                <div class="col-lg-8 mb-4 mb-lg-0">
-                    <h2 class="mb-3">هل أنت مستعد لتجربة رعاية صحية استثنائية؟</h2>
-                    <p class="lead mb-0">احجز موعدك اليوم ودع فريقنا الخبير يعتني باحتياجاتك الصحية.</p>
-                </div>
-                <div class="col-lg-4 text-lg-start">
-                    <a href="appointment.html" class="btn btn-primary btn-lg px-4">حجز موعد</a>
-                </div>
-            </div>
+
+  <!-- Radiology Services -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>خدمات التصوير الطبي</h2>
+        <p class="lead">نقدم مجموعة متكاملة من خدمات التصوير التشخيصي بأعلى معايير الجودة</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+          <div class="feature-card">
+            <i class="fas fa-magnet"></i>
+            <h4>الرنين المغناطيسي (MRI)</h4>
+            <p>أحدث جهاز رنين مغناطيسي 3 تسلا للتصوير الدقيق للدماغ، العمود الفقري، المفاصل والأعضاء الداخلية بدون إشعاع.</p>
+          </div>
         </div>
-    </section>
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="feature-card">
+            <i class="fas fa-layer-group"></i>
+            <h4>الأشعة المقطعية (CT)</h4>
+            <p>أجهزة مقطعية متطورة 128 شريحة للكشف عن الإصابات، الأورام، الجلطات وأمراض القلب والشرايين بدقة عالية.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="feature-card">
+            <i class="fas fa-bone"></i>
+            <h4>الأشعة السينية (X-ray)</h4>
+            <p>أشعة سينية رقمية للعظام، الصدر، البطن وغيرها من المناطق مع تقليل جرعة الإشعاع إلى الحد الأدنى.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+          <div class="feature-card">
+            <i class="fas fa-baby-carriage"></i>
+            <h4>الموجات فوق الصوتية</h4>
+            <p>أجهزة موجات فوق صوتية 4D لمتابعة الحمل، تشخيص أمراض البطن، الحوض، الغدة الدرقية والثدي.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h4>تصوير القلب</h4>
+            <p>إيكو القلب، تصوير الأوعية التاجية، فحص الجهد النووي وغيرها من فحوصات القلب المتخصصة.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="feature-card">
+            <i class="fas fa-procedures"></i>
+            <h4>التصوير التداخلي</h4>
+            <p>إجراءات تصويرية تداخلية مثل أخذ العينات، تركيب القساطر وغيرها تحت توجيه الأشعة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radiology Process -->
+  <section class="container py-5">
+    <div class="section-header text-center">
+      <h2>خطوات إجراء الفحوصات</h2>
+      <p class="lead">عملية سهلة وآمنة لضمان راحتكم ودقة النتائج</p>
+    </div>
+    <div class="process-steps">
+      <div class="row">
+        <div class="col-md-6 animate__animated animate__fadeInLeft">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4>الحجز والاستعدادات</h4>
+            <p>حجز موعد مسبق مع تعليمات خاصة لكل فحص (صيام، شرب سوائل، إيقاف أدوية معينة حسب الحاجة).</p>
+          </div>
+        </div>
+        <div class="col-md-6 animate__animated animate__fadeInRight">
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4>الاستقبال والتسجيل</h4>
+            <p>استقبال المريض وتعبئة النماذج اللازمة مع شرح تفصيلي للإجراءات المتبعة وفحص المؤشرات الحيوية.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 animate__animated animate__fadeInLeft">
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4>إجراء الفحص</h4>
+            <p>إجراء الفحص بواسطة فني أشعة متخصص تحت إشراف طبيب، مع مراعاة كافة إجراءات السلامة والراحة.</p>
+          </div>
+        </div>
+        <div class="col-md-6 animate__animated animate__fadeInRight">
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4>استلام النتائج</h4>
+            <p>تحليل الصور من قبل أطباء الأشعة المتخصصين وإصدار تقرير مفصل خلال 24-48 ساعة حسب نوع الفحص.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety Section -->
+  <section class="safety-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>سلامة المرضى أولويتنا</h2>
+        <p class="lead">نلتزم بأعلى معايير السلامة في جميع إجراءات التصوير الطبي</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="safety-card">
+            <i class="fas fa-radiation-alt"></i>
+            <h4>الحد من الإشعاع</h4>
+            <p>نستخدم أحدث التقنيات للحد من جرعات الإشعاع مع الحفاظ على جودة الصور التشخيصية، خاصة للأطفال والحوامل.</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="safety-card">
+            <i class="fas fa-user-shield"></i>
+            <h4>إجراءات الحماية</h4>
+            <p>نوفر أدوات حماية شخصية مثل السترات الواقية من الرصاص ونطبق بروتوكولات صارمة للسلامة الإشعاعية.</p>
+          </div>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="safety-card">
+            <i class="fas fa-allergies"></i>
+            <h4>إدارة المواد الظليلة</h4>
+            <p>فحص الحساسية للمواد الظليلة مسبقاً واستخدام أنواع حديثة آمنة مع مراقبة المريض خلال وبعد الفحص.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Radiology Features -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2>لماذا تختار قسم الأشعة لدينا؟</h2>
+        <p class="lead">نتميز بتقديم خدمة تصوير طبي دقيقة وآمنة</p>
+      </div>
+      <div class="row text-center radiology-benefits gy-5">
+        <div class="col-md-4 animate__animated animate__fadeInUp">
+          <div class="icon-box">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h5>اعتمادات عالمية</h5>
+          <p>قسم الأشعة معتمد من الكلية الأمريكية للأشعة (ACR) وهيئة الاعتماد الدولية (JCI) لضمان الجودة.</p>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="icon-box">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h5>نتائج سريعة</h5>
+          <p>نقدم نتائج الفحوصات العادية خلال 24 ساعة والطارئة خلال ساعتين مع إمكانية استشارة طبية فورية.</p>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="icon-box">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h5>معايير السلامة</h5>
+          <p>نتبع أعلى معايير السلامة الإشعاعية مع مراقبة مستمرة لجرعات الإشعاع وفحص الأجهزة دورياً.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section py-5">
+    <div class="container">
+      <div class="row align-items-center animate__animated animate__fadeIn">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2 class="mb-3">هل تحتاج إلى فحص أشعة أو تصوير طبي؟</h2>
+          <p class="lead mb-0">احجز موعدك الآن للحصول على تشخيص دقيق من خلال أحدث تقنيات التصوير الطبي.</p>
+        </div>
+        <div class="col-lg-4 text-lg-start">
+          <a href="appointment.html" class="btn btn-light btn-lg px-4">حجز موعد <i class="fas fa-arrow-left ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container py-5">
+    <div class="section-header text-center">
+      <h2>أسئلة شائعة</h2>
+      <p class="lead">إجابات على أكثر الأسئلة شيوعاً حول الفحوصات الإشعاعية</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item animate__animated animate__fadeInUp">
+            <h3 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                هل الأشعة المقطعية آمنة للحامل؟
+              </button>
+            </h3>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                يفضل تجنب الأشعة المقطعية أثناء الحمل إلا في حالات الضرورة القصوى وبعد استشارة طبيب الأشعة والطبيب المعالج. لدينا بدائل آمنة مثل الموجات فوق الصوتية والرنين المغناطيسي (بدون إشعاع).
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item animate__animated animate__fadeInUp">
+            <h3 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                كم من الوقت يستغرق فحص الرنين المغناطيسي؟
+              </button>
+            </h3>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                تختلف مدة الفحص حسب المنطقة المراد تصويرها، عادةً ما بين 20-60 دقيقة. بعض الفحوصات المتخصصة قد تستغرق وقتاً أطول. سيتم إعلامكم بالمدة التقريبية عند الحجز.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item animate__animated animate__fadeInUp">
+            <h3 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                هل يمكن إجراء الرنين المغناطيسي لمرضى الكلستروفوبيا (رهاب الأماكن المغلقة)؟
+              </button>
+            </h3>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                نعم، لدينا أجهزة رنين مغناطيسي مفتوحة الجوانب تناسب مرضى الكلستروفوبيا. كما يمكن وصف مهدئات خفيفة قبل الفحص بعد استشارة الطبيب المعالج.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="FAQs.html" class="btn btn-outline-primary">المزيد من الأسئلة الشائعة</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -573,27 +1021,44 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
     
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Back to top button functionality
-            const backToTopButton = document.querySelector('.back-to-top');
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('active');
-                } else {
-                    backToTopButton.classList.remove('active');
-                }
-            });
-            
-            backToTopButton.addEventListener('click', (e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-    </script>
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
+    // Animation on scroll
+    const animateElements = document.querySelectorAll('.animate__animated');
+    
+    const animateOnScroll = () => {
+      animateElements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          const animationClass = element.classList[1];
+          element.classList.add(animationClass);
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+  </script>
 </body>
 </html>

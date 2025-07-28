@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="مختبر التحاليل الطبية في مركز ميديكير يقدم كافة أنواع التحاليل بدقة وكفاءة عالية باستخدام أحدث التقنيات.">
-  <title>قسم المختبر | مركز ميديكير</title>
+  <meta name="description" content="قسم الإسعاف في مركز ميديكير يوفر فريق إسعاف مدرب وسيارات إسعاف مجهزة بالكامل للتعامل مع الحالات الطارئة ونقل المرضى بأمان.">
+  <title>قسم الإسعاف | مركز ميديكير</title>
 
  <!-- Bootstrap CSS RTL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
@@ -22,8 +22,8 @@
   <style>
    
 
-     .lab-hero {
-    background: url('images/lab hero.jpg') center/cover no-repeat;
+     .ambulance-hero {
+    background: url('images/Ambulance.jpg') center/cover no-repeat;
     height: 60vh;
     min-height: 450px;
     position: relative;
@@ -78,37 +78,18 @@
     margin-top: 30px;
   }
   
-  .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
-    flex-wrap: wrap;
-  }
-  
-  .stat-item {
-    text-align: center;
-    background: rgba(255,255,255,0.15);
-    backdrop-filter: blur(5px);
-    padding: 20px 30px;
-    border-radius: 10px;
-    min-width: 120px;
-    border: 1px solid rgba(255,255,255,0.2);
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
+  .emergency-number {
+    background-color: #d9534f;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
     font-weight: 700;
-    margin-bottom: 5px;
-  }
-  
-  .stat-number span {
-    font-size: 1rem;
-  }
-  
-  .stat-label {
-    font-size: 1rem;
-    opacity: 0.9;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(217, 83, 79, 0.3);
   }
   
   @media (max-width: 992px) {
@@ -125,18 +106,14 @@
       align-items: center;
     }
     
-    .hero-stats {
-      gap: 20px;
-    }
-    
-    .stat-item {
-      padding: 15px 20px;
-      min-width: 100px;
+    .emergency-number {
+      font-size: 1.3rem;
+      padding: 12px 20px;
     }
   }
   
   @media (max-width: 768px) {
-    .lab-hero {
+    .ambulance-hero {
       height: auto;
       padding: 100px 0;
     }
@@ -147,10 +124,6 @@
     
     .hero-subtitle {
       font-size: 1.1rem;
-    }
-    
-    .stat-number {
-      font-size: 2rem;
     }
   }
 
@@ -180,11 +153,11 @@
       border-radius: 2px;
     }
 
-    .lab-benefits {
+    .ambulance-benefits {
       transition: all 0.3s ease;
     }
 
-    .lab-benefits .icon-box {
+    .ambulance-benefits .icon-box {
       width: 80px;
       height: 80px;
       background: rgba(42,127,186,0.1);
@@ -195,18 +168,18 @@
       margin: 0 auto 20px;
     }
 
-    .lab-benefits i {
+    .ambulance-benefits i {
       font-size: 2.5rem;
       color: var(--primary-color);
     }
 
-    .lab-benefits h5 {
+    .ambulance-benefits h5 {
       font-weight: 600;
       margin-bottom: 15px;
       color: var(--dark-color);
     }
 
-    .lab-benefits p {
+    .ambulance-benefits p {
       font-weight: 400;
       color: #555;
     }
@@ -273,25 +246,25 @@
     opacity: 1;
   }
   
-  .lab-image-container {
+  .ambulance-image-container {
     position: relative;
     height: 100%;
   }
   
-  .main-lab-image {
+  .main-ambulance-image {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     height: 400px;
   }
   
-  .main-lab-image img {
+  .main-ambulance-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .secondary-lab-images {
+  .secondary-ambulance-images {
     position: absolute;
     bottom: -30px;
     left: -30px;
@@ -300,7 +273,7 @@
     z-index: 2;
   }
   
-  .small-lab-image {
+  .small-ambulance-image {
     width: 120px;
     height: 120px;
     border-radius: 8px;
@@ -309,7 +282,7 @@
     border: 3px solid white;
   }
   
-  .small-lab-image img {
+  .small-ambulance-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -347,7 +320,7 @@
   }
   
   @media (max-width: 992px) {
-    .secondary-lab-images {
+    .secondary-ambulance-images {
       left: 0;
     }
     
@@ -357,11 +330,11 @@
   }
   
   @media (max-width: 768px) {
-    .main-lab-image {
+    .main-ambulance-image {
       height: 300px;
     }
     
-    .small-lab-image {
+    .small-ambulance-image {
       width: 80px;
       height: 80px;
     }
@@ -486,12 +459,60 @@
         color: var(--primary-color);
     }
 
+    /* Equipment List */
+    .equipment-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .equipment-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .equipment-list i {
+      color: var(--primary-color);
+    }
+    
+    /* Emergency Box */
+    .emergency-box {
+      background-color: #d9534f;
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(217, 83, 79, 0.3);
+    }
+    
+    .emergency-box i {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+    .emergency-box h3 {
+      margin-bottom: 15px;
+    }
+    
+    .emergency-box .btn {
+      background-color: white;
+      color: #d9534f;
+      font-weight: 600;
+      margin-top: 15px;
+    }
+    
+    .emergency-box .btn:hover {
+      background-color: #f8f9fa;
+    }
+
     @media (max-width: 768px) {
-      .lab-hero {
+      .ambulance-hero {
         padding: 100px 0;
       }
       
-      .lab-hero h1 {
+      .ambulance-hero h1 {
         font-size: 2.5rem;
       }
       
@@ -574,43 +595,47 @@
 
 
 <!-- Hero Section -->
-<section class="lab-hero">
+<section class="ambulance-hero">
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
-        <h1 class="hero-title">قسم المختبر والتحاليل الطبية</h1>
-        <p class="hero-subtitle">تحاليل دقيقة باستخدام أحدث التقنيات العالمية</p>
+        <h1 class="hero-title">خدمات الإسعاف والطوارئ</h1>
+        <p class="hero-subtitle">استجابة سريعة على مدار الساعة لنقل الحالات الطارئة بأمان وكفاءة</p>
         <div class="hero-cta">
           <a href="#services" class="btn btn-primary btn-lg">اكتشف خدماتنا</a>
           <a href="appointment.html" class="btn btn-outline-light btn-lg">حجز موعد</a>
         </div>
+        <div class="emergency-number animate__animated animate__pulse animate__infinite">
+          <i class="fas fa-phone-alt"></i>
+          <span>الطوارئ: 1234567890</span>
+        </div>
       </div>
-   
+     
     </div>
   </div>
   <div class="hero-overlay"></div>
 </section>
 
-<!-- About Lab Section -->
+<!-- About Ambulance Section -->
 <section class="container py-5">
   <div class="row align-items-center">
     <div class="col-lg-6 mb-4 mb-lg-0">
       <div class="section-header">
-        <h2>مركز التميز في التحاليل الطبية</h2>
+        <h2>خدمات الإسعاف على مدار الساعة</h2>
       </div>
       <div class="about-content">
         <p class="lead mb-4">
-          مختبر مركز ميديكير يعد منشأة طبية متكاملة تقدم حلولاً تشخيصية دقيقة باستخدام أحدث ما توصلت إليه التكنولوجيا الطبية العالمية.
+          يقدم قسم الإسعاف في مركز ميديكير خدمات طوارئ طبية متكاملة على مدار 24 ساعة، مع فريق إسعاف مدرب ومركبات مجهزة بأحدث التقنيات الطبية لنقل المرضى بأمان وسرعة.
         </p>
         
         <div class="about-features">
           <div class="feature-item">
             <div class="feature-icon">
-              <i class="fas fa-microscope"></i>
+              <i class="fas fa-ambulance"></i>
             </div>
             <div class="feature-text">
-              <h5>تقنيات متطورة</h5>
-              <p>أجهزة تحليل آلية متكاملة من شركات رائدة مثل Roche و Siemens و Abbott</p>
+              <h5>سيارات إسعاف حديثة</h5>
+              <p>أسطول من سيارات الإسعاف المجهزة بأحدث الأجهزة الطبية والمعدات اللازمة</p>
             </div>
           </div>
           
@@ -619,18 +644,18 @@
               <i class="fas fa-user-md"></i>
             </div>
             <div class="feature-text">
-              <h5>كفاءات طبية</h5>
-              <p>فريق من الأخصائيين المعتمدين دولياً مع خبرات تصل إلى 15 عاماً في التشخيص المخبري</p>
+              <h5>فريق إسعاف متخصص</h5>
+              <p>فنيو إسعاف معتمدون ومدربون على التعامل مع جميع أنواع الحالات الطارئة</p>
             </div>
           </div>
           
           <div class="feature-item">
             <div class="feature-icon">
-              <i class="fas fa-shield-alt"></i>
+              <i class="fas fa-stopwatch"></i>
             </div>
             <div class="feature-text">
-              <h5>نظام الجودة</h5>
-              <p>نلتزم بمعايير ISO 15189 و CAP مع ضوابط جودة صارمة لكل مرحلة تحليلية</p>
+              <h5>استجابة سريعة</h5>
+              <p>متوسط وقت الوصول أقل من 15 دقيقة في حالات الطوارئ داخل المدينة</p>
             </div>
           </div>
         </div>
@@ -638,30 +663,30 @@
         <div class="certifications mt-4">
           <h6 class="mb-3">شهادات الاعتماد:</h6>
           <div class="d-flex flex-wrap gap-3">
-            <img src="images/ISO.png" alt="ISO Certification" class="cert-img">
-            <img src="images/CAPNEW.jpg" alt="CAP Certification" class="cert-img">
+            <img src="images/ISO.png" alt="NAEMT Certification" class="cert-img">
             <img src="images/JCI Accreditation Certificate.jpeg" alt="JCI Certification" class="cert-img">
+            <img src="images/CAP.png" alt="EMS Certification" class="cert-img">
           </div>
         </div>
       </div>
     </div>
     
     <div class="col-lg-6">
-      <div class="lab-image-container">
-        <div class="main-lab-image">
-          <img src="images/blood.jpeg" alt="مختبر التحاليل الطبية" class="img-fluid rounded-3">
+      <div class="ambulance-image-container">
+        <div class="main-ambulance-image">
+          <img src="images/Ambulance1.jpeg" alt="سيارة إسعاف مجهزة" class="img-fluid rounded-3">
         </div>
-        <div class="secondary-lab-images">
-          <div class="small-lab-image">
-            <img src="images/blood1.jpg" alt="أجهزة المختبر" class="img-fluid rounded-2">
+        <div class="secondary-ambulance-images">
+          <div class="small-ambulance-image">
+            <img src="images/Ambulance2.jpeg" alt="فريق الإسعاف" class="img-fluid rounded-2">
           </div>
-          <div class="small-lab-image">
-            <img src="images/lab.jpg" alt="فريق المختبر" class="img-fluid rounded-2">
+          <div class="small-ambulance-image">
+            <img src="images/Ambulance3.jpeg" alt="معدات الإسعاف" class="img-fluid rounded-2">
           </div>
         </div>
         <div class="experience-badge">
           <div class="badge-content">
-            <span class="years">+15</span>
+            <span class="years">+20</span>
             <span class="text">سنة خبرة</span>
           </div>
         </div>
@@ -671,80 +696,124 @@
 </section>
 
 
-  <!-- Lab Services -->
+  <!-- Ambulance Services -->
   <section id="services" class="py-5 bg-light">
     <div class="container">
       <div class="section-header text-center">
-        <h2>خدمات التحاليل</h2>
-        <p class="lead">نقدم مجموعة شاملة من التحاليل الطبية الدقيقة باستخدام أحدث التقنيات</p>
+        <h2>خدمات الإسعاف والطوارئ</h2>
+        <p class="lead">نقدم مجموعة متكاملة من خدمات الطوارئ الطبية والنقل الآمن للمرضى</p>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
           <div class="feature-card">
-            <i class="fas fa-vial"></i>
-            <h4>تحاليل الدم</h4>
-            <p>تحاليل الدم الشاملة CBC، وظائف الكبد والكلى، السكر، الدهون، أنيميا، تخثر الدم وغيرها من التحاليل الأساسية.</p>
+            <i class="fas fa-heartbeat"></i>
+            <h4>الإسعافات الأولية</h4>
+            <p>تقديم الإسعافات الأولية الفورية في مكان الحادث قبل نقل المريض إلى المستشفى.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
           <div class="feature-card">
-            <i class="fas fa-dna"></i>
-            <h4>التحاليل الجينية</h4>
-            <p>تحاليل الهرمونات، الفيتامينات، التوازن الغذائي، التحاليل الجينية والوراثية المتقدمة.</p>
+            <i class="fas fa-procedures"></i>
+            <h4>نقل المرضى</h4>
+            <p>نقل المرضى بين المنازل والمستشفيات والعيادات بسيارات إسعاف مجهزة.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
           <div class="feature-card">
-            <i class="fas fa-virus"></i>
-            <h4>الأمراض المعدية</h4>
-            <p>تحاليل الفيروسات والأمراض المعدية، تحاليل المناعة، PCR، الأجسام المضادة والتحاليل المتعلقة بالأوبئة.</p>
+            <i class="fas fa-user-injured"></i>
+            <h4>حالات الطوارئ</h4>
+            <p>استجابة فورية لحالات الطوارئ مثل الحوادث والنوبات القلبية والسكتات الدماغية.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
           <div class="feature-card">
             <i class="fas fa-baby"></i>
-            <h4>تحاليل النساء والتوليد</h4>
-            <p>تحاليل ما قبل الزواج، الحمل، الأجنة، الهرمونات النسائية، متابعة الحمل وغيرها من التحاليل المتخصصة.</p>
+            <h4>نقل حديثي الولادة</h4>
+            <p>وحدات إسعاف مجهزة خصيصاً لنقل حديثي الولادة والرضع بحالات حرجة.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-1s">
           <div class="feature-card">
-            <i class="fas fa-user-shield"></i>
-            <h4>تحاليل ما قبل العمليات</h4>
-            <p>تحاليل ما قبل العمليات الجراحية، الفحوصات الدورية، تحاليل المسح الشامل والكشف المبكر عن الأمراض.</p>
+            <i class="fas fa-wheelchair"></i>
+            <h4>نقل كبار السن</h4>
+            <p>خدمات نقل آمنة ومريحة لكبار السن وذوي الاحتياجات الخاصة.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp animate__delay-2s">
           <div class="feature-card">
-            <i class="fas fa-microscope"></i>
-            <h4>تحاليل الأنسجة</h4>
-            <p>تحاليل البول والبراز، تحاليل الأنسجة والخلايا، المسحات، الزراعات البكتيرية والفحوصات المجهرية.</p>
+            <i class="fas fa-plane"></i>
+            <h4>الإسعاف الجوي</h4>
+            <p>تنسيق عمليات الإسعاف الجوي للحالات الحرجة التي تحتاج نقل سريع لمراكز متخصصة.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Lab Process -->
+  <!-- Ambulance Equipment -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-header">
+          <h2>معدات وأجهزة الإسعاف</h2>
+        </div>
+        <p class="lead mb-4">سيارات الإسعاف لدينا مجهزة بأحدث المعدات الطبية لتقديم الرعاية أثناء النقل:</p>
+        
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="equipment-list">
+              <li><i class="fas fa-check-circle"></i> أجهزة إنعاش قلبية</li>
+              <li><i class="fas fa-check-circle"></i> أجهزة تنفس صناعي</li>
+              <li><i class="fas fa-check-circle"></i> أجهزة مراقبة العلامات الحيوية</li>
+              <li><i class="fas fa-check-circle"></i> مضخات الأدوية</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="equipment-list">
+              <li><i class="fas fa-check-circle"></i> أكسجين طبي</li>
+              <li><i class="fas fa-check-circle"></i> أدوات جراحية طارئة</li>
+              <li><i class="fas fa-check-circle"></i> أدوية الطوارئ</li>
+              <li><i class="fas fa-check-circle"></i> أجهزة شفط</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="emergency-box animate__animated animate__pulse">
+          <i class="fas fa-ambulance"></i>
+          <h3>حالة طارئة؟</h3>
+          <p>اتصل بنا على الفور وسيصل فريق الإسعاف إليك في أسرع وقت ممكن</p>
+          <div class="emergency-number-large">
+            <i class="fas fa-phone-alt"></i>
+            <span>1234567890</span>
+          </div>
+          <a href="tel:1234567890" class="btn btn-light">اتصل الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambulance Process -->
   <section class="container py-5">
     <div class="section-header text-center">
-      <h2>خطوات إجراء التحاليل</h2>
-      <p class="lead">عملية سهلة وسريعة لضمان راحتكم ودقة النتائج</p>
+      <h2>خطوات استجابة الإسعاف</h2>
+      <p class="lead">إجراءات سريعة ومنظمة لضمان أفضل رعاية طارئة</p>
     </div>
     <div class="process-steps">
       <div class="row">
         <div class="col-md-6 animate__animated animate__fadeInLeft">
           <div class="step">
             <div class="step-number">1</div>
-            <h4>الحجز والاستقبال</h4>
-            <p>يمكنكم الحجز مسبقاً عبر الموقع أو الهاتف، أو الحضور مباشرة لقسم المختبر حيث يتم استقبالكم من قبل فريق متخصص.</p>
+            <h4>استقبال البلاغ</h4>
+            <p>استقبال معلومات الحالة الطارئة عبر الهاتف وتحديد الأولوية والموقع.</p>
           </div>
         </div>
         <div class="col-md-6 animate__animated animate__fadeInRight">
           <div class="step">
             <div class="step-number">2</div>
-            <h4>سحب العينات</h4>
-            <p>يقوم فنيو المختبر المؤهلون بسحب العينات باستخدام أحدث التقنيات وأعلى معايير السلامة والنظافة.</p>
+            <h4>إرسال الفريق</h4>
+            <p>إرسال أقرب سيارة إسعاف مجهزة بالفريق الطبي حسب نوع الحالة.</p>
           </div>
         </div>
       </div>
@@ -752,49 +821,49 @@
         <div class="col-md-6 animate__animated animate__fadeInLeft">
           <div class="step">
             <div class="step-number">3</div>
-            <h4>تحليل العينات</h4>
-            <p>يتم تحليل العينات باستخدام أجهزة متطورة معتمدة عالمياً، بإشراف أخصائيي تحاليل ذوي خبرة عالية.</p>
+            <h4>التقييم المبدئي</h4>
+            <p>تقييم حالة المريض وتقديم الإسعافات الأولية اللازمة في مكان الحادث.</p>
           </div>
         </div>
         <div class="col-md-6 animate__animated animate__fadeInRight">
           <div class="step">
             <div class="step-number">4</div>
-            <h4>استلام النتائج</h4>
-            <p>تحصلون على نتائج التحاليل خلال وقت قياسي، إما شخصياً أو عبر البريد الإلكتروني بشكل سري وآمن.</p>
+            <h4>النقل الآمن</h4>
+            <p>تثبيت حالة المريض ونقله بأمان إلى المستشفى المناسب مع استمرار الرعاية أثناء النقل.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Lab Features -->
+  <!-- Ambulance Features -->
   <section class="bg-light py-5">
     <div class="container">
       <div class="section-header text-center">
-        <h2>لماذا تختار مختبرنا؟</h2>
-        <p class="lead">نتميز بتقديم خدمة تحاليل طبية دقيقة وموثوقة</p>
+        <h2>لماذا تختار خدمات الإسعاف لدينا؟</h2>
+        <p class="lead">نتميز بتقديم خدمات إسعاف سريعة وفعالة وفق أعلى المعايير</p>
       </div>
-      <div class="row text-center lab-benefits gy-5">
+      <div class="row text-center ambulance-benefits gy-5">
         <div class="col-md-4 animate__animated animate__fadeInUp">
-          <div class="icon-box">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h5>اعتمادات عالمية</h5>
-          <p>مختبرنا معتمد من أهم الهيئات الصحية المحلية والدولية، مما يضمن جودة ودقة النتائج.</p>
-        </div>
-        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
           <div class="icon-box">
             <i class="fas fa-clock"></i>
           </div>
-          <h5>نتائج سريعة</h5>
-          <p>نقدم نتائج التحاليل الأساسية خلال ساعات، والتحاليل المتخصصة خلال 24-48 ساعة كحد أقصى.</p>
+          <h5>استجابة سريعة</h5>
+          <p>متوسط وقت الوصول أقل من 15 دقيقة في المناطق الحضرية</p>
+        </div>
+        <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="icon-box">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h5>فريق مدرب</h5>
+          <p>فنيو إسعاف معتمدون وذوي خبرة في التعامل مع الحالات الحرجة</p>
         </div>
         <div class="col-md-4 animate__animated animate__fadeInUp animate__delay-2s">
           <div class="icon-box">
-            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-ambulance"></i>
           </div>
-          <h5>معايير السلامة</h5>
-          <p>نتبع أعلى معايير السلامة والنظافة في التعامل مع العينات والتخلص الآمن من النفايات الطبية.</p>
+          <h5>مركبات مجهزة</h5>
+          <p>أسطول حديث من سيارات الإسعاف المجهزة بأحدث التقنيات الطبية</p>
         </div>
       </div>
     </div>
@@ -805,11 +874,11 @@
     <div class="container">
       <div class="row align-items-center animate__animated animate__fadeIn">
         <div class="col-lg-8 mb-4 mb-lg-0">
-          <h2 class="mb-3">هل أنت مستعد لإجراء التحاليل الطبية؟</h2>
-          <p class="lead mb-0">احجز موعدك الآن للحصول على نتائج دقيقة وسريعة من مختبرنا المتطور.</p>
+          <h2 class="mb-3">هل تحتاج إلى خدمة نقل طبي غير طارئة؟</h2>
+          <p class="lead mb-0">يمكنك حجز خدمة نقل المريض مسبقاً لضمان توفر سيارة إسعاف في الوقت المطلوب.</p>
         </div>
         <div class="col-lg-4 text-lg-start">
-          <a href="appointment.html" class="btn btn-light btn-lg px-4">حجز موعد <i class="fas fa-arrow-left ms-2"></i></a>
+          <a href="contact.html" class="btn btn-light btn-lg px-4">اتصل بنا <i class="fas fa-arrow-left ms-2"></i></a>
         </div>
       </div>
     </div>
@@ -819,7 +888,7 @@
   <section class="container py-5">
     <div class="section-header text-center">
       <h2>أسئلة شائعة</h2>
-      <p class="lead">إجابات على أكثر الأسئلة شيوعاً حول التحاليل الطبية</p>
+      <p class="lead">إجابات على أكثر الأسئلة شيوعاً حول خدمات الإسعاف</p>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -827,36 +896,36 @@
           <div class="accordion-item animate__animated animate__fadeInUp">
             <h3 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                هل أحتاج إلى صيام قبل إجراء تحاليل الدم؟
+                ما هي الحالات التي تستدعي طلب الإسعاف؟
               </button>
             </h3>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                بعض تحاليل الدم تتطلب الصيام لمدة 8-12 ساعة قبل أخذ العينة (مثل تحاليل السكر والكوليسترول). سيتم إعلامكم عند الحجز إذا كانت التحاليل المطلوبة تحتاج إلى صيام.
+                يجب طلب الإسعاف فوراً في الحالات التالية: النوبات القلبية، صعوبة التنفس الشديدة، الإصابات الخطيرة في الحوادث، الحروق الكبيرة، النزيف الشديد، فقدان الوعي، السكتة الدماغية، حالات التسمم، الولادة الطارئة، وأي حالة تهدد الحياة أو تحتاج إلى رعاية طبية فورية أثناء النقل.
               </div>
             </div>
           </div>
           <div class="accordion-item animate__animated animate__fadeInUp">
             <h3 class="accordion-header" id="headingTwo">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                كم من الوقت تستغرق نتائج التحاليل؟
+                هل يمكن طلب سيارة إسعاف لنقل غير الطوارئ؟
               </button>
             </h3>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                تختلف مدة ظهور النتائج حسب نوع التحليل. التحاليل الروتينية تظهر خلال 24 ساعة، بينما قد تحتاج بعض التحاليل المتخصصة إلى 3-5 أيام. يمكنكم استلام النتائج عبر البريد الإلكتروني أو شخصياً في المركز.
+                نعم، نوفر خدمة نقل المرضى غير الطارئة للمواعيد الطبية أو النقل بين المستشفيات. يمكن حجز هذه الخدمة مسبقاً عبر الهاتف، مع توفير سيارات إسعاف مجهزة تجهيزاً كاملاً وفريق إسعاف مؤهل لضمان راحة وأمان المريض أثناء النقل.
               </div>
             </div>
           </div>
           <div class="accordion-item animate__animated animate__fadeInUp">
             <h3 class="accordion-header" id="headingThree">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                هل يمكنني الحصول على نسخة من نتائج تحاليل سابقة؟
+                ما هي مناطق التغطية لخدمات الإسعاف لديكم؟
               </button>
             </h3>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                نعم، نحتفظ بسجلات التحاليل لمدة 5 سنوات. يمكنكم طلب نسخة من النتائج السابقة عن طريق زيارة المركز أو عبر البريد الإلكتروني مع تقديم معلومات الهوية.
+                نغطي كافة مناطق المدينة الرئيسية والضواحي القريبة بخدمة الإسعاف السريع. كما نقدم خدمة النقل لمسافات طويلة بين المدن بترتيب مسبق. خارج مناطق التغطية العادية، قد يتم تطبيق رسوم إضافية حسب المسافة والوقت المطلوب.
               </div>
             </div>
           </div>
@@ -868,7 +937,7 @@
     </div>
   </section>
 
-    <!-- Footer -->
+     <!-- Footer -->
     <footer class="footer">
         <div class="footer-main">
             <div class="container">
