@@ -1,0 +1,117 @@
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .appointment-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-header {
+            margin-bottom: 30px;
+            text-align: right;
+        }
+        
+        .section-header .subtitle {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #0d6efd;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2a2a2a;
+        }
+        
+        .section-header .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #0d6efd;
+            margin: 15px 0 15px auto;
+        }
+        
+        .section-header p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .appointment-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .form-control, .form-select {
+            height: 50px;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+        }
+        
+        textarea.form-control {
+            height: auto !important;
+            min-height: 120px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+        
+        .info-card h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2a2a2a;
+        }
+        
+        .info-card h3 i {
+            color: #0d6efd;
+            margin-left: 10px;
+        }
+        
+        .info-card ul {
+            padding-right: 20px;
+        }
+        
+        .info-card ul li {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 991.98px) {
+            .appointment-section {
+                padding: 60px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .appointment-section {
+                padding: 40px 0;
+            }
+            
+            .section-header {
+                text-align: center;
+            }
+            
+            .section-header .divider {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }

@@ -181,6 +181,10 @@ namespace HeathCare.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Availability")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Bio")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -200,11 +204,49 @@ namespace HeathCare.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("WorkingDays")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WorkingHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("Doctors");
+                });
+
+            modelBuilder.Entity("HeathCare.Models.DoctorAvailability", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DoctorId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DoctorId");
+
+                    b.ToTable("DoctorAvailabilities");
                 });
 
             modelBuilder.Entity("HeathCare.Models.HeathCare.Models.ApplicationUser", b =>
@@ -597,6 +639,17 @@ namespace HeathCare.Migrations
                     b.Navigation("Department");
                 });
 
+            modelBuilder.Entity("HeathCare.Models.DoctorAvailability", b =>
+                {
+                    b.HasOne("HeathCare.Models.Doctor", "Doctor")
+                        .WithMany("Availabilities")
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+                });
+
             modelBuilder.Entity("HeathCare.Models.JobApplication", b =>
                 {
                     b.HasOne("HeathCare.Models.Career", "Career")
@@ -683,6 +736,8 @@ namespace HeathCare.Migrations
 
             modelBuilder.Entity("HeathCare.Models.Doctor", b =>
                 {
+                    b.Navigation("Availabilities");
+
                     b.Navigation("Reviews");
                 });
 

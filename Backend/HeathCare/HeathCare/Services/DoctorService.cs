@@ -46,21 +46,7 @@ namespace HeathCare.Services
                 {
                     try
                     {
-                        var uploadsFolder = Path.Combine(_environment.WebRootPath, "uploads", "doctors");
-                        if (!Directory.Exists(uploadsFolder))
-                        {
-                            Directory.CreateDirectory(uploadsFolder);
-                        }
-
-                        var uniqueFileName = $"{Guid.NewGuid()}_{doctorDto.ImageFile.FileName}";
-                        var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await doctorDto.ImageFile.CopyToAsync(stream);
-                        }
-
-                        imagePath = $"/uploads/doctors/{uniqueFileName}";
+                        imagePath = await _fileService.SaveImageAsync(doctorDto.ImageFile, "doctors");
                     }
                     catch (Exception ex)
                     {
@@ -75,11 +61,33 @@ namespace HeathCare.Services
                     Specialty = doctorDto.Specialty,
                     Bio = doctorDto.Bio,
                     ImagePath = imagePath,
-                    DepartmentId = doctorDto.DepartmentId
+                    DepartmentId = doctorDto.DepartmentId,
+                    WorkingDays = doctorDto.WorkingDays,
+                    Availability = doctorDto.Availability,
+                    WorkingHours = doctorDto.WorkingHours
                 };
 
                 _context.Doctors.Add(doctor);
                 await _context.SaveChangesAsync();
+
+                // Add availabilities
+                if (doctorDto.Availabilities != null && doctorDto.Availabilities.Any())
+                {
+                    foreach (var availabilityDto in doctorDto.Availabilities)
+                    {
+                        var availability = new DoctorAvailability
+                        {
+                            DoctorId = doctor.Id,
+                            // Convert int to DayOfWeek enum
+                            DayOfWeek = (DayOfWeek)availabilityDto.DayOfWeek,
+                            StartTime = TimeSpan.Parse(availabilityDto.StartTime),
+                            EndTime = TimeSpan.Parse(availabilityDto.EndTime),
+                            IsAvailable = availabilityDto.IsAvailable
+                        };
+                        _context.DoctorAvailabilities.Add(availability);
+                    }
+                    await _context.SaveChangesAsync();
+                }
 
                 // Load department name for the DTO
                 await _context.Entry(doctor)
@@ -94,6 +102,8 @@ namespace HeathCare.Services
                 throw;
             }
         }
+
+
 
 
         public async Task UpdateDoctorAsync(int id, DoctorUpdateDTO doctorDto)
@@ -134,19 +144,19 @@ namespace HeathCare.Services
 
         // Services/DoctorService.cs
         // Services/DoctorService.cs
+        // In DoctorService.cs
+        // In DoctorService.cs
         public async Task<DoctorDTO> GetDoctorByIdAsync(int id)
         {
             var doctor = await _context.Doctors
                 .Include(d => d.Department)
-                .Include(d => d.Reviews) // Include reviews
+                .Include(d => d.Reviews)
+                .Include(d => d.Availabilities) // Add this line
                 .FirstOrDefaultAsync(d => d.Id == id);
 
             if (doctor == null) return null;
 
-            var doctorDTO = _mapper.Map<DoctorDTO>(doctor);
-
-            // These will be automatically mapped from the calculated properties
-            return doctorDTO;
+            return _mapper.Map<DoctorDTO>(doctor);
         }
 
         public async Task<IEnumerable<DoctorDTO>> GetAllDoctorsAsync()
@@ -154,10 +164,12 @@ namespace HeathCare.Services
             var doctors = await _context.Doctors
                 .Include(d => d.Department)
                 .Include(d => d.Reviews)
+                .Include(d => d.Availabilities) // Add this line
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<DoctorDTO>>(doctors);
         }
+
 
     }
 

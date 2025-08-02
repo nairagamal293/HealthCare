@@ -641,6 +641,31 @@
         "Name": "DepartmentId",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "WorkingDays",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Availability",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WorkingHours",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvailabilitiesJson",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Availabilities",
+        "Type": "System.Collections.Generic.List\u00601[[HeathCare.DTOs.DoctorAvailabilityCreateDTO, HeathCare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -654,6 +679,142 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.DoctorAvailabilitiesController",
+    "Method": "GetAvailabilities",
+    "RelativePath": "api/doctors/{doctorId}/DoctorAvailabilities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HeathCare.DTOs.DoctorAvailabilityDTO, HeathCare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.DoctorAvailabilitiesController",
+    "Method": "CreateAvailability",
+    "RelativePath": "api/doctors/{doctorId}/DoctorAvailabilities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "availabilityDto",
+        "Type": "HeathCare.DTOs.DoctorAvailabilityCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HeathCare.DTOs.DoctorAvailabilityDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.DoctorAvailabilitiesController",
+    "Method": "GetAvailability",
+    "RelativePath": "api/doctors/{doctorId}/DoctorAvailabilities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HeathCare.DTOs.DoctorAvailabilityDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetAvailability"
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.DoctorAvailabilitiesController",
+    "Method": "UpdateAvailability",
+    "RelativePath": "api/doctors/{doctorId}/DoctorAvailabilities/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "availabilityDto",
+        "Type": "HeathCare.DTOs.DoctorAvailabilityCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.DoctorAvailabilitiesController",
+    "Method": "DeleteAvailability",
+    "RelativePath": "api/doctors/{doctorId}/DoctorAvailabilities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doctorId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "HeathCare.Controllers.DoctorsController",
@@ -722,6 +883,26 @@
       {
         "Name": "DepartmentId",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Availability",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WorkingDays",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "WorkingHours",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AvailabilitiesJson",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

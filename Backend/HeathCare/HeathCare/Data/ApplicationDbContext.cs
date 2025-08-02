@@ -22,6 +22,7 @@ namespace HealthCare.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Career> Careers { get; set; }
         public DbSet<JobApplication> JobApplications { get; set; }
+        public DbSet<DoctorAvailability> DoctorAvailabilities { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -57,6 +58,13 @@ namespace HealthCare.Data
                 .WithMany()
                 .HasForeignKey(j => j.CareerId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Doctor-Availability relationship
+            modelBuilder.Entity<Doctor>()
+                .HasMany(d => d.Availabilities)
+                .WithOne(da => da.Doctor)
+                .HasForeignKey(da => da.DoctorId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Seed initial data with ImagePath
             modelBuilder.Entity<Department>().HasData(

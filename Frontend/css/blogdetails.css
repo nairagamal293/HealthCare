@@ -1,3 +1,4 @@
+    
 
         /* ONLY STYLE THE BLOG CONTENT SECTION */
         .blog-content-section {
@@ -11,7 +12,7 @@
             --border-radius: 8px;
             --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Tajawal', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
         }
@@ -46,7 +47,7 @@
         .blog-content-section ul,
         .blog-content-section ol {
             margin-bottom: 1.5em;
-            padding-left: 1.5em;
+            padding-right: 1.5em;
         }
 
         .blog-content-section li {
@@ -62,8 +63,8 @@
         }
 
         .blog-content-section blockquote {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 1em;
+            border-right: 4px solid var(--primary-color);
+            padding-right: 1em;
             margin: 1.5em 0;
             font-style: italic;
             color: var(--text-light);
@@ -79,7 +80,7 @@
         }
 
         .blog-content-section .post-meta i {
-            margin-right: 0.5em;
+            margin-left: 0.5em;
             color: var(--primary-color);
         }
 
@@ -93,7 +94,7 @@
             color: var(--text-color);
             padding: 0.3em 0.8em;
             border-radius: 20px;
-            margin-right: 0.5em;
+            margin-left: 0.5em;
             margin-bottom: 0.5em;
             font-size: 0.8em;
             text-decoration: none;
@@ -160,7 +161,7 @@
         }
         
         .blog-details .post-meta i {
-            margin-right: 8px;
+            margin-left: 8px;
             color: var(--primary-color);
         }
         
@@ -202,7 +203,7 @@
         .blog-details .post-content ul,
         .blog-details .post-content ol {
             margin-bottom: 20px;
-            padding-left: 20px;
+            padding-right: 20px;
         }
         
         .blog-details .post-content li {
@@ -363,7 +364,7 @@
         .blog-comments .comments-title::after {
             content: '';
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: 0;
             width: 60px;
             height: 3px;
@@ -400,7 +401,7 @@
         
         /* Sidebar */
         .blog-sidebar {
-            padding-left: 30px;
+            padding-right: 30px;
         }
         
         .sidebar-widget {
@@ -423,7 +424,7 @@
         .widget-title::after {
             content: '';
             position: absolute;
-            left: 0;
+            right: 0;
             bottom: -2px;
             width: 50px;
             height: 2px;
@@ -436,12 +437,12 @@
         }
         
         .search-form .form-control {
-            border-right: 0;
+            border-left: 0;
             padding: 10px 15px;
         }
         
         .search-form .btn {
-            border-left: 0;
+            border-right: 0;
             padding: 10px 15px;
         }
         
@@ -468,7 +469,7 @@
         
         .category-list a:hover {
             color: var(--primary-color);
-            padding-left: 5px;
+            padding-right: 5px;
         }
         
         .category-list a span {
@@ -554,7 +555,7 @@
         /* Responsive */
         @media (max-width: 991.98px) {
             .blog-sidebar {
-                padding-left: 0;
+                padding-right: 0;
                 margin-top: 50px;
             }
             
@@ -592,4 +593,3 @@
                 justify-content: flex-start;
             }
         }
-    

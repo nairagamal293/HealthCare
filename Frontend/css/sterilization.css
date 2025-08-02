@@ -1,0 +1,448 @@
+
+
+     .sterilization-hero {
+    background: url('../images/sterilization-hero.jpg') center/cover no-repeat;
+    height: 60vh;
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   background: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+        color: #f8f9fa;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+
+  
+  @media (max-width: 992px) {
+    .hero-title {
+      font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .hero-stats {
+      gap: 20px;
+    }
+    
+    .stat-item {
+      padding: 15px 20px;
+      min-width: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sterilization-hero {
+      height: auto;
+      padding: 100px 0;
+    }
+    
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+
+    .section-header {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .section-header h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: var(--dark-color);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .sterilization-benefits {
+      transition: all 0.3s ease;
+    }
+
+    .sterilization-benefits .icon-box {
+      width: 80px;
+      height: 80px;
+      background: rgba(42,127,186,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .sterilization-benefits i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+    }
+
+    .sterilization-benefits h5 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--dark-color);
+    }
+
+    .sterilization-benefits p {
+      font-weight: 400;
+      color: #555;
+    }
+.about-content {
+    position: relative;
+    padding-right: 30px;
+  }
+  
+  .about-content:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary-color), #fff);
+    border-radius: 3px;
+  }
+  
+  .feature-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(42,127,186,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .feature-icon i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+  }
+  
+  .feature-text h5 {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+  }
+  
+  .feature-text p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+  
+  .cert-img {
+    height: 40px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .cert-img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  
+  .sterilization-image-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .main-sterilization-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    height: 400px;
+  }
+  
+  .main-sterilization-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .secondary-sterilization-images {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    display: flex;
+    gap: 15px;
+    z-index: 2;
+  }
+  
+  .small-sterilization-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 3px solid white;
+  }
+  
+  .small-sterilization-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .experience-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: var(--primary-color);
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    box-shadow: 0 10px 30px rgba(42,127,186,0.3);
+  }
+  
+  .badge-content {
+    text-align: center;
+  }
+  
+  .badge-content .years {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+  }
+  
+  .badge-content .text {
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 992px) {
+    .secondary-sterilization-images {
+      left: 0;
+    }
+    
+    .experience-badge {
+      right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-sterilization-image {
+      height: 300px;
+    }
+    
+    .small-sterilization-image {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .experience-badge {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .badge-content .years {
+      font-size: 1.5rem;
+    }
+  }
+
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+      transition: all 0.3s ease;
+      border-top: 4px solid transparent;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      border-top-color: var(--primary-color);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .feature-card h4 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .process-steps {
+      position: relative;
+      padding-top: 60px;
+    }
+
+    .process-steps:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 2px;
+      height: 100%;
+      background: var(--primary-color);
+      opacity: 0.2;
+    }
+
+    .step {
+      position: relative;
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+      position: absolute;
+      top: -25px;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 2;
+    }
+
+     /* CTA Section */
+    .cta-section {
+        padding: 80px 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat fixed;
+        color: var(--white-color);
+        position: relative;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .cta-section h2::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        width: 50px;
+        height: 3px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+    }
+
+    .cta-section .btn-primary {
+        background-color: transparent;
+        border: 2px solid var(--white-color);
+        color: var(--white-color);
+        padding: 12px 30px;
+        font-weight: 600;
+    }
+
+    .cta-section .btn-primary:hover {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+      .sterilization-hero {
+        padding: 100px 0;
+      }
+      
+      .sterilization-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }

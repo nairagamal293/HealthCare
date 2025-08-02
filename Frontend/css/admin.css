@@ -240,3 +240,16 @@
             text-decoration: underline;
         }
     
+        /* Add to your admin.css */
+.availability-entry {
+    background-color: #f8f9fa;
+}
+
+.availability-entry .form-control, 
+.availability-entry .form-select {
+    background-color: white;
+}
+
+.remove-availability {
+    width: 100%;
+}

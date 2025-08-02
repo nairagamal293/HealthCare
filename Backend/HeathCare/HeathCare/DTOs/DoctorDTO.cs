@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
 
 namespace HeathCare.DTOs
 {
@@ -14,10 +16,18 @@ namespace HeathCare.DTOs
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
 
+        // Simple availability properties
+        public string Availability { get; set; }
+        public string WorkingDays { get; set; }
+        public string WorkingHours { get; set; }
+
         // Review-related properties
         public double? AverageRating { get; set; }
         public int ReviewCount { get; set; }
         public List<ReviewDTO> Reviews { get; set; } = new List<ReviewDTO>();
+
+        // Detailed availabilities
+        public List<DoctorAvailabilityDTO> Availabilities { get; set; } = new List<DoctorAvailabilityDTO>();
     }
 
     public class DoctorCreateDTO
@@ -33,18 +43,28 @@ namespace HeathCare.DTOs
         [StringLength(500)]
         public string Bio { get; set; }
 
-        [Required]
-        public IFormFile ImageFile { get; set; } // Changed from ImageUrl to ImageFile
+        public IFormFile ImageFile { get; set; }
 
         [Required]
         [Range(1, int.MaxValue)]
         public int DepartmentId { get; set; }
+
+        public string WorkingDays { get; set; }
+        public string Availability { get; set; }
+        public string WorkingHours { get; set; }
+
+        public string AvailabilitiesJson { get; set; }
+
+        [NotMapped]
+        public List<DoctorAvailabilityCreateDTO> Availabilities =>
+            string.IsNullOrEmpty(AvailabilitiesJson)
+                ? new List<DoctorAvailabilityCreateDTO>()
+                : JsonSerializer.Deserialize<List<DoctorAvailabilityCreateDTO>>(AvailabilitiesJson);
     }
 
-    // DTOs/DoctorDTOs.cs
     public class DoctorUpdateDTO
     {
-        public int Id { get; set; } // Add this line
+        public int Id { get; set; }
 
         [Required]
         [StringLength(100, MinimumLength = 2)]
@@ -57,10 +77,18 @@ namespace HeathCare.DTOs
         [StringLength(500)]
         public string Bio { get; set; }
 
-        public IFormFile? ImageFile { get; set; } // Make nullable if not always required
+        public IFormFile? ImageFile { get; set; }
 
         [Required]
         [Range(1, int.MaxValue)]
         public int DepartmentId { get; set; }
+
+        // Add these new properties
+        public string Availability { get; set; }
+        public string WorkingDays { get; set; }
+        public string WorkingHours { get; set; }
+
+        // Add for availability updates
+        public string AvailabilitiesJson { get; set; }
     }
 }

@@ -1,0 +1,158 @@
+        .faq-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        .faq-section {
+            padding: 4rem 0;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-category h2 {
+            color: #00529e;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .faq-category h2:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to left, #00529e, #4da8ff);
+        }
+        
+        .faq-item {
+            margin-bottom: 1.25rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e9f5;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 82, 158, 0.1);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background-color: #f8fafd;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .faq-question:hover {
+            background-color: #f0f6ff;
+        }
+        
+        .faq-question:after {
+            content: '+';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #00529e;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+        
+        .faq-question.collapsed:after {
+            content: '+';
+        }
+        
+        .faq-question:not(.collapsed):after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            border-top: 1px solid #e0e9f5;
+            background: white;
+        }
+        
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-promo {
+            background: linear-gradient(135deg, #00529e 0%, #4da8ff 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 82, 158, 0.2);
+        }
+        
+        .contact-promo h3 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-promo p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .contact-promo .btn {
+            padding: 0.75rem 1.75rem;
+            font-weight: 500;
+            border-radius: 50px;
+            margin: 0 0.5rem;
+        }
+        
+        .contact-promo .btn-light {
+            background: white;
+            color: #00529e;
+        }
+        
+        .contact-promo .btn-outline-light {
+            border: 2px solid white;
+            background: transparent;
+        }
+        
+        .contact-promo .btn-outline-light:hover {
+            background: white;
+            color: #00529e;
+        }
+        
+        @media (max-width: 767.98px) {
+            .faq-hero {
+                padding: 4rem 0 3rem;
+            }
+            
+            .faq-question, .faq-answer {
+                padding: 1.25rem;
+            }
+            
+            .contact-promo {
+                padding: 2rem;
+            }
+            
+            .contact-promo .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+        }

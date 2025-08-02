@@ -1,0 +1,349 @@
+        .department-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--bg-image);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0 4rem;
+            margin-bottom: 3rem;
+        }
+        
+        .department-hero h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .breadcrumb {
+            background: transparent;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+        
+        .breadcrumb-item.active {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .breadcrumb-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .department-content {
+            padding: 3rem 0;
+        }
+        
+        .department-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .department-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .department-info h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .department-info h2:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #0d6efd;
+        }
+        
+        .department-info p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .department-services {
+            margin: 2rem 0;
+        }
+        
+        .department-services h3 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-item:hover {
+            background-color: #e9f5ff;
+            transform: translateX(-5px);
+        }
+        
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .service-icon i {
+            color: #0d6efd;
+            font-size: 1rem;
+        }
+        
+        .service-content h4 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .service-content p {
+            color: #7f8c8d;
+            margin-bottom: 0;
+            font-size: 0.9rem;
+        }
+        
+        .department-doctors {
+            margin: 0rem 0;
+            padding: 3rem 0;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Updated Department Doctors Styles */
+        .department-doctors {
+            padding: 5rem 0;
+            background-color: #f8fafc;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            right: 50%;
+            bottom: -10px;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+            transform: translateX(50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .doctor-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .doctor-img {
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .doctor-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        .doctor-card:hover .doctor-img img {
+            transform: scale(1.05);
+        }
+        
+        .doctor-img:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+        
+        .doctor-info {
+            padding: 1.8rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .doctor-info h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+        
+        .doctor-info p.specialty {
+            color: #4a6ee0;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            background: rgba(74, 110, 224, 0.1);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+        
+        .doctor-info p.experience {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .doctor-actions {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .doctor-actions .btn {
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-profile {
+            background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+            color: white;
+            border: none;
+        }
+        
+        .btn-profile:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(58, 123, 213, 0.3);
+        }
+        
+        .btn-appointment {
+            border: 1px solid #3a7bd5;
+            color: #3a7bd5;
+            background: white;
+        }
+        
+        .btn-appointment:hover {
+            background: #f8faff;
+        }
+        
+        .cta-section {
+            padding: 4rem 0;
+            color: white;
+            position: relative;
+        }
+        
+        .cta-section h2 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section .lead {
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+        
+        .cta-section .btn-light {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        
+        .cta-section .btn-outline-light {
+            border-width: 2px;
+            font-weight: 600;
+        }
+        
+        .cta-section .btn-outline-light:hover {
+            color: #0d6efd;
+            background: white;
+        }
+        
+        @media (max-width: 767.98px) {
+            .department-hero {
+                padding: 4rem 0 2rem;
+            }
+            
+            .department-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .doctor-img {
+                height: 200px;
+            }
+            
+            .doctor-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .doctor-actions .btn {
+                width: 100%;
+            }
+            
+            .cta-section .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }

@@ -97,6 +97,7 @@ builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<ICareerService, CareerService>();
 // Add to services
 builder.Services.AddScoped<IJobApplicationService, JobApplicationService>();
+builder.Services.AddScoped<IDoctorAvailabilityService, DoctorAvailabilityService>();
 
 
 // Add AutoMapper

@@ -37,6 +37,17 @@ namespace HeathCare
             CreateMap<DoctorCreateDTO, Doctor>();
             CreateMap<DoctorUpdateDTO, Doctor>();
 
+
+            CreateMap<DoctorAvailability, DoctorAvailabilityDTO>()
+                .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime.ToString(@"hh\:mm")))
+                .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime.ToString(@"hh\:mm")));
+
+            CreateMap<DoctorAvailabilityCreateDTO, DoctorAvailability>()
+                .ForMember(dest => dest.DayOfWeek, opt => opt.MapFrom(src => (DayOfWeek)src.DayOfWeek))
+                .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => TimeSpan.Parse(src.StartTime)))
+                .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => TimeSpan.Parse(src.EndTime)));
+            
+            
             // Add other mappings as needed
             CreateMap<DepartmentCreateDTO, Department>();
             CreateMap<DepartmentUpdateDTO, Department>();
@@ -49,6 +60,19 @@ namespace HeathCare
 
             CreateMap<ServiceCreateDTO, Service>();
             CreateMap<ServiceUpdateDTO, Service>();
+
+            // Doctor mapping
+            CreateMap<Doctor, DoctorDTO>()
+                .ForMember(dest => dest.DepartmentName,
+                           opt => opt.MapFrom(src => src.Department.Name))
+                .ForMember(dest => dest.AverageRating,
+                           opt => opt.MapFrom(src => src.AverageRating))
+                .ForMember(dest => dest.ReviewCount,
+                           opt => opt.MapFrom(src => src.ReviewCount))
+                .ForMember(dest => dest.Reviews,
+                           opt => opt.MapFrom(src => src.Reviews))
+                .ForMember(dest => dest.Availabilities,
+                           opt => opt.MapFrom(src => src.Availabilities));
 
             // Blog mappings
             CreateMap<BlogCreateDTO, Blog>()
