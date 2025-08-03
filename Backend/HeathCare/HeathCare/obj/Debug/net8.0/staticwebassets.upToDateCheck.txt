@@ -9,11 +9,11 @@ wwwroot\uploads\doctors\3e9a45e3-3f8e-4a05-8673-76e5ad2eae69_Empowering Patients
 wwwroot\uploads\doctors\62973745-393b-4282-a7ed-5d989a53ba68_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg
 wwwroot\uploads\doctors\79682a51-8861-4cc0-9d96-688d29c70bda_Young Confident Male Doctor PNG Images _ PNG Free Download - Pikbest.jpeg
 wwwroot\uploads\doctors\83cbc80c-117e-4d19-9b48-a144ae7e46f8_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg
-wwwroot\uploads\blogs\66f55431-7241-4b68-91e3-f5a3ab3a0fea.jpeg
+wwwroot\uploads\doctors\ef088a44-a41b-4d61-8583-d90b4e7ef85e.jpeg
 wwwroot\uploads\departments\e1f05b2e-4bb2-4070-b74c-9e7091457f60.jpeg
 wwwroot\uploads\departments\4b2435ae-4ba7-411a-867e-24fdad005e0f.jpeg
 wwwroot\uploads\blogs\1ba31dd9-bf01-4eea-b86f-f42987935d11.jpeg
-wwwroot\uploads\departments\dc0d0379-532d-471d-8122-be1e8d125275.jpeg
+wwwroot\uploads\departments\9d754e04-eec1-446b-912f-2cd5b7177fc1.jpeg
 wwwroot\uploads\departments\67c9ec14-5500-4957-b1c3-8cb9d30e75b7.jpeg
 wwwroot\uploads\departments\c20b6fcc-6177-49c4-bb54-c974bf87cd76.jpeg
 wwwroot\uploads\departments\9034d1af-1f4d-49b2-b8b9-7aefdfad27d5.jpeg
@@ -38,6 +38,15 @@ wwwroot\uploads\doctors\303f40c6-7f5d-42ea-836b-dbb2687d3af5_Download Young Fema
 wwwroot\uploads\doctors\3c4e928b-e549-46a8-89cd-e1b4a6316a66_Download Young Female Doctor Smiling with Confidence and Positivity for free.jpeg
 wwwroot\uploads\doctors\966c12ec-1163-4ba8-94b6-343472842dc3_basmala.jpeg
 wwwroot\uploads\doctors\a07a678d-69e5-44a7-b3dd-90fcbb5b90fc.jpeg
-wwwroot\uploads\doctors\b686a7d1-93a1-493c-85be-e8e27e3e0c2d.jpeg
-wwwroot\uploads\blogs\27db726f-8e96-43cf-9844-c52c2b0007af.jpeg
-wwwroot\uploads\doctors\74f66dc6-8019-4bde-b671-704c80f18382.jpeg
+wwwroot\uploads\doctors\8ad24d0d-8a98-4f1a-a745-304a4bd1abb5.jpeg
+wwwroot\uploads\doctors\53559dc7-953c-4ff8-90ca-dc5156cfb24e.jpeg
+wwwroot\uploads\doctors\2382a524-b38f-4e8a-ad4b-6ac0a0023033.jpeg
+wwwroot\uploads\doctors\32031f66-04c3-404d-a453-fe07861af9f6.jpeg
+wwwroot\uploads\departments\62a4351c-b6c7-4822-a7de-6baeb35b9eb7.jpeg
+wwwroot\uploads\departments\f9f4a1a0-09a0-4311-b843-deeb750e33eb.jpeg
+wwwroot\uploads\departments\3d8ae9b8-0024-4431-9534-4df992825b3c.jpg
+wwwroot\uploads\departments\80d42995-4f82-4f24-afe8-31a3e619d7cc.jpeg
+wwwroot\uploads\departments\da2ae517-893c-4ca3-a25a-0f74b7a1f0e6.jpeg
+wwwroot\uploads\departments\a633878a-126d-427d-b8e5-92c7d7ddb35a.jpeg
+wwwroot\uploads\departments\e4b4e61c-e587-4e48-b34d-c199a975a0c2.jpeg
+wwwroot\uploads\doctors\f15b4dc1-714c-4fae-8a84-1ba626a91431.jpeg

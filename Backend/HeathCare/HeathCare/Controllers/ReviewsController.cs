@@ -61,11 +61,14 @@ namespace HeathCare.Controllers
         {
             try
             {
+                _logger.LogInformation("Received review: {@Review}", reviewDto);
+
                 var review = await _reviewService.CreateReviewAsync(reviewDto);
                 return CreatedAtAction(nameof(GetReview), new { id = review.Id }, review);
             }
             catch (ArgumentException ex)
             {
+                _logger.LogError(ex, "Validation error in review submission");
                 return BadRequest(new { message = ex.Message });
             }
             catch (Exception ex)

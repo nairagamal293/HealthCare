@@ -211,16 +211,16 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\heathcare.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\heathcare.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\heathcare.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -310,7 +310,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -366,6 +366,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
+              "RelativeDocumentMoniker": "HeathCare\\appsettings.json",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
+              "RelativeToolTip": "HeathCare\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-10T10:44:31.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\MappingProfile.cs",
@@ -385,22 +398,9 @@
               "RelativeDocumentMoniker": "HeathCare\\Program.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Program.cs",
               "RelativeToolTip": "HeathCare\\Program.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAqwOEAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAqwOIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T09:25:37.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
-              "RelativeDocumentMoniker": "HeathCare\\appsettings.json",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
-              "RelativeToolTip": "HeathCare\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T10:44:31.596Z",
               "EditorCaption": ""
             },
             {
@@ -866,7 +866,7 @@
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\ReviewsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ReviewsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\ReviewsController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAmwHUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAmwHgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T09:16:07.749Z",
               "EditorCaption": ""
@@ -995,6 +995,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 52,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "HeathCare\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T10:45:02.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "HeathCare.http",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\HeathCare.http",
               "RelativeDocumentMoniker": "HeathCare\\HeathCare.http",
@@ -1002,8 +1015,7 @@
               "RelativeToolTip": "HeathCare\\HeathCare.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-07-15T12:58:50.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-15T12:58:50.02Z"
             },
             {
               "$type": "Document",
@@ -1079,7 +1091,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "HeathCare\\WeatherForecast.cs",
@@ -1088,18 +1100,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T10:44:33.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "HeathCare\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T10:45:02.998Z"
             },
             {
               "$type": "Document",

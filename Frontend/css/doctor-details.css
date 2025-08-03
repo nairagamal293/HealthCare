@@ -63,3 +63,52 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
+
+        /* Add to your existing CSS */
+#current-review-container {
+    min-height: 150px; /* Ensure consistent height when cycling */
+    transition: opacity 0.3s ease;
+}
+
+#next-review-btn {
+    width: 150px;
+}
+
+.review-item {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Star Rating in Review Form */
+#reviewForm .star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+#reviewForm .star-rating input[type="radio"] {
+    display: none;
+}
+
+#reviewForm .star-rating label.star {
+    color: #e4e5e9;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#reviewForm .star-rating input[type="radio"]:checked ~ label.star,
+#reviewForm .star-rating input[type="radio"]:hover ~ label.star,
+#reviewForm .star-rating label.star:hover,
+#reviewForm .star-rating label.star:hover ~ label.star {
+    color: #ffc107;
+}
+
+#reviewForm .star-rating input[type="radio"]:checked + label.star {
+    color: #ffc107;
+}

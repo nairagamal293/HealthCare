@@ -1,5 +1,2 @@
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\blogs\66f55431-7241-4b68-91e3-f5a3ab3a0fea.jpeg
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\departments\dc0d0379-532d-471d-8122-be1e8d125275.jpeg
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\doctors\b686a7d1-93a1-493c-85be-e8e27e3e0c2d.jpeg
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\blogs\27db726f-8e96-43cf-9844-c52c2b0007af.jpeg
-D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\doctors\74f66dc6-8019-4bde-b671-704c80f18382.jpeg
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\doctors\97ed27bd-80f4-4a47-8e8d-613f7ea1b9aa.jpeg
+D:\Naira\Healthcare Group\Backend\HeathCare\HeathCare\wwwroot\uploads\doctors\b3f65061-336c-4abf-b4d2-4725fc1c20c8.jpeg

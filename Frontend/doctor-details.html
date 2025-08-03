@@ -26,18 +26,7 @@
  
 </head>
 <body>
-    <div class="top-bar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="contact-info">
-                        <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1 (234) 567-890</a>
-                        <a href="mailto:info@medicare.com"><i class="fas fa-envelope"></i> info@medicare.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
@@ -351,40 +340,43 @@
                         </div>
                         <div class="card-body">
                             <!-- Review Form -->
-                            <div id="reviewForm">
-                                <h4 class="h5 mb-3">أضف تقييمك</h4>
-                                <form id="submitReviewForm">
-                                    <input type="hidden" name="doctorId" value="${doctor.id}">
-                                    <div class="mb-3">
-                                        <label for="visitorName" class="form-label">اسمك</label>
-                                        <input type="text" class="form-control" id="visitorName" name="visitorName" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="visitorEmail" class="form-label">بريدك الإلكتروني</label>
-                                        <input type="email" class="form-control" id="visitorEmail" name="visitorEmail" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">التقييم</label>
-                                        <div class="star-rating">
-                                            <input type="radio" id="star5" name="rating" value="5" required>
-                                            <label for="star5" class="star"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star4" name="rating" value="4">
-                                            <label for="star4" class="star"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star3" name="rating" value="3">
-                                            <label for="star3" class="star"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star2" name="rating" value="2">
-                                            <label for="star2" class="star"><i class="fas fa-star"></i></label>
-                                            <input type="radio" id="star1" name="rating" value="1">
-                                            <label for="star1" class="star"><i class="fas fa-star"></i></label>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="content" class="form-label">تقييمك</label>
-                                        <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">إرسال التقييم</button>
-                                </form>
-                            </div>
+                    
+<!-- Review Form -->
+<div id="reviewForm">
+    <h4 class="h5 mb-3">أضف تقييمك</h4>
+    <form id="submitReviewForm">
+        <input type="hidden" name="doctorId" value="${doctor.id}">
+        <div class="mb-3">
+            <label for="visitorName" class="form-label">اسمك</label>
+            <input type="text" class="form-control" id="visitorName" name="visitorName" required>
+        </div>
+        <div class="mb-3">
+            <label for="visitorEmail" class="form-label">بريدك الإلكتروني</label>
+            <input type="email" class="form-control" id="visitorEmail" name="visitorEmail" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">التقييم</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" class="star"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" class="star"><i class="fas fa-star"></i></label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">تقييمك</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">إرسال التقييم</button>
+    </form>
+</div>
+
                             
                             <!-- Reviews Container -->
                             <div id="reviews-container">
@@ -395,47 +387,106 @@
                 </div>
             </div>
         `;
-        
+        setupReviewCycling(doctor.reviews);
         // Add event listener for review form submission
         document.getElementById('submitReviewForm')?.addEventListener('submit', handleReviewSubmit);
     }
     
-    // Display doctor reviews
-    function displayDoctorReviews(reviews) {
-        if (!reviews || reviews.length === 0) {
-            return `
-                <div class="alert alert-info">
-                    لا توجد تقييمات بعد. كن أول من يقيم هذا الطبيب!
-                </div>
-            `;
-        }
-        
-        let html = `
-            <div class="d-flex align-items-center mb-3">
-                <div class="rating-display">
-                    <span>${reviews.length} ${reviews.length === 1 ? 'تقييم' : 'تقييمات'}</span>
-                </div>
+ // Display doctor reviews - updated to show one at a time
+function displayDoctorReviews(reviews) {
+    if (!reviews || reviews.length === 0) {
+        return `
+            <div class="alert alert-info">
+                لا توجد تقييمات بعد. كن أول من يقيم هذا الطبيب!
             </div>
         `;
-        
-        reviews.forEach(review => {
-            html += `
-                <div class="review-item">
-                    <div class="d-flex justify-content-between mb-2">
-                        <h5 class="mb-0">${review.visitorName}</h5>
-                        <small class="text-muted">${formatDate(review.createdAt)}</small>
-                    </div>
-                    <div class="rating mb-2">
-                        ${renderStarRating(review.rating)}
-                    </div>
-                    <p>${review.content}</p>
-                </div>
-            `;
-        });
-        
-        return html;
     }
     
+    let html = `
+        <div class="d-flex align-items-center mb-3">
+            <div class="rating-display">
+                <span>${reviews.length} ${reviews.length === 1 ? 'تقييم' : 'تقييمات'}</span>
+            </div>
+        </div>
+        <div id="current-review-container">
+            ${renderSingleReview(reviews[0], 0, reviews.length)}
+        </div>
+    `;
+    
+    if (reviews.length > 1) {
+        html += `
+            <div class="text-center mt-3">
+                <button id="next-review-btn" class="btn btn-outline-primary" 
+                        data-current-index="0" data-total-reviews="${reviews.length}">
+                    عرض التالي <i class="fas fa-arrow-left ms-2"></i>
+                </button>
+            </div>
+        `;
+    }
+    
+    return html;
+}
+
+
+// Render a single review
+function renderSingleReview(review, currentIndex, totalReviews) {
+    return `
+        <div class="review-item">
+            <div class="d-flex justify-content-between mb-2">
+                <h5 class="mb-0">${review.visitorName}</h5>
+                <small class="text-muted">${formatDate(review.createdAt)}</small>
+            </div>
+            <div class="rating mb-2">
+                ${renderExactStarRating(review.rating)}
+            </div>
+            <p>${review.content}</p>
+            <div class="text-muted small text-end">
+                ${currentIndex + 1} من ${totalReviews}
+            </div>
+        </div>
+    `;
+}
+
+// Helper function to render exact star rating (no half stars)
+function renderExactStarRating(rating) {
+    let stars = '';
+    const fullStars = Math.floor(rating);
+    
+    for (let i = 1; i <= 5; i++) {
+        if (i <= fullStars) {
+            stars += '<i class="fas fa-star star-rating"></i>';
+        } else {
+            stars += '<i class="far fa-star star-rating empty-star"></i>';
+        }
+    }
+    
+    return stars;
+}
+
+// Add event listener for the next review button
+function setupReviewCycling(reviews) {
+    const nextReviewBtn = document.getElementById('next-review-btn');
+    if (nextReviewBtn) {
+        nextReviewBtn.addEventListener('click', function() {
+            const currentIndex = parseInt(this.getAttribute('data-current-index'));
+            const totalReviews = parseInt(this.getAttribute('data-total-reviews'));
+            const nextIndex = (currentIndex + 1) % totalReviews;
+            
+            document.getElementById('current-review-container').innerHTML = 
+                renderSingleReview(reviews[nextIndex], nextIndex, totalReviews);
+            
+            this.setAttribute('data-current-index', nextIndex);
+            
+            // Update button text if we're at the last review
+            if (nextIndex === totalReviews - 1) {
+                this.innerHTML = 'عرض الأول <i class="fas fa-arrow-left ms-2"></i>';
+            } else {
+                this.innerHTML = 'عرض التالي <i class="fas fa-arrow-left ms-2"></i>';
+            }
+        });
+    }
+}
+
     // Display doctor availabilities
     function displayDoctorAvailabilities(availabilities) {
         if (!availabilities || availabilities.length === 0) {
@@ -480,42 +531,54 @@
     }
     
     // Handle review form submission
-    async function handleReviewSubmit(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const formData = new FormData(form);
-        const reviewData = {
-            doctorId: formData.get('doctorId'),
-            visitorName: formData.get('visitorName'),
-            visitorEmail: formData.get('visitorEmail'),
-            rating: parseInt(formData.get('rating')),
-            content: formData.get('content')
-        };
-        
-        try {
-            const response = await fetch(`${apiBaseUrl}/reviews`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(reviewData)
-            });
-            
-            if (!response.ok) {
-                throw new Error('Failed to submit review');
-            }
-            
-            const result = await response.json();
-            alert('شكراً لتقييمك!');
-            form.reset();
-            fetchDoctorDetails(); // Refresh doctor details to update rating and reviews
-        } catch (error) {
-            console.error('Error submitting review:', error);
-            alert('فشل إرسال التقييم. يرجى المحاولة مرة أخرى.');
-        }
+  async function handleReviewSubmit(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const reviewData = {
+        DoctorId: parseInt(formData.get('doctorId')),
+        VisitorName: formData.get('visitorName'),
+        VisitorEmail: formData.get('visitorEmail'),
+        Rating: parseInt(formData.get('rating')),
+        Content: formData.get('content')
+    };
+    
+    // Validate minimum content length
+    if (reviewData.Content.length < 10) {
+        alert('يجب أن يحتوي التقييم على الأقل 10 أحرف');
+        return;
     }
     
+    try {
+        const response = await fetch(`${apiBaseUrl}/reviews`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(reviewData)
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json();
+            // Show validation errors if available
+            if (errorData.errors) {
+                const errorMessages = Object.values(errorData.errors).flat().join('\n');
+                throw new Error(errorMessages);
+            }
+            throw new Error(errorData.message || 'Failed to submit review');
+        }
+        
+        const result = await response.json();
+        alert('شكراً لتقييمك! تم إضافة التقييم بنجاح.');
+        form.reset();
+        fetchDoctorDetails(); // Refresh doctor details
+    } catch (error) {
+        console.error('Error submitting review:', error);
+        alert(`فشل إرسال التقييم:\n${error.message}`);
+    }
+}
     // Helper function to render star rating
     function renderStarRating(rating) {
         let stars = '';
