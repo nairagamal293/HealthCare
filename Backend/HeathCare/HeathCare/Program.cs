@@ -81,6 +81,8 @@ builder.Services.Configure<FormOptions>(options =>
     options.MemoryBufferThreshold = int.MaxValue;
 });
 
+
+
 // Add logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();

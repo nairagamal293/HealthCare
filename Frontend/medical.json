@@ -1,0 +1,88 @@
+{
+  "name": "Medical Center Arabic Bot",
+  "enabled": false,
+  "description": "A bot for handling Arabic inquiries in a medical center",
+  "updated_at": 1754400924030,
+  "priority": 0,
+  "updated_author": "1caca13e-0476-44c1-b08c-1cf50ab41c20",
+  "flow": {
+    "draft": {
+      "blocks": [
+        {"id":"entry","position":{"x":1120,"y":0},"type":"entry","data":{}},
+        {"id":"welcome","position":{"x":1120,"y":96},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"مرحبًا بك في مركزنا الصحي 👋\nكيف يمكننا مساعدتك اليوم؟"}}}},
+        {"id":"service_type","position":{"x":1120,"y":207},"type":"action","data":{"type":"message-send","subtype":"picker","settings":{"default":{"type":"picker","content":{"text":"ما نوع الخدمة التي تبحث عنها؟","choices":[{"label":"حجز موعد مع طبيب","value":"doctor_appointment"},{"label":"طلب تحليل مخبري","value":"lab_test"},{"label":"استشارة طبية أونلاين","value":"online_consultation"},{"label":"الاستفسار عن الأسعار والخدمات","value":"pricing_inquiry"},{"label":"أخرى","value":"other"}]}}}}},
+        {"id":"doctor_specialty","position":{"x":560,"y":461},"type":"action","data":{"type":"message-send","subtype":"picker","settings":{"default":{"type":"picker","content":{"text":"ما التخصص الذي ترغب في الحجز فيه؟","choices":[{"label":"الباطنة","value":"internal"},{"label":"الأطفال","value":"pediatrics"},{"label":"النساء والتوليد","value":"obgyn"},{"label":"الجلدية","value":"dermatology"},{"label":"العظام","value":"orthopedics"},{"label":"أخرى","value":"other_specialty"}]}}}}},
+        {"id":"appointment_date","position":{"x":560,"y":801},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"ما هو التاريخ المناسب لك للحجز؟"}}}},
+        {"id":"lab_test_type","position":{"x":840,"y":486},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"ما نوع التحليل الذي تود القيام به؟"}}}},
+        {"id":"lab_visit_type","position":{"x":840,"y":801},"type":"action","data":{"type":"message-send","subtype":"picker","settings":{"default":{"type":"picker","content":{"text":"هل تود الحضور للمركز أم حجز زيارة منزلية؟","choices":[{"label":"الحضور للمركز","value":"center_visit"},{"label":"زيارة منزلية","value":"home_visit"}]}}}}},
+        {"id":"consultation_details","position":{"x":1120,"y":487},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"يرجى كتابة سؤالك أو الحالة التي ترغب باستشارة الطبيب بشأنها:"}}}},
+        {"id":"pricing_details","position":{"x":1680,"y":489},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"يرجى كتابة الخدمة التي تود معرفة سعرها أو تفاصيلها:"}}}},
+        {"id":"phone_input","position":{"x":560,"y":989},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"من فضلك أدخل رقم هاتفك للتواصل:"}}}},
+        {"id":"email_input","position":{"x":560,"y":1083},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"أدخل بريدك الإلكتروني إن وُجد:"}}}},
+        {"id":"confirmation","position":{"x":560,"y":1177},"type":"action","data":{"type":"message-send","subtype":"text","settings":{"default":{"type":"text","content":"شكرًا لتواصلك معنا 🙏\nتم استلام طلبك وسيتم الرد عليك في أقرب وقت ممكن.\nهل ترغب في التحدث مع أحد ممثلينا الآن؟"}}}},
+        {"id":"final_choice","position":{"x":560,"y":1322},"type":"action","data":{"type":"message-send","subtype":"picker","settings":{"default":{"type":"picker","content":{"text":"اختر الخيار المناسب:","choices":[{"label":"نعم، تحدث مع موظف","value":"talk_to_agent"},{"label":"لا، شكرًا","value":"end_conversation"}]}}}}}
+      ],
+      "wires": [
+        {"id":"connect_welcome","source":"entry","target":"welcome"},
+        {"id":"connect_service","source":"welcome","target":"service_type"},
+        {
+          "id":"connect_doctor",
+          "source":"service_type",
+          "target":"doctor_specialty",
+          "condition": {
+            "type": "message-action",
+            "settings": {
+              "type": "button-click",
+              "match": "doctor_appointment"
+            }
+          }
+        },
+        {"id":"connect_date","source":"doctor_specialty","target":"appointment_date"},
+        {
+          "id":"connect_lab_type",
+          "source":"service_type",
+          "target":"lab_test_type",
+          "condition": {
+            "type": "message-action",
+            "settings": {
+              "type": "button-click",
+              "match": "lab_test"
+            }
+          }
+        },
+        {"id":"connect_visit_type","source":"lab_test_type","target":"lab_visit_type"},
+        {
+          "id":"connect_consultation",
+          "source":"service_type",
+          "target":"consultation_details",
+          "condition": {
+            "type": "message-action",
+            "settings": {
+              "type": "button-click",
+              "match": "online_consultation"
+            }
+          }
+        },
+        {
+          "id":"connect_pricing",
+          "source":"service_type",
+          "target":"pricing_details",
+          "condition": {
+            "type": "message-action",
+            "settings": {
+              "type": "button-click",
+              "match": "pricing_inquiry"
+            }
+          }
+        },
+        {"id":"connect_to_phone1","source":"appointment_date","target":"phone_input"},
+        {"id":"connect_to_phone2","source":"lab_visit_type","target":"phone_input"},
+        {"id":"connect_to_phone3","source":"consultation_details","target":"phone_input"},
+        {"id":"connect_to_phone4","source":"pricing_details","target":"phone_input"},
+        {"id":"connect_to_email","source":"phone_input","target":"email_input"},
+        {"id":"connect_to_confirmation","source":"email_input","target":"confirmation"},
+        {"id":"connect_final","source":"confirmation","target":"final_choice"}
+      ]
+    }
+  }
+}
