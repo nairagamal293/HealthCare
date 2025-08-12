@@ -3,72 +3,16 @@
   "WorkspaceRootPath": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250809111658_blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250809111658_blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\doctoravailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\doctoravailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\services\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\services\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -107,6 +51,10 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\services\\departmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\services\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\services\\contactservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\services\\careerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\services\\careerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -119,12 +67,48 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\jobapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\doctoravailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\doctoravailability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\career.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\career.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\servicedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -155,6 +139,10 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\departmentcreatewithservicesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\contactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\careerdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\careerdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -165,6 +153,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\blogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\blogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -199,6 +191,10 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\careerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\careerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -215,16 +211,20 @@
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250809111658_blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250809111658_blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\heathcare.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\heathcare.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\heathcare.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -309,6 +309,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250809091512_addipaddresstocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250809091512_addipaddresstocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250809134846_contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250809134846_contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250809131108_addemailverificationtocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250809131108_addemailverificationtocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|d:\\naira\\healthcare group\\backend\\heathcare\\heathcare\\migrations\\20250810074929_addisreadandcreatedattocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7705E44E-5A96-4487-AB4E-ABB69B1749E3}|HeathCare\\HeathCare.csproj|solutionrelative:heathcare\\migrations\\20250810074929_addisreadandcreatedattocontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -322,100 +334,93 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Contact.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Contact.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Contact.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Contact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowAcAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IJobApplicationService.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IJobApplicationService.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Services\\IJobApplicationService.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IJobApplicationService.cs",
+              "RelativeToolTip": "HeathCare\\Services\\IJobApplicationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:55:03.644Z"
+              "WhenOpened": "2025-07-27T09:13:23.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ReviewService.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Services\\ReviewService.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ReviewService.cs",
+              "RelativeToolTip": "HeathCare\\Services\\ReviewService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAYwGsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T09:15:35.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JobApplicationService.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\JobApplicationService.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Services\\JobApplicationService.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\JobApplicationService.cs",
+              "RelativeToolTip": "HeathCare\\Services\\JobApplicationService.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T09:13:48.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceService.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ServiceService.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Services\\ServiceService.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ServiceService.cs",
+              "RelativeToolTip": "HeathCare\\Services\\ServiceService.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAYwGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:50:46.624Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Blog.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Blog.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Blog.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Blog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "HeathCare\\MappingProfile.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\MappingProfile.cs",
+              "RelativeToolTip": "HeathCare\\MappingProfile.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAkwHcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:54:11.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Review.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Review.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Review.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Review.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Review.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T09:12:32.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Service.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Service.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Service.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Service.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:49:15.814Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "JobApplication.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\JobApplication.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\JobApplication.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\JobApplication.cs",
-              "RelativeToolTip": "HeathCare\\Models\\JobApplication.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:10:41.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DoctorAvailability.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\DoctorAvailability.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\DoctorAvailability.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\DoctorAvailability.cs",
-              "RelativeToolTip": "HeathCare\\Models\\DoctorAvailability.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T11:25:56.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthDTOs.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\AuthDTOs.cs",
-              "RelativeDocumentMoniker": "HeathCare\\DTOs\\AuthDTOs.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\AuthDTOs.cs",
-              "RelativeToolTip": "HeathCare\\DTOs\\AuthDTOs.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:06:42.892Z",
+              "WhenOpened": "2025-07-10T13:04:34.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20250809111658_Blog.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809111658_Blog.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250809111658_Blog.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809111658_Blog.cs",
-              "RelativeToolTip": "HeathCare\\Migrations\\20250809111658_Blog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Program.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Program.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Program.cs",
+              "RelativeToolTip": "HeathCare\\Program.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAkwOQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T11:16:58.704Z",
+              "WhenOpened": "2025-07-10T09:25:37.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
+              "RelativeDocumentMoniker": "HeathCare\\appsettings.json",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
+              "RelativeToolTip": "HeathCare\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-10T10:44:31.596Z",
               "EditorCaption": ""
             },
             {
@@ -424,187 +429,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Doctor.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Doctor.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Doctor.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:53:04.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Department.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Department.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\Department.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Department.cs",
-              "RelativeToolTip": "HeathCare\\Models\\Department.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:53:47.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Models\\ApplicationUser.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "HeathCare\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T10:46:18.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ContactController.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ContactController.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Controllers\\ContactController.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ContactController.cs",
-              "RelativeToolTip": "HeathCare\\Controllers\\ContactController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:12:32.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Program.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Program.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Program.cs",
-              "RelativeToolTip": "HeathCare\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:25:37.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ContactService.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ContactService.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Services\\ContactService.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ContactService.cs",
-              "RelativeToolTip": "HeathCare\\Services\\ContactService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvzEAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:10:00.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ContactDTO.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ContactDTO.cs",
-              "RelativeDocumentMoniker": "HeathCare\\DTOs\\ContactDTO.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ContactDTO.cs",
-              "RelativeToolTip": "HeathCare\\DTOs\\ContactDTO.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:06:07.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
-              "RelativeDocumentMoniker": "HeathCare\\appsettings.json",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\appsettings.json",
-              "RelativeToolTip": "HeathCare\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-10T10:44:31.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "HeathCare\\MappingProfile.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\MappingProfile.cs",
-              "RelativeToolTip": "HeathCare\\MappingProfile.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAmwGwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T13:04:34.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ServiceService.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ServiceService.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Services\\ServiceService.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ServiceService.cs",
-              "RelativeToolTip": "HeathCare\\Services\\ServiceService.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAcwGUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:50:46.624Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ReviewService.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ReviewService.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Services\\ReviewService.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ReviewService.cs",
-              "RelativeToolTip": "HeathCare\\Services\\ReviewService.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAA4wGsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T09:15:35.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "JobApplicationService.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\JobApplicationService.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Services\\JobApplicationService.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\JobApplicationService.cs",
-              "RelativeToolTip": "HeathCare\\Services\\JobApplicationService.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAiwHcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:13:48.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IJobApplicationService.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IJobApplicationService.cs",
-              "RelativeDocumentMoniker": "HeathCare\\Services\\IJobApplicationService.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IJobApplicationService.cs",
-              "RelativeToolTip": "HeathCare\\Services\\IJobApplicationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:13:23.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 7,
               "Title": "IFileService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IFileService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\IFileService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IFileService.cs",
               "RelativeToolTip": "HeathCare\\Services\\IFileService.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwHUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:21:23.435Z"
+              "WhenOpened": "2025-07-10T09:21:23.435Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 8,
               "Title": "IDoctorAvailabilityService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IDoctorAvailabilityService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\IDoctorAvailabilityService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\IDoctorAvailabilityService.cs",
               "RelativeToolTip": "HeathCare\\Services\\IDoctorAvailabilityService.cs",
-              "ViewState": "AgIAALIAAAAAAAAAAAAcwM8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAYwM8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T11:29:33.303Z"
+              "WhenOpened": "2025-07-31T11:29:33.303Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 9,
               "Title": "ICareerService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ICareerService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\ICareerService.cs",
@@ -612,355 +463,614 @@
               "RelativeToolTip": "HeathCare\\Services\\ICareerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T06:56:51.111Z"
+              "WhenOpened": "2025-07-27T06:56:51.111Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 10,
               "Title": "DoctorService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\DoctorService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\DoctorService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\DoctorService.cs",
               "RelativeToolTip": "HeathCare\\Services\\DoctorService.cs",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAswLgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAqwLgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:07:59.551Z"
+              "WhenOpened": "2025-07-10T09:07:59.551Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 11,
               "Title": "DepartmentService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\DepartmentService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\DepartmentService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\DepartmentService.cs",
               "RelativeToolTip": "HeathCare\\Services\\DepartmentService.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAswKwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAqwKwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:08:33.65Z"
+              "WhenOpened": "2025-07-10T09:08:33.65Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 12,
+              "Title": "ContactService.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ContactService.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Services\\ContactService.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\ContactService.cs",
+              "RelativeToolTip": "HeathCare\\Services\\ContactService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAuwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:10:00.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CareerService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\CareerService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\CareerService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\CareerService.cs",
               "RelativeToolTip": "HeathCare\\Services\\CareerService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAcwFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T06:57:33.754Z"
+              "WhenOpened": "2025-07-27T06:57:33.754Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 14,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\BookingService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\BookingService.cs",
               "RelativeToolTip": "HeathCare\\Services\\BookingService.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAcwFYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAYwFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:09:25.834Z"
+              "WhenOpened": "2025-07-10T09:09:25.834Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 15,
               "Title": "BlogService.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\BlogService.cs",
               "RelativeDocumentMoniker": "HeathCare\\Services\\BlogService.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Services\\BlogService.cs",
               "RelativeToolTip": "HeathCare\\Services\\BlogService.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAiwH4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAgwH4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:09:02.416Z"
+              "WhenOpened": "2025-07-10T09:09:02.416Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 16,
+              "Title": "Service.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Service.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Service.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T06:49:15.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Review.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Review.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T09:12:32.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "JobApplication.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\JobApplication.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\JobApplication.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\JobApplication.cs",
+              "RelativeToolTip": "HeathCare\\Models\\JobApplication.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA6wCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T09:10:41.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DoctorAvailability.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\DoctorAvailability.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\DoctorAvailability.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\DoctorAvailability.cs",
+              "RelativeToolTip": "HeathCare\\Models\\DoctorAvailability.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T11:25:56.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Doctor.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Doctor.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Doctor.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA2wCQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:53:04.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Department.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Department.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Department.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:53:47.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Contact.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Contact.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:55:03.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Career.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Career.cs",
               "RelativeDocumentMoniker": "HeathCare\\Models\\Career.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Career.cs",
               "RelativeToolTip": "HeathCare\\Models\\Career.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA6wCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T06:53:05.221Z"
+              "WhenOpened": "2025-07-27T06:53:05.221Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 24,
               "Title": "Booking.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "HeathCare\\Models\\Booking.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Booking.cs",
               "RelativeToolTip": "HeathCare\\Models\\Booking.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:54:41.014Z"
+              "WhenOpened": "2025-07-10T08:54:41.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 25,
+              "Title": "Blog.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Blog.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\Blog.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\Blog.cs",
+              "RelativeToolTip": "HeathCare\\Models\\Blog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:54:11.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Models\\ApplicationUser.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "HeathCare\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T10:46:18.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "ServiceDTOs.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ServiceDTOs.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\ServiceDTOs.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ServiceDTOs.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\ServiceDTOs.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAswC0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:50:01.817Z"
+              "WhenOpened": "2025-07-16T06:50:01.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 28,
               "Title": "ReviewDTOs.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ReviewDTOs.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\ReviewDTOs.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ReviewDTOs.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\ReviewDTOs.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA9wDIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwDIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T09:13:10.066Z"
+              "WhenOpened": "2025-07-17T09:13:10.066Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 29,
               "Title": "JobApplicationDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\JobApplicationDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\JobApplicationDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\JobApplicationDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\JobApplicationDTO.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAowDcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:11:35.977Z"
+              "WhenOpened": "2025-07-27T09:11:35.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 30,
               "Title": "DoctorDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DoctorDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\DoctorDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DoctorDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\DoctorDTO.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAA7wF4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAiwF4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T08:57:11.241Z"
+              "WhenOpened": "2025-07-10T08:57:11.241Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 31,
               "Title": "DoctorAvailabilityDTOs.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DoctorAvailabilityDTOs.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\DoctorAvailabilityDTOs.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DoctorAvailabilityDTOs.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\DoctorAvailabilityDTOs.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA7wCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T11:28:39.84Z"
+              "WhenOpened": "2025-07-31T11:28:39.84Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 32,
               "Title": "DepartmentDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DepartmentDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\DepartmentDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DepartmentDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\DepartmentDTO.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAkwDIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwDIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:04:30.437Z"
+              "WhenOpened": "2025-07-10T09:04:30.437Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 33,
               "Title": "DepartmentCreateWithServicesDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DepartmentCreateWithServicesDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\DepartmentCreateWithServicesDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\DepartmentCreateWithServicesDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\DepartmentCreateWithServicesDTO.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T07:24:51.75Z"
+              "WhenOpened": "2025-07-16T07:24:51.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 34,
+              "Title": "ContactDTO.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ContactDTO.cs",
+              "RelativeDocumentMoniker": "HeathCare\\DTOs\\ContactDTO.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\ContactDTO.cs",
+              "RelativeToolTip": "HeathCare\\DTOs\\ContactDTO.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:06:07.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "CareerDTOs.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\CareerDTOs.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\CareerDTOs.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\CareerDTOs.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\CareerDTOs.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA7wEMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T06:53:52.021Z"
+              "WhenOpened": "2025-07-27T06:53:52.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 36,
               "Title": "BookingDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\BookingDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\BookingDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\BookingDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\BookingDTO.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA9wD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAmwD0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:05:41.017Z"
+              "WhenOpened": "2025-07-10T09:05:41.017Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 37,
               "Title": "BlogDTO.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\BlogDTO.cs",
               "RelativeDocumentMoniker": "HeathCare\\DTOs\\BlogDTO.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\BlogDTO.cs",
               "RelativeToolTip": "HeathCare\\DTOs\\BlogDTO.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:05:17.54Z"
+              "WhenOpened": "2025-07-10T09:05:17.54Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 38,
+              "Title": "AuthDTOs.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\AuthDTOs.cs",
+              "RelativeDocumentMoniker": "HeathCare\\DTOs\\AuthDTOs.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\DTOs\\AuthDTOs.cs",
+              "RelativeToolTip": "HeathCare\\DTOs\\AuthDTOs.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:06:42.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "DbInitializer.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Data\\DbInitializer.cs",
               "RelativeDocumentMoniker": "HeathCare\\Data\\DbInitializer.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Data\\DbInitializer.cs",
               "RelativeToolTip": "HeathCare\\Data\\DbInitializer.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwDIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwDIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:51:10.428Z"
+              "WhenOpened": "2025-07-10T09:51:10.428Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 40,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "HeathCare\\Data\\ApplicationDbContext.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "HeathCare\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAmwF4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAkwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:02:27.341Z"
+              "WhenOpened": "2025-07-10T09:02:27.341Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 41,
               "Title": "ServicesController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ServicesController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\ServicesController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ServicesController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\ServicesController.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAiwFYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T06:51:33.985Z"
+              "WhenOpened": "2025-07-16T06:51:33.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 42,
               "Title": "ReviewsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ReviewsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\ReviewsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ReviewsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\ReviewsController.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAiwHgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwHgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T09:16:07.749Z"
+              "WhenOpened": "2025-07-17T09:16:07.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 43,
               "Title": "JobApplicationsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\JobApplicationsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\JobApplicationsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\JobApplicationsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\JobApplicationsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAA4wE4AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T09:16:16.003Z"
+              "WhenOpened": "2025-07-27T09:16:16.003Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 44,
               "Title": "DoctorsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DoctorsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\DoctorsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DoctorsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\DoctorsController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAiwJwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAgwJwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:02:09.424Z"
+              "WhenOpened": "2025-07-10T09:02:09.424Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 45,
               "Title": "DoctorAvailabilitiesController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DoctorAvailabilitiesController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\DoctorAvailabilitiesController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DoctorAvailabilitiesController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\DoctorAvailabilitiesController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAiwKEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAgwKEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-31T11:32:59.766Z"
+              "WhenOpened": "2025-07-31T11:32:59.766Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 46,
               "Title": "DepartmentsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DepartmentsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\DepartmentsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\DepartmentsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\DepartmentsController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAiwHYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwHYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:10:43.735Z"
+              "WhenOpened": "2025-07-10T09:10:43.735Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 47,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Controllers\\ContactController.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "HeathCare\\Controllers\\ContactController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAYwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:12:32.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
               "Title": "CareersController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\CareersController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\CareersController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\CareersController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\CareersController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAA4wEsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-27T06:58:50.574Z"
+              "WhenOpened": "2025-07-27T06:58:50.574Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "BookingsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\BookingsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\BookingsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\BookingsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\BookingsController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAiwEsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAA3wEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:12:03.539Z"
+              "WhenOpened": "2025-07-10T09:12:03.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "BlogsController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\BlogsController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\BlogsController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\BlogsController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\BlogsController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAiwFUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAgwFUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:11:23.183Z"
+              "WhenOpened": "2025-07-10T09:11:23.183Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 51,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\AuthController.cs",
               "RelativeToolTip": "HeathCare\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAiwJcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAgwJcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T09:13:02.077Z"
+              "WhenOpened": "2025-07-10T09:13:02.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "20250810074929_AddIsReadAndCreatedAtToContact.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250810074929_AddIsReadAndCreatedAtToContact.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250810074929_AddIsReadAndCreatedAtToContact.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250810074929_AddIsReadAndCreatedAtToContact.cs",
+              "RelativeToolTip": "HeathCare\\Migrations\\20250810074929_AddIsReadAndCreatedAtToContact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-10T07:49:29.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "20250809134846_Contact.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809134846_Contact.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250809134846_Contact.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809134846_Contact.cs",
+              "RelativeToolTip": "HeathCare\\Migrations\\20250809134846_Contact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T13:48:46.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "20250809131108_AddEmailVerificationToContact.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809131108_AddEmailVerificationToContact.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250809131108_AddEmailVerificationToContact.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809131108_AddEmailVerificationToContact.cs",
+              "RelativeToolTip": "HeathCare\\Migrations\\20250809131108_AddEmailVerificationToContact.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T13:11:08.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "HeathCare\\WeatherForecast.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\WeatherForecast.cs",
+              "RelativeToolTip": "HeathCare\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T10:44:33.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20250809111658_Blog.cs",
+              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809111658_Blog.cs",
+              "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250809111658_Blog.cs",
+              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250809111658_Blog.cs",
+              "RelativeToolTip": "HeathCare\\Migrations\\20250809111658_Blog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-09T11:16:58.704Z"
             },
             {
               "$type": "Document",
@@ -976,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "HeathCare\\Controllers\\WeatherForecastController.cs",
@@ -988,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "HeathCare.http",
               "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\HeathCare.http",
               "RelativeDocumentMoniker": "HeathCare\\HeathCare.http",
@@ -1069,18 +1179,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T09:28:16.56Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "HeathCare\\WeatherForecast.cs",
-              "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\WeatherForecast.cs",
-              "RelativeToolTip": "HeathCare\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T10:44:33.793Z"
             },
             {
               "$type": "Document",
@@ -1174,7 +1272,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710123722_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710123722_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710123722_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T12:37:22.906Z"
             },
@@ -1186,7 +1283,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710121308_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710121308_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710121308_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T12:13:09.007Z"
             },
@@ -1198,7 +1294,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710122741_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710122741_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710122741_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T12:27:41.25Z"
             },
@@ -1210,7 +1305,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710121221_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710121221_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710121221_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T12:12:21.413Z"
             },
@@ -1222,7 +1316,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710115901_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710115901_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710115901_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T11:59:01.582Z"
             },
@@ -1234,7 +1327,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710114903_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710114903_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710114903_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T11:49:03.332Z"
             },
@@ -1246,7 +1338,6 @@
               "RelativeDocumentMoniker": "HeathCare\\Migrations\\20250710113050_IntialMigration.cs",
               "ToolTip": "D:\\Naira\\Healthcare Group\\Backend\\HeathCare\\HeathCare\\Migrations\\20250710113050_IntialMigration.cs",
               "RelativeToolTip": "HeathCare\\Migrations\\20250710113050_IntialMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-10T11:30:51.083Z"
             }

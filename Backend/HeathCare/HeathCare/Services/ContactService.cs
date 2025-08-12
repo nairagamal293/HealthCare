@@ -25,6 +25,30 @@ namespace HeathCare.Services
                 .ToListAsync();
             return _mapper.Map<IEnumerable<ContactDTO>>(contacts);
         }
+        public async Task<ContactDTO> GetContactByIdAsync(int id)
+        {
+            var contact = await _context.Contacts.FindAsync(id);
+            if (contact == null) return null;
+            return _mapper.Map<ContactDTO>(contact);
+        }
+
+        public async Task<ContactDTO> MarkAsReadAsync(int id)
+        {
+            var contact = await _context.Contacts.FindAsync(id);
+            if (contact == null) return null;
+
+            contact.IsRead = true;
+            _context.Contacts.Update(contact);
+            await _context.SaveChangesAsync();
+
+            return _mapper.Map<ContactDTO>(contact);
+        }
+
+        public async Task<int> GetUnreadCountAsync()
+        {
+            return await _context.Contacts.CountAsync(c => !c.IsRead);
+        }
+
 
         public async Task<ContactDTO> CreateContactAsync(ContactCreateDTO contactDto)
         {
@@ -48,5 +72,11 @@ namespace HeathCare.Services
     {
         Task<IEnumerable<ContactDTO>> GetAllContactsAsync();
         Task<ContactDTO> CreateContactAsync(ContactCreateDTO contactDto);
+        Task<ContactDTO> GetContactByIdAsync(int id);
+
+        // Add these two:
+        Task<ContactDTO> MarkAsReadAsync(int id);
+        Task<int> GetUnreadCountAsync();
     }
+
 }

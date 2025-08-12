@@ -446,6 +446,73 @@
     ]
   },
   {
+    "ContainingType": "HeathCare.Controllers.ContactController",
+    "Method": "GetContact",
+    "RelativePath": "api/Contact/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "HeathCare.DTOs.ContactDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.ContactController",
+    "Method": "MarkAsRead",
+    "RelativePath": "api/Contact/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "contactDto",
+        "Type": "HeathCare.DTOs.ContactUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HeathCare.Controllers.ContactController",
+    "Method": "GetUnreadCount",
+    "RelativePath": "api/Contact/unread-count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "HeathCare.Controllers.DepartmentsController",
     "Method": "GetDepartments",
     "RelativePath": "api/Departments",

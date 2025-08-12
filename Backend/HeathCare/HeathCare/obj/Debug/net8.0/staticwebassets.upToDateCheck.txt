@@ -1,8 +1,7 @@
 wwwroot\uploads\blogs\1ba31dd9-bf01-4eea-b86f-f42987935d11.jpeg
 wwwroot\uploads\blogs\1ba46eb0-416c-4bb4-a24a-c38126be5d8b.jpeg
 wwwroot\uploads\blogs\2d697503-0c84-40cc-9604-495e32e8f764.jpeg
-wwwroot\uploads\blogs\35e2763f-1bfb-4538-b2fe-069a7760cced.jpeg
-wwwroot\uploads\blogs\499793a7-10dd-44c2-9063-546d13cee243.jpeg
+wwwroot\uploads\blogs\e4dcf5c4-7ce0-408c-9d76-c85a1199eb5d.jpeg
 wwwroot\uploads\blogs\7a310deb-18b2-4a96-9e21-0be331e38b3d.jpeg
 wwwroot\uploads\blogs\7b07c859-d771-469f-aaf1-0de9908f60b3.jpeg
 wwwroot\uploads\blogs\ccd43ac0-e3ba-48d5-9aa8-3b76990ed52a.jpeg
@@ -31,7 +30,6 @@ wwwroot\uploads\departments\c05113b4-4f8d-4586-a917-2e9ae2439606.jpeg
 wwwroot\uploads\departments\c20b6fcc-6177-49c4-bb54-c974bf87cd76.jpeg
 wwwroot\uploads\departments\da2ae517-893c-4ca3-a25a-0f74b7a1f0e6.jpeg
 wwwroot\uploads\departments\e1f05b2e-4bb2-4070-b74c-9e7091457f60.jpeg
-wwwroot\uploads\departments\e4b4e61c-e587-4e48-b34d-c199a975a0c2.jpeg
 wwwroot\uploads\departments\f9f4a1a0-09a0-4311-b843-deeb750e33eb.jpeg
 wwwroot\uploads\doctors\07f80ad0-f912-4dd1-8e49-ae34406cd88e_Empowering Patients with Expert Guidance and Personalized Care for Optimal Health Results _ Premium AI-generated image.jpeg
 wwwroot\uploads\doctors\2382a524-b38f-4e8a-ad4b-6ac0a0023033.jpeg
@@ -50,3 +48,5 @@ wwwroot\uploads\doctors\a07a678d-69e5-44a7-b3dd-90fcbb5b90fc.jpeg
 wwwroot\uploads\doctors\d01bf587-353b-4139-897e-e608bdec80fc_Download Young Female Doctor Smiling with Confidence and Positivity for free.jpeg
 wwwroot\uploads\doctors\ef088a44-a41b-4d61-8583-d90b4e7ef85e.jpeg
 wwwroot\uploads\doctors\f15b4dc1-714c-4fae-8a84-1ba626a91431.jpeg
+wwwroot\uploads\blogs\aab24899-2153-4bba-bb1d-da27dc8df163.jpg
+wwwroot\uploads\blogs\fe07e58c-ef1c-41eb-b565-e02cddb19b66.jpg

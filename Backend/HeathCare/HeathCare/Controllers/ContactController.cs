@@ -17,6 +17,15 @@ namespace HeathCare.Controllers
             _contactService = contactService;
         }
 
+        [HttpGet("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<ContactDTO>> GetContact(int id)
+        {
+            var contact = await _contactService.GetContactByIdAsync(id);
+            if (contact == null) return NotFound();
+            return Ok(contact);
+        }
+
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<ContactDTO>>> GetContacts()
@@ -24,6 +33,33 @@ namespace HeathCare.Controllers
             var contacts = await _contactService.GetAllContactsAsync();
             return Ok(contacts);
         }
+
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> MarkAsRead(int id, ContactUpdateDTO contactDto)
+        {
+            if (id != contactDto.Id) return BadRequest();
+
+            try
+            {
+                await _contactService.MarkAsReadAsync(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
+            }
+        }
+
+        [HttpGet("unread-count")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<int>> GetUnreadCount()
+        {
+            var count = await _contactService.GetUnreadCountAsync();
+            return Ok(count);
+        }
+
 
         [HttpPost]
         public async Task<ActionResult<ContactDTO>> PostContact(ContactCreateDTO contactDto)

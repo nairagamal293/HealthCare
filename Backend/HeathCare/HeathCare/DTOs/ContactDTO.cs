@@ -10,6 +10,7 @@ namespace HeathCare.DTOs
         public string Email { get; set; }
         public string Message { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool IsRead { get; set; } // Add this
     }
 
     public class ContactCreateDTO
@@ -25,5 +26,10 @@ namespace HeathCare.DTOs
         [Required]
        
         public string Message { get; set; }
+    }
+    public class ContactUpdateDTO
+    {
+        public int Id { get; set; }
+        public bool IsRead { get; set; }
     }
 }

@@ -34,7 +34,7 @@ namespace HeathCare.DTOs
         public string Title { get; set; }
 
         [Required(ErrorMessage = "Content is required")]
-        [StringLength(5000, ErrorMessage = "Content cannot exceed 5000 characters")]
+        [StringLength(50000, ErrorMessage = "Content cannot exceed 50000 characters")]
         public string Content { get; set; }
 
         public IFormFile? ImageFile { get; set; }

@@ -218,36 +218,59 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats-section py-5">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-6 col-md-3 animate-slide-up">
-                    <div class="stat-item">
-                        <h3 class="display-4 fw-bold mb-2">15+</h3>
-                        <p class="mb-0">تخصصات طبية</p>
+ <!-- Modern Stats Section -->
+<section class="stats-section py-5">
+    <div class="container">
+        <div class="row g-4 text-center">
+            <!-- Years of Experience -->
+            <div class="col-6 col-md-3 animate-slide-up">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
                     </div>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <span class="plus-sign">+</span>
+                    <p>سنوات من الخبرة</p>
                 </div>
-                <div class="col-6 col-md-3 animate-slide-up animate-delay-1">
-                    <div class="stat-item">
-                        <h3 class="display-4 fw-bold mb-2">50+</h3>
-                        <p class="mb-0">أطباء مؤهلين</p>
+            </div>
+            
+            <!-- Qualified Doctors -->
+            <div class="col-6 col-md-3 animate-slide-up animate-delay-1">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-md"></i>
                     </div>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <span class="plus-sign">+</span>
+                    <p>أطباء مؤهلين</p>
                 </div>
-                <div class="col-6 col-md-3 animate-slide-up animate-delay-2">
-                    <div class="stat-item">
-                        <h3 class="display-4 fw-bold mb-2">10K+</h3>
-                        <p class="mb-0">مرضى سنويًا</p>
+            </div>
+            
+            <!-- Annual Patients -->
+            <div class="col-6 col-md-3 animate-slide-up animate-delay-2">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-procedures"></i>
                     </div>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <span class="k-sign">K+</span>
+                    <p>مرضى سنويًا</p>
                 </div>
-                <div class="col-6 col-md-3 animate-slide-up animate-delay-3">
-                    <div class="stat-item">
-                        <h3 class="display-4 fw-bold mb-2">24/7</h3>
-                        <p class="mb-0">رعاية طوارئ</p>
+            </div>
+            
+            <!-- Emergency Care -->
+            <div class="col-6 col-md-3 animate-slide-up animate-delay-3">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-ambulance"></i>
                     </div>
+                    <h3>24/7</h3>
+                    <p>رعاية طوارئ</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
   <!-- Doctors Preview Section -->
 <section class="doctors-preview py-5">
@@ -401,6 +424,39 @@
     
     <!-- Custom JS -->
     <script>
+
+        // Counter Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    function animateCounters() {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if(count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounters, 1);
+            } else {
+                counter.innerText = target;
+            }
+        });
+    }
+    
+    // Start animation when section is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {threshold: 0.5});
+    
+    observer.observe(document.querySelector('.stats-section'));
+});
     // Animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
         const animateElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
@@ -502,6 +558,8 @@
     // Initialize
     fetchDoctorsPreview();
 });
+
+
     </script>
 </body>
 </html>

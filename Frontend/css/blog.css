@@ -1,5 +1,5 @@
 
-        /* NEW BLOG-SPECIFIC STYLES ONLY */
+        /* Blog Content Area Styles */
         .blog-content-area {
             --primary-color: #2a7fba;
             --secondary-color: #3bb4c1;
@@ -11,25 +11,12 @@
             --border-radius: 8px;
             --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
-        }
-        
-        .blog-content-area {
             font-family: 'Tajawal', sans-serif;
             color: var(--text-color);
             line-height: 1.6;
+            padding: 40px 0;
         }
-        
-        .blog-content-area h1, 
-        .blog-content-area h2, 
-        .blog-content-area h3, 
-        .blog-content-area h4, 
-        .blog-content-area h5, 
-        .blog-content-area h6 {
-            font-family: 'Tajawal', sans-serif;
-            color: var(--dark-color);
-            font-weight: 600;
-        }
-        
+
         /* Blog Header */
         .blog-header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -38,25 +25,14 @@
             margin-bottom: 40px;
             text-align: center;
         }
-        
+
         .blog-header h1 {
             font-size: 2.5rem;
             margin-bottom: 15px;
             color: white;
         }
-        
-        .blog-header p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-        
+
         /* Blog Posts */
-        .blog-posts-container {
-            padding: 40px 0;
-        }
-        
         .modern-blog-post {
             margin-bottom: 40px;
             border-radius: var(--border-radius);
@@ -65,33 +41,33 @@
             background: white;
             box-shadow: var(--box-shadow);
         }
-        
+
         .modern-blog-post:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
-        
+
         .modern-post-img {
             overflow: hidden;
             height: 220px;
             position: relative;
         }
-        
+
         .modern-post-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
         }
-        
+
         .modern-blog-post:hover .modern-post-img img {
             transform: scale(1.05);
         }
-        
+
         .modern-post-content {
             padding: 25px;
         }
-        
+
         .modern-post-meta {
             display: flex;
             flex-wrap: wrap;
@@ -99,39 +75,39 @@
             font-size: 0.85rem;
             color: var(--text-light);
         }
-        
+
         .modern-post-meta span {
             margin-left: 20px;
             display: flex;
             align-items: center;
         }
-        
+
         .modern-post-meta i {
             margin-left: 5px;
             color: var(--primary-color);
         }
-        
+
         .modern-blog-post h3 {
             font-size: 1.4rem;
             margin-bottom: 15px;
             line-height: 1.4;
         }
-        
+
         .modern-blog-post h3 a {
             color: var(--dark-color);
             text-decoration: none;
             transition: var(--transition);
         }
-        
+
         .modern-blog-post h3 a:hover {
             color: var(--primary-color);
         }
-        
+
         .modern-blog-post p {
             margin-bottom: 20px;
             color: var(--text-light);
         }
-        
+
         .modern-read-more {
             display: inline-flex;
             align-items: center;
@@ -140,20 +116,20 @@
             text-decoration: none;
             transition: var(--transition);
         }
-        
+
         .modern-read-more i {
             margin-right: 5px;
             transition: var(--transition);
         }
-        
+
         .modern-read-more:hover {
             color: var(--secondary-color);
         }
-        
+
         .modern-read-more:hover i {
             transform: translateX(3px);
         }
-        
+
         /* Featured Post */
         .modern-featured-post {
             grid-column: 1 / -1;
@@ -162,26 +138,22 @@
             gap: 30px;
             margin-bottom: 50px;
         }
-        
+
         .modern-featured-post .modern-post-img {
             height: 100%;
         }
-        
+
         .modern-featured-post .modern-post-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        
+
         .modern-featured-post h2 {
             font-size: 1.8rem;
             margin-bottom: 20px;
         }
-        
-        .modern-featured-post p {
-            font-size: 1.05rem;
-        }
-        
+
         .modern-post-badge {
             position: absolute;
             left: 15px;
@@ -194,157 +166,192 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-        
-        /* Sidebar */
-        .modern-blog-sidebar {
-            padding-right: 30px;
-        }
-        
-        .modern-sidebar-widget {
-            background: white;
-            border-radius: var(--border-radius);
+
+        /* Sidebar Widget Styles */
+        .sidebar-widget {
+            background: #fff;
+            
+            border-radius: 10px;
             padding: 25px;
             margin-bottom: 30px;
-            box-shadow: var(--box-shadow);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
         
-        .modern-widget-title {
+        .sidebar-widget:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .widget-title {
+            font-family: 'Changa', sans-serif;
             font-size: 1.3rem;
+            font-weight: 700;
+            color: #2c3e50;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #f0f2f5;
             position: relative;
         }
         
-        .modern-widget-title::after {
+        .widget-title:after {
             content: '';
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: -2px;
             width: 50px;
             height: 2px;
-            background: var(--primary-color);
+            background: #3498db;
         }
         
-        .modern-search-form .input-group {
-            border-radius: 30px;
+        /* Health Tips Carousel */
+        .health-tips-widget .carousel {
+            border-radius: 8px;
             overflow: hidden;
         }
         
-        .modern-search-form .form-control {
-            border-left: 0;
-            padding: 10px 15px;
+        .health-tip {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
-        .modern-search-form .btn {
-            border-right: 0;
-            padding: 10px 15px;
+        .health-tip i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #3498db;
         }
         
-        .modern-category-list {
-            list-style: none;
-            padding: 0;
+        .health-tip p {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            color: #2c3e50;
             margin: 0;
         }
         
-        .modern-category-list li {
+        /* Wellness Quote */
+        .wellness-quote {
+            position: relative;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .quote-icon {
+            font-size: 1.5rem;
+            color: rgba(52, 152, 219, 0.2);
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+        
+        .quote-text {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            font-style: italic;
+            color: #2c3e50;
             margin-bottom: 10px;
         }
         
-        .modern-category-list a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 8px 0;
-            transition: var(--transition);
-            border-bottom: 1px dashed #eee;
+        .quote-author {
+            font-family: 'Changa', sans-serif;
+            font-weight: 500;
+            color: #7f8c8d;
+            margin: 0;
         }
         
-        .modern-category-list a:hover {
-            color: var(--primary-color);
-            padding-right: 5px;
-        }
-        
-        .modern-category-list a span {
-            background: #f5f5f5;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-        }
-        
-        .modern-recent-posts {
+        /* Health Infographic */
+        .infographic {
             display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
         }
         
-        .modern-recent-post {
+        .info-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             display: flex;
-            gap: 15px;
             align-items: center;
-        }
-        
-        .modern-recent-post .modern-post-thumb {
-            width: 80px;
-            height: 80px;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        
-        .modern-recent-post .modern-post-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .modern-recent-post:hover .modern-post-thumb img {
-            transform: scale(1.1);
-        }
-        
-        .modern-recent-post .modern-post-info h4 {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-            line-height: 1.4;
-        }
-        
-        .modern-recent-post .modern-post-info h4 a {
-            color: var(--dark-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .modern-recent-post .modern-post-info h4 a:hover {
-            color: var(--primary-color);
-        }
-        
-        .modern-recent-post .modern-post-info span {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        
-        .modern-tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .modern-tag-cloud a {
-            display: inline-block;
-            background: #f5f5f5;
-            color: var(--text-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .modern-tag-cloud a:hover {
-            background: var(--primary-color);
+            justify-content: center;
+            margin: 0 auto 10px;
             color: white;
+            font-size: 1.2rem;
+        }
+        
+        .info-item p {
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.85rem;
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        /* Did You Know Widget */
+        .health-fact {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .fact-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .fact-header i {
+            font-size: 1.5rem;
+            color: #f39c12;
+            margin-left: 10px;
+        }
+        
+        .fact-header h4 {
+            font-family: 'Changa', sans-serif;
+            font-size: 1.1rem;
+            margin: 0;
+            color: #2c3e50;
+        }
+        
+        .fact-list {
+            padding-right: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .fact-list li {
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            position: relative;
+            color: #34495e;
+        }
+        
+        .fact-list li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-right: -1em;
+        }
+        
+        .fact-button {
+            width: 100%;
+            font-family: 'Changa', sans-serif;
+            font-weight: 600;
         }
         
         /* Pagination */
@@ -352,29 +359,7 @@
             margin-top: 50px;
         }
         
-        .modern-page-item {
-            margin: 0 5px;
-        }
-        
-        .modern-page-link {
-            border: none;
-            color: var(--text-color);
-            border-radius: var(--border-radius) !important;
-            padding: 8px 15px;
-            transition: var(--transition);
-        }
-        
-        .modern-page-link:hover {
-            background: #f0f0f0;
-            color: var(--primary-color);
-        }
-        
-        .modern-page-item.active .modern-page-link {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        /* Responsive */
+        /* Responsive Adjustments */
         @media (max-width: 991.98px) {
             .modern-blog-sidebar {
                 padding-right: 0;
@@ -382,6 +367,10 @@
             }
             
             .modern-featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .infographic {
                 grid-template-columns: 1fr;
             }
         }

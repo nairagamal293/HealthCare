@@ -155,13 +155,6 @@
                             </form>
                         </div>
 
-                        <!-- Categories Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">التصنيفات</h3>
-                            <ul class="category-list" id="blog-categories-sidebar">
-                                <!-- Categories will be loaded dynamically -->
-                            </ul>
-                        </div>
 
                         <!-- Recent Posts Widget -->
                         <div class="sidebar-widget">
@@ -172,12 +165,7 @@
                         </div>
 
                         <!-- Tags Widget -->
-                        <div class="sidebar-widget">
-                            <h3 class="widget-title">الوسوم</h3>
-                            <div class="tag-cloud" id="blog-tags-sidebar">
-                                <!-- Tags will be loaded dynamically -->
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -346,16 +334,14 @@
                 <div class="post-meta">
                     <span><i class="far fa-calendar"></i> ${formattedDate}</span>
                     <span><i class="far fa-user"></i> بواسطة ${blog.author || 'فريق ميديكير'}</span>
-                    ${blog.categories?.length ? `<span><i class="far fa-folder"></i> ${blog.categories.join('، ')}</span>` : ''}
+                    
                 </div>
                 <h1 class="post-title">${blog.title}</h1>
                 <div class="post-content">
                     ${blog.content}
                 </div>
                 <div class="post-footer">
-                    <div class="post-tags">
-                        ${blog.tags?.map(tag => `<a href="blog.html?tag=${tag}">${tag}</a>`).join('') || ''}
-                    </div>
+                   
                     <div class="social-share">
                         <span>مشاركة:</span>
                         <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -385,63 +371,66 @@
 
         // Update sidebar (similar to blog.html)
         async function updateSidebar() {
-            try {
-                // Load all blogs for sidebar
-                const response = await fetch(`${API_BASE_URL}/blogs`);
-                const allBlogs = await response.json();
-
-                // Categories
-                const categories = {};
-                allBlogs.forEach(blog => {
-                    blog.categories?.forEach(cat => {
-                        categories[cat] = (categories[cat] || 0) + 1;
-                    });
-                });
-
-                let categoriesHtml = '';
-                for (const [category, count] of Object.entries(categories)) {
-                    categoriesHtml += `<li><a href="blog.html?category=${category}">${category} <span>(${count})</span></a></li>`;
-                }
-                document.getElementById('blog-categories-sidebar').innerHTML = categoriesHtml;
-
-                // Recent posts (latest 3, excluding current)
-                const recentPosts = [...allBlogs]
-                    .filter(blog => blog.id !== blogId)
-                    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-                    .slice(0, 3);
-                
-                let recentHtml = '';
-                recentPosts.forEach(post => {
-                    recentHtml += `
-                        <div class="recent-post">
-                            <div class="post-thumb">
-                                <a href="blog-single.html?id=${post.id}"><img src="https://localhost:7230${post.imagePath}" alt="${post.title}" class="img-fluid"></a>
-                            </div>
-                            <div class="post-info">
-                                <h4><a href="blog-single.html?id=${post.id}">${post.title}</a></h4>
-                                <span>${new Date(post.createdAt).toLocaleDateString('ar-SA', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-                            </div>
-                        </div>
-                    `;
-                });
-                document.getElementById('recent-posts-sidebar').innerHTML = recentHtml;
-
-                // Tags
-                const tags = new Set();
-                allBlogs.forEach(blog => {
-                    blog.tags?.forEach(tag => tags.add(tag));
-                });
-
-                let tagsHtml = '';
-                tags.forEach(tag => {
-                    tagsHtml += `<a href="blog.html?tag=${tag}">${tag}</a>`;
-                });
-                document.getElementById('blog-tags-sidebar').innerHTML = tagsHtml;
-
-            } catch (err) {
-                console.error('Error loading sidebar data:', err);
-            }
+    try {
+        // First, verify we can find the container
+        const recentPostsContainer = document.getElementById('recent-posts-sidebar');
+        if (!recentPostsContainer) {
+            console.error('Error: Could not find #recent-posts-sidebar element');
+            console.log('Available elements:', document.querySelectorAll('*[id]'));
+            return;
         }
+
+        // Load all blogs for sidebar
+        const response = await fetch(`${API_BASE_URL}/blogs`);
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const allBlogs = await response.json();
+        if (!Array.isArray(allBlogs)) throw new Error('Invalid blog data format');
+
+        // Recent posts (latest 3, excluding current)
+        const recentPosts = [...allBlogs]
+            .filter(blog => blog.id !== blogId)
+            .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+            .slice(0, 3);
+        
+        let recentHtml = '';
+        recentPosts.forEach(post => {
+            recentHtml += `
+                <div class="recent-post">
+                    <div class="post-thumb">
+                        <a href="blog-single.html?id=${post.id}">
+                            <img src="https://localhost:7230${post.imagePath}" alt="${post.title}" class="img-fluid">
+                        </a>
+                    </div>
+                    <div class="post-info">
+                        <h4><a href="blog-single.html?id=${post.id}">${post.title}</a></h4>
+                        <span>${new Date(post.createdAt).toLocaleDateString('ar-SA', { 
+                            month: 'short', 
+                            day: 'numeric', 
+                            year: 'numeric' 
+                        })}</span>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Safely update the container
+        recentPostsContainer.innerHTML = recentHtml;
+
+    } catch (err) {
+        console.error('Error loading sidebar data:', err);
+        // Optionally display an error message to users
+        const errorContainer = document.getElementById('recent-posts-sidebar') || 
+                              document.querySelector('.sidebar-widget');
+        if (errorContainer) {
+            errorContainer.innerHTML = `
+                <div class="alert alert-warning">
+                    تعذر تحميل المشاركات الحديثة. يرجى المحاولة لاحقاً.
+                </div>
+            `;
+        }
+    }
+}
 
         // Initial load
         loadBlogDetails();
